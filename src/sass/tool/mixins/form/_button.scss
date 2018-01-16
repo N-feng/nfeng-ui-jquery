@@ -1,0 +1,38 @@
+@mixin button-size($padding-vertical,$padding-horizontal,$font-size,$line-height,$border-radius,$height:false){
+  padding: $padding-vertical $padding-horizontal;
+  line-height: $line-height;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  @if $height {
+    height: $height;
+  }
+}
+
+@mixin button-variant($color,$background,$border-color,$font-color:false){
+  color: $color;
+  background-color: $background;
+  border-color: $border-color;
+  transition: all .2s ease;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border-color, 12%);
+     @if $font-color {
+        color:darken($color,10%);
+     }
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $background;
+      border-color: $border-color;
+    }
+  }
+}

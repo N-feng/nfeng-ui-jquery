@@ -1,0 +1,33 @@
+// prefix setting
+$prefix-global-setting: webkit moz ms o;
+
+// px-to-em setting
+// if you use flexible.js , recommend set  the psd full width to $em-base;
+$em-base: 16px !default;
+
+// functions
+@import "functions/px-to-rem";
+
+// helpers
+@import "helpers/clearfix";
+@import "helpers/ellipsis";
+@import "helpers/triangle";
+@import "helpers/center-block";
+
+// mixins animation
+@import "mixins/animation/animation";
+@import "mixins/animation/transform";
+@import "mixins/animation/transition";
+
+// mixins typography
+@import "mixins/typography/text";
+@import "mixins/typography/background";
+@import "mixins/typography/margin";
+@import "mixins/typography/padding";
+
+// mixins utilities
+@import "mixins/utilities/prefixer";
+@import "mixins/utilities/susy/index";
+
+// mixins form
+@import "mixins/form/button";

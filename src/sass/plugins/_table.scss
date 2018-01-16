@@ -1,0 +1,131 @@
+.lock,
+.unlock {
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+[class*=uk-icon-] {
+    font-family: FontAwesome;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.uk-icon-lock:before {
+    content: "\f023";
+}
+
+.uk-icon-unlock:before {
+    content: "\f09c"
+}
+
+.table-wrap {
+	position: relative;
+}
+
+.table-header table,
+.table-body table,
+.table-fixed table {
+    table-layout: fixed;
+}
+
+.table-header {
+    overflow: hidden;
+}
+
+.table-header th .lock {
+    display: none;
+}
+
+.table-header th.active .lock {
+    display: inline-block;
+}
+
+.table-body {
+    overflow: auto;
+}
+
+.table-fixed {
+	background-color: #fff;
+	position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    // box-shadow: 0 0 10px rgba(0,0,0,.12);
+    bottom: 10px;
+    // padding-bottom: 8px;
+    margin-right: -20px;
+}
+
+.table-fixed .scroll-hide {
+    overflow-x: hidden;
+    margin-right: -20px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+.table-fixed th {
+    height: 18px;
+}
+
+.table-fixed .table-header th .lock {
+    display: inline-block;
+}
+
+.table-fixed .table-header th.active .lock {
+    display: none;
+}
+
+.table-fixed .table-header th .unlock {
+    display: none;
+}
+
+.table-fixed .table-header th.active .unlock {
+    display: inline-block;
+}
+
+.table-edit-text {
+    cursor: pointer;
+    &:hover {
+        background-color: yellow;
+    }
+}
+
+.table-edit-text,
+.table-edit-input {
+    display: inline-block;
+}
+
+.table-collapsed:after {
+    content: "+";
+}
+
+.table-collapsed.loading:after {
+    content: "";
+}
+
+.table-expanded:after {
+    content: "-";
+}
+
+.table-collapsed,
+.table-expanded {
+    cursor: pointer;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    line-height: 17px;
+    border: 1px solid #e9e9e9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #fff;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .65);
+    margin-right: 8px;
+}

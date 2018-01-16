@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'anticon';
+  src: url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.eot');
+  /* IE9*/
+  src: url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ 
+  url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.ttf') format('truetype'), /* iOS 4.1- */ 
+  url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.svg#iconfont') format('svg');
+}
+
+.anticon {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon:before {
+  display: block;
+  font-family: "anticon" !important;
+}
+
+.anticon-cross-circle:before {
+  content: "\E62E";
+}

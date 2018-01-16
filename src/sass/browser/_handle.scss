@@ -1,0 +1,85 @@
+.pull-left { float: left; }
+
+.pull-right { float: right; }
+
+.di { display: inline-block; }
+
+.vm { vertical-align: middle; }
+
+.vt { vertical-align: top; }
+
+.fb { font-weight: bold; }
+
+.f-xm { font-size: 12px; }
+
+.f-sm { font-size: 16px; }
+
+.f-md { font-size: 18px; }
+
+.f-lg { font-size: 20px; }
+
+.c333 { color: #333; }
+
+.c666 { color: #666; }
+
+.c999 { color: #999; }
+
+.lh15 { line-height: 1.5; }
+
+.lh18 { line-height: 1.8; }
+
+.lh20 { line-height: 2; }
+
+.of { overflow: hidden; }
+
+.oa { overflow: auto; }
+
+.tc { text-align: center; }
+
+.tl { text-align: left; }
+
+.tr { text-align: right; }
+
+.hide { display: none; }
+
+.pr { position: relative; }
+
+.pa { position: absolute; }
+
+.ellipsis { @include ellipsis; }
+
+.center-block { @include center-block; }
+
+@mixin bread() {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.bread { @include bread; }
+
+@include text-emphasis-variant('.text-white', white);
+@include text-emphasis-variant('.text-red', red);
+@include text-emphasis-variant('.text-skyblue', skyblue);
+@include text-emphasis-variant('.text-gray', gray);
+@include text-emphasis-variant('.text-greenyellow', greenyellow);
+@include text-emphasis-variant('.text-orange', orange);
+@include text-emphasis-variant('.text-info', #23c6c8);
+@include text-emphasis-variant('.text-danger', #ed5565);
+@include bg-variant('.bg-orange', orange);
+@include bg-variant('.bg-greenyellow', greenyellow);
+@include bg-variant('.bg-skyblue', skyblue);
+@include bg-variant('.bg-white', white);
+@include bg-variant('.bg-gray', gray);
+@include margin-init(60, 5, true true true true true);
+@include padding-init(60, 5, true true true true true);
+
+.clearfix { zoom: 1; }
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}

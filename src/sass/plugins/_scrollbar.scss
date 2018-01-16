@@ -1,0 +1,92 @@
+.scroll-content {
+    overflow: scroll;
+}
+
+.scroll-textarea {
+    border: 1px solid #ccc;
+    border-top-color: #999;
+}
+
+.scroll-textarea > .scroll-content {
+    overflow: hidden;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+    border: none;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font: inherit;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scroll-element {
+    position: absolute;
+    display: none;    
+}
+
+.scroll-element.scroll-visible {
+    display: block;
+}
+
+.scroll-x {
+    width: 100%;
+    height: 8px;
+    left: 0;
+    bottom: 0;
+}
+
+.scroll-y {
+    width: 8px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.scroll-outer,
+.scroll-track,
+.scroll-bar {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.scroll-outer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.scroll-size,
+.scroll-track,
+.scroll-bar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// .scroll-track,
+// .scroll-bar {
+//     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+//     filter: alpha(opacity=40);
+//     opacity: 0.4;
+// }
+
+.scroll-track {
+    background-color: #e0e0e0;
+}
+
+.scroll-bar {
+    background-color: #c2c2c2;
+}
+
+.scroll-bar:hover,
+.scroll-bar.active {
+    background-color: #919191;
+}

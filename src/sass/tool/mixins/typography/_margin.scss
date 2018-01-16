@@ -1,0 +1,34 @@
+
+@mixin margin-init($max:30,$interval:5,$direction: true true true true true){
+	@for $i from $interval through $max {
+		@if $i % $interval == 0{
+			@if(nth($direction,1)){
+				.mt#{$i} {
+					margin-top: $i+px;
+				}
+			}
+			@if(nth($direction,2)){
+				.mr#{$i} {
+					margin-right: $i+px;
+				}
+			}
+			@if(nth($direction,3)){
+				.mb#{$i} {
+					margin-bottom: $i+px;
+				}
+			}
+			@if(nth($direction,4)){
+				.ml#{$i} {
+					margin-left: $i+px;
+				}
+			}
+			
+			@if(nth($direction,5)){
+				.m#{$i} {
+					margin: $i+px;
+				}
+			}
+
+		}
+	}
+}

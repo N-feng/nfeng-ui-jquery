@@ -1,0 +1,60 @@
+.list-1 {
+    position: relative;
+    ul {
+        @extend .clearfix;
+        border-left: 1px solid #dbe5ed;
+    }
+    .owl-icon {
+        position: absolute;
+        top: 22px;
+        right: 10px;
+    }
+    li {
+        float: left;
+        padding: 20px 8px;
+        border: 1px solid #dbe5ed;
+        border-right: 1px solid #dbe5ed;
+        border-left: none;
+        position: relative;
+        display: none;
+        cursor: pointer;
+        min-height: 148px;
+        &.active:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #3c8dbc;
+        }
+        &:hover, &.active {
+            .owl-icon {
+                color: #3c8dbc;
+            }
+        }
+    }
+    .prev,
+    .next {
+        position: absolute;
+        top: 0;
+        width: 28px;
+        height: 146px;
+        line-height: 146px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;
+        cursor: pointer;
+        border: 1px solid #dbe5ed;
+        // &:hover {
+        //     box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+        //     color: #2062e6;
+        // }
+    }
+    .prev {
+        left: -18px;
+    }
+    .next {
+        right: -18px;
+    }
+}

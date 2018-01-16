@@ -1,0 +1,85 @@
+/* _table.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+th {
+    text-align: left;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-bordered {
+    border: 1px solid #f4f4f4;
+}
+
+.table-bordered>thead>tr>th,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>tbody>tr>td,
+.table-bordered>tfoot>tr>td {
+    border: 1px solid #f4f4f4;
+}
+
+.table-hover>tbody>tr.active {
+    background-color: #f5f5f5
+}
+
+.table-data {
+    white-space: nowrap;
+}
+
+.table-data>thead>tr>th>a {
+    color: #333;
+}
+
+.table-data>thead>tr>th.sorting>a:after {
+    content: "\e022";
+}
+
+.table-data>thead>tr>th.sorting_asc>a:after {
+    content: "\e013";
+}
+
+.table-data>thead>tr>th.sorting_desc>a:after {
+    content: "\e012";
+}
+
+.table-data>thead>tr>th.sorting>a:after,
+.table-data>thead>tr>th.sorting_asc>a:after,
+.table-data>thead>tr>th.sorting_desc>a:after {
+    display: inline-block;
+    font-family: 'footable';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 5px;
+}

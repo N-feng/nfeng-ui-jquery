@@ -1,0 +1,32 @@
+@mixin padding-init($max:30,$interval:5,$direction: true true true true true){
+	@for $i from $interval through $max {
+		@if $i % $interval == 0{
+			@if(nth($direction,1)){
+				.pt#{$i} {
+					padding-top: $i+px;
+				}
+			}
+			@if(nth($direction,2)){
+				.pr#{$i} {
+					padding-right: $i+px;
+				}
+			}
+			@if(nth($direction,3)){
+				.pb#{$i} {
+					padding-bottom: $i+px;
+				}
+			}
+			@if(nth($direction,4)){
+				.pl#{$i} {
+					padding-left: $i+px;
+				}
+			}
+			@if(nth($direction,5)){
+				.p#{$i} {
+					padding: $i+px;
+				}
+			}
+
+		}
+	}
+}
