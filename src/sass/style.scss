@@ -2,6 +2,7 @@
 @import "fonts/footable";
 @import "fonts/icomoon";
 @import "fonts/anticon";
+@import "fonts/ionicons";
 
 @import "configuration";
 @import "tool/index";
@@ -14,6 +15,8 @@
 @import "layout/base";
 @import "layout/nav";
 @import "layout/logo";
+@import "layout/sidebar";
+@import "layout/layout";
 
 @import "form/button";
 @import "form/form";
@@ -34,8 +37,6 @@
 @import "component/multiCheck";
 @import "component/layer";
 @import "component/list";
-@import "component/breadcrumb";
-@import "component/menu";
 
 @import "plugins/datapick";
 @import "plugins/loading";

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{block 'title'}}nfeng-ui-jquery{{/block}}</title>
+    {{block 'head'}}
+    <link rel="stylesheet" href="../css/pc.css"> {{/block}}
+</head>
+
+<body>
+    {{include './header.art'}} {{include './sidebar.art' url}}
+
+    <div class="content">
+        {{include './bread.art' bread}}
+        <div class="content-wrapper">
+            {{block 'content'}}{{/block}}
+        </div>
+    </div>
+    <script src="../src/js/vendor/jquery.js"></script>
+    <script src="../js/pc.js "></script>
+</body>
+
+</html>

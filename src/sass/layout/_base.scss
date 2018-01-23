@@ -6,16 +6,6 @@
     height: 100%;
 }
 
-.content-wrapper {
-    background-color: #ecf0f5;
-    margin-left: 230px;
-    min-height: 100%;
-    -webkit-transition: -webkit-transform .3s ease-in-out,margin .3s ease-in-out;
-    -moz-transition: -moz-transform .3s ease-in-out,margin .3s ease-in-out;
-    -o-transition: -o-transform .3s ease-in-out,margin .3s ease-in-out;
-    transition: transform .3s ease-in-out,margin .3s ease-in-out;
-}
-
 .sidebar-collapse .content-wrapper {
     margin-left: 50px !important;
     z-index: 840;
@@ -48,16 +38,6 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.content-header {
-    position: relative;
-    padding: 15px 15px 0 15px;
-}
-
-.content {
-    min-height: 250px;
-    padding: 15px;
 }
 
 @-webkit-keyframes fadeInRight {

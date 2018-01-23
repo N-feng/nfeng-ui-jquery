@@ -1,42 +1,9 @@
-.form-horizontal .form-group {
-    margin-left: -7px;
-    margin-right: -8px
+.form-group {
+    margin-bottom: 15px;
 }
 
-.form-horizontal .form-group:before,
-.form-horizontal .form-group:after {
-    content: " ";
-    display: table
-}
-
-.form-horizontal .form-group:after {
-    clear: both
-}
-
-$screen-sm: 768px !default;
-$screen-sm-min: $screen-sm !default;
-$padding-base-vertical: 6px !default;
-
-@media (min-width: $screen-sm-min) {
-    .control-label {
-        text-align: right;
-        margin-bottom: 0;
-        padding-top: ($padding-base-vertical + 1);
-    }
-}
-
-.help-block {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-.has-error .help-block {
-    color: #eb6100
-}
-
-.has-error .form-control {
-    border-color: #eb6100;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
 }

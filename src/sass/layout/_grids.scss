@@ -6,16 +6,16 @@ $susy: (
 
 .row {
   @include clearfix;
-  margin-left: -7px;
-  margin-right: -8px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 @for $i from 1 through 12 {
   .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}{
     position: relative;
     min-height: 1px;
-    padding-left: 8px;
-    padding-right: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

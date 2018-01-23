@@ -1,21 +1,36 @@
 {
-  "name": "web",
+  "name": "nfeng-ui-jquery",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "watch": "./node_modules/.bin/webpack --watch"
+    "server": "node build/dev-server.js",
+    "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-feng/nfeng-ui-jquery.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N-feng/nfeng-ui-jquery/issues"
+  },
+  "homepage": "https://github.com/N-feng/nfeng-ui-jquery#readme",
   "devDependencies": {
+    "art-template": "^4.12.2",
     "css-loader": "^0.28.4",
+    "express": "^4.16.2",
+    "express-art-template": "^1.0.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.4.1"
-  }
+    "webpack": "^3.4.1",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {}
 }

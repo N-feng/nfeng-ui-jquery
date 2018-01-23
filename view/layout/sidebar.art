@@ -1,0 +1,104 @@
+<div class="sidebar">
+    <ul class="sidebar-menu">
+        <li class="treeview active menu-open">
+            <a href="javascript:;">
+                <i class="fa fa-folder"></i>
+                <span>项目分析</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+            </a>
+            <ul class="treeview-menu" style="display: block;">
+                <li class="active">
+                    <a href="/project-analysis/list">
+                        <i class="fa fa-circle-o"></i> 项目列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="treeview menu-open">
+            <a href="javascript:;">
+                <i class="fa fa-folder"></i>
+                <span>渠道分析</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+            </a>
+            <ul class="treeview-menu" style="display:block;">
+                <li class="">
+                    <a href="/channel-analysis/list">
+                        <i class="fa fa-circle-o"></i> 渠道列表
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/channel-analysis/monitoring">
+                        <i class="fa fa-circle-o"></i> 渠道预算
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/channel-analysis/delivery ">
+                        <i class="fa fa-circle-o"></i> 综合投放
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/edm-asset/index">
+                        <i class="fa fa-circle-o"></i> EDM资产
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview menu-open">
+            <a href="javascript:;">
+                <i class="fa fa-folder"></i>
+                <span>活动分析</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+            </a>
+            <ul class="treeview-menu" style="display:block;">
+                <li class="">
+                    <a href="/activity-analysis/list">
+                        <i class="fa fa-circle-o"></i> 活动列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview menu-open">
+            <a href="javascript:;">
+                <i class="fa fa-folder"></i>
+                <span>财务报表</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+            </a>
+            <ul class="treeview-menu" style="display:block;">
+                <li class="">
+                    <a href="/report/finacial">
+                        <i class="fa fa-circle-o"></i>财务报表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview menu-open{{if controller === 'forms'}} active{{/if}}">
+            <a href="#">
+                <i class="fa fa-edit"></i> <span>Forms</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu" style="display:block;"> 
+                <li class="{{if action === 'datapick'}}active{{/if}}"><a href="/forms/datapick"><i class="fa fa-circle-o"></i> DatePicker 日期选择器</a></li>
+                <li><a href="advanced"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                <li><a href="editors"><i class="fa fa-circle-o"></i> Editors</a></li>
+            </ul>
+        </li>
+
+        <li class="treeview menu-open{{if controller === 'forms'}} active{{/if}}">
+            <a href="#">
+                <i class="fa fa-table"></i> <span>Tables</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu" style="display:block;">
+                <li><a href="advanced"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                <li><a href="editors"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

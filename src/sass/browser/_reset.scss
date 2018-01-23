@@ -1,12 +1,16 @@
 $theme-color: #dd4b39 #3674a9 #ecf0f6 #92b6cc;
-ul {
+ul,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 label {
-    font-weight: normal;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 
 body {
@@ -34,4 +38,17 @@ a {
 body,
 html {
     height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 0;
+    small {
+        color: #777;
+    }
 }

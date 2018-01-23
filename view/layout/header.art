@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="header-user">
+        <span class="name op7">Welcome，service-dmj@infinite.net.cn</span>
+        <a class="text-white ml15" href="/public/create-cmp-user" target="_bank">IC帐号申请</a>
+        <a class="text-white ml15" href="/public/password"><i class="fa fa-cog fa-lg"></i></a>
+        <a class="text-white ml15" href="/public/logout"><i class="fa fa-power-off fa-lg"></i></a>
+    </div>
+    <a href="/public/index" title="nfeng-ui-jquery" class="logo">nfeng-ui-jquery</a>
+    <ul class="nav navbar-nav">
+        <li class="">
+            <a href="/public/index">首页</a>
+        </li>
+        <li class="">
+            <a href="/project-analysis/list">监控分析</a>
+        </li>
+        <li class="active">
+            <a href="/plan/demand-index">排产中心</a>
+        </li>
+        <li class="">
+            <a href="/business/income-index">商务中心</a>
+        </li>
+        <li class="">
+            <a href="/corp/index-mapped">配置管理</a>
+        </li>
+    </ul>
+</div>
