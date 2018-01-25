@@ -4,7 +4,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware')
 
 const app = express();
-const webpackConfig = require('./webpack.server.conf.js');
+const webpackConfig = require('../webpack.config.js');
 const compiler = webpack(webpackConfig);
 
 app.set('views', './view');
