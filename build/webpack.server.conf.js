@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     'pc': './src/entry.pc.js'
@@ -16,6 +17,7 @@ module.exports = {
     //         warnings: false
     //     }
     // }),
+    new HtmlWebpackPlugin(),
     new ExtractTextPlugin({
       filename: 'css/[name].css'
     }),
@@ -54,13 +56,5 @@ module.exports = {
         }
       }
     ]
-  },
-  devServer : {
-    contentBase      : __dirname,
-    compress         : true,
-    port             : 3000,
-    inline           : true,
-    host             : '0.0.0.0',
-    disableHostCheck : true
   }
 }

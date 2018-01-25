@@ -4,30 +4,30 @@
     <div class="col-md-6">
         <div class="box box-primary">
             <div class="box-header">
-                <h3 class="box-title">日期选择插件:</h3>
+                <h3 class="box-title">日期选择插件</h3>
             </div>
             <div class="box-body">
                 <div class="form-group">
                     <label>Select date</label>
-                    <div class="input-group">
+                    <div>
                         <input type="text" class="form-control datepick" data-type="date" value="" placeholder="Select date">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Select month</label>
-                    <div class="input-group">
+                    <div>
                         <input type="text" class="form-control datepick" data-type="month" value="" placeholder="Select month">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Select year</label>
-                    <div class="input-group">
+                    <div>
                         <input type="text" class="form-control datepick" data-type="year" value="" placeholder="Select year">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Select range</label>
-                    <div class="input-group">
+                    <div>
                         <input type="text" class="form-control datepick" data-type="range" value="" placeholder="Select range">
                     </div>
                 </div>
@@ -41,7 +41,7 @@
         <div class="box box-primary">
             <div class="box-header">
                 <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">功能介绍:</h3>
+                <h3 class="box-title">功能介绍</h3>
             </div>
             <div class="box-body">
                 <ul class="todo-list">

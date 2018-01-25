@@ -1,61 +1,99 @@
-.pull-left { float: left; }
+.pull-left {
+    float: left;
+}
 
-.pull-right { float: right; }
+.pull-right {
+    float: right;
+}
 
-.di { display: inline-block; }
+.di {
+    display: inline-block;
+}
 
-.vm { vertical-align: middle; }
+.vm {
+    vertical-align: middle;
+}
 
-.vt { vertical-align: top; }
+.vt {
+    vertical-align: top;
+}
 
-.fb { font-weight: bold; }
+.fb {
+    font-weight: bold;
+}
 
-.f-xm { font-size: 12px; }
+.f-xm {
+    font-size: 12px;
+}
 
-.f-sm { font-size: 16px; }
+.f-sm {
+    font-size: 16px;
+}
 
-.f-md { font-size: 18px; }
+.f-md {
+    font-size: 18px;
+}
 
-.f-lg { font-size: 20px; }
+.f-lg {
+    font-size: 20px;
+}
 
-.c333 { color: #333; }
+.c333 {
+    color: #333;
+}
 
-.c666 { color: #666; }
+.c666 {
+    color: #666;
+}
 
-.c999 { color: #999; }
+.c999 {
+    color: #999;
+}
 
-.lh15 { line-height: 1.5; }
+.tc {
+    text-align: center;
+}
 
-.lh18 { line-height: 1.8; }
+.tl {
+    text-align: left;
+}
 
-.lh20 { line-height: 2; }
+.tr {
+    text-align: right;
+}
 
-.of { overflow: hidden; }
+.hide {
+    display: none;
+}
 
-.oa { overflow: auto; }
+.pr {
+    position: relative;
+}
 
-.tc { text-align: center; }
+.pa {
+    position: absolute;
+}
 
-.tl { text-align: left; }
+.pf {
+    position: fixed;
+}
 
-.tr { text-align: right; }
+.ellipsis {
+    @include ellipsis;
+}
 
-.hide { display: none; }
-
-.pr { position: relative; }
-
-.pa { position: absolute; }
-
-.ellipsis { @include ellipsis; }
-
-.center-block { @include center-block; }
+.center-block {
+    @include center-block;
+}
 
 @mixin bread() {
     word-wrap: break-word;
     word-break: break-all;
 }
 
-.bread { @include bread; }
+.bread {
+    @include bread;
+}
 
 @include text-emphasis-variant('.text-white', white);
 @include text-emphasis-variant('.text-red', red);
@@ -72,8 +110,9 @@
 @include bg-variant('.bg-gray', gray);
 @include margin-init(60, 5, true true true true true);
 @include padding-init(60, 5, true true true true true);
-
-.clearfix { zoom: 1; }
+.clearfix {
+    zoom: 1;
+}
 
 .clearfix:after {
     content: '';
@@ -82,4 +121,8 @@
     height: 0;
     overflow: hidden;
     visibility: hidden;
+}
+
+.no-padding {
+    padding: 0 !important;
 }

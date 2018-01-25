@@ -1,23 +1,15 @@
-const express = require('express');
+const webpackDevServer = require('webpack-dev-server');
 const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware')
 
-const app = express();
-const webpackConfig = require('./webpack.dev.conf.js');
-const compiler = webpack(webpackConfig);
+const config = require('./webpack.dev.conf.js');
+const options = {
+  contentBase: './',
+  hot: true,
+  host: 'localhost'
+};
 
-app.set('views', './view');
-app.engine('art', require('express-art-template'));
-app.use(express.static('.'));
+webpackDevServer.addDevServerEntrypoints(config, options);
+const compiler = webpack(config);
+const server = new webpackDevServer(compiler, options);
 
-app.use(webpackDevMiddleware(compiler, {
-  publicPath: webpackConfig.output.publicPath
-}))
-
-app.use(webpackHotMiddleware(compiler));
-
-const router = require('../route');
-app.use(router);
-
-app.listen(3000);
+server.listen(3000);

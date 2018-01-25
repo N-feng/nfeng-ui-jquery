@@ -4,6 +4,8 @@
     height: 50px;
     z-index: 1133;
     position: relative;
+    position: fixed;
+    top: 0;
     .#{header}-user {
         float: right;
         height: 50px;

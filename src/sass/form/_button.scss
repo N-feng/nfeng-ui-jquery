@@ -9,19 +9,19 @@
     background-image: none;
     border: 1px solid transparent;
     white-space: nowrap;
-    line-height: 28px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 15px;
     font-size: 12px;
     border-radius: 4px;
-    height: 28px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     position: relative;
-    color: rgba(0,0,0,.65);
+    color: rgba(0, 0, 0, .65);
     background-color: #fff;
     border-color: #d9d9d9
 }
@@ -41,7 +41,8 @@
     height: 32px;
 }
 
-.fa-search {
-    line-height: 30px;
-    vertical-align: top;
+.btn-default {
+    background-color: #f4f4f4;
+    color: #444;
+    border-color: #ddd;
 }
