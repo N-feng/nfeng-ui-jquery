@@ -4,9 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "server": "node build/server.js",
-    "build": "node build/build.js",
-    "dev": "node build/dev.js"
+    "build": "webpack",
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",

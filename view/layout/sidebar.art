@@ -96,8 +96,8 @@
                 </span>
             </a>
             <ul class="treeview-menu" style="display:block;">
-                <li class="{{if action === 'simple'}}active{{/if}}"><a href="/table/simple"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                <li class="{{if action === 'data'}}active{{/if}}"><a href="/table/data"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                <li class="{{if action === 'simple'}}active{{/if}}"><a href="#/table/simple"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                <li class="{{if action === 'data'}}active{{/if}}"><a href="#/table/data"><i class="fa fa-circle-o"></i> Data tables</a></li>
             </ul>
         </li>
     </ul>

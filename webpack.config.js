@@ -3,12 +3,12 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
-    'pc': './src/entry.pc.js'
+    'nfeng-ui-jquery': './assets/entry.pc.js'
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: __dirname + '/dist',
     filename: 'js/[name].js',
-    publicPath: '/'
+    publicPath: '/dist/'
   },
   plugins: [
     // new webpack.optimize.UglifyJsPlugin({
