@@ -19,7 +19,21 @@ define(['./routes'], function(routes) {
         },
         complieOuter: function(val, params) {
             var router = this;
-            require([val], function (view) {});
+
+            router.sidebarActive(val);
+            
+            require([val], function (view) {
+                if (router.current != null) {
+                    router.current.remove();
+                    router.current = null;
+                }
+                console.log(new view(params))
+            });
+        },
+        sidebarActive: function (val) {
+            // page reload sidebar active
+            var str = '[href="#'+val.replace('view', '')+'"]';
+            $(str).parent('li').addClass('active');
         }
     });
 

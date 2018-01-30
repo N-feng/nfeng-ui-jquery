@@ -8,19 +8,28 @@
 </head>
 
 <body>
+    <div class="header"></div>
     <div class="sidebar"></div>
-    <script src="../static/js/jquery-1.10.2.min.js"></script>
-    <script src="static/js/underscore-min.js"></script>
-    <script src="static/js/backbone-min.js"></script>
-    <script src="static/js/require.js"></script>
+    <div class="content">
+        <div class="content-wrapper"></div>
+    </div>
+    <script src="static/jquery-1.10.2.min.js"></script>
+    <script src="static/underscore-min.js"></script>
+    <script src="static/backbone-min.js"></script>
+    <script src="static/require.js"></script>
     <script src="./dist/js/nfeng-ui-jquery.js"></script>
     <script>
     require.config({
         paths: {
-            text: 'static/js/text'
+            text: 'static/text'
         }
     });
-    require(['./view/layout/sidebar','./router/index']);
+    require([
+        './view/header/header',
+        './view/sidebar/sidebar'
+    ], function () {
+        require(['./router/index'])
+    });
     </script>
 </body>
 

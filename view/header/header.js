@@ -1,12 +1,12 @@
 define(function(require) {
     // var base = require('base');
     // console.log(base)
-    var sidebarTemplate = require("text!./sidebar.art");
+    var headerTemplate = require("text!./header.art");
     // console.log(sibarTemplate)
 
-    var SideBarView = Backbone.View.extend({
-        el: '.sidebar',
-        template: _.template(sidebarTemplate),
+    var HeaderView = Backbone.View.extend({
+        el: '.header',
+        template: _.template(headerTemplate),
         initialize: function() {
             this.render();
         },
@@ -15,5 +15,5 @@ define(function(require) {
         }
     });
 
-    var sideBarView = new SideBarView();
+    var headerView = new HeaderView();
 });

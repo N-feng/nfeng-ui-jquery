@@ -2,7 +2,7 @@ define(function () {
     var routerList = {
       'public/index': 'view/public/index',
       'table/simple': 'view/table/simple',
-      'table/data/:id': 'view/table/data'
+      'table/data': 'view/table/data'
     };
 
     return routerList;

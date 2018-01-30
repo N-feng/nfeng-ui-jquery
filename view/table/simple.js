@@ -1,5 +1,5 @@
 define(function(require) {
-    var template = require("text!./data.html");
+    var template = require("text!./simple.html");
 
     var View = Backbone.View.extend({
         el: '.content-wrapper',
