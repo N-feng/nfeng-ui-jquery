@@ -19,24 +19,19 @@ define(['./routes'], function(routes) {
         },
         complieOuter: function(val, params) {
             var router = this;
-
-            router.sidebarActive(val);
-            
             require([val], function (view) {
                 if (router.current != null) {
                     router.current.remove();
                     router.current = null;
                 }
-                console.log(new view(params))
+                var content = document.querySelectorAll('.content')[0];
+                var dom = document.createElement("div");
+                dom.className = 'content-wrapper';
+                content.appendChild(dom);
+                router.current = new view(params);
             });
-        },
-        sidebarActive: function (val) {
-            // page reload sidebar active
-            var str = '[href="#'+val.replace('view', '')+'"]';
-            $(str).parent('li').addClass('active');
         }
     });
-
     var app_router = new AppRouter(routes);
     Backbone.history.start();
 });

@@ -2,6 +2,7 @@ require("./sass/style.scss");
 
 var NUI = {};
 
+// 注入到jQuery原型对象
 $.each([
 	require('./js/plugins/datepick'),
 	require('./js/plugins/multiSelect'),
@@ -16,13 +17,16 @@ $.each([
 	}
 });
 
+// 注入到jQuery全局对象
 $.each([
 	require('./js/common/pubsub'),
-	require('./js/component/loading')
+	require('./js/component/loading'),
+	require('./js/common/urlHelper'),
 ], function (index, component) {
 	$.extend(component);
 });
 
+// 调用插件
 $.fn.NUI = function () {
 	var arg = arguments;
 	var component = NUI[arguments[0]];

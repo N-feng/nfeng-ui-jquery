@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a6747bf10b65c2e960ce"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "804e3b2ce8f7faf4cdad"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1081,6 +1081,7 @@ __webpack_require__(4);
 
 var NUI = {};
 
+// 注入到jQuery原型对象
 $.each([
 	__webpack_require__(5),
 	__webpack_require__(10),
@@ -1095,13 +1096,16 @@ $.each([
 	}
 });
 
+// 注入到jQuery全局对象
 $.each([
 	__webpack_require__(37),
-	__webpack_require__(38)
+	__webpack_require__(38),
+	__webpack_require__(39),
 ], function (index, component) {
 	$.extend(component);
 });
 
+// 调用插件
 $.fn.NUI = function () {
 	var arg = arguments;
 	var component = NUI[arguments[0]];
@@ -1114,14 +1118,13 @@ $.fn.NUI = function () {
 	}
 };
 
-__webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
-
 __webpack_require__(42);
-__webpack_require__(43);
 
+__webpack_require__(43);
 __webpack_require__(44);
+
 __webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
@@ -1130,6 +1133,7 @@ __webpack_require__(49);
 __webpack_require__(50);
 __webpack_require__(51);
 __webpack_require__(52);
+__webpack_require__(53);
 
 
 /***/ }),
@@ -1689,108 +1693,108 @@ module.exports = {
 
 let Utils = __webpack_require__(1);
 let Event = {
-	updateDateView: function (date, event, $selector) {
-		event && event.preventDefault();
-		let _this = this;
-		let _date = date || _this._d;
+    updateDateView: function (date, event, $selector) {
+        event && event.preventDefault();
+        let _this = this;
+        let _date = date || _this._d;
 
-		_this.update(_date);
-		_this.renderDate(_date, $selector);
-		_this.showDateView(_date);
-	},
-	updateMonthView: function (date, event) {
-		event && event.preventDefault();
-		let _this = this;
-		let _date = date || _this._d;
+        _this.update(_date);
+        _this.renderDate(_date, $selector);
+        _this.showDateView(_date);
+    },
+    updateMonthView: function (date, event) {
+        event && event.preventDefault();
+        let _this = this;
+        let _date = date || _this._d;
 
-		_this.update(_date);
-		_this.renderMonth(_date);
-		_this.showMonthView(_date);
-	},
-	updateYearView(date, event) {
-    event && event.preventDefault();
-    let _this = this;
-    let _date = date || _this._d;
-    _this.update(_date);
-    _this.renderYear(_date);
-    _this.showYearView(_date);
-  },
-  updateDecadeView(date, event) {
-    event && event.preventDefault();
-    let _this = this;
-    let _date = date || _this._d;
-    _this.update(_date);
-    _this.renderDecade(_date);
-    _this.showDecadeView(_date);
-  },
-  selectDecade: function (event) {
-  	event && event.preventDefault();
-  	let _this = this;
-		let config = _this.config;
-    let el = event.target;
-    let $td = $(el).parent('td');
-    let _date = new Date($td.attr('title'));
+        _this.update(_date);
+        _this.renderMonth(_date);
+        _this.showMonthView(_date);
+    },
+    updateYearView(date, event) {
+        event && event.preventDefault();
+        let _this = this;
+        let _date = date || _this._d;
+        _this.update(_date);
+        _this.renderYear(_date);
+        _this.showYearView(_date);
+    },
+    updateDecadeView(date, event) {
+        event && event.preventDefault();
+        let _this = this;
+        let _date = date || _this._d;
+        _this.update(_date);
+        _this.renderDecade(_date);
+        _this.showDecadeView(_date);
+    },
+    selectDecade: function (event) {
+        event && event.preventDefault();
+        let _this = this;
+        let config = _this.config;
+        let el = event.target;
+        let $td = $(el).parent('td');
+        let _date = new Date($td.attr('title'));
 
-    _this.update(_date);
-    _this.renderYear(_date);
-    _this.showYearView(_date);
-  },
-  selectYear(event) {
-    event && event.preventDefault();
-    let _this = this;
-		let config = _this.config;
-    let el = event.target;
-    let $td = $(el).parent('td');
-    let _date = new Date($td.attr('title'));
-    _this.update(_date);
-    _this.renderMonth(_date);
-    if (_this.config.type === 'year') {
-      Event.checked.call(_this, event, config.format.substring(0, 4));
-      _this.hide();
-    } else {
-    	_this.showMonthView(_date);
+        _this.update(_date);
+        _this.renderYear(_date);
+        _this.showYearView(_date);
+    },
+    selectYear(event) {
+        event && event.preventDefault();
+        let _this = this;
+        let config = _this.config;
+        let el = event.target;
+        let $td = $(el).parent('td');
+        let _date = new Date($td.attr('title'));
+        _this.update(_date);
+        _this.renderMonth(_date);
+        if (_this.config.type === 'year') {
+            Event.checked.call(_this, event, config.format.substring(0, 4));
+            _this.hide();
+        } else {
+            _this.showMonthView(_date);
+        }
+    },
+    selectMonth: function (event) {
+        event && event.preventDefault();
+        let _this = this;
+        let config = _this.config;
+        let el = event.target;
+        let $td = $(el).parent('td');
+        let date = new Date($td.attr('title'));
+
+        _this.update(date);
+        _this.renderDate(date);
+        if (_this.config.type === 'month') {
+            Event.checked.call(_this, event, config.format.substring(0, 7));
+            _this.config.selectMonth();
+            _this.hide();
+        } else {
+            _this.showDateView();
+        }
+    },
+    selectDay: function (event) {
+        event && event.preventDefault();
+        let _this = this;
+        let config = _this.config;
+        let el = event.target;
+        let $td = $(el).parent('td');
+        let date = new Date($td.attr('title'));
+
+        _this.update(date);
+        _this.renderDate(date);
+        if (_this.config.type === 'date') {
+            Event.checked.call(_this, event, config.format.substring(0, 10));
+            _this.config.weeks(Utils.iso8601Week(date));
+            _this.hide();
+        }
+    },
+    checked: function (event, fmt) {
+        let _this = this;
+        _this.value = $(event.target).parent('td').attr('title');
+        _this.$el.val(fmt ? Utils.format(_this.value, fmt) : _this.value);
+        // $(document).trigger('click.datepick')
     }
-  },
-	selectMonth: function (event) {
-		event && event.preventDefault();
-		let _this = this;
-		let config = _this.config;
-		let el = event.target;
-		let $td = $(el).parent('td');
-		let date = new Date($td.attr('title'));
-
-		_this.update(date);
-		_this.renderDate(date);
-		if (_this.config.type === 'month') {
-			Event.checked.call(_this, event, config.format.substring(0, 7));
-			_this.config.selectMonth();
-			_this.hide();
-		} else {
-			_this.showDateView();
-		}
-	},
-	selectDay: function (event) {
-		event && event.preventDefault();
-		let _this = this;
-		let config = _this.config;
-		let el = event.target;
-		let $td = $(el).parent('td');
-		let date = new Date($td.attr('title'));
-		
-		_this.update(date);	
-		_this.renderDate(date);
-		if (_this.config.type === 'date') {
-			Event.checked.call(_this, event, config.format.substring(0, 10));
-			_this.config.weeks(Utils.iso8601Week(date));
-			_this.hide();
-		}
-	},
-	checked: function (event, fmt) {
-		let _this = this;
-		_this.value = $(event.target).parent('td').attr('title');
-		_this.$el.val(fmt ? Utils.format(_this.value, fmt) : _this.value);
-		// $(document).trigger('click.datepick')
-	}
 }
 
 module.exports = Event
@@ -3964,6 +3968,186 @@ module.exports = { loading: Loading };
 /* 39 */
 /***/ (function(module, exports) {
 
+/**
+ * 拿到url上的参数
+ * 调用：$.getHash(url);
+ */
+
+var urlHelper = {
+
+    // 获取单个参数
+    // demo: getParam('query','https://juejin.im/search?query=hello&time=2017-11-12')
+    // output: "hello"
+    /**
+     * [getParam ]
+     * @param  {String} name
+     * @param  {String} url   [default:location.href]
+     * @return {String|Boolean}
+     */
+    getParam: function (name, url) {
+        if (typeof name !== 'string') return false;
+        if (!url) url = window.location.href;
+        // 当遇到name[xx]时，对方括号做一下转义为 name\[xxx\]，因为下面还需要使用name做正则
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        var results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    },
+
+    // 设置单个参数
+    // demo: setParam('query','world','https://juejin.im/search?query=hello&time=2017-11-12')
+    // output: "https://juejin.im/search?query=world&time=2017-11-12"
+    /**
+     * [setParam 设置单个参数]
+     * @param {String} name
+     * @param {String|Number} val
+     * @return {String|Boolean}
+     */
+    setParam: function (name, val, url) {
+        if (typeof name !== 'string') return false;
+        if (!url) url = window.location.href;
+        var _name = name.replace(/[\[\]]/g, '\\$&');
+        var value = name + '=' + encodeURIComponent(val);
+        var regex = new RegExp(_name + '=[^&]*');
+        var urlArr = url.split('#');
+        var result = '';
+
+        if (regex.exec(url)) {
+            result = url.replace(regex, value);
+        } else {
+            result = urlArr[0] + '&' + value + (urlArr[1] || '');
+        }
+
+        return result
+    },
+
+    // 移除单个参数
+    // demo: removeParam('query','https://juejin.im/search?query=hello&time=2017-11-12')
+    // output: "https://juejin.im/search?time=2017-11-12"
+    /**
+     * [removeParam 移除单个参数]
+     * @param  {String} name
+     * @param  {String} url   [default:location.href]
+     * @return {String|Boolean}
+     */
+    removeParam: function (name, url) {
+        if (typeof name !== 'string') return false;
+        if (!url) url = window.location.href;
+        var urlparts = url.split('?');
+        var prefix = encodeURIComponent(name + '=');
+        var pars = urlparts[1].split(/[&;]/g);
+        var i = 0, len = pars.length;
+
+        for (; i < len; i++) {
+            if (encodeURIComponent(pars[i]).lastIndexOf(prefix, 0) !== -1) {
+                pars.splice(i, 1);
+            }
+        }
+
+        url = urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : '');
+
+        return url;
+    },
+
+    // 获取多个参数
+    // demo: getParams('query time','https://juejin.im/search?query=hello&time=2017-11-12')
+    // output: {query: "hello", time: "2017-11-12"}
+    /**
+     * [getParams 获取多个参数]
+     * @param  {String} names [多个用空格分割]
+     * @param  {String} url   [default:location.href]
+     * @return {[String|Boolean]}
+     */
+    getParams: function (names, url) {
+        if (typeof name !== 'string') return false;
+        var names = names.split(' ');
+        var result = {};
+        var i = 0,
+            len = names.length;
+        if (names.length === 0) return false;
+        for (; i < len; i++) {
+            result[names[i]] = getParam(names[i], url);
+        }
+        return result;
+    },
+
+    // 设置多个参数
+    // demo: setParams({a:111,b:222,query:'world'},'https://juejin.im/search?query=hello&time=2017-11-12')
+    // output: "https://juejin.im/search?query=world&time=2017-11-12&a=111&b=222"
+    /**
+     * [setParams 设置多个参数]
+     * @param {Object} obj
+     * @param  {String} url   [default:location.href]
+     * @return {[String|Boolean]}
+     */
+    setParams: function (obj, url) {
+        var result = url || '';
+        if (Object.prototype.toString.call(obj) !== '[object Object]') return false;
+        for (var name in obj) {
+            result = setParam(name, obj[name], result);
+        }
+        return result;
+    },
+
+    // 移除多个参数
+    // demo: removeParams('query time','https://juejin.im/search?query=hello&time=2017-11-12')
+    // output: "https://juejin.im/search"
+    /**
+     * [removeParams 移除多个参数]
+     * @param  {String} names [多个用空格分割]
+     * @param  {String} url   [default:location.href]
+     * @return {[String|Boolean]}
+     */
+    removeParams: function (names, url) {
+        var result = url || '';
+        var names = names.split(' ');
+        var i = 0,
+            len = names.length;
+        if (names.length === 0) return false;
+
+        for (; i < len; i++) {
+            result = removeParam(names[i], result);
+        }
+        return result;
+    },
+
+    // url hash 操作
+    /**
+     * [getHash 方法]
+     * @param  {[String]} url [default:location.href]
+     * @return {[String]}
+     */
+    getHash: function (url) {
+        return decodeURIComponent(url ? url.substring(url.indexOf('#') + 1) : window.location.hash.substr(1));
+    },
+    /**
+     * [setHash 方法]
+     * @param {String} hash
+     */
+    setHash: function (hash) {
+        window.location.replace('#' + encodeURIComponent(hash));
+    },
+    /**
+     * [removeHash 方法]
+     */
+    removeHash: function () {
+        window.location.replace('#', '');
+    }
+
+};
+
+// $.fn.getParam = urlHelper.getParam;
+$.fn.getHash = urlHelper.getHash;
+
+module.exports = urlHelper;
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
 ;
 (function () {
 
@@ -3972,7 +4156,7 @@ module.exports = { loading: Loading };
 } ());
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 ;
@@ -4042,7 +4226,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 ;
@@ -4059,7 +4243,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 (function($, window) {
@@ -4351,7 +4535,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 ;(function(){
@@ -4387,7 +4571,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 ;
@@ -4793,7 +4977,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 ;(function(){
@@ -4822,7 +5006,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 ;
@@ -4876,7 +5060,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 ;
@@ -4971,7 +5155,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 ;
@@ -5116,7 +5300,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 ;
@@ -5427,7 +5611,7 @@ module.exports = { loading: Loading };
 })(jQuery, window);
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 (function() {
@@ -5481,7 +5665,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 ;
@@ -5546,7 +5730,7 @@ module.exports = { loading: Loading };
 }());
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports) {
 
 ;
