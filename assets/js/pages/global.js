@@ -1,18 +1,19 @@
 (function() {
 
-  var dynamicLayer = $.fn.layer({
-    id: '#dynamicLayer',
-    vertical: false,
-    cache: true,
-    successCall: function(res) {
-      this.find('.layer-content').html(res);
-      $.pub('dynamicShow', [this]);
-    },
-    confirmCall: function(e, target, deferred) {
-      this.find('form').trigger('submit');
-      deferred.hideLayer();
-    }
-  });
+  // 创建弹层
+  // var dynamicLayer = $.fn.layer({
+  //   id: '#dynamicLayer',
+  //   vertical: false,
+  //   cache: true,
+  //   successCall: function(res) {
+  //     this.find('.layer-content').html(res);
+  //     $.pub('dynamicShow', [this]);
+  //   },
+  //   confirmCall: function(e, target, deferred) {
+  //     this.find('form').trigger('submit');
+  //     deferred.hideLayer();
+  //   }
+  // });
 
   $('[data-trigger="dynamic"]').on('click', function(event) {
     var $this = $(this);

@@ -100,3 +100,14 @@
         </ul>
     </li>
 </ul>
+
+<script id="sidebar">
+    $(function() {
+        var str = '[href="#'+$.getHash(window.location.href)+'"]';
+        $(str).parent('li').addClass('active');
+        $('.treeview-menu').on('click', 'a', function (e) {
+            $('.treeview-menu').find('li').removeClass('active');
+            $(e.target).parent('li').addClass('active');
+        })
+    });
+</script>

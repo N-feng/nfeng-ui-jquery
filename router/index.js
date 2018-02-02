@@ -1,37 +1,28 @@
-define(['./routes'], function(routes) {
+define(['require', './routes'], function(require, routes) {
     var AppRouter = Backbone.Router.extend({
-        state: null,
         current: null,
-        initialize: function(routes) {
-            var router = this;
-            _.each(routes, function(val, key) {
-                var param_keys = key.split('/:');
-                var name = param_keys.shift();
-                router.route(key, name, function() {
-                    router.state = '';
-                    var params = _.object(param_keys, arguments);
-                    router.complieOuter(val, params);
-                });
-            });
+        routes: {
+            "*actions" : "defaultRoute"
         },
-        execute: function(callback, args) {
-            callback.apply(this, args);
-        },
-        complieOuter: function(val, params) {
-            var router = this;
-            require([val], function (view) {
-                if (router.current != null) {
-                    router.current.remove();
-                    router.current = null;
+        defaultRoute : function(actions){
+            var url = routes[actions];
+            var defaultUrl = 'text!../' + url + '.html';
+            var errorUrl = 'text!../view/public/error.html';
+            var str = url ? defaultUrl : errorUrl;
+            require([str], function (template) {
+                if (this.current != null) {
+                    this.current.remove();
+                    this.current = null;
                 }
-                var content = document.querySelectorAll('.content')[0];
-                var dom = document.createElement("div");
-                dom.className = 'content-wrapper';
-                content.appendChild(dom);
-                router.current = new view(params);
+                var $dom = $("<div>", {
+                    class: 'content-wrapper',
+                    html: template
+                });
+                $('.content').append($dom);
+                this.current = $dom;
             });
         }
     });
-    var app_router = new AppRouter(routes);
+    new AppRouter();
     Backbone.history.start();
 });

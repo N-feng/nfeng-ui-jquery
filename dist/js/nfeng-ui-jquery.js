@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "804e3b2ce8f7faf4cdad"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2e48c6a9f0169ae6429b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -5616,19 +5616,20 @@ module.exports = urlHelper;
 
 (function() {
 
-  var dynamicLayer = $.fn.layer({
-    id: '#dynamicLayer',
-    vertical: false,
-    cache: true,
-    successCall: function(res) {
-      this.find('.layer-content').html(res);
-      $.pub('dynamicShow', [this]);
-    },
-    confirmCall: function(e, target, deferred) {
-      this.find('form').trigger('submit');
-      deferred.hideLayer();
-    }
-  });
+  // 创建弹层
+  // var dynamicLayer = $.fn.layer({
+  //   id: '#dynamicLayer',
+  //   vertical: false,
+  //   cache: true,
+  //   successCall: function(res) {
+  //     this.find('.layer-content').html(res);
+  //     $.pub('dynamicShow', [this]);
+  //   },
+  //   confirmCall: function(e, target, deferred) {
+  //     this.find('form').trigger('submit');
+  //     deferred.hideLayer();
+  //   }
+  // });
 
   $('[data-trigger="dynamic"]').on('click', function(event) {
     var $this = $(this);

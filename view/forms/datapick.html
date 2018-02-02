@@ -6,26 +6,26 @@
             </div>
             <div class="box-body">
                 <div class="form-group">
-                    <label>Select date</label>
-                    <div>
+                    <label>Select date</label><br>
+                    <div class="pr di">
                         <input type="text" class="form-control datepick" data-type="date" value="" placeholder="Select date">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Select month</label>
-                    <div>
+                    <label>Select month</label><br>
+                    <div class="pr di">
                         <input type="text" class="form-control datepick" data-type="month" value="" placeholder="Select month">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Select year</label>
-                    <div>
+                    <label>Select year</label><br>
+                    <div class="pr di">
                         <input type="text" class="form-control datepick" data-type="year" value="" placeholder="Select year">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Select range</label>
-                    <div>
+                    <label>Select range</label><br>
+                    <div class="pr di">
                         <input type="text" class="form-control datepick" data-type="range" value="" placeholder="Select range">
                     </div>
                 </div>
@@ -57,3 +57,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function () {
+        $('.datepick').NUI('datepick');
+    })
+</script>

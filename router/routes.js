@@ -1,12 +1,9 @@
 define(function () {
-    var routerList = {
-        'public/index': 'view/public/index',
+   var routes = {
+       "forms/datapick": "view/forms/datapick",
 
-        'forms/datapick': 'view/forms/datapick/index',
-
-        'table/simple': 'view/table/simple/index',
-        'table/data': 'view/table/data/index',
-    };
-
-    return routerList;
+       "table/simple":  "view/table/simple",
+       "table/data": "view/table/data",
+   };
+   return routes;
 });
