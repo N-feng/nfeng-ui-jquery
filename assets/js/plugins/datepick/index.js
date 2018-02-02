@@ -15,9 +15,10 @@ let ENP = {
 
 function datepick(options, selector) {
 	let defaults = {
+        container         : 'body',
 		initDate      	  : new Date(),
 		currentView   	  : 'date',
-		currentToday 			: true,
+		currentToday      : true,
 		type          	  : $(selector).data('type') || 'month',    //  week,  month,  year
 		minDate		  	  : '1990-00-00',
 		maxDate		  	  : '2019-10-10',
@@ -70,7 +71,7 @@ datepick.prototype.bindEvent = function () {
 		event.stopPropagation();
 	});
 
-	_this.$el.on(ENP.click, function (event) {		
+	_this.$el.on(ENP.click, function (event) {
 		if ($context.hasClass(config.hideClass) && $(event.target)[0] === _this.$el[0]) {
 			_this._d = new Date(this.value).toString() === 'Invalid Date' ? _this.config.initDate : new Date(this.value);
 			let mode = {
@@ -84,15 +85,15 @@ datepick.prototype.bindEvent = function () {
 	});
 
 	// 鼠标放到表单的时候icon交互
-	_this.$el.on(ENP.mouseover, function () { 
-		if($(this).val()) { 
+	_this.$el.on(ENP.mouseover, function () {
+		if($(this).val()) {
 			$(this).addClass('active');
 			_this.$clear.removeClass('hide');
 		}
 	});
 
-	_this.$el.on(ENP.mouseleave, function () { 
-		$(this).removeClass('active'); 
+	_this.$el.on(ENP.mouseleave, function () {
+		$(this).removeClass('active');
 	});
 
 	_this.$clear.on(ENP.mouseover, function () {

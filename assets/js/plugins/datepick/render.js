@@ -12,9 +12,9 @@ Render.prototype.renderInit = function () {
 	this.initHeader();
 	this.initDate();
 	this.initMonth();
-  this.initYear();
-  this.initDecade();
-	$('body').append(this.$container);
+  	this.initYear();
+  	this.initDecade();
+	$(this.config.container).append(this.$container);
 }
 
 Render.prototype.renderIcon = function () {

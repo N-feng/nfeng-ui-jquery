@@ -78,6 +78,13 @@ let Event = {
 		let str = '';
 
 		json['value'] = value;
+
+		// 必须参数demo:<span class="table-edit-text" data-url="" data-params="{}">num like: 9999</span>
+		if (_url === '') {
+            let valueText = Utils.commafy(parseInt(value)) === '' ? '-' : Utils.commafy(parseInt(value));
+            _this.showEditText(valueText, event);
+            return;
+		}
 		
 		$.ajax({
 			url: _url,

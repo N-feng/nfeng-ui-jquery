@@ -67,9 +67,9 @@
     height: 100%;
 }
 
-.table-fixed th {
-    height: 18px;
-}
+//.table-fixed th {
+//    height: 18px;
+//}
 
 .table-fixed .table-header th .lock {
     display: inline-block;
@@ -94,10 +94,10 @@
     }
 }
 
-.table-edit-text,
-.table-edit-input {
-    display: inline-block;
-}
+//.table-edit-text,
+//.table-edit-input {
+//    display: inline-block;
+//}
 
 .table-collapsed:after {
     content: "+";
