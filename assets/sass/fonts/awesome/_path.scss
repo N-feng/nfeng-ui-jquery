@@ -11,7 +11,9 @@
     //url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
     //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
 
-    src: url('https://n-feng.github.io/nfeng-ui-jquery/dist/font/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2');
+    //src: url('https://n-feng.github.io/nfeng-ui-jquery/dist/font/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2');
+
+    src: url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff');
 
     font-weight: normal;
     font-style: normal;

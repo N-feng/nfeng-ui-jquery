@@ -1,6 +1,6 @@
 require.config({
     paths: {
-        "text": './static/requirejs-text/text'
+        "text": './static/js/requirejs-text/text'
     }
 });
 
