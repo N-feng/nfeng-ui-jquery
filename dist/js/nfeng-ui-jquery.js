@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2e48c6a9f0169ae6429b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0dfe13bdaeb9a24de937"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -716,7 +716,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -1163,9 +1163,10 @@ let ENP = {
 
 function datepick(options, selector) {
 	let defaults = {
+        container         : 'body',
 		initDate      	  : new Date(),
 		currentView   	  : 'date',
-		currentToday 			: true,
+		currentToday      : true,
 		type          	  : $(selector).data('type') || 'month',    //  week,  month,  year
 		minDate		  	  : '1990-00-00',
 		maxDate		  	  : '2019-10-10',
@@ -1218,7 +1219,7 @@ datepick.prototype.bindEvent = function () {
 		event.stopPropagation();
 	});
 
-	_this.$el.on(ENP.click, function (event) {		
+	_this.$el.on(ENP.click, function (event) {
 		if ($context.hasClass(config.hideClass) && $(event.target)[0] === _this.$el[0]) {
 			_this._d = new Date(this.value).toString() === 'Invalid Date' ? _this.config.initDate : new Date(this.value);
 			let mode = {
@@ -1232,15 +1233,15 @@ datepick.prototype.bindEvent = function () {
 	});
 
 	// 鼠标放到表单的时候icon交互
-	_this.$el.on(ENP.mouseover, function () { 
-		if($(this).val()) { 
+	_this.$el.on(ENP.mouseover, function () {
+		if($(this).val()) {
 			$(this).addClass('active');
 			_this.$clear.removeClass('hide');
 		}
 	});
 
-	_this.$el.on(ENP.mouseleave, function () { 
-		$(this).removeClass('active'); 
+	_this.$el.on(ENP.mouseleave, function () {
+		$(this).removeClass('active');
 	});
 
 	_this.$clear.on(ENP.mouseover, function () {
@@ -1437,9 +1438,9 @@ Render.prototype.renderInit = function () {
 	this.initHeader();
 	this.initDate();
 	this.initMonth();
-  this.initYear();
-  this.initDecade();
-	$('body').append(this.$container);
+  	this.initYear();
+  	this.initDecade();
+	$(this.config.container).append(this.$container);
 }
 
 Render.prototype.renderIcon = function () {
@@ -3657,6 +3658,13 @@ let Event = {
 		let str = '';
 
 		json['value'] = value;
+
+		// 必须参数demo:<span class="table-edit-text" data-url="" data-params="{}">num like: 9999</span>
+		if (_url === '') {
+            let valueText = Utils.commafy(parseInt(value)) === '' ? '-' : Utils.commafy(parseInt(value));
+            _this.showEditText(valueText, event);
+            return;
+		}
 		
 		$.ajax({
 			url: _url,
