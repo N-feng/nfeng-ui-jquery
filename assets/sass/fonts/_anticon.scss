@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'anticon';
-  src: url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.eot');
-  /* IE9*/
-  src: url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ 
-  url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.ttf') format('truetype'), /* iOS 4.1- */ 
-  url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.svg#iconfont') format('svg');
+  //src: url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.eot');/* IE9*/
+  //src: url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  //url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.ttf') format('truetype'), /* iOS 4.1- */
+  //url('../fonts/anticon/font_148784_r2qo40wrmaolayvi.svg#iconfont') format('svg');
+  src: url('https://n-feng.github.io/nfeng-ui-jquery/static/font/anticon/anticon.woff') format('woff');
 }
 
 .anticon {

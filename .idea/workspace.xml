@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae572886-4e44-4595-8c31-40ffb8b93a22" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/fonts/awesome/awesome.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/fonts/_anticon.scss" afterPath="$PROJECT_DIR$/assets/sass/fonts/_anticon.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/fonts/_footable.scss" afterPath="$PROJECT_DIR$/assets/sass/fonts/_footable.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/fonts/_icomoon.scss" afterPath="$PROJECT_DIR$/assets/sass/fonts/_icomoon.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss" afterPath="$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss" />
       <change beforePath="$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss" afterPath="$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss" />
+      <change beforePath="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" afterPath="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" />
+      <change beforePath="$PROJECT_DIR$/dist/font/awesome.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/font_148784_r2qo40wrmaolayvi.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/font_148784_r2qo40wrmaolayvi.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/font_148784_r2qo40wrmaolayvi.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/font_148784_r2qo40wrmaolayvi.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/font/ionicons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js" afterPath="$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,26 +38,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/event.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1825">
-              <caret line="94" column="30" lean-forward="false" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,16 +68,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/fonts/awesome/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_path.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_path.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+            <state relative-caret-position="252">
+              <caret line="12" column="122" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -104,8 +91,38 @@
       <file leaf-file-name="_anticon.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_anticon.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="65" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_icomoon.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_icomoon.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footable.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_footable.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="67" lean-forward="false" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ionicons.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -166,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss" />
         <option value="$PROJECT_DIR$/assets/sass/component/_tags.scss" />
         <option value="$PROJECT_DIR$/assets/sass/component/_icon.scss" />
         <option value="$PROJECT_DIR$/assets/sass/style.scss" />
@@ -213,6 +229,10 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/static/js/main.js" />
         <option value="$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/fonts/_anticon.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/fonts/_icomoon.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/fonts/_footable.scss" />
       </list>
     </option>
   </component>
@@ -262,25 +282,50 @@
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="icomoon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="font" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="font" type="462c0819:PsiDirectoryNode" />
-              <item name="awesome" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,7 +416,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54846000" />
+    <option name="totallyTimeSpent" value="55681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,27 +499,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/common/pubsub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/pages/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/common/urlHelper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -755,14 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_anticon.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -789,8 +805,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        <state relative-caret-position="252">
+          <caret line="12" column="122" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_anticon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="65" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_icomoon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_footable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="67" lean-forward="false" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
           <folding />
         </state>
       </provider>

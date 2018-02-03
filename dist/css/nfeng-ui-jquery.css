@@ -1991,14 +1991,13 @@
 
 @font-face {
   font-family: 'footable';
-  src: url(/dist/font/footable.eot);
-  src: url(/dist/font/footable.eot?#iefix) format("embedded-opentype"), url(/dist/font/footable.woff) format("woff"), url(/dist/font/footable.ttf) format("truetype"), url(/dist/font/footable.svg#footable) format("svg");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/footable/footable.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'icomoon';
-  src: url(/dist/font/icomoon.ttf) format("truetype");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/icomoon/icomoon.ttf?7ygapi") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -2148,9 +2147,7 @@
 
 @font-face {
   font-family: 'anticon';
-  src: url(/dist/font/font_148784_r2qo40wrmaolayvi.eot);
-  /* IE9*/
-  src: url(/dist/font/font_148784_r2qo40wrmaolayvi.woff) format("woff"), url(/dist/font/font_148784_r2qo40wrmaolayvi.ttf) format("truetype"), url(/dist/font/font_148784_r2qo40wrmaolayvi.svg#iconfont) format("svg"); }
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/anticon/anticon.woff") format("woff"); }
 
 .anticon {
   display: inline-block;
@@ -2183,7 +2180,7 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url(/dist/font/ionicons.ttf) format("truetype");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/ionicons/ionicons.ttf?v=2.0.0") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
