@@ -6,9 +6,9 @@ require.config({
 
 require([
     '../router/index',
-    'text!../view/layouts/header.html',
-    'text!../view/layouts/sidebar.html'
+    // 'text!../view/layouts/header.html',
+    // 'text!../view/layouts/sidebar.html'
 ], function (router, header, sidebar) {
-    $('.header').html(header);
-    $('.sidebar').html(sidebar);
+    // $('.header').html(header);
+    // $('.sidebar').html(sidebar);
 });
