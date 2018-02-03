@@ -7,7 +7,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("https://n-feng.github.io/nfeng-ui-jquery/dist/font/fontawesome-webfont.woff2?v=4.4.0") format("woff2");
+  src: url(/dist/fontawesome-webfont.eot);
+  src: url(/dist/fontawesome-webfont.eot?#iefix&v=4.4.0) format("embedded-opentype"), url(/dist/fontawesome-webfont.woff2) format("woff2"), url(/dist/fontawesome-webfont.woff) format("woff"), url(/dist/fontawesome-webfont.ttf) format("truetype"), url(/dist/fontawesome-webfont.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1991,14 +1992,14 @@
 
 @font-face {
   font-family: 'footable';
-  src: url(/dist/font/footable.eot);
-  src: url(/dist/font/footable.eot?#iefix) format("embedded-opentype"), url(/dist/font/footable.woff) format("woff"), url(/dist/font/footable.ttf) format("truetype"), url(/dist/font/footable.svg#footable) format("svg");
+  src: url(/dist/footable.eot);
+  src: url(/dist/footable.eot?#iefix) format("embedded-opentype"), url(/dist/footable.woff) format("woff"), url(/dist/footable.ttf) format("truetype"), url(/dist/footable.svg#footable) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'icomoon';
-  src: url(/dist/font/icomoon.ttf) format("truetype");
+  src: url(/dist/icomoon.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -2148,9 +2149,9 @@
 
 @font-face {
   font-family: 'anticon';
-  src: url(/dist/font/font_148784_r2qo40wrmaolayvi.eot);
+  src: url(/dist/font_148784_r2qo40wrmaolayvi.eot);
   /* IE9*/
-  src: url(/dist/font/font_148784_r2qo40wrmaolayvi.woff) format("woff"), url(/dist/font/font_148784_r2qo40wrmaolayvi.ttf) format("truetype"), url(/dist/font/font_148784_r2qo40wrmaolayvi.svg#iconfont) format("svg"); }
+  src: url(/dist/font_148784_r2qo40wrmaolayvi.woff) format("woff"), url(/dist/font_148784_r2qo40wrmaolayvi.ttf) format("truetype"), url(/dist/font_148784_r2qo40wrmaolayvi.svg#iconfont) format("svg"); }
 
 .anticon {
   display: inline-block;
@@ -2183,7 +2184,7 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url(/dist/font/ionicons.ttf) format("truetype");
+  src: url(/dist/ionicons.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -6534,7 +6535,7 @@ th {
   position: absolute;
   top: -15px;
   right: 35px;
-  background-image: url(/dist/img/icons.png);
+  background-image: url(/dist/icons.png);
   background-repeat: no-repeat;
   background-position: -154px -109px;
   width: 20px;

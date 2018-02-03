@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: __dirname + '/dist',
-    filename: 'js/[name].js',
+    filename: '[name].js',
     publicPath: '/dist/'
   },
   plugins: [
@@ -17,7 +17,7 @@ module.exports = {
     //     }
     // }),
     new ExtractTextPlugin({
-      filename: 'css/[name].css'
+      filename: '[name].css'
     }),
     // 下面三个是HMR的依赖插件
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -35,7 +35,7 @@ module.exports = {
         options: {
           limit: 10000,
           // name: 'fonts/[name].[hash:7].[ext]'
-          name: 'font/[name].[ext]'
+          name: '[name].[ext]'
         }
       },
       {
@@ -50,7 +50,7 @@ module.exports = {
         loader: 'url-loader?limit=8192',
         options: {
           limit: 10000,
-          name: 'img/[name].[ext]'
+          name: '[name].[ext]'
         }
       }
     ]
