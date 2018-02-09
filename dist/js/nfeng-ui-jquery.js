@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2e48c6a9f0169ae6429b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6e5704e131508978a113"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1089,7 +1089,8 @@ $.each([
 	__webpack_require__(19),
 	__webpack_require__(23),
 	__webpack_require__(27),
-	__webpack_require__(33)
+	__webpack_require__(33),
+	__webpack_require__(37)
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -1098,9 +1099,9 @@ $.each([
 
 // 注入到jQuery全局对象
 $.each([
-	__webpack_require__(37),
 	__webpack_require__(38),
 	__webpack_require__(39),
+	__webpack_require__(40),
 ], function (index, component) {
 	$.extend(component);
 });
@@ -1118,14 +1119,13 @@ $.fn.NUI = function () {
 	}
 };
 
-__webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
-
 __webpack_require__(43);
-__webpack_require__(44);
 
+__webpack_require__(44);
 __webpack_require__(45);
+
 __webpack_require__(46);
 __webpack_require__(47);
 __webpack_require__(48);
@@ -1134,6 +1134,7 @@ __webpack_require__(50);
 __webpack_require__(51);
 __webpack_require__(52);
 __webpack_require__(53);
+__webpack_require__(54);
 
 
 /***/ }),
@@ -1163,9 +1164,10 @@ let ENP = {
 
 function datepick(options, selector) {
 	let defaults = {
+        container         : 'body',
 		initDate      	  : new Date(),
 		currentView   	  : 'date',
-		currentToday 			: true,
+		currentToday      : true,
 		type          	  : $(selector).data('type') || 'month',    //  week,  month,  year
 		minDate		  	  : '1990-00-00',
 		maxDate		  	  : '2019-10-10',
@@ -1218,7 +1220,7 @@ datepick.prototype.bindEvent = function () {
 		event.stopPropagation();
 	});
 
-	_this.$el.on(ENP.click, function (event) {		
+	_this.$el.on(ENP.click, function (event) {
 		if ($context.hasClass(config.hideClass) && $(event.target)[0] === _this.$el[0]) {
 			_this._d = new Date(this.value).toString() === 'Invalid Date' ? _this.config.initDate : new Date(this.value);
 			let mode = {
@@ -1232,15 +1234,15 @@ datepick.prototype.bindEvent = function () {
 	});
 
 	// 鼠标放到表单的时候icon交互
-	_this.$el.on(ENP.mouseover, function () { 
-		if($(this).val()) { 
+	_this.$el.on(ENP.mouseover, function () {
+		if($(this).val()) {
 			$(this).addClass('active');
 			_this.$clear.removeClass('hide');
 		}
 	});
 
-	_this.$el.on(ENP.mouseleave, function () { 
-		$(this).removeClass('active'); 
+	_this.$el.on(ENP.mouseleave, function () {
+		$(this).removeClass('active');
 	});
 
 	_this.$clear.on(ENP.mouseover, function () {
@@ -1437,9 +1439,9 @@ Render.prototype.renderInit = function () {
 	this.initHeader();
 	this.initDate();
 	this.initMonth();
-  this.initYear();
-  this.initDecade();
-	$('body').append(this.$container);
+  	this.initYear();
+  	this.initDecade();
+	$(this.config.container).append(this.$container);
 }
 
 Render.prototype.renderIcon = function () {
@@ -1795,9 +1797,9 @@ let Event = {
         _this.$el.val(fmt ? Utils.format(_this.value, fmt) : _this.value);
         // $(document).trigger('click.datepick')
     }
-}
+};
 
-module.exports = Event
+module.exports = Event;
 
 
 /***/ }),
@@ -3657,6 +3659,13 @@ let Event = {
 		let str = '';
 
 		json['value'] = value;
+
+		// 必须参数demo:<span class="table-edit-text" data-url="" data-params="{}">num like: 9999</span>
+		if (_url === '') {
+            let valueText = Utils.commafy(parseInt(value)) === '' ? '-' : Utils.commafy(parseInt(value));
+            _this.showEditText(valueText, event);
+            return;
+		}
 		
 		$.ajax({
 			url: _url,
@@ -3894,6 +3903,102 @@ module.exports = Render
 /* 37 */
 /***/ (function(module, exports) {
 
+var ENP = {
+    click: 'click.menu',
+    mouseover: 'mouseover.menu',
+    mouseleave: 'mouseleave.menu'
+};
+
+function Menu(options, selector) {
+    var defaults = {
+        trigger: 'click'
+    };
+    var _this = this;
+    _this.config = $.extend({}, defaults, options);
+    _this.$el = $(selector);
+
+    _this.init();
+}
+
+Menu.prototype.init = function () {
+    var _this = this;
+
+    _this.showActive();
+    _this.bindEvent();
+};
+
+Menu.prototype.showActive = function () {
+    var url = window.location.href;
+    var str = '#' + $.getHash(url);
+    var $target = $("[href='"+str+"']");
+
+    $target.addClass('active');
+    $target.parents('.menu-sub').siblings('.menu-title').addClass('active');
+};
+
+Menu.prototype.bindEvent = function () {
+    var _this = this;
+    var config = _this.config;
+    config.trigger === 'click' ? _this.bindClickEvent() : '';
+    config.trigger === 'hover' ? _this.bindHoverEvent() : '';
+
+    // 点击菜单active 变化
+    _this.$el.on(ENP.click, '.menu-item', function () {
+        _this.$el.find('.menu-item').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.menu-sub').siblings('.menu-title').addClass('active')
+            .parent('li').siblings('li').find('.menu-title').removeClass('active');
+    });
+    _this.$el.on(ENP.click, '.menu-title', function () {
+        _this.$el.find('.menu-item').removeClass('active');
+        $(this).addClass('active');
+        $(this).addClass('active')
+            .parent('li').siblings('li').find('.menu-title').removeClass('active');
+    });
+};
+
+Menu.prototype.bindClickEvent = function () {
+    var _this = this;
+
+    // 点击菜单标题展开内容
+    _this.$el.on(ENP.click, '.menu-title', function () {
+        if ($(this).hasClass('menu-open')) {
+            $(this).siblings('.menu-sub').slideUp();
+        } else {
+            $(this).siblings('.menu-sub').slideDown();
+        }
+        $(this).toggleClass('menu-open');
+    });
+};
+
+Menu.prototype.bindHoverEvent = function () {
+    var _this = this;
+
+    // 鼠标放在菜单效果
+    _this.$el.on(ENP.mouseover, 'li', function () {
+        $(this).find('.menu-sub').slideDown();
+        $(this).find('.menu-title').addClass('menu-open');
+    });
+
+    // 鼠标离开菜单效果
+    _this.$el.on(ENP.mouseleave, 'li', function () {
+        $(this).find('.menu-sub').slideUp();
+        $(this).find('.menu-title').removeClass('menu-open');
+    });
+};
+
+module.exports = {
+    menu: function (options) {
+        return this.each(function (index, el) {
+            $(el).data('menu', new Menu(options, el));
+        });
+    }
+};
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
 var o = $({});
 
 module.exports = {
@@ -3909,7 +4014,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 let defaults = {
@@ -3965,7 +4070,7 @@ $.fn.loading = Loading;
 module.exports = { loading: Loading };
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 /**
@@ -4139,13 +4244,13 @@ var urlHelper = {
 };
 
 // $.fn.getParam = urlHelper.getParam;
-$.fn.getHash = urlHelper.getHash;
+// $.fn.getHash = urlHelper.getHash;
 
 module.exports = urlHelper;
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 ;
@@ -4156,7 +4261,7 @@ module.exports = urlHelper;
 } ());
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 ;
@@ -4226,7 +4331,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 ;
@@ -4243,7 +4348,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 (function($, window) {
@@ -4535,7 +4640,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 ;(function(){
@@ -4571,7 +4676,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 ;
@@ -4977,7 +5082,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 ;(function(){
@@ -5006,7 +5111,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 ;
@@ -5060,7 +5165,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 ;
@@ -5155,7 +5260,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 ;
@@ -5300,7 +5405,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 ;
@@ -5611,7 +5716,7 @@ module.exports = urlHelper;
 })(jQuery, window);
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 (function() {
@@ -5666,7 +5771,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports) {
 
 ;
@@ -5731,7 +5836,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 ;

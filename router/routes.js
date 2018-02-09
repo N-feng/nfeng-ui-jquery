@@ -1,5 +1,7 @@
 define(function () {
    var routes = {
+       "layout/menu": "view/layout/menu",
+
        "public/index": "view/public/index",
 
        "forms/datapick": "view/forms/datapick",

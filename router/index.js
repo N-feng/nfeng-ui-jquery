@@ -8,7 +8,8 @@ define(['require', './routes'], function(require, routes) {
             var url = routes[actions];
             var defaultUrl = 'text!../' + url + '.html';
             var errorUrl = 'text!../view/public/error.html';
-            var str = url ? defaultUrl : errorUrl;
+            var indexUrl = 'text!../view/public/index.html';
+            var str = actions == null ? indexUrl : url ? defaultUrl : errorUrl;
             require([str], function (template) {
                 if (this.current != null) {
                     this.current.remove();

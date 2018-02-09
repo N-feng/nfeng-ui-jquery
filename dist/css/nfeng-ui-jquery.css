@@ -7,8 +7,7 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/dist/font/fontawesome-webfont.eot);
-  src: url(/dist/font/fontawesome-webfont.eot?#iefix&v=4.4.0) format("embedded-opentype"), url(/dist/font/fontawesome-webfont.woff2) format("woff2"), url(/dist/font/fontawesome-webfont.woff) format("woff"), url(/dist/font/fontawesome-webfont.ttf) format("truetype"), url(/dist/font/fontawesome-webfont.svg#fontawesomeregular) format("svg");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/awesome/awesome.woff?v=4.4.0") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -1992,14 +1991,13 @@
 
 @font-face {
   font-family: 'footable';
-  src: url(/dist/font/footable.eot);
-  src: url(/dist/font/footable.eot?#iefix) format("embedded-opentype"), url(/dist/font/footable.woff) format("woff"), url(/dist/font/footable.ttf) format("truetype"), url(/dist/font/footable.svg#footable) format("svg");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/footable/footable.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'icomoon';
-  src: url(/dist/font/icomoon.ttf) format("truetype");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/icomoon/icomoon.ttf?7ygapi") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -2149,9 +2147,7 @@
 
 @font-face {
   font-family: 'anticon';
-  src: url(/dist/font/font_148784_r2qo40wrmaolayvi.eot);
-  /* IE9*/
-  src: url(/dist/font/font_148784_r2qo40wrmaolayvi.woff) format("woff"), url(/dist/font/font_148784_r2qo40wrmaolayvi.ttf) format("truetype"), url(/dist/font/font_148784_r2qo40wrmaolayvi.svg#iconfont) format("svg"); }
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/anticon/anticon.woff") format("woff"); }
 
 .anticon {
   display: inline-block;
@@ -2184,7 +2180,7 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url(/dist/font/ionicons.ttf) format("truetype");
+  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/ionicons/ionicons.ttf?v=2.0.0") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -5807,6 +5803,26 @@ a.bg-gray:focus {
     font-size: 14px;
     color: #fff; }
 
+.logo {
+  color: #fff;
+  border-bottom: 0 solid transparent;
+  -webkit-transition: width .3s ease-in-out;
+  -o-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  display: block;
+  float: left;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  width: 230px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0 15px;
+  font-weight: 300;
+  overflow: hidden; }
+  .logo.active {
+    background-color: #367fa9; }
+
 .wrapper {
   background-color: #222d32;
   position: relative;
@@ -5912,39 +5928,19 @@ a.bg-gray:focus {
   padding-top: 15px;
   padding-bottom: 15px; }
 
-.logo {
-  color: #fff;
-  border-bottom: 0 solid transparent;
-  -webkit-transition: width .3s ease-in-out;
-  -o-transition: width .3s ease-in-out;
-  transition: width .3s ease-in-out;
-  display: block;
-  float: left;
-  height: 50px;
-  font-size: 20px;
-  line-height: 50px;
-  text-align: center;
-  width: 230px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 0 15px;
-  font-weight: 300;
-  overflow: hidden; }
-  .logo.active {
-    background-color: #367fa9; }
-
 .sidebar {
   background-color: #222d32;
   position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
-  padding-top: 50px;
-  min-height: 100%;
   width: 230px;
   z-index: 810;
   -webkit-transition: -webkit-transform .3s ease-in-out,width .3s ease-in-out;
   -moz-transition: -moz-transform .3s ease-in-out,width .3s ease-in-out;
   -o-transition: -o-transform .3s ease-in-out,width .3s ease-in-out;
-  transition: transform .3s ease-in-out,width .3s ease-in-out; }
+  transition: transform .3s ease-in-out,width .3s ease-in-out;
+  overflow: auto;
+  bottom: 0; }
   .sidebar.fixed {
     position: fixed;
     top: 0;
@@ -5990,7 +5986,9 @@ a.bg-gray:focus {
 .sidebar-menu > li > a {
   padding: 12px 5px 12px 15px;
   display: block;
-  position: relative; }
+  position: relative;
+  line-height: 26px;
+  font-size: 14px; }
 
 .sidebar a {
   color: #b8c7ce; }
@@ -6053,7 +6051,9 @@ a.bg-gray:focus {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-left: 5px; }
+  padding-left: 5px;
+  line-height: 30px;
+  font-size: 14px; }
 
 .active .treeview-menu {
   display: block; }
@@ -7013,6 +7013,7 @@ th {
 /* _datepick.scss */
 .datepick-container {
   position: absolute;
+  position: fixed;
   outline: none;
   width: 260px;
   border: 1px solid #fff;
@@ -7788,9 +7789,6 @@ th {
   padding-right: 20px;
   height: 100%; }
 
-.table-fixed th {
-  height: 18px; }
-
 .table-fixed .table-header th .lock {
   display: inline-block; }
 
@@ -7807,10 +7805,6 @@ th {
   cursor: pointer; }
   .table-edit-text:hover {
     background-color: yellow; }
-
-.table-edit-text,
-.table-edit-input {
-  display: inline-block; }
 
 .table-collapsed:after {
   content: "+"; }
@@ -7838,6 +7832,97 @@ th {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.65);
   margin-right: 8px; }
+
+.menu-sub {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  display: none; }
+
+.menu-open + .menu-sub {
+  display: block; }
+
+.menu-title,
+.menu-item {
+  height: 50px;
+  line-height: 50px;
+  border-left: 3px solid transparent;
+  padding: 0 15px;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  display: block; }
+  .menu-title .fa,
+  .menu-item .fa {
+    margin-right: 5px; }
+  .menu-title [class*=" fa-angle-"],
+  .menu-item [class*=" fa-angle-"] {
+    -webkit-transition: transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease; }
+
+.menu-open [class*=" fa-angle-"] {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+.menu-item {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 25px; }
+
+.menu-horizontal li {
+  display: inline-block;
+  position: relative; }
+
+.menu-horizontal .menu-sub {
+  position: absolute;
+  z-index: 1; }
+  .menu-horizontal .menu-sub li {
+    width: 100%; }
+
+.menu-horizontal .menu-open {
+  border-bottom: 2px solid #409eff; }
+
+.menu-vertical li {
+  display: block; }
+
+.menu-default {
+  color: #909399; }
+  .menu-default a {
+    color: #909399; }
+  .menu-default .menu-item {
+    background-color: #fff; }
+  .menu-default .menu-item.active {
+    color: #303133; }
+  .menu-default .menu-title.active {
+    color: #303133; }
+
+.menu-dark {
+  background-color: #222d32;
+  color: #b8c7ce; }
+  .menu-dark a {
+    color: #b8c7ce; }
+  .menu-dark .menu-item {
+    background-color: #2c3b41; }
+  .menu-dark .menu-item.active {
+    color: #fff; }
+  .menu-dark .menu-item:hover a,
+  .menu-dark .menu-title:hover a {
+    color: #fff; }
+  .menu-dark .menu-item.active a,
+  .menu-dark .menu-title.active a {
+    color: #fff; }
+
+.menu-skyblue {
+  color: #fff;
+  background-color: #3c8dbc; }
+  .menu-skyblue a {
+    color: #fff; }
+  .menu-skyblue li {
+    background-color: #3c8dbc; }
+  .menu-skyblue .menu-item.active,
+  .menu-skyblue .menu-title.active {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .user-portrait .title {
   border-bottom: 1px solid #666; }

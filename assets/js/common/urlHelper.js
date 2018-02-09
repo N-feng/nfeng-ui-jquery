@@ -169,6 +169,6 @@ var urlHelper = {
 };
 
 // $.fn.getParam = urlHelper.getParam;
-$.fn.getHash = urlHelper.getHash;
+// $.fn.getHash = urlHelper.getHash;
 
 module.exports = urlHelper;

@@ -102,6 +102,6 @@ let Event = {
         _this.$el.val(fmt ? Utils.format(_this.value, fmt) : _this.value);
         // $(document).trigger('click.datepick')
     }
-}
+};
 
-module.exports = Event
+module.exports = Event;

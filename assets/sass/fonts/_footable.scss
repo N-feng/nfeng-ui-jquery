@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'footable';
-    src: url('../fonts/footable/footable.eot');
-    src: url('../fonts/footable/footable.eot?#iefix') format('embedded-opentype'), 
-    	 url('../fonts/footable/footable.woff') format('woff'), 
-    	 url('../fonts/footable/footable.ttf') format('truetype'), 
-    	 url('../fonts/footable/footable.svg#footable') format('svg');
+    //src: url('../fonts/footable/footable.eot');
+    //src: url('../fonts/footable/footable.eot?#iefix') format('embedded-opentype'),
+    //	 url('../fonts/footable/footable.woff') format('woff'),
+    //	 url('../fonts/footable/footable.ttf') format('truetype'),
+    //	 url('../fonts/footable/footable.svg#footable') format('svg');
+    src: url('https://n-feng.github.io/nfeng-ui-jquery/static/font/footable/footable.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

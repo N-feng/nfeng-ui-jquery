@@ -1,14 +1,73 @@
-<ul class="sidebar-menu">
+<ul class="menu menu-vertical menu-dark">
+    <li>
+        <div class="menu-title menu-open">
+            <i class="fa fa-files-o"></i>
+            <span>Layout Options</span>
+            <span class="pull-right">
+                <i class="fa fa-angle-up"></i>
+            </span>
+        </div>
+        <ul class="menu-sub">
+            <li>
+                <a href="#/layout/menu" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>menu</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div class="menu-title menu-open">
+            <i class="fa fa-edit"></i>
+            <span>Forms</span>
+            <span class="pull-right">
+                <i class="fa fa-angle-up"></i>
+            </span>
+        </div>
+        <ul class="menu-sub">
+            <li>
+                <a href="#/forms/datapick" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>DatePicker</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div class="menu-title menu-open">
+            <i class="fa fa-table"></i>
+            <span>Tables</span>
+            <span class="pull-right">
+                <i class="fa fa-angle-up"></i>
+            </span>
+        </div>
+        <ul class="menu-sub">
+            <li>
+                <a href="#/table/simple" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Simple tables</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/table/data" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Data tables</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul class="sidebar-menu J-nav hide">
     <li class="treeview active menu-open">
         <a href="javascript:;">
-            <i class="fa fa-folder"></i>
-            <span>项目分析</span>
+            <i class="fa fa-files-o"></i>
+            <span>Layout Options</span>
             <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
         </a>
         <ul class="treeview-menu" style="display: block;">
             <li>
                 <a href="/project-analysis/list">
-                    <i class="fa fa-circle-o"></i> 项目列表
+                    <i class="fa fa-circle-o"></i> menu
                 </a>
             </li>
         </ul>
@@ -103,11 +162,6 @@
 
 <script>
     $(function() {
-        var str = '[href="#'+$.getHash(window.location.href)+'"]';
-        $(str).parent('li').addClass('active');
-        $('.treeview-menu').on('click', 'a', function (e) {
-            $('.treeview-menu').find('li').removeClass('active');
-            $(e.target).parent('li').addClass('active');
-        })
+        $('.menu').NUI('menu');
     });
 </script>
