@@ -10,7 +10,8 @@ $.each([
 	require('./js/plugins/validate'),
 	require('./js/plugins/fixedBox'),
 	require('./js/plugins/scrollbar'),
-	require('./js/plugins/table')
+	require('./js/plugins/table'),
+	require('./js/plugins/menu')
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
