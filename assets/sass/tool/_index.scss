@@ -8,6 +8,9 @@ $em-base: 16px !default;
 // functions
 @import "functions/px-to-rem";
 
+// mixins color
+@import "mixins/color/background-color-opacity";
+
 // helpers
 @import "helpers/clearfix";
 @import "helpers/ellipsis";

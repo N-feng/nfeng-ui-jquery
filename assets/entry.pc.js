@@ -11,7 +11,8 @@ $.each([
 	require('./js/plugins/fixedBox'),
 	require('./js/plugins/scrollbar'),
 	require('./js/plugins/table'),
-	require('./js/plugins/menu')
+	require('./js/navigation/menu'),
+    require('./js/datadisplay/tooltip')
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -21,8 +22,9 @@ $.each([
 // 注入到jQuery全局对象
 $.each([
 	require('./js/common/pubsub'),
-	require('./js/component/loading'),
-	require('./js/common/urlHelper'),
+	require('./js/component/loading'),		// 加载
+	require('./js/common/urlHelper'),		// 拿url参数
+	require('./js/feedback/message')		// 提示
 ], function (index, component) {
 	$.extend(component);
 });

@@ -11,7 +11,7 @@ let ENP = {
 	focus : 		'focus.datepick',
 	mouseover:  'mouseover.datepick',
 	mouseleave: 'mouseleave.datepick'
-}
+};
 
 function datepick(options, selector) {
 	let defaults = {
@@ -60,7 +60,7 @@ datepick.prototype.init = function () {
 	_this.bindEvent();
 	_this.bindEventHeader();
 	_this.bindEventBody();
-}
+};
 
 datepick.prototype.bindEvent = function () {
 	let _this = this;
@@ -116,7 +116,7 @@ datepick.prototype.bindEvent = function () {
 			$context.removeClass('slideDown-leave-active').addClass('datepick-hidden');
 		}
 	});
-}
+};
 
 datepick.prototype.bindEventHeader = function () {
   let _this = this;
@@ -186,7 +186,7 @@ datepick.prototype.bindEventHeader = function () {
     event.preventDefault();
     Event.updateDecadeView.call(_this, _this._d, event);
   });
-}
+};
 
 datepick.prototype.bindEventBody = function () {
   let _this = this;
@@ -196,7 +196,7 @@ datepick.prototype.bindEventBody = function () {
 	$context.on(ENP.click, '.datepick-month td:not(.disabled) a', $.proxy(Event.selectMonth, _this));
 	$context.on(ENP.click, '.datepick-year td:not(.disabled) a', $.proxy(Event.selectYear, _this));
 	$context.on(ENP.click, '.datepick-decade td:not(.disabled) a', $.proxy(Event.selectDecade, _this));
-}
+};
 
 $('body').on(ENP.click, function (event) {
 	let $target = $(event.target);
@@ -217,4 +217,4 @@ module.exports = {
 			$(el).data('datepick', new datepick(options, el));
 		});
 	}
-}
+};

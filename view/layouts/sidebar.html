@@ -1,11 +1,50 @@
-<ul class="menu menu-vertical menu-dark">
+<ul class="menu-vertical menu-dark">
+    <li>
+        <div class="menu-title menu-open">
+            <i class="fa fa-laptop"></i>
+            <span>General</span>
+        </div>
+        <ul class="menu-sub">
+            <li>
+                <a href="#/general/button" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Buttons</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div class="menu-title menu-open">
+            <i class="fa fa-commenting-o"></i>
+            <span>Data Display</span>
+        </div>
+        <ul class="menu-sub">
+            <li>
+                <a href="#/datadisplay/tooltip" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Tooltip</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div class="menu-title menu-open">
+            <i class="fa fa-envelope-o"></i>
+            <span>Feedback</span>
+        </div>
+        <ul class="menu-sub">
+            <li>
+                <a href="#/feedback/message" class="menu-item">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Message</span>
+                </a>
+            </li>
+        </ul>
+    </li>
     <li>
         <div class="menu-title menu-open">
             <i class="fa fa-files-o"></i>
             <span>Layout Options</span>
-            <span class="pull-right">
-                <i class="fa fa-angle-up"></i>
-            </span>
         </div>
         <ul class="menu-sub">
             <li>
@@ -20,9 +59,6 @@
         <div class="menu-title menu-open">
             <i class="fa fa-edit"></i>
             <span>Forms</span>
-            <span class="pull-right">
-                <i class="fa fa-angle-up"></i>
-            </span>
         </div>
         <ul class="menu-sub">
             <li>
@@ -37,9 +73,6 @@
         <div class="menu-title menu-open">
             <i class="fa fa-table"></i>
             <span>Tables</span>
-            <span class="pull-right">
-                <i class="fa fa-angle-up"></i>
-            </span>
         </div>
         <ul class="menu-sub">
             <li>
@@ -76,7 +109,6 @@
         <a href="javascript:;">
             <i class="fa fa-folder"></i>
             <span>渠道分析</span>
-            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
         </a>
         <ul class="treeview-menu" style="display:block;">
             <li>
@@ -106,7 +138,6 @@
         <a href="javascript:;">
             <i class="fa fa-folder"></i>
             <span>活动分析</span>
-            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
         </a>
         <ul class="treeview-menu" style="display:block;">
             <li>
@@ -121,7 +152,6 @@
         <a href="javascript:;">
             <i class="fa fa-folder"></i>
             <span>财务报表</span>
-            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
         </a>
         <ul class="treeview-menu" style="display:block;">
             <li>
@@ -162,6 +192,6 @@
 
 <script>
     $(function() {
-        $('.menu').NUI('menu');
+        $('.menu-vertical').NUI('menu');
     });
 </script>
