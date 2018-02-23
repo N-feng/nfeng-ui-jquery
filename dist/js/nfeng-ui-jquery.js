@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6e5704e131508978a113"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "977c861043afe4b36eb1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1090,7 +1090,8 @@ $.each([
 	__webpack_require__(23),
 	__webpack_require__(27),
 	__webpack_require__(33),
-	__webpack_require__(37)
+	__webpack_require__(37),
+    __webpack_require__(38)
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -1099,9 +1100,10 @@ $.each([
 
 // 注入到jQuery全局对象
 $.each([
-	__webpack_require__(38),
 	__webpack_require__(39),
-	__webpack_require__(40),
+	__webpack_require__(40),		// 加载
+	__webpack_require__(41),		// 拿url参数
+	__webpack_require__(42)		// 提示
 ], function (index, component) {
 	$.extend(component);
 });
@@ -1119,15 +1121,13 @@ $.fn.NUI = function () {
 	}
 };
 
-__webpack_require__(41);
-__webpack_require__(42);
 __webpack_require__(43);
-
 __webpack_require__(44);
 __webpack_require__(45);
 
 __webpack_require__(46);
 __webpack_require__(47);
+
 __webpack_require__(48);
 __webpack_require__(49);
 __webpack_require__(50);
@@ -1135,6 +1135,8 @@ __webpack_require__(51);
 __webpack_require__(52);
 __webpack_require__(53);
 __webpack_require__(54);
+__webpack_require__(55);
+__webpack_require__(56);
 
 
 /***/ }),
@@ -1160,7 +1162,7 @@ let ENP = {
 	focus : 		'focus.datepick',
 	mouseover:  'mouseover.datepick',
 	mouseleave: 'mouseleave.datepick'
-}
+};
 
 function datepick(options, selector) {
 	let defaults = {
@@ -1209,7 +1211,7 @@ datepick.prototype.init = function () {
 	_this.bindEvent();
 	_this.bindEventHeader();
 	_this.bindEventBody();
-}
+};
 
 datepick.prototype.bindEvent = function () {
 	let _this = this;
@@ -1265,7 +1267,7 @@ datepick.prototype.bindEvent = function () {
 			$context.removeClass('slideDown-leave-active').addClass('datepick-hidden');
 		}
 	});
-}
+};
 
 datepick.prototype.bindEventHeader = function () {
   let _this = this;
@@ -1335,7 +1337,7 @@ datepick.prototype.bindEventHeader = function () {
     event.preventDefault();
     Event.updateDecadeView.call(_this, _this._d, event);
   });
-}
+};
 
 datepick.prototype.bindEventBody = function () {
   let _this = this;
@@ -1345,7 +1347,7 @@ datepick.prototype.bindEventBody = function () {
 	$context.on(ENP.click, '.datepick-month td:not(.disabled) a', $.proxy(Event.selectMonth, _this));
 	$context.on(ENP.click, '.datepick-year td:not(.disabled) a', $.proxy(Event.selectYear, _this));
 	$context.on(ENP.click, '.datepick-decade td:not(.disabled) a', $.proxy(Event.selectDecade, _this));
-}
+};
 
 $('body').on(ENP.click, function (event) {
 	let $target = $(event.target);
@@ -1366,7 +1368,7 @@ module.exports = {
 			$(el).data('datepick', new datepick(options, el));
 		});
 	}
-}
+};
 
 /***/ }),
 /* 6 */
@@ -1631,62 +1633,62 @@ module.exports = Render
 /***/ (function(module, exports) {
 
 module.exports = {
-	showMonthView: function () {
-		let _this = this;
-		let config = _this.config;
-		_this.currentView = 'month';
-		_this.$dateView.addClass(config.hideClass);
-		_this.$yearView.addClass(config.hideClass);
-		_this.$monthView.removeClass(config.hideClass);
-    _this.$decadeView.addClass(config.hideClass);
-		_this.renderHeader();
-	},
-	showDateView: function () {
-		let _this = this;
-		let config = _this.config;
-    _this.currentView = 'date';
-    _this.$dateView.removeClass(config.hideClass);
-    _this.$yearView.addClass(config.hideClass);
-    _this.$monthView.addClass(config.hideClass);
-    _this.$decadeView.addClass(config.hideClass);
-    _this.renderHeader();
-	},
-	showYearView() {
-    let _this = this;
-		let config = _this.config;
-    _this.currentView = 'year';
-    _this.$dateView.addClass(config.hideClass);
-    _this.$monthView.addClass(config.hideClass);
-    _this.$yearView.removeClass(config.hideClass);
-    _this.$decadeView.addClass(config.hideClass);
-    _this.renderHeader();
-  },
-	showDecadeView() {
-    let _this = this;
-		let config = _this.config;
-    _this.currentView = 'decade';
-    _this.$dateView.addClass(config.hideClass);
-    _this.$monthView.addClass(config.hideClass);
-    _this.$yearView.addClass(config.hideClass);
-    _this.$decadeView.removeClass(config.hideClass);
-    _this.renderHeader();
-  },
-	show: function () {
-		let _this = this;
-		let matrix = _this.$el[0].getBoundingClientRect();
-		let _x = matrix.left;
-		let _y = matrix.top + matrix.height;
-		_this.$container.css({
-			left : _x,
-			top  : _y
-		}).removeClass('datepick-hidden').addClass('slideDown-enter-active').removeClass('slideDown-leave-active');
-	},
-	hide: function () {
-		let _this = this;
-		let config = _this.config;
-		_this.$container.removeClass(config.animateEnterClass).addClass(config.animateLeaveClass);
-	}
-}
+    showMonthView: function () {
+        let _this = this;
+        let config = _this.config;
+        _this.currentView = 'month';
+        _this.$dateView.addClass(config.hideClass);
+        _this.$yearView.addClass(config.hideClass);
+        _this.$monthView.removeClass(config.hideClass);
+        _this.$decadeView.addClass(config.hideClass);
+        _this.renderHeader();
+    },
+    showDateView: function () {
+        let _this = this;
+        let config = _this.config;
+        _this.currentView = 'date';
+        _this.$dateView.removeClass(config.hideClass);
+        _this.$yearView.addClass(config.hideClass);
+        _this.$monthView.addClass(config.hideClass);
+        _this.$decadeView.addClass(config.hideClass);
+        _this.renderHeader();
+    },
+    showYearView() {
+        let _this = this;
+        let config = _this.config;
+        _this.currentView = 'year';
+        _this.$dateView.addClass(config.hideClass);
+        _this.$monthView.addClass(config.hideClass);
+        _this.$yearView.removeClass(config.hideClass);
+        _this.$decadeView.addClass(config.hideClass);
+        _this.renderHeader();
+    },
+    showDecadeView() {
+        let _this = this;
+        let config = _this.config;
+        _this.currentView = 'decade';
+        _this.$dateView.addClass(config.hideClass);
+        _this.$monthView.addClass(config.hideClass);
+        _this.$yearView.addClass(config.hideClass);
+        _this.$decadeView.removeClass(config.hideClass);
+        _this.renderHeader();
+    },
+    show: function () {
+        let _this = this;
+        let matrix = _this.$el[0].getBoundingClientRect();
+        let _x = matrix.left;
+        let _y = matrix.top + matrix.height;
+        _this.$container.css({
+            left: _x,
+            top: _y
+        }).removeClass('datepick-hidden').addClass('slideDown-enter-active').removeClass('slideDown-leave-active');
+    },
+    hide: function () {
+        let _this = this;
+        let config = _this.config;
+        _this.$container.removeClass(config.animateEnterClass).addClass(config.animateLeaveClass);
+    }
+};
 
 
 /***/ }),
@@ -3901,7 +3903,9 @@ module.exports = Render
 
 /***/ }),
 /* 37 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var commonUtils = __webpack_require__(0);
 
 var ENP = {
     click: 'click.menu',
@@ -3911,7 +3915,14 @@ var ENP = {
 
 function Menu(options, selector) {
     var defaults = {
-        trigger: 'click'
+        mode: 'vertical',
+        container: 'body',
+        trigger: 'click',
+        closeHandle: '.menu-close',
+        openHandle: '.menu-open',
+        hideClass     	  : 'hide',
+        animateEnterClass : 'slideDown-enter-active',
+        animateLeaveClass : 'slideDown-leave-active'
     };
     var _this = this;
     _this.config = $.extend({}, defaults, options);
@@ -3939,29 +3950,38 @@ Menu.prototype.showActive = function () {
 Menu.prototype.bindEvent = function () {
     var _this = this;
     var config = _this.config;
-    config.trigger === 'click' ? _this.bindClickEvent() : '';
-    config.trigger === 'hover' ? _this.bindHoverEvent() : '';
+    config.mode === 'vertical' ? _this.bindVerticalEvent() : _this.bindHorizontalEvent();
 
     // 点击菜单active 变化
     _this.$el.on(ENP.click, '.menu-item', function () {
-        _this.$el.find('.menu-item').removeClass('active');
+        _this.$el.find('.menu-title, .menu-item').removeClass('active');
         $(this).addClass('active');
-        $(this).parents('.menu-sub').siblings('.menu-title').addClass('active')
-            .parent('li').siblings('li').find('.menu-title').removeClass('active');
-    });
-    _this.$el.on(ENP.click, '.menu-title', function () {
-        _this.$el.find('.menu-item').removeClass('active');
-        $(this).addClass('active');
-        $(this).addClass('active')
-            .parent('li').siblings('li').find('.menu-title').removeClass('active');
+        $(this).parents('.menu-sub').siblings('.menu-title').addClass('active');
     });
 };
 
-Menu.prototype.bindClickEvent = function () {
+// 垂直菜单绑定事件
+Menu.prototype.bindVerticalEvent = function () {
     var _this = this;
+    var config = _this.config;
 
-    // 点击菜单标题展开内容
+    // 菜单收起、展开按钮操作
+    $(config.container).on(ENP.click, config.closeHandle, function (event) {
+        _this.$el.addClass('menu-collapse');
+        $(event.target).addClass('active').siblings('button').removeClass('active');
+        _this.$el.find('.menu-sub').slideUp();
+    });
+    $(config.container).on(ENP.click, config.openHandle, function () {
+        _this.$el.removeClass('menu-collapse');
+        $(event.target).addClass('active').siblings('button').removeClass('active');
+        _this.$el.find('.menu-open').siblings('.menu-sub').slideDown();
+    });
+
+    // 展开菜单绑定事件
     _this.$el.on(ENP.click, '.menu-title', function () {
+        if (_this.$el.hasClass('menu-collapse')) {
+            return false;
+        }
         if ($(this).hasClass('menu-open')) {
             $(this).siblings('.menu-sub').slideUp();
         } else {
@@ -3969,21 +3989,56 @@ Menu.prototype.bindClickEvent = function () {
         }
         $(this).toggleClass('menu-open');
     });
+    // 收起菜单绑定事件
+    _this.$el.on(ENP.mouseover, '.menu-title', function () {
+       if (!_this.$el.hasClass('menu-collapse')) {
+           return false;
+       }
+       $(this).addClass('menu-mouseover');
+    });
+    _this.$el.on(ENP.mouseleave, '.menu-title', function () {
+        if (!_this.$el.hasClass('menu-collapse')) {
+            return false;
+        }
+        $(this).removeClass('menu-mouseover');
+    });
+    _this.$el.on(ENP.mouseover, '.menu-sub' , function () {
+        if (!_this.$el.hasClass('menu-collapse')) {
+            return false;
+        }
+        $(this).siblings('.menu-title').addClass('menu-mouseover');
+    });
+    _this.$el.on(ENP.mouseleave, '.menu-sub' , function () {
+        if (!_this.$el.hasClass('menu-collapse')) {
+            return false;
+        }
+        $(this).siblings('.menu-title').removeClass('menu-mouseover');
+    });
 };
 
-Menu.prototype.bindHoverEvent = function () {
+// 水平菜单绑定事件
+Menu.prototype.bindHorizontalEvent = function () {
     var _this = this;
+    var config = _this.config;
+    var $context = _this.$el.find('.menu-sub');
 
     // 鼠标放在菜单效果
     _this.$el.on(ENP.mouseover, 'li', function () {
-        $(this).find('.menu-sub').slideDown();
+        $(this).find('.menu-sub').removeClass(config.hideClass).addClass(config.animateEnterClass).removeClass(config.animateLeaveClass);
         $(this).find('.menu-title').addClass('menu-open');
     });
 
     // 鼠标离开菜单效果
     _this.$el.on(ENP.mouseleave, 'li', function () {
-        $(this).find('.menu-sub').slideUp();
+        $(this).find('.menu-sub').removeClass(config.animateEnterClass).addClass(config.animateLeaveClass);
         $(this).find('.menu-title').removeClass('menu-open');
+    });
+
+    // 动画结束事件绑定
+    commonUtils.animateEndShim($context, function () {
+        if ($context.hasClass(config.animateLeaveClass)) {
+            $context.removeClass(config.animateLeaveClass).addClass(config.hideClass);
+        }
     });
 };
 
@@ -3997,6 +4052,150 @@ module.exports = {
 
 /***/ }),
 /* 38 */
+/***/ (function(module, exports) {
+
+/**
+ * tooltip
+ * version 1.0
+ * last update 2017-03-17
+ */
+
+let defaults = {
+    container : 'body',
+    handler   : '[data-tooltip]',
+    offsetX   : 10,
+    offsetY   : 10
+};
+
+// 位置计算
+let positionCalc = {
+    left(options, template) {
+        let _this = this;
+        let srcX = options.left;
+        let srcY = options.top;
+        let srcH = options.height;
+        let destW = template.outerWidth();
+        let destH = template.outerHeight();
+
+        return [srcX - destW - _this.config.offsetX, srcY + ((srcH - destH) / 2)];
+    },
+    right(options, template) {
+        let _this = this;
+        let srcX = options.left;
+        let srcY = options.top;
+        let srcW = options.width;
+        let srcH = options.height;
+        let destH = template.outerHeight();
+
+        return [srcX + srcW + _this.config.offsetX, srcY + ((srcH - destH) / 2)];
+
+    },
+    up(options, template) {
+        let _this = this;
+        let srcX = options.left;
+        let srcY = options.top;
+        let srcW = options.width;
+        let destW = template.outerWidth();
+        let destH = template.outerHeight();
+
+        return [(srcW / 2) + srcX - (destW / 2), srcY - destH - _this.config.offsetY];
+
+    },
+    down(options, template) {
+        let _this = this;
+        let srcX = options.left;
+        let srcY = options.top;
+        let srcW = options.width;
+        let srcH = options.height;
+        let destW = template.outerWidth();
+
+        return [(srcW / 2) + srcX - (destW / 2), srcY + srcH + _this.config.offsetY];
+
+    }
+};
+
+
+let eventAction = {
+    focus(event) {
+        let _this = this;
+        let $target = $(event.target);
+
+        if (_this.$template) {
+            $target.data('iuiTooltip', _this.$template);
+        }
+    },
+    blur(event) {
+        let $target = $(event.target);
+
+        $target.data('iuiTooltip').remove();
+        $target.removeData('iuiTooltip');
+    }
+};
+
+function Tooltip(options) {
+    let _this = this;
+    _this.config = $.extend(defaults, options);
+    _this.$container = $(_this.config.container);
+    _this.init();
+}
+
+Tooltip.prototype = {
+    init() {
+        let _this = this;
+        let config = _this.config;
+        let handler = config.handler;
+
+        _this.$container.on('mouseenter.iui-tooltip', handler, $.proxy(_this.show, _this));
+        _this.$container.on('mouseleave.iui-tooltip', handler, $.proxy(_this.hide, _this));
+        _this.$container.on('focus.iui-tooltip', handler, $.proxy(eventAction.focus, _this));
+        _this.$container.on('blur.iui-tooltip', handler, $.proxy(eventAction.blur, _this));
+
+    },
+    show(event) {
+        let _this = this;
+        let $target = $(event.target);
+        let options = ($target.data('tooltipOptions') || '|').split('|');
+        let text = $target.data('tooltip') || '';
+        let direct = options[0] || 'left';
+        let size = options[1] || 'small';
+        let bcr = event.target.getBoundingClientRect();
+
+
+        if (!text || $target.data('iuiTooltip')) {
+            return false;
+        }
+
+        _this.$template = $(`<div id="tooltip-${+new Date()}" class="tooltip tooltip-${size} tooltip-${direct}">${text}</div>`);
+
+        _this.$container.append(_this.$template);
+
+        let pos = positionCalc[direct].call(_this, bcr, _this.$template);
+
+        _this.$template.addClass('tooltip-show').css({ 'left': pos[0], 'top': pos[1] });
+
+    },
+    hide(event) {
+        let _this = this;
+        let $target = $(event.target);
+        let $template = _this.$template;
+
+        if ($template && !$target.data('iuiTooltip')) {
+            $template.remove();
+        }
+    }
+};
+
+// $.fn.tooltip = Tooltip;
+
+module.exports = {
+    tooltip: function (options) {
+        return new Tooltip(options);
+    }
+};
+
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports) {
 
 var o = $({});
@@ -4014,7 +4213,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 let defaults = {
@@ -4070,7 +4269,7 @@ $.fn.loading = Loading;
 module.exports = { loading: Loading };
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 /**
@@ -4250,7 +4449,157 @@ module.exports = urlHelper;
 
 
 /***/ }),
-/* 41 */
+/* 42 */
+/***/ (function(module, exports) {
+
+function Message(options) {
+    options = options || {};
+    if (typeof options === "string") {
+        options = {
+            message: options
+        };
+    }
+    // 返回MessageConstructor实例
+    return new MessageConstructor(options);
+}
+
+var MessageConstructor = function (options) {
+    this.options = null;
+    this.$element = null;
+    this.msgId = null;
+    this.closed = false;
+    this.timer = null;
+    this.init(options);
+};
+
+MessageConstructor.DEFAULT = {
+    container : 'body',
+    type: 'info',
+    iconClass: '',
+    customClass: '',
+    duration: 3000,
+    message: '',
+    showClose: false,
+    center: false,
+    onClose: null,
+    animateEnterClass : 'message-fade-enter',
+    animateLeaveClass : 'message-fade-leave-active',
+};
+
+MessageConstructor.prototype.getDefault = function () {
+    return MessageConstructor.DEFAULT;
+};
+
+MessageConstructor.prototype.getOptions = function (options) {
+    return $.extend({}, this.getDefault(), options);
+};
+
+MessageConstructor.prototype.init = function (options) {
+    this.options = this.getOptions(options);
+    //生成一个随机5位数，作为id
+    var msgId = 'msgId-';
+    do {
+        msgId += ~~(Math.random() * 100000)
+    } while (document.getElementById(msgId));
+    this.msgId = msgId;
+    this.customClass = this.options.customClass;
+    this.type = this.options.type;
+    this.message = this.options.message;
+    var typeClass = '';
+    var iconClass = '';
+    switch (this.type.toLowerCase()) {
+        case 'info':
+            typeClass = 'message--info';
+            iconClass = 'el-icon-info';
+            break;
+        case 'success':
+            typeClass = 'message--success';
+            iconClass = 'el-icon-success';
+            break;
+        case 'warning':
+            typeClass = 'message--warning';
+            iconClass = 'el-icon-warning';
+            break;
+        case 'error':
+            typeClass = 'message--error';
+            iconClass = 'el-icon-error';
+            break;
+        default:
+            throw new Error('类型必须为["info","success","warning","error"]其中之一')
+            break;
+    }
+    var closeBtn = "";
+    if (this.options.showClose) {
+        closeBtn = '<i class="message__closeBtn el-icon-close"></i>';
+    }
+    if (this.options.iconClass) {
+        iconClass = this.options.iconClass;
+    }
+    var obj = $('<div class="message" id="' + msgId + '">');
+    obj.appendTo(this.options.container);
+    obj.html('<i class="message__icon ' + iconClass + '"></i>' +
+        '<p class="message__content">' + this.message + '</p>' + closeBtn);
+    obj.addClass(typeClass).addClass(this.options.animateEnterClass).addClass(this.customClass);
+    if (this.options.center) {
+        obj.addClass('is-center');
+    }
+    this.$element = $('#' + msgId);
+    this.$closeBtn = this.$element.find('.message__closeBtn');
+    var self = this;
+    if (this.$closeBtn.length) {
+        this.$closeBtn.on('click', function () {
+            self.close();
+        })
+    }
+
+    // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
+    setTimeout(function () {
+        self.$element.removeClass(self.options.animateEnterClass);
+    }, 100);
+    this.startTimer();
+    // 鼠标hover事件
+    this.$element.hover(function () {
+        self.clearTimer();
+    }, function () {
+        self.startTimer();
+    });
+};
+
+//关闭即销毁
+MessageConstructor.prototype.close = function () {
+    var self = this;
+    this.closed = true;
+    if (typeof this.options.onClose === 'function') {
+        this.options.onClose(this);
+    }
+    //消失动画结束后销毁
+    this.$element.addClass(this.options.animateLeaveClass).on('transitionend', function () {
+        self.$element.remove();
+    });
+};
+
+MessageConstructor.prototype.clearTimer = function () {
+    clearTimeout(this.timer);
+};
+
+MessageConstructor.prototype.startTimer = function () {
+    var self = this;
+    var duration = this.options.duration;
+    if (duration > 0) {
+        this.timer = setTimeout(function () {
+            if (!self.closed) {
+                self.close();
+            }
+        }, duration);
+    }
+};
+
+module.exports = {
+    message: Message
+};
+
+/***/ }),
+/* 43 */
 /***/ (function(module, exports) {
 
 ;
@@ -4261,7 +4610,7 @@ module.exports = urlHelper;
 } ());
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports) {
 
 ;
@@ -4331,7 +4680,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports) {
 
 ;
@@ -4348,7 +4697,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports) {
 
 (function($, window) {
@@ -4640,7 +4989,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports) {
 
 ;(function(){
@@ -4676,7 +5025,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports) {
 
 ;
@@ -5082,7 +5431,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 ;(function(){
@@ -5111,7 +5460,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports) {
 
 ;
@@ -5165,7 +5514,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports) {
 
 ;
@@ -5260,7 +5609,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports) {
 
 ;
@@ -5405,7 +5754,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports) {
 
 ;
@@ -5716,7 +6065,7 @@ module.exports = urlHelper;
 })(jQuery, window);
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports) {
 
 (function() {
@@ -5771,7 +6120,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports) {
 
 ;
@@ -5836,7 +6185,7 @@ module.exports = urlHelper;
 }());
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports) {
 
 ;

@@ -3,6 +3,7 @@
 @import "fonts/icomoon";
 @import "fonts/anticon";
 @import "fonts/ionicons";
+@import "fonts/element";
 
 @import "configuration";
 @import "tool/index";
@@ -36,7 +37,7 @@
 @import "component/layer";
 @import "component/list";
 
-@import "desktop/tooltip";
+@import "datadisplay/tooltip";
 
 @import "plugins/datapick";
 @import "plugins/loading";
@@ -52,4 +53,4 @@
 
 @import "general/button";
 
-@import "datadisplay/message";
+@import "feedback/message";
