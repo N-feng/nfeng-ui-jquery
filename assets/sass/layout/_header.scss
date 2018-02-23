@@ -2,7 +2,7 @@
     background-color: #3c8dbc;
     width: 100%;
     height: 50px;
-    z-index: 1133;
+    //z-index: 1133;
     position: relative;
     position: fixed;
     top: 0;
@@ -17,6 +17,7 @@
 }
 
 .logo {
+    background-color: #367fa9;
     color: #fff;
     border-bottom: 0 solid transparent;
     -webkit-transition: width .3s ease-in-out;

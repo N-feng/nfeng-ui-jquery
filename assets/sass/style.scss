@@ -17,7 +17,6 @@
 @import "layout/sidebar";
 @import "layout/layout";
 
-@import "form/button";
 @import "form/form";
 @import "form/input";
 @import "form/table";
@@ -37,6 +36,8 @@
 @import "component/layer";
 @import "component/list";
 
+@import "desktop/tooltip";
+
 @import "plugins/datapick";
 @import "plugins/loading";
 @import "plugins/multiSelect";
@@ -44,6 +45,11 @@
 @import "plugins/fixedBox";
 @import "plugins/scrollbar";
 @import "plugins/table";
-@import "plugins/menu";
+@import "navigation/menu";
 
 @import "pages/index";
+
+
+@import "general/button";
+
+@import "datadisplay/message";
