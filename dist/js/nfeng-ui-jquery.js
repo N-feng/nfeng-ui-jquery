@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "977c861043afe4b36eb1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "00563a074de8abe6a1ff"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1090,8 +1090,7 @@ $.each([
 	__webpack_require__(23),
 	__webpack_require__(27),
 	__webpack_require__(33),
-	__webpack_require__(37),
-    __webpack_require__(38)
+	__webpack_require__(37)
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -1100,10 +1099,11 @@ $.each([
 
 // 注入到jQuery全局对象
 $.each([
-	__webpack_require__(39),
-	__webpack_require__(40),		// 加载
-	__webpack_require__(41),		// 拿url参数
-	__webpack_require__(42)		// 提示
+	__webpack_require__(38),
+	__webpack_require__(39),		// 加载
+	__webpack_require__(40),		// 拿url参数
+	__webpack_require__(41),		// 提示
+    __webpack_require__(42)
 ], function (index, component) {
 	$.extend(component);
 });
@@ -4054,150 +4054,6 @@ module.exports = {
 /* 38 */
 /***/ (function(module, exports) {
 
-/**
- * tooltip
- * version 1.0
- * last update 2017-03-17
- */
-
-let defaults = {
-    container : 'body',
-    handler   : '[data-tooltip]',
-    offsetX   : 10,
-    offsetY   : 10
-};
-
-// 位置计算
-let positionCalc = {
-    left(options, template) {
-        let _this = this;
-        let srcX = options.left;
-        let srcY = options.top;
-        let srcH = options.height;
-        let destW = template.outerWidth();
-        let destH = template.outerHeight();
-
-        return [srcX - destW - _this.config.offsetX, srcY + ((srcH - destH) / 2)];
-    },
-    right(options, template) {
-        let _this = this;
-        let srcX = options.left;
-        let srcY = options.top;
-        let srcW = options.width;
-        let srcH = options.height;
-        let destH = template.outerHeight();
-
-        return [srcX + srcW + _this.config.offsetX, srcY + ((srcH - destH) / 2)];
-
-    },
-    up(options, template) {
-        let _this = this;
-        let srcX = options.left;
-        let srcY = options.top;
-        let srcW = options.width;
-        let destW = template.outerWidth();
-        let destH = template.outerHeight();
-
-        return [(srcW / 2) + srcX - (destW / 2), srcY - destH - _this.config.offsetY];
-
-    },
-    down(options, template) {
-        let _this = this;
-        let srcX = options.left;
-        let srcY = options.top;
-        let srcW = options.width;
-        let srcH = options.height;
-        let destW = template.outerWidth();
-
-        return [(srcW / 2) + srcX - (destW / 2), srcY + srcH + _this.config.offsetY];
-
-    }
-};
-
-
-let eventAction = {
-    focus(event) {
-        let _this = this;
-        let $target = $(event.target);
-
-        if (_this.$template) {
-            $target.data('iuiTooltip', _this.$template);
-        }
-    },
-    blur(event) {
-        let $target = $(event.target);
-
-        $target.data('iuiTooltip').remove();
-        $target.removeData('iuiTooltip');
-    }
-};
-
-function Tooltip(options) {
-    let _this = this;
-    _this.config = $.extend(defaults, options);
-    _this.$container = $(_this.config.container);
-    _this.init();
-}
-
-Tooltip.prototype = {
-    init() {
-        let _this = this;
-        let config = _this.config;
-        let handler = config.handler;
-
-        _this.$container.on('mouseenter.iui-tooltip', handler, $.proxy(_this.show, _this));
-        _this.$container.on('mouseleave.iui-tooltip', handler, $.proxy(_this.hide, _this));
-        _this.$container.on('focus.iui-tooltip', handler, $.proxy(eventAction.focus, _this));
-        _this.$container.on('blur.iui-tooltip', handler, $.proxy(eventAction.blur, _this));
-
-    },
-    show(event) {
-        let _this = this;
-        let $target = $(event.target);
-        let options = ($target.data('tooltipOptions') || '|').split('|');
-        let text = $target.data('tooltip') || '';
-        let direct = options[0] || 'left';
-        let size = options[1] || 'small';
-        let bcr = event.target.getBoundingClientRect();
-
-
-        if (!text || $target.data('iuiTooltip')) {
-            return false;
-        }
-
-        _this.$template = $(`<div id="tooltip-${+new Date()}" class="tooltip tooltip-${size} tooltip-${direct}">${text}</div>`);
-
-        _this.$container.append(_this.$template);
-
-        let pos = positionCalc[direct].call(_this, bcr, _this.$template);
-
-        _this.$template.addClass('tooltip-show').css({ 'left': pos[0], 'top': pos[1] });
-
-    },
-    hide(event) {
-        let _this = this;
-        let $target = $(event.target);
-        let $template = _this.$template;
-
-        if ($template && !$target.data('iuiTooltip')) {
-            $template.remove();
-        }
-    }
-};
-
-// $.fn.tooltip = Tooltip;
-
-module.exports = {
-    tooltip: function (options) {
-        return new Tooltip(options);
-    }
-};
-
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
 var o = $({});
 
 module.exports = {
@@ -4213,7 +4069,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports) {
 
 let defaults = {
@@ -4269,7 +4125,7 @@ $.fn.loading = Loading;
 module.exports = { loading: Loading };
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports) {
 
 /**
@@ -4449,7 +4305,7 @@ module.exports = urlHelper;
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports) {
 
 function Message(options) {
@@ -4463,9 +4319,9 @@ function Message(options) {
     return new MessageConstructor(options);
 }
 
-var MessageConstructor = function (options) {
+let MessageConstructor = function (options) {
     this.options = null;
-    this.$element = null;
+    this.$template = null;
     this.msgId = null;
     this.closed = false;
     this.timer = null;
@@ -4483,120 +4339,293 @@ MessageConstructor.DEFAULT = {
     center: false,
     onClose: null,
     animateEnterClass : 'message-fade-enter',
-    animateLeaveClass : 'message-fade-leave-active',
+    animateLeaveClass : 'message-fade-leave-active'
 };
 
-MessageConstructor.prototype.getDefault = function () {
-    return MessageConstructor.DEFAULT;
-};
+MessageConstructor.prototype = {
+    getDefault() {
+        return MessageConstructor.DEFAULT;
+    },
+    getOptions(options) {
+        return $.extend({}, this.getDefault(), options);
+    },
+    getTemplate() {
+        //生成一个随机5位数，作为id
+        let msgId = 'msgId-';
+        do {
+            msgId += ~~(Math.random() * 100000)
+        } while (document.getElementById(msgId));
+        this.msgId = msgId;
+        this.customClass = this.options.customClass;
+        this.type = this.options.type;
+        this.message = this.options.message;
+        let typeClass = '';
+        let iconClass = '';
+        switch (this.type.toLowerCase()) {
+            case 'info':
+                typeClass = 'message--info';
+                iconClass = 'el-icon-info';
+                break;
+            case 'success':
+                typeClass = 'message--success';
+                iconClass = 'el-icon-success';
+                break;
+            case 'warning':
+                typeClass = 'message--warning';
+                iconClass = 'el-icon-warning';
+                break;
+            case 'error':
+                typeClass = 'message--error';
+                iconClass = 'el-icon-error';
+                break;
+            default:
+                throw new Error('类型必须为["info","success","warning","error"]其中之一');
+                break;
+        }
+        let closeBtn = "";
+        if (this.options.showClose) {
+            closeBtn = '<i class="message__closeBtn el-icon-close"></i>';
+        }
+        if (this.options.iconClass) {
+            iconClass = this.options.iconClass;
+        }
 
-MessageConstructor.prototype.getOptions = function (options) {
-    return $.extend({}, this.getDefault(), options);
-};
-
-MessageConstructor.prototype.init = function (options) {
-    this.options = this.getOptions(options);
-    //生成一个随机5位数，作为id
-    var msgId = 'msgId-';
-    do {
-        msgId += ~~(Math.random() * 100000)
-    } while (document.getElementById(msgId));
-    this.msgId = msgId;
-    this.customClass = this.options.customClass;
-    this.type = this.options.type;
-    this.message = this.options.message;
-    var typeClass = '';
-    var iconClass = '';
-    switch (this.type.toLowerCase()) {
-        case 'info':
-            typeClass = 'message--info';
-            iconClass = 'el-icon-info';
-            break;
-        case 'success':
-            typeClass = 'message--success';
-            iconClass = 'el-icon-success';
-            break;
-        case 'warning':
-            typeClass = 'message--warning';
-            iconClass = 'el-icon-warning';
-            break;
-        case 'error':
-            typeClass = 'message--error';
-            iconClass = 'el-icon-error';
-            break;
-        default:
-            throw new Error('类型必须为["info","success","warning","error"]其中之一')
-            break;
-    }
-    var closeBtn = "";
-    if (this.options.showClose) {
-        closeBtn = '<i class="message__closeBtn el-icon-close"></i>';
-    }
-    if (this.options.iconClass) {
-        iconClass = this.options.iconClass;
-    }
-    var obj = $('<div class="message" id="' + msgId + '">');
-    obj.appendTo(this.options.container);
-    obj.html('<i class="message__icon ' + iconClass + '"></i>' +
-        '<p class="message__content">' + this.message + '</p>' + closeBtn);
-    obj.addClass(typeClass).addClass(this.options.animateEnterClass).addClass(this.customClass);
-    if (this.options.center) {
-        obj.addClass('is-center');
-    }
-    this.$element = $('#' + msgId);
-    this.$closeBtn = this.$element.find('.message__closeBtn');
-    var self = this;
-    if (this.$closeBtn.length) {
-        this.$closeBtn.on('click', function () {
-            self.close();
-        })
-    }
-
-    // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
-    setTimeout(function () {
-        self.$element.removeClass(self.options.animateEnterClass);
-    }, 100);
-    this.startTimer();
-    // 鼠标hover事件
-    this.$element.hover(function () {
-        self.clearTimer();
-    }, function () {
-        self.startTimer();
-    });
-};
-
-//关闭即销毁
-MessageConstructor.prototype.close = function () {
-    var self = this;
-    this.closed = true;
-    if (typeof this.options.onClose === 'function') {
-        this.options.onClose(this);
-    }
-    //消失动画结束后销毁
-    this.$element.addClass(this.options.animateLeaveClass).on('transitionend', function () {
-        self.$element.remove();
-    });
-};
-
-MessageConstructor.prototype.clearTimer = function () {
-    clearTimeout(this.timer);
-};
-
-MessageConstructor.prototype.startTimer = function () {
-    var self = this;
-    var duration = this.options.duration;
-    if (duration > 0) {
-        this.timer = setTimeout(function () {
-            if (!self.closed) {
+        this.$template = $('<div class="message" id="' + msgId + '">');
+        this.$template.html('<i class="message__icon ' + iconClass + '"></i>' +
+            '<p class="message__content">' + this.message + '</p>' + closeBtn);
+        this.$template.addClass(typeClass).addClass(this.options.animateEnterClass).addClass(this.customClass);
+        if (this.options.center) {
+            this.$template.addClass('is-center');
+        }
+        this.$closeBtn = this.$template.find('.message__closeBtn');
+        let self = this;
+        if (this.$closeBtn.length) {
+            this.$closeBtn.on('click', function () {
                 self.close();
-            }
-        }, duration);
+            })
+        }
+
+        // 鼠标hover事件
+        this.$template.hover(function () {
+            self.clearTimer();
+        }, function () {
+            self.startTimer();
+        });
+
+        return this.$template;
+    },
+    showTemplate() {
+        let self = this;
+        // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
+        setTimeout(function () {
+            self.$template.removeClass(self.options.animateEnterClass);
+        }, 100);
+        this.startTimer();
+    },
+    init(options) {
+        this.options = this.getOptions(options);
+        this.getTemplate().appendTo(this.options.container);
+        this.showTemplate();
+    },
+    // 关闭即销毁
+    close() {
+        let self = this;
+        this.closed = true;
+        if (typeof this.options.onClose === 'function') {
+            this.options.onClose(this);
+        }
+        //消失动画结束后销毁
+        this.$template.addClass(this.options.animateLeaveClass).on('transitionend', function () {
+            self.$template.remove();
+        });
+    },
+    clearTimer() {
+        clearTimeout(this.timer);
+    },
+    startTimer() {
+        let self = this;
+        let duration = this.options.duration;
+        if (duration > 0) {
+            this.timer = setTimeout(function () {
+                if (!self.closed) {
+                    self.close();
+                }
+            }, duration);
+        }
     }
 };
 
 module.exports = {
     message: Message
 };
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports) {
+
+function Tooltip(options) {
+    options = options || {};
+    let handle = options.handler || '[data-tooltip]';
+    $(handle).each(function (index, selector) {
+        new TooltipConstructor(options, selector);
+    });
+}
+
+function TooltipConstructor(options, selector) {
+    this.options = null;
+    this.$selector = $(selector);
+    this.$template = null;
+    this.tooltipId = null;
+    this.timer = null;
+    this.init(options);
+}
+
+TooltipConstructor.DEFAULT = {
+    container: 'body',
+    offsetX: 10,
+    offsetY: 10,
+    onClose: null,
+    animateEnterClass: 'zoom-big-fast-enter-active',
+    animateLeaveClass: 'zoom-big-fast-leave zoom-big-fast-leave-active',
+    duration: 300,
+};
+
+// 位置计算
+TooltipConstructor.PositionCalc = {
+    left(bcr, template) {
+        let srcX = bcr.left;
+        let srcY = bcr.top;
+        let srcH = bcr.height;
+        let destW = template.outerWidth();
+        let destH = template.outerHeight();
+        return [srcX - destW - this.options.offsetX, srcY + ((srcH - destH) / 2)];
+    },
+    right(bcr, template) {
+        let srcX = bcr.left;
+        let srcY = bcr.top;
+        let srcW = bcr.width;
+        let srcH = bcr.height;
+        let destH = template.outerHeight();
+        return [srcX + srcW + this.options.offsetX, srcY + ((srcH - destH) / 2)];
+    },
+    up(bcr, template) {
+        let srcX = bcr.left;
+        let srcY = bcr.top;
+        let srcW = bcr.width;
+        let destW = template.outerWidth();
+        let destH = template.outerHeight();
+        return [(srcW / 2) + srcX - (destW / 2), srcY - destH - this.options.offsetY];
+    },
+    down(bcr, template) {
+        let srcX = bcr.left;
+        let srcY = bcr.top;
+        let srcW = bcr.width;
+        let srcH = bcr.height;
+        let destW = template.outerWidth();
+        return [(srcW / 2) + srcX - (destW / 2), srcY + srcH + this.options.offsetY];
+    }
+};
+
+TooltipConstructor.prototype = {
+    getDefault() {
+        return TooltipConstructor.DEFAULT;
+    },
+    getOptions(options) {
+        return $.extend({}, this.getDefault(), options);
+    },
+    getTemplate() {
+        //生成一个随机5位数，作为id
+        let tooltipId = 'tooltipId-';
+        do {
+            tooltipId += ~~(Math.random() * 100000)
+        } while (document.getElementById(tooltipId));
+        this.tooltipId = tooltipId;
+        let tooltipOptions = (this.$selector.data('tooltipOptions') || '|').split('|');
+        let text = this.$selector.data('tooltip') || '';
+        let direct = tooltipOptions[0] || 'left';
+        let size = tooltipOptions[1] || 'small';
+
+        this.$template = $('<div class="tooltip" id="' + this.tooltipId + '">');
+        this.$template.html(text);
+        this.$template.addClass('tooltip-' + direct + ' tooltip-' + size);
+
+        // 鼠标hover事件
+        let self = this;
+        this.$template.hover(function () {
+            self.clearTimer();
+        }, function () {
+            self.startTimer();
+        });
+
+        return this.$template;
+    },
+    getPosition() {
+        let tooltipOptions = (this.$selector.data('tooltipOptions') || '|').split('|');
+        let direct = tooltipOptions[0] || 'left';
+        let bcr = this.$selector[0].getBoundingClientRect();
+        let pos = TooltipConstructor.PositionCalc[direct].call(this, bcr, this.$template);
+        this.$template.css({'left': pos[0], 'top': pos[1]});
+    },
+    showTemplate() {
+        // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
+        let self = this;
+        self.$template.addClass('zoom-big-fast-enter');
+        setTimeout(function () {
+            self.$template.addClass(self.options.animateEnterClass).on('animationend', function () {
+                self.$template.removeClass(self.options.animateEnterClass).removeClass('zoom-big-fast-enter');
+            });
+        }, 300);
+    },
+    init(options) {
+        this.options = this.getOptions(options);
+
+        this.$selector.on('mouseenter.tooltip', $.proxy(this.show, this));
+        this.$selector.on('mouseleave.tooltip', $.proxy(this.hide, this));
+    },
+    show() {
+        this.clearTimer();
+        if(!this.$template) {
+            this.getTemplate().appendTo(this.options.container);
+            this.getPosition();
+            this.showTemplate();
+        }
+    },
+    hide() {
+        this.startTimer();
+    },
+    // 关闭即销毁
+    close() {
+        let self = this;
+        if (typeof this.options.onClose === 'function') {
+            this.options.onClose(this);
+        }
+        if(!this.$template) {
+            return false;
+        }
+        //消失动画结束后销毁
+        this.$template.addClass(this.options.animateLeaveClass).on('animationend', function () {
+            self.$template.remove();
+            self.$template = null;
+        });
+    },
+    startTimer() {
+        let self = this;
+        let duration = self.options.duration;
+        if (duration > 0) {
+            self.timer = setTimeout(function () {
+                self.close();
+            }, duration);
+        }
+    },
+    clearTimer() {
+        clearTimeout(this.timer);
+    }
+};
+
+module.exports = {
+    tooltip: Tooltip
+};
+
 
 /***/ }),
 /* 43 */
