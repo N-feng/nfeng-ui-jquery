@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "00563a074de8abe6a1ff"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e76195462da45e23d388"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -4393,7 +4393,7 @@ MessageConstructor.prototype = {
         this.$template = $('<div class="message" id="' + msgId + '">');
         this.$template.html('<i class="message__icon ' + iconClass + '"></i>' +
             '<p class="message__content">' + this.message + '</p>' + closeBtn);
-        this.$template.addClass(typeClass).addClass(this.options.animateEnterClass).addClass(this.customClass);
+        this.$template.addClass(typeClass).addClass(this.customClass);
         if (this.options.center) {
             this.$template.addClass('is-center');
         }
@@ -4416,6 +4416,7 @@ MessageConstructor.prototype = {
     },
     showTemplate() {
         let self = this;
+        self.$template.addClass(this.options.animateEnterClass);
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         setTimeout(function () {
             self.$template.removeClass(self.options.animateEnterClass);
@@ -4485,7 +4486,8 @@ TooltipConstructor.DEFAULT = {
     offsetX: 10,
     offsetY: 10,
     onClose: null,
-    animateEnterClass: 'zoom-big-fast-enter-active',
+    animateEnterClass: 'zoom-big-fast-enter',
+    animateEnterActiveClass: 'zoom-big-fast-enter-active',
     animateLeaveClass: 'zoom-big-fast-leave zoom-big-fast-leave-active',
     duration: 300,
 };
@@ -4569,10 +4571,10 @@ TooltipConstructor.prototype = {
     showTemplate() {
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         let self = this;
-        self.$template.addClass('zoom-big-fast-enter');
+        self.$template.addClass(self.options.animateEnterClass);
         setTimeout(function () {
-            self.$template.addClass(self.options.animateEnterClass).on('animationend', function () {
-                self.$template.removeClass(self.options.animateEnterClass).removeClass('zoom-big-fast-enter');
+            self.$template.addClass(self.options.animateEnterActiveClass).on('animationend', function () {
+                self.$template.removeClass(self.options.animateEnterActiveClass).removeClass(self.options.animateEnterClass);
             });
         }, 300);
     },

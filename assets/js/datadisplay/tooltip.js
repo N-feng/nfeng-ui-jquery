@@ -20,7 +20,8 @@ TooltipConstructor.DEFAULT = {
     offsetX: 10,
     offsetY: 10,
     onClose: null,
-    animateEnterClass: 'zoom-big-fast-enter-active',
+    animateEnterClass: 'zoom-big-fast-enter',
+    animateEnterActiveClass: 'zoom-big-fast-enter-active',
     animateLeaveClass: 'zoom-big-fast-leave zoom-big-fast-leave-active',
     duration: 300,
 };
@@ -104,10 +105,10 @@ TooltipConstructor.prototype = {
     showTemplate() {
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         let self = this;
-        self.$template.addClass('zoom-big-fast-enter');
+        self.$template.addClass(self.options.animateEnterClass);
         setTimeout(function () {
-            self.$template.addClass(self.options.animateEnterClass).on('animationend', function () {
-                self.$template.removeClass(self.options.animateEnterClass).removeClass('zoom-big-fast-enter');
+            self.$template.addClass(self.options.animateEnterActiveClass).on('animationend', function () {
+                self.$template.removeClass(self.options.animateEnterActiveClass).removeClass(self.options.animateEnterClass);
             });
         }, 300);
     },

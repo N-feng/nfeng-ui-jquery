@@ -83,7 +83,7 @@ MessageConstructor.prototype = {
         this.$template = $('<div class="message" id="' + msgId + '">');
         this.$template.html('<i class="message__icon ' + iconClass + '"></i>' +
             '<p class="message__content">' + this.message + '</p>' + closeBtn);
-        this.$template.addClass(typeClass).addClass(this.options.animateEnterClass).addClass(this.customClass);
+        this.$template.addClass(typeClass).addClass(this.customClass);
         if (this.options.center) {
             this.$template.addClass('is-center');
         }
@@ -106,6 +106,7 @@ MessageConstructor.prototype = {
     },
     showTemplate() {
         let self = this;
+        self.$template.addClass(this.options.animateEnterClass);
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         setTimeout(function () {
             self.$template.removeClass(self.options.animateEnterClass);
