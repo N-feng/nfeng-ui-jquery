@@ -1,13 +1,10 @@
-@import "fonts/awesome/awesome";
-@import "fonts/footable";
-@import "fonts/icomoon";
-@import "fonts/anticon";
-@import "fonts/ionicons";
-@import "fonts/element";
+@import "fonts/fonts";
+@import "animate/animate";
+@import "general/button";
+@import "feedback/message";
 
 @import "configuration";
 @import "tool/index";
-@import "browser/animate";
 @import "browser/reset";
 @import "browser/handle";
 
@@ -49,8 +46,3 @@
 @import "navigation/menu";
 
 @import "pages/index";
-
-
-@import "general/button";
-
-@import "feedback/message";

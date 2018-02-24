@@ -21,10 +21,6 @@
                 <button class="btn btn-default" onclick="typeMessage('info', '居中的文字', true)">文字居中</button>
                 <h3 class="mb10">使用 HTML 片段</h3>
                 <button class="btn btn-default" onclick="defaultMessage('<strong>这是 <i>HTML</i> 片段</strong>')">使用 HTML 片段</button>
-
-                <h3 class="mb10">自定义</h3>
-                <button class="btn" onclick="typeMessage('info','自定义iconClass。', false, 'test')">自定义iconClass</button>
-                <button class="btn" onclick="typeMessage('info','自定义customClass。', false, '', 'test')">自定义customClass</button>
             </div>
         </div>
     </div>
@@ -122,29 +118,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Methods</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>方法名</th>
-                        <th>说明</th>
-                    </tr>
-                    <tr>
-                        <td>close</td>
-                        <td>关闭当前的 Message</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
 <style>
     .demo .btn {
         margin-right: 8px;
@@ -162,13 +135,11 @@
         $.message(msg);
     }
 
-    function typeMessage(type, msg, center, iconClass, customClass) {
+    function typeMessage(type, msg, center) {
         $.message({
             type: type,
             message: msg,
-            center: center,
-            iconClass: iconClass,
-            customClass: customClass
+            center: center
         })
     }
 

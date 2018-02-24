@@ -11,8 +11,7 @@ $.each([
 	require('./js/plugins/fixedBox'),
 	require('./js/plugins/scrollbar'),
 	require('./js/plugins/table'),
-	require('./js/navigation/menu'),
-    require('./js/datadisplay/tooltip')
+	require('./js/navigation/menu')
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -24,7 +23,8 @@ $.each([
 	require('./js/common/pubsub'),
 	require('./js/component/loading'),		// 加载
 	require('./js/common/urlHelper'),		// 拿url参数
-	require('./js/feedback/message')		// 提示
+	require('./js/feedback/message'),		// 提示
+    require('./js/datadisplay/tooltip')
 ], function (index, component) {
 	$.extend(component);
 });

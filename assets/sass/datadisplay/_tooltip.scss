@@ -2,9 +2,9 @@
   position: absolute;
   padding: 5px 10px;
   color: #fff;
-  opacity: 0;
-  border-radius: 3px;
-  @include bgc-opacity(#000, .7);
+  //opacity: 0;
+  border-radius: 4px;
+  @include bgc-opacity(#000, .75);
 
 
   &.tooltip-left:after {
