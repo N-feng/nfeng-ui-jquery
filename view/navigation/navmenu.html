@@ -129,8 +129,8 @@
             <div class="box-header">
                 <h3 class="box-title">垂直菜单</h3>
                 <div class="btn-group ml15">
-                    <button type="button" class="btn btn-default btn-sm menu-open active">展开</button>
-                    <button type="button" class="btn btn-default btn-sm menu-close">收起</button>
+                    <button type="button" class="btn btn-default btn-sm menu-demo-spread active">展开</button>
+                    <button type="button" class="btn btn-default btn-sm menu-demo-close">收起</button>
                 </div>
             </div>
             <div class="box-body" style="">
@@ -270,8 +270,13 @@
 <script>
     $(function() {
         $('.menu-demo-horizontal').NUI('menu', {
-            mode: 'horizontal'
+            mode: 'horizontal',
+            closeHandle: '.menu-demo-close',
+            openHandle: '.menu-demo-spread'
         });
-        $('.menu-demo-vertical').NUI('menu');
+        $('.menu-demo-vertical').NUI('menu', {
+            closeHandle: '.menu-demo-close',
+            openHandle: '.menu-demo-spread'
+        });
     });
 </script>

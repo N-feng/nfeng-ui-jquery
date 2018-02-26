@@ -20,9 +20,9 @@ TooltipConstructor.DEFAULT = {
     offsetX: 10,
     offsetY: 10,
     onClose: null,
-    animateEnterClass: 'zoom-big-fast-enter',
-    animateEnterActiveClass: 'zoom-big-fast-enter-active',
-    animateLeaveClass: 'zoom-big-fast-leave zoom-big-fast-leave-active',
+    animateEnterClass: 'fade-in-linear-enter',
+    animateEnterActiveClass: 'fade-in-linear-enter-active',
+    animateLeaveClass: 'fade-in-linear-leave-active',
     duration: 300,
 };
 
@@ -84,6 +84,7 @@ TooltipConstructor.prototype = {
         this.$template = $('<div class="tooltip" id="' + this.tooltipId + '">');
         this.$template.html(text);
         this.$template.addClass('tooltip-' + direct + ' tooltip-' + size);
+        this.$template.addClass(this.options.animateEnterClass).addClass(this.options.animateEnterActiveClass);
 
         // 鼠标hover事件
         let self = this;
@@ -105,12 +106,11 @@ TooltipConstructor.prototype = {
     showTemplate() {
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         let self = this;
-        self.$template.addClass(self.options.animateEnterClass);
         setTimeout(function () {
-            self.$template.addClass(self.options.animateEnterActiveClass).on('animationend', function () {
-                self.$template.removeClass(self.options.animateEnterActiveClass).removeClass(self.options.animateEnterClass);
+            self.$template.removeClass(self.options.animateEnterClass).on('transitionend', function () {
+                self.$template.removeClass(self.options.animateEnterActiveClass);
             });
-        }, 300);
+        }, 100);
     },
     init(options) {
         this.options = this.getOptions(options);
@@ -139,7 +139,7 @@ TooltipConstructor.prototype = {
             return false;
         }
         //消失动画结束后销毁
-        this.$template.addClass(this.options.animateLeaveClass).on('animationend', function () {
+        this.$template.addClass(this.options.animateLeaveClass).on('transitionend', function () {
             self.$template.remove();
             self.$template = null;
         });

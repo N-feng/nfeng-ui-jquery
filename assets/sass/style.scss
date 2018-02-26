@@ -1,19 +1,16 @@
-@import "fonts/fonts";
-@import "animate/animate";
-@import "general/button";
-@import "feedback/message";
-
 @import "configuration";
 @import "tool/index";
 @import "browser/reset";
 @import "browser/handle";
 
-@import "layout/grids";
-@import "layout/header";
-@import "layout/base";
-@import "layout/nav";
-@import "layout/sidebar";
 @import "layout/layout";
+@import "fonts/fonts";
+@import "animate/animate";
+@import "general/button";
+@import "feedback/message";
+
+
+
 
 @import "form/form";
 @import "form/input";
@@ -43,6 +40,8 @@
 @import "plugins/fixedBox";
 @import "plugins/scrollbar";
 @import "plugins/table";
-@import "navigation/menu";
+@import "navigation/navmenu";
 
 @import "pages/index";
+
+@import "demo";

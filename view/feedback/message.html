@@ -4,7 +4,7 @@
             <div class="box-header">
                 <h3 class="box-title">Message</h3>
             </div>
-            <div class="box-body demo">
+            <div class="box-body demo-block">
                 <h3 class="mb10">基础用法</h3>
                 <button class="btn btn-default" onclick="defaultMessage('这是一个默认提示框')">打开消息提示</button>
                 <h3 class="mb10">不同状态</h3>
@@ -21,6 +21,43 @@
                 <button class="btn btn-default" onclick="typeMessage('info', '居中的文字', true)">文字居中</button>
                 <h3 class="mb10">使用 HTML 片段</h3>
                 <button class="btn btn-default" onclick="defaultMessage('<strong>这是 <i>HTML</i> 片段</strong>')">使用 HTML 片段</button>
+                <div class="meta">
+                    <div class="highlight">
+                    <pre>
+                        <code class="hljs">
+                            function defaultMessage(msg) {
+                                $.message(msg);
+                            }
+
+                            function typeMessage(type, msg, center) {
+                                $.message({
+                                    type: type,
+                                    message: msg,
+                                    center: center
+                                })
+                            }
+
+                            function closeMessage(type, msg, duration, cb) {
+                                if (typeof duration === 'function') {
+                                    cb = duration;
+                                    duration = 3000
+                                }
+                                $.message({
+                                    type: type,
+                                    message: msg,
+                                    showClose: true,
+                                    duration: duration,
+                                    onClose: cb
+                                })
+                            }
+                        </code>
+                    </pre>
+                    </div>
+                </div>
+                <div class="demo-block-control">
+                    <i class="el-icon-caret-bottom"></i>
+                    <span style="display: none;">显示代码</span>
+                </div>
             </div>
         </div>
     </div>
@@ -119,15 +156,7 @@
 </div>
 
 <style>
-    .demo .btn {
-        margin-right: 8px;
-        margin-bottom: 12px;
-    }
 
-    .demo .btn-group .btn {
-        margin-right: 0;
-        margin-bottom: 0;
-    }
 </style>
 
 <script type="text/javascript">

@@ -1,13 +1,15 @@
+@import "grids";
+@import "header";
+@import "sidebar";
+
 .content {
     background-color: #ecf0f5;
-    // margin-left: 230px;
-    // margin-top: 50px;
-    // min-height: 100%;
+    margin-left: 230px;
     position: absolute;
     top: 50px;
     bottom: 0;
     right: 0;
-    left: 230px;
+    left: 0;
     overflow: auto;
     -webkit-transition: -webkit-transform .3s ease-in-out,margin .3s ease-in-out;
     -moz-transition: -moz-transform .3s ease-in-out,margin .3s ease-in-out;
@@ -17,23 +19,6 @@
 
 .content-wrapper {
     padding: 15px;
-}
-
-.content-header {
-    position: relative;
-    padding: 15px 15px 0 15px;
-}
-
-.content-header>h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.content-header>h1>small {
-    font-size: 15px;
-    display: inline-block;
-    padding-left: 4px;
-    font-weight: 300;
 }
 
 .breadcrumb {

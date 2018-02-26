@@ -11,7 +11,7 @@ $.each([
 	require('./js/plugins/fixedBox'),
 	require('./js/plugins/scrollbar'),
 	require('./js/plugins/table'),
-	require('./js/navigation/menu')
+	require('./js/navigation/navmenu')		// 菜单
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -58,3 +58,5 @@ require('./js/pages/multiCheck');
 require('./js/pages/global');
 require('./js/pages/city');
 require('./js/pages/index');
+
+require('./js/demo');

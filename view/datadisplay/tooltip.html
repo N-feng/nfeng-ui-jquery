@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="box box-primary">
+        <div class="box box-primary demo-block">
             <div class="box-header">
                 <h3 class="box-title">Tooltip</h3>
             </div>
@@ -16,6 +16,17 @@
                 </p>
                 <h3 class="mb10">表单用法</h3>
                 <p><label for="age" class="mr10">Your age:</label><input id="age" data-tooltip="We ask for your age only for statistical purposes." data-tooltip-options="right|small"></p>
+            </div>
+            <div class="meta">
+                <div class="highlight">
+                    <pre>
+                        <code class="hljs">$.tooltip()</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="demo-block-control">
+                <i class="el-icon-caret-bottom"></i>
+                <span style="display: none;">显示代码</span>
             </div>
         </div>
     </div>
@@ -99,21 +110,21 @@
                         <td>动画始名</td>
                         <td>string</td>
                         <td>-</td>
-                        <td>zoom-big-fast-enter</td>
+                        <td>fade-in-linear-enter</td>
                     </tr>
                     <tr>
                         <td>animateEnterActiveClass</td>
                         <td>动画始激活名</td>
                         <td>string</td>
                         <td>-</td>
-                        <td>zoom-big-fast-enter-active</td>
+                        <td>fade-in-linear-enter-active</td>
                     </tr>
                     <tr>
                         <td>animateLeaveClass</td>
                         <td>动画终名</td>
                         <td>string</td>
                         <td>-</td>
-                        <td>zoom-big-fast-leave zoom-big-fast-leave-active</td>
+                        <td>fade-in-linear-leave-active</td>
                     </tr>
                 </table>
             </div>
@@ -127,9 +138,7 @@
             // offsetX: 100,
             // offsetY: 100,
             // handler: 'title',
-            // duration: 3000
-            // animateEnterClass: 'fade-in-linear-enter',
-            // animateEnterActiveClass: 'fade-in-linear-enter-active'
+            // duration: 3000,
         });
     });
 </script>

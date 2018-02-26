@@ -1,98 +1,98 @@
 .pull-left {
-    float: left;
+  float: left;
 }
 
 .pull-right {
-    float: right;
+  float: right;
 }
 
 .di {
-    display: inline-block;
+  display: inline-block;
 }
 
 .vm {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .vt {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .fb {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .f-xm {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .f-sm {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .f-md {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .f-lg {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .c333 {
-    color: #333;
+  color: #333;
 }
 
 .c666 {
-    color: #666;
+  color: #666;
 }
 
 .c999 {
-    color: #999;
+  color: #999;
 }
 
 .tc {
-    text-align: center;
+  text-align: center;
 }
 
 .tl {
-    text-align: left;
+  text-align: left;
 }
 
 .tr {
-    text-align: right;
+  text-align: right;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .pr {
-    position: relative;
+  position: relative;
 }
 
 .pa {
-    position: absolute;
+  position: absolute;
 }
 
 .pf {
-    position: fixed;
+  position: fixed;
 }
 
 .ellipsis {
-    @include ellipsis;
+  @include ellipsis;
 }
 
 .center-block {
-    @include center-block;
+  @include center-block;
 }
 
 @mixin bread() {
-    word-wrap: break-word;
-    word-break: break-all;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .bread {
-    @include bread;
+  @include bread;
 }
 
 @include text-emphasis-variant('.text-white', white);
@@ -111,18 +111,18 @@
 @include margin-init(60, 5, true true true true true);
 @include padding-init(60, 5, true true true true true);
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
 
 .clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .no-padding {
-    padding: 0 !important;
+  padding: 0 !important;
 }
