@@ -11,7 +11,7 @@ $.each([
 	require('./js/plugins/fixedBox'),
 	require('./js/plugins/scrollbar'),
 	require('./js/plugins/table'),
-	require('./js/plugins/navigation/navmenu')		// 菜单
+	require('./js/plugins/navmenu')		// 菜单
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -46,7 +46,6 @@ require('./js/component/table');
 require('./js/plugins/datepick');
 
 require('./js/component/layer');
-require('./js/component/menu');
 
 require('./js/pages/echarts');
 require('./js/pages/select');
