@@ -1,4 +1,4 @@
-let utils = require('../../common/utils')
+let utils = require('../../base/utils')
 let action = {
   singleChoose: function (event) {
     let _this = this;

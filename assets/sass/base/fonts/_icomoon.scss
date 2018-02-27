@@ -6,7 +6,7 @@
     // url('../fonts/icomoon/icomoon.woff?7ygapi') format('woff'),
     // url('../fonts/icomoon/icomoon.svg?7ygapi#icomoon') format('svg');
     //src: url('../fonts/icomoon/icomoon.ttf?7ygapi') format('truetype');
-    src: url('https://n-feng.github.io/nfeng-ui-jquery/static/font/icomoon/icomoon.ttf?7ygapi') format('truetype');
+    src: url('#{$font-path}/icomoon/icomoon.ttf?7ygapi') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

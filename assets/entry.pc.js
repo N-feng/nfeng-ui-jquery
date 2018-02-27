@@ -11,7 +11,7 @@ $.each([
 	require('./js/plugins/fixedBox'),
 	require('./js/plugins/scrollbar'),
 	require('./js/plugins/table'),
-	require('./js/navigation/navmenu')		// 菜单
+	require('./js/plugins/navigation/navmenu')		// 菜单
 ], function (index, component) {
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
@@ -20,11 +20,11 @@ $.each([
 
 // 注入到jQuery全局对象
 $.each([
-	require('./js/common/pubsub'),
+	require('./js/base/pubsub'),
 	require('./js/component/loading'),		// 加载
-	require('./js/common/urlHelper'),		// 拿url参数
-	require('./js/feedback/message'),		// 提示
-    require('./js/datadisplay/tooltip')
+	require('./js/base/urlHelper'),		// 拿url参数
+	require('./js/component/message'),		// 提示
+    require('./js/component/tooltip')
 ], function (index, component) {
 	$.extend(component);
 });
@@ -42,9 +42,8 @@ $.fn.NUI = function () {
 	}
 };
 
-require('./js/form/select');
-require('./js/form/table');
-require('./js/form/datepick');
+require('./js/component/table');
+require('./js/plugins/datepick');
 
 require('./js/component/layer');
 require('./js/component/menu');

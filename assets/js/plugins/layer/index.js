@@ -1,4 +1,4 @@
-let commonUtils = require('../../common/utils');
+let commonUtils = require('../../base/utils');
 let Utils = require('./utils');
 let View = require('./view');
 let Event = require('./event');

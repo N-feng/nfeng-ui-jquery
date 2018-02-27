@@ -1,4 +1,4 @@
-var commonUtils = require('../common/utils');
+var commonUtils = require('../../base/utils');
 
 function Menu(options) {
     return this.each(function (index, el) {

@@ -1,24 +1,21 @@
-@import "configuration";
-@import "tool/index";
-@import "browser/reset";
-@import "browser/handle";
+@import "base/configuration";
+@import "base/tool/index";
+@import "base/browser/reset";
+@import "base/browser/handle";
+@import "base/layout/layout";
+@import "base/fonts/fonts";
+@import "base/animate/animate";
 
-@import "layout/layout";
-@import "fonts/fonts";
-@import "animate/animate";
-@import "general/button";
-@import "feedback/message";
+@import "ui/button";
+@import "ui/form";
+@import "ui/input";
+@import "ui/table";
+@import "ui/badge";
+@import "ui/progress";
+@import "ui/pagination";
 
-
-
-
-@import "form/form";
-@import "form/input";
-@import "form/table";
-@import "form/badge";
-@import "form/progress";
-@import "form/pagination";
-
+@import "component/message";
+@import "component/tooltip";
 @import "component/box";
 @import "component/icon";
 @import "component/tab";
@@ -31,8 +28,6 @@
 @import "component/layer";
 @import "component/list";
 
-@import "datadisplay/tooltip";
-
 @import "plugins/datapick";
 @import "plugins/loading";
 @import "plugins/multiSelect";
@@ -40,6 +35,6 @@
 @import "plugins/fixedBox";
 @import "plugins/scrollbar";
 @import "plugins/table";
-@import "navigation/navmenu";
+@import "plugins/navmenu";
 
 @import "pages/index";

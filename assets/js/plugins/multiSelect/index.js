@@ -2,7 +2,7 @@ let multiUtils = require('./utils')
 let Render = require('./render')
 let View = require('./view')
 let Event = require('./event')
-let Utils = require('../../common/utils')
+let Utils = require('../../base/utils')
 let isSafari = (function () {
   let ua = navigator.userAgent.toLowerCase();
   if (ua.indexOf('safari') !== -1) {

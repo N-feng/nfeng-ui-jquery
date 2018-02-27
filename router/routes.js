@@ -1,13 +1,16 @@
 define(function () {
    var routes = {
        "public/index": "view/public/index",
-       "general/button": "view/general/button",
-       "datadisplay/tooltip": "view/datadisplay/tooltip",
-       "feedback/message": "view/feedback/message",
-       "navigation/navmenu": "view/navigation/navmenu",
-       "forms/datapick": "view/forms/datapick",
-       "table/simple":  "view/table/simple",
-       "table/data": "view/table/data"
+
+       "ui/button": "view/ui/button",
+       "ui/simple":  "view/ui/simple",
+       "ui/data": "view/ui/data",
+
+       "component/tooltip": "view/component/tooltip",
+       "component/message": "view/component/message",
+
+       "plugins/navmenu": "view/plugins/navmenu",
+       "plugins/datapick": "view/plugins/datapick"
    };
    return routes;
 });

@@ -5,7 +5,7 @@
     //	 url('../fonts/footable/footable.woff') format('woff'),
     //	 url('../fonts/footable/footable.ttf') format('truetype'),
     //	 url('../fonts/footable/footable.svg#footable') format('svg');
-    src: url('https://n-feng.github.io/nfeng-ui-jquery/static/font/footable/footable.woff') format('woff');
+    src: url('#{$font-path}/footable/footable.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
