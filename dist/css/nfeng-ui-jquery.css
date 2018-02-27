@@ -1210,7 +1210,7 @@ a.bg-gray:focus {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/awesome/awesome.woff?v=4.4.0") format("woff");
+  src: url(/distfont/awesome.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
