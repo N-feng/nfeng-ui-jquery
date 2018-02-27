@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="box box-primary">
+        <div class="box box-primary demo-block">
             <div class="box-header">
                 <h3 class="box-title">水平菜单</h3>
             </div>
@@ -119,13 +119,28 @@
                     </li>
                 </ul>
             </div>
+            <div class="meta">
+                <div class="highlight">
+                    <pre>
+                        <code class="hljs">
+                            $('.menu-demo-horizontal').NUI('menu', {
+                                mode: 'horizontal'
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="demo-block-control">
+                <i class="el-icon-caret-bottom"></i>
+                <span style="display: none;">显示代码</span>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <div class="box box-primary">
+        <div class="box box-primary demo-block">
             <div class="box-header">
                 <h3 class="box-title">垂直菜单</h3>
                 <div class="btn-group ml15">
@@ -134,7 +149,7 @@
                 </div>
             </div>
             <div class="box-body" style="">
-                <div class="row">
+                <div class="row ">
                     <div class="col-md-3">
                         <ul class="menu-demo-vertical menu-vertical menu-default">
                             <li>
@@ -263,6 +278,22 @@
                     </div>
                 </div>
             </div>
+            <div class="meta">
+                <div class="highlight">
+                    <pre>
+                        <code class="hljs">
+                            $('.menu-demo-vertical').NUI('menu', {
+                                closeHandle: '.menu-demo-close',
+                                openHandle: '.menu-demo-spread'
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="demo-block-control">
+                <i class="el-icon-caret-bottom"></i>
+                <span style="display: none;">显示代码</span>
+            </div>
         </div>
     </div>
 </div>
@@ -270,9 +301,7 @@
 <script>
     $(function() {
         $('.menu-demo-horizontal').NUI('menu', {
-            mode: 'horizontal',
-            closeHandle: '.menu-demo-close',
-            openHandle: '.menu-demo-spread'
+            mode: 'horizontal'
         });
         $('.menu-demo-vertical').NUI('menu', {
             closeHandle: '.menu-demo-close',

@@ -58,5 +58,3 @@ require('./js/pages/multiCheck');
 require('./js/pages/global');
 require('./js/pages/city');
 require('./js/pages/index');
-
-require('./js/demo');

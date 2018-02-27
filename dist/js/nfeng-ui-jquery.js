@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b2d4431ef201360b3a6e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8bb56380e8fe0c68415e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1137,8 +1137,6 @@ __webpack_require__(53);
 __webpack_require__(54);
 __webpack_require__(55);
 __webpack_require__(56);
-
-__webpack_require__(57);
 
 
 /***/ }),
@@ -6302,39 +6300,6 @@ module.exports = {
     //     $('#formLine').trigger('submit.echarts');
     // });
 
-}());
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports) {
-
-;
-(function () {
-    $('body').on('mouseenter.demo', '.demo-block-control', function () {
-        let self = this;
-        let $span = $(self).find('span');
-        let $i = $(self).find('i');
-        $span.addClass('text-slide-enter').removeAttr('style');
-        $i.addClass('hovering');
-        setTimeout(function () {
-            $span.removeClass('text-slide-enter');
-        }, 100);
-    });
-    $('body').on('mouseleave.demo', '.demo-block-control', function () {
-        let self = this;
-        let $span = $(self).find('span');
-        let $i = $(self).find('i');
-        $span.css('display', 'none');
-        $i.removeClass('hovering');
-    });
-    $('body').on('click.demo', '.demo-block-control', function () {
-        let $meta = $(this).siblings('.meta');
-        if (parseInt($meta.css('height')) === 1) {
-            $meta.css('height', $meta.find('.highlight').height());
-        } else {
-            $meta.css('height', '0');
-        }
-    });
 }());
 
 /***/ })
