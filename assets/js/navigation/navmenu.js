@@ -26,18 +26,18 @@ MenuConstructor.DEFAULT = {
 };
 
 MenuConstructor.prototype = {
-    getDefault() {
+    getDefault: function () {
         return MenuConstructor.DEFAULT;
     },
-    getOptions(options) {
+    getOptions: function (options) {
         return $.extend({}, this.getDefault(), options);
     },
-    init(options) {
+    init: function (options) {
         this.config = this.getOptions(options);
         this.showActive();
         this.bindEvent();
     },
-    showActive() {
+    showActive: function () {
         var url = window.location.href;
         var str = '#' + $.getHash(url);
         var $target = $("[href='"+str+"']");
@@ -45,7 +45,7 @@ MenuConstructor.prototype = {
         $target.addClass('active');
         $target.parents('.menu-sub').siblings('.menu-title').addClass('active');
     },
-    bindEvent() {
+    bindEvent: function () {
         var _this = this;
         var config = _this.config;
         config.mode === 'vertical' ? _this.bindVerticalEvent() : _this.bindHorizontalEvent();
@@ -58,7 +58,7 @@ MenuConstructor.prototype = {
         });
     },
     // 垂直菜单绑定事件
-    bindVerticalEvent() {
+    bindVerticalEvent: function () {
         var _this = this;
         var config = _this.config;
 
@@ -70,6 +70,7 @@ MenuConstructor.prototype = {
             _this.$el.children('li').children('.menu-item').children('span').addClass('tooltip tooltip-right fade-in-linear-enter');
         });
         $(config.container).on('click.menu', config.openHandle, function () {
+            console.log('what?');
             _this.$el.removeClass('menu-collapse');
             $(event.target).addClass('active').siblings('button').removeClass('active');
             _this.$el.find('.menu-open').siblings('.menu-sub').slideDown();
@@ -96,7 +97,7 @@ MenuConstructor.prototype = {
             }
             $(this).addClass('menu-mouseover');
             $(this).siblings('.menu-sub').addClass(config.animateVerticalEnterClass).addClass(config.animateVerticalEnterActiveClass);
-            let self = this;
+            var self = this;
             setTimeout(function () {
                 $(self).siblings('.menu-sub').removeClass(config.animateVerticalEnterClass).on('transitionend', function () {
                     $(this).removeClass(config.animateVerticalEnterActiveClass);
@@ -114,8 +115,8 @@ MenuConstructor.prototype = {
             if (!_this.$el.hasClass('menu-collapse')) {
                 return false;
             }
-            let self = this;
-            let $span = $(self).find('span');
+            var self = this;
+            var $span = $(self).find('span');
             $(self).addClass('menu-mouseover');
             setTimeout(function () {
                 $span.removeClass('fade-in-linear-enter');
@@ -125,8 +126,8 @@ MenuConstructor.prototype = {
             if (!_this.$el.hasClass('menu-collapse')) {
                 return false;
             }
-            let self = this;
-            let $span = $(self).find('span');
+            var self = this;
+            var $span = $(self).find('span');
             setTimeout(function () {
                 $span.addClass('fade-in-linear-enter');
             }, 100);
@@ -145,7 +146,7 @@ MenuConstructor.prototype = {
         });
     },
     // 水平菜单绑定事件
-    bindHorizontalEvent() {
+    bindHorizontalEvent: function () {
         var _this = this;
         var config = _this.config;
         var $context = _this.$el.find('.menu-sub');

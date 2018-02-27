@@ -1,6 +1,6 @@
 @font-face {
   font-family: element-icons;
-  src: url('https://n-feng.github.io/nfeng-ui-jquery/static/font/element/element.woff') format("woff");
+  src: url('#{$font-path}/element/element.woff') format("woff");
   font-weight: 400;
   font-style: normal
 }

@@ -9,7 +9,7 @@ function Message(options) {
     return new MessageConstructor(options);
 }
 
-let MessageConstructor = function (options) {
+var MessageConstructor = function (options) {
     this.options = null;
     this.$template = null;
     this.msgId = null;
@@ -33,15 +33,15 @@ MessageConstructor.DEFAULT = {
 };
 
 MessageConstructor.prototype = {
-    getDefault() {
+    getDefault: function () {
         return MessageConstructor.DEFAULT;
     },
-    getOptions(options) {
+    getOptions: function (options) {
         return $.extend({}, this.getDefault(), options);
     },
-    getTemplate() {
+    getTemplate: function () {
         //生成一个随机5位数，作为id
-        let msgId = 'msgId-';
+        var msgId = 'msgId-';
         do {
             msgId += ~~(Math.random() * 100000)
         } while (document.getElementById(msgId));
@@ -49,8 +49,8 @@ MessageConstructor.prototype = {
         this.customClass = this.options.customClass;
         this.type = this.options.type;
         this.message = this.options.message;
-        let typeClass = '';
-        let iconClass = '';
+        var typeClass = '';
+        var iconClass = '';
         switch (this.type.toLowerCase()) {
             case 'info':
                 typeClass = 'message--info';
@@ -72,7 +72,7 @@ MessageConstructor.prototype = {
                 throw new Error('类型必须为["info","success","warning","error"]其中之一');
                 break;
         }
-        let closeBtn = "";
+        var closeBtn = "";
         if (this.options.showClose) {
             closeBtn = '<i class="message__closeBtn el-icon-close"></i>';
         }
@@ -88,7 +88,7 @@ MessageConstructor.prototype = {
             this.$template.addClass('is-center');
         }
         this.$closeBtn = this.$template.find('.message__closeBtn');
-        let self = this;
+        var self = this;
         if (this.$closeBtn.length) {
             this.$closeBtn.on('click', function () {
                 self.close();
@@ -104,8 +104,8 @@ MessageConstructor.prototype = {
 
         return this.$template;
     },
-    showTemplate() {
-        let self = this;
+    showTemplate: function () {
+        var self = this;
         self.$template.addClass(this.options.animateEnterClass);
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         setTimeout(function () {
@@ -113,14 +113,14 @@ MessageConstructor.prototype = {
         }, 100);
         this.startTimer();
     },
-    init(options) {
+    init: function (options) {
         this.options = this.getOptions(options);
         this.getTemplate().appendTo(this.options.container);
         this.showTemplate();
     },
     // 关闭即销毁
-    close() {
-        let self = this;
+    close: function () {
+        var self = this;
         this.closed = true;
         if (typeof this.options.onClose === 'function') {
             this.options.onClose(this);
@@ -130,12 +130,12 @@ MessageConstructor.prototype = {
             self.$template.remove();
         });
     },
-    clearTimer() {
+    clearTimer: function () {
         clearTimeout(this.timer);
     },
-    startTimer() {
-        let self = this;
-        let duration = this.options.duration;
+    startTimer: function () {
+        var self = this;
+        var duration = this.options.duration;
         if (duration > 0) {
             this.timer = setTimeout(function () {
                 if (!self.closed) {

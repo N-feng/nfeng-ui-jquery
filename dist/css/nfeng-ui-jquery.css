@@ -3415,7 +3415,7 @@ a.bg-gray:focus {
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/ionicons/ionicons.ttf?v=2.0.0") format("truetype");
+  src: url(/nfeng-ui-jquery/dist/font/ionicons.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -5633,7 +5633,7 @@ a.bg-gray:focus {
 
 @font-face {
   font-family: element-icons;
-  src: url("https://n-feng.github.io/nfeng-ui-jquery/static/font/element/element.woff") format("woff");
+  src: url(/nfeng-ui-jquery/dist/font/element.woff) format("woff");
   font-weight: 400;
   font-style: normal; }
 
