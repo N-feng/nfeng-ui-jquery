@@ -1210,7 +1210,7 @@ a.bg-gray:focus {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/dist/font/awesome.woff) format("woff");
+  src: url(/static/font/awesome.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
