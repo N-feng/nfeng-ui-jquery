@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: 'js/[name].js',
-    publicPath: '/dist/'
+    publicPath: '/nfeng-ui-jquery/dist/'
   },
   plugins: [
     // new webpack.optimize.UglifyJsPlugin({
