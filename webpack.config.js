@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: 'js/[name].js',
-    publicPath: '/static/'
+    publicPath: '/dist/'
   },
   plugins: [
     // new webpack.optimize.UglifyJsPlugin({
