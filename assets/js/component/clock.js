@@ -41,12 +41,18 @@ ClockConstructor.prototype = {
         return this.$template;
     },
     showDiallines() {
-        var dialLines = document.getElementsByClassName('diallines');
+        // var dialLines = document.getElementsByClassName('diallines');
+        //
+        // for (var i = 1; i < 60; i++) {
+        //     dialLines[i] = $(dialLines[i-1]).clone()
+        //         .insertAfter($(dialLines[i-1]));
+        //     $(dialLines[i]).css('transform', 'rotate(' + 6 * i + 'deg)');
+        // }
 
         for (var i = 1; i < 60; i++) {
-            dialLines[i] = $(dialLines[i-1]).clone()
-                .insertAfter($(dialLines[i-1]));
-            $(dialLines[i]).css('transform', 'rotate(' + 6 * i + 'deg)');
+            $($('.diallines').eq(i - 1)).clone()
+                .insertAfter($('.diallines').eq(i - 1))
+                .css('transform', 'rotate(' + 6 * i + 'deg)');
         }
     },
     showDate() {
