@@ -2,6 +2,18 @@ require("./sass/style.scss");
 
 var NUI = {};
 
+// 注入到jQuery全局对象
+$.each([
+    require('./js/base/pubsub'),
+    require('./js/component/loading'),		// 加载
+    require('./js/base/urlHelper'),			// 拿url参数
+    require('./js/component/message'),		// 提示
+    require('./js/component/tooltip'),
+	require('./js/component/clock')			// 时钟
+], function (index, component) {
+    $.extend(component);
+});
+
 // 注入到jQuery原型对象
 $.each([
 	require('./js/plugins/datepick'),
@@ -16,17 +28,6 @@ $.each([
 	if (typeof component === 'object' && !NUI[component]) {
 		$.extend(NUI, component);
 	}
-});
-
-// 注入到jQuery全局对象
-$.each([
-	require('./js/base/pubsub'),
-	require('./js/component/loading'),		// 加载
-	require('./js/base/urlHelper'),		// 拿url参数
-	require('./js/component/message'),		// 提示
-    require('./js/component/tooltip')
-], function (index, component) {
-	$.extend(component);
 });
 
 // 调用插件
@@ -58,4 +59,3 @@ require('./js/pages/city');
 require('./js/pages/index');
 
 require('./js/other/demo');
-require('./js/other/index');

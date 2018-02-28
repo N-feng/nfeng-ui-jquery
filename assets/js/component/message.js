@@ -33,13 +33,13 @@ MessageConstructor.DEFAULT = {
 };
 
 MessageConstructor.prototype = {
-    getDefault: function () {
+    getDefault() {
         return MessageConstructor.DEFAULT;
     },
-    getOptions: function (options) {
+    getOptions(options) {
         return $.extend({}, this.getDefault(), options);
     },
-    getTemplate: function () {
+    getTemplate() {
         //生成一个随机5位数，作为id
         var msgId = 'msgId-';
         do {
@@ -104,7 +104,7 @@ MessageConstructor.prototype = {
 
         return this.$template;
     },
-    showTemplate: function () {
+    showTemplate() {
         var self = this;
         self.$template.addClass(this.options.animateEnterClass);
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
@@ -113,13 +113,13 @@ MessageConstructor.prototype = {
         }, 100);
         this.startTimer();
     },
-    init: function (options) {
+    init(options) {
         this.options = this.getOptions(options);
         this.getTemplate().appendTo(this.options.container);
         this.showTemplate();
     },
     // 关闭即销毁
-    close: function () {
+    close() {
         var self = this;
         this.closed = true;
         if (typeof this.options.onClose === 'function') {
@@ -130,10 +130,10 @@ MessageConstructor.prototype = {
             self.$template.remove();
         });
     },
-    clearTimer: function () {
+    clearTimer() {
         clearTimeout(this.timer);
     },
-    startTimer: function () {
+    startTimer() {
         var self = this;
         var duration = this.options.duration;
         if (duration > 0) {
