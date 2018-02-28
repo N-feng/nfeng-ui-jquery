@@ -4,19 +4,21 @@ var NUI = {};
 
 // 注入到jQuery全局对象
 $.each([
-    require('./js/base/pubsub'),
-    require('./js/component/loading'),		// 加载
+    require('./js/base/pubsub'),			// 订阅发布
     require('./js/base/urlHelper'),			// 拿url参数
+    require('./js/component/loading'),		// 加载
     require('./js/component/message'),		// 提示
-    require('./js/component/tooltip'),
-	require('./js/component/clock')			// 时钟
+    require('./js/component/tooltip'),		// tooltip
+
+	require('./js/other/clock'),			// 时钟
+	require('./js/other/parallax')			// 3d视差
 ], function (index, component) {
     $.extend(component);
 });
 
 // 注入到jQuery原型对象
 $.each([
-	require('./js/plugins/datepick'),
+	require('./js/plugins/datepick'),		// 时间选择控件
 	require('./js/plugins/multiSelect'),
 	require('./js/plugins/layer'),
 	require('./js/plugins/validate'),
