@@ -1,76 +1,80 @@
-// 菜单标题、子菜单样式
-.menu-title,
-.menu-item {
-  height: 50px;
+// 菜单标题、选项样式
+.menu-item,
+.menu-item-disabled {
   line-height: 50px;
-  border-left: 3px solid transparent;
-  padding: 0 15px;
+  padding: 0 20px;
   font-size: 14px;
-  position: relative;
-  cursor: pointer;
   display: block;
+  cursor: pointer;
+  transition: border-color .3s,background-color .3s,color .3s;
   white-space: nowrap;
-
   .fa {
     margin-right: 5px;
   }
 }
-
-// 子菜单样式
-.menu-sub {
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
-  margin-bottom: 5px;
-  .menu-item {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 25px;
-  }
+.menu-item-disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  color: #999;
 }
+//.menu-item>span,
+//.menu-item-disabled>span {
+//  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+//  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+//  opacity: 1;
+//}
 
 // 三角标样式
-.menu-title {
+.menu-triangle,
+.menu-triangle-right {
   font-family: FontAwesome;
-  &:after {
-    content: "\F106";
-    position: absolute;
-    right: 20px;
-    -webkit-transition: transform .5s ease;
-    -o-transition: transform .5s ease;
-    transition: transform .5s ease;
-  }
-  &.menu-open {
-    &:after {
-      -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-      -o-transform: rotate(-180deg);
-      transform: rotate(-180deg);
-    }
-  }
+}
+.menu-triangle:after,
+.menu-triangle-right:after {
+  content: "\F106";
+  @include transition(transform .5s ease);
+  float: right;
+}
+.menu-triangle:after {
+  margin-left: 8px;
+  @include transform(rotate(-180deg));
+}
+.menu-triangle.hover:after,
+.menu-triangle.menu-open:after {
+  @include transform(rotate(0deg));
+}
+.menu-triangle-right:after {
+  @include transform(rotate(90deg));
+}
+.menu-triangle-right.hover:after {
+  @include transform(rotate(270deg));
+}
+.menu-inline>li>.menu-triangle:after {
+  content: '';
 }
 
 // 水平菜单样式
+.menu-horizontal>li {
+  display: inline-block;
+  position: relative;
+}
+.menu-horizontal>li>.menu-item {
+  border-bottom: 2px solid transparent;
+}
 .menu-horizontal {
-  font-size: 0;
-  li {
-    display: inline-block;
-    position: relative;
-  }
-  .menu-title {
-    border-left: none;
-  }
-  .menu-sub {
+  .menu-popup {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
     position: absolute;
     z-index: 1;
-    width: 100%;
-    li {
-      width: 100%;
-    }
+    border-radius: 2px;
+    min-width: 100%;
   }
-  .menu-open {
-    border-bottom: 2px solid #409eff;
+  .menu-popup .menu-popup {
+    top: 0;
+    left: 100%;
   }
-  span {
-    margin-right: 20px;
+  .menu-sub {
+    position: relative;
   }
 }
 
@@ -81,7 +85,7 @@
   -moz-transition: width .2s;
   -o-transition: width .2s;
   transition: width .2s;
-  span {
+  .span {
     -webkit-transition: width 0.3s;
     transition: width 0.3s;
     //opacity: 1;
@@ -92,59 +96,156 @@
     vertical-align: middle;
   }
 }
-
-// 菜单默认主题
-.menu-default {
-  color: #909399;
-  a {
-    color: #909399;
+.menu-vertical {
+  .menu-popup {
+    .menu-item,
+    .menu-title {
+      padding-left: 40px;
+    }
   }
-  .menu-item {
-    background-color: #fff;
-  }
-  .menu-item.active {
-    color: #303133;
-  }
-  .menu-title.active {
-    color: #303133;
+  .menu-popup .menu-popup {
+    .menu-item,
+    .menu-title {
+      padding-left: 60px;
+    }
   }
 }
 
-// 菜单黑暗主题
-.menu-dark {
-  background-color: #222d32;
-  color: #b8c7ce;
-  a {
-    color: #b8c7ce;
+// 内嵌菜单样式
+.menu-inline {
+  width: 50px;
+}
+.menu-inline li {
+  position: relative;
+}
+.menu-inline>li>.menu-item,
+.menu-inline>li>.menu-item-disabled {
+  padding: 0 0 0 18px;
+  //@include transition(padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1));
+}
+.menu-inline>li>.menu-item>span,
+.menu-inline>li>.menu-item-disabled>span {
+  position: absolute;
+  //opacity: 0;
+  //display: none;
+  @include ellipsis(0);
+}
+.menu-inline>li>.menu-item.hover>span.hover {
+  left: 50px;
+  max-width: initial;
+  //opacity: 1;
+  //display: inline-block;
+}
+.menu-inline {
+  .menu-popup {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    position: absolute;
+    left: 50px;
+    top: 0;
+    z-index: 1;
+    border-radius: 2px;
+    min-width: 200px;
   }
-  .menu-sub {
-    background-color: #2c3b41;
-  }
-  .menu-item.active,
-  .menu-title.active {
-    color: #fff;
+  .menu-popup .menu-popup {
+    top: 0;
+    left: 100%;
   }
 }
-
-// 菜单蓝色主题
-.menu-skyblue {
-  background-color: #3c8dbc;
-  color: #fff;
-  a {
-    color: #fff;
+.menu-inline1 {
+  .menu-sub>li>.menu-item>span {
+    width: 100%;
+  }
+  .menu-sub:after,
+  .menu-item>span:after {
+    content: ' ';
+    position: absolute;
+    left: -5px;
+    top: 17px;
   }
   li {
-    background-color: #3c8dbc;
+    position: relative;
   }
-  .menu-item.active,
-  .menu-title.active {
-    background-color: rgba(0, 0, 0, 0.1);
+  //.menu-sub
+  li>.menu-item span
+  {
+    display: block !important;
+    position: absolute;
+    left: 57px;
+    top: 3px;
+    z-index: 1;
+    border-radius: 4px;
   }
+  li>.menu-item span {
+    width: auto;
+    line-height: 1.2;
+    top: 50%;
+    margin-top: -13px;
+    margin-left: -3px;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .menu-sub .fa {
+    display: none;
+  }
+}
+.menu-inline>li {
+  position: relative;
+}
+.menu-inline>li>.menu-title.menu-open+.menu-sub {
+  display: block !important;
+  position: absolute;
+  left: 57px;
+  top: 3px;
+  z-index: 1;
+  border-radius: 4px;
+}
+.menu-inline>li>.menu-title.menu-open+.menu-sub .fa {
+  display: none;
+}
+
+// 默认主题
+.menu-default .menu-popup {
+  background-color: #fff;
+}
+.menu-default .menu-item {
+  color: #909399;
+}
+.menu-default .menu-item:hover,
+.menu-default .menu-item.hover {
+  background-color: #ecf5ff;
+}
+.menu-default .menu-item.active {
+  color: #303133;
+}
+.menu-default.menu-horizontal>li>.menu-item.active {
+  border-bottom: 2px solid #409eff;
+}
+
+// 暗黑主题
+.menu-dark {
+  background-color: rgb(84, 92, 100);
+}
+.menu-dark .menu-popup {
+  background-color: #545c64;
+}
+.menu-dark .menu-item {
+  color: #b8c7ce;
+}
+.menu-dark .menu-item:hover,
+.menu-dark .menu-item.hover {
+  background-color: rgb(67, 74, 80);
+}
+.menu-dark .menu-item.active {
+  color: rgb(255, 208, 75);
+}
+.menu-dark.menu-horizontal>li>.menu-item.active {
+  border-bottom: 2px solid rgb(255, 208, 75);
 }
 
 // 菜单收起样式
 .menu-collapse {
-  width: 80px;
+  width: 50px;
   span {
     width: 0;
   }
@@ -156,10 +257,6 @@
   li {
     position: relative;
   }
-  .menu-title,
-  .menu-item {
-    padding: 0 30px;
-  }
 }
 
 // 菜单收起鼠标放到菜单标题样式
@@ -167,7 +264,7 @@
   &+.menu-sub {
     display: block!important;
     position: absolute;
-    left: 83px;
+    left: 53px;
     top: 3px;
     z-index: 1;
     border-radius: 4px;

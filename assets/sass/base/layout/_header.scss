@@ -1,8 +1,6 @@
 .header {
-    background-color: #3c8dbc;
     width: 100%;
     height: 50px;
-    //z-index: 1133;
     position: relative;
     position: fixed;
     top: 0;
@@ -17,39 +15,37 @@
 }
 
 .logo {
-    background-color: #367fa9;
-    color: #fff;
-    border-bottom: 0 solid transparent;
-    -webkit-transition: width .3s ease-in-out;
-    -o-transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
-    display: block;
     float: left;
-    height: 50px;
+    color: #666;
     font-size: 20px;
     line-height: 50px;
-    text-align: center;
     width: 230px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0 15px;
-    font-weight: 300;
-    overflow: hidden;
-    &.active {
-        background-color: #367fa9;
+    @include transition(width .3s ease-in-out);
+    .logo-mini {
+        display: none;
+    }
+}
+
+.sidebar-collapse .logo {
+    width: 80px;
+    .logo-mini {
+        display: inline-block;
+    }
+    .logo-lg {
+        display: none;
     }
 }
 
 .sidebar-toggle {
     float: left;
-    background-color: transparent;
-    background-image: none;
-    padding: 15px 15px;
+    padding: 15px;
     font-family: fontAwesome;
-    color: #fff;
+    color: #666;
     &:before {
         content: "\f0c9";
     }
     &:hover {
-        background-color: #367fa9
+        color: #999;
     }
 }

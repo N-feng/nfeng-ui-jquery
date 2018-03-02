@@ -1,4 +1,4 @@
-var commonUtils = require('../../base/utils');
+let commonUtils = require('../../base/utils');
 
 function Menu(options) {
     return this.each(function (index, el) {
@@ -26,147 +26,135 @@ MenuConstructor.DEFAULT = {
 };
 
 MenuConstructor.prototype = {
-    getDefault: function () {
+    getDefault() {
         return MenuConstructor.DEFAULT;
     },
-    getOptions: function (options) {
+    getOptions(options) {
         return $.extend({}, this.getDefault(), options);
     },
-    init: function (options) {
+    init(options) {
         this.config = this.getOptions(options);
         this.showActive();
         this.bindEvent();
     },
-    showActive: function () {
-        var url = window.location.href;
-        var str = '#' + $.getHash(url);
-        var $target = $("[href='"+str+"']");
+    showActive() {
+        let url = window.location.href;
+        let str = '#' + $.getHash(url);
+        let $target = $("[href='"+str+"']");
 
         $target.addClass('active');
-        $target.parents('.menu-sub').siblings('.menu-title').addClass('active');
+        $target.parents('.menu-popup').siblings('.menu-item').addClass('active');
     },
-    bindEvent: function () {
-        var _this = this;
-        var config = _this.config;
-        config.mode === 'vertical' ? _this.bindVerticalEvent() : _this.bindHorizontalEvent();
+    bindEvent() {
+        let _this = this;
+        let config = _this.config;
+        config.mode === 'vertical' ? _this.bindVerticalEvent() : '';
+        config.mode === 'horizontal' ? _this.bindHorizontalEvent() : '';
+        config.mode === 'inline' ? _this.bindInlineEvent() : '';
 
         // 点击菜单active 变化
         _this.$el.on('click.menu', '.menu-item', function () {
-            _this.$el.find('.menu-title, .menu-item').removeClass('active');
-            $(this).addClass('active');
-            $(this).parents('.menu-sub').siblings('.menu-title').addClass('active');
+            if ($(this).siblings('.menu-popup').length) {
+                $(this).toggleClass('menu-open');
+            } else {
+                _this.$el.find('.menu-item').removeClass('active').children('span').removeClass('active');
+                $(this).addClass('active').children('.menu-item').addClass('active');
+                $(this).parents('.menu-popup').siblings('.menu-item').addClass('active');
+            }
         });
-    },
-    // 垂直菜单绑定事件
-    bindVerticalEvent: function () {
-        var _this = this;
-        var config = _this.config;
 
         // 菜单收起、展开按钮操作
         $(config.container).on('click.menu', config.closeHandle, function (event) {
-            _this.$el.addClass('menu-collapse');
+            _this.$el.removeClass('menu-vertical').addClass('menu-inline');
+            _this.$el.find('.menu-popup').slideUp();
+            _this.$el.find('.menu-open').removeClass('menu-open');
+            _this.unbindEvent();
+            _this.bindInlineEvent();
             $(event.target).addClass('active').siblings('button').removeClass('active');
-            _this.$el.find('.menu-sub').slideUp();
-            _this.$el.children('li').children('.menu-item').children('span').addClass('tooltip tooltip-right fade-in-linear-enter');
         });
         $(config.container).on('click.menu', config.openHandle, function () {
-            console.log('what?');
-            _this.$el.removeClass('menu-collapse');
+            _this.$el.removeClass('menu-inline').addClass('menu-vertical');
+            // _this.$el.find('.menu-open').siblings('.menu-sub').slideDown();
+            // _this.$el.children('li').children('.menu-item').children('span').removeClass('tooltip tooltip-right fade-in-linear-enter');
+            // _this.$el.find('.menu-mouseover').removeClass('menu-mouseover');
+            _this.unbindEvent();
+            _this.bindVerticalEvent();
             $(event.target).addClass('active').siblings('button').removeClass('active');
-            _this.$el.find('.menu-open').siblings('.menu-sub').slideDown();
-            _this.$el.children('li').children('.menu-item').children('span').removeClass('tooltip tooltip-right fade-in-linear-enter');
-            _this.$el.find('.menu-mouseover').removeClass('menu-mouseover');
-        });
-
-        // 展开菜单绑定事件
-        _this.$el.on('click.menu', '.menu-title', function () {
-            if (_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            if ($(this).hasClass('menu-open')) {
-                $(this).siblings('.menu-sub').slideUp();
-            } else {
-                $(this).siblings('.menu-sub').slideDown();
-            }
-            $(this).toggleClass('menu-open');
-        });
-        // 收起菜单绑定事件
-        _this.$el.on('mouseenter.navmenu', '.menu-title', function () {
-            if (!_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            $(this).addClass('menu-mouseover');
-            $(this).siblings('.menu-sub').addClass(config.animateVerticalEnterClass).addClass(config.animateVerticalEnterActiveClass);
-            var self = this;
-            setTimeout(function () {
-                $(self).siblings('.menu-sub').removeClass(config.animateVerticalEnterClass).on('transitionend', function () {
-                    $(this).removeClass(config.animateVerticalEnterActiveClass);
-                });
-            }, 100);
-        });
-        _this.$el.on('mouseleave.menu', '.menu-title', function () {
-            if (!_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            $(this).removeClass('menu-mouseover');
-        });
-        // 收起菜单的二级栏目绑定事件
-        _this.$el.children('li').children('.menu-item').on('mouseenter.menu', function () {
-            if (!_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            var self = this;
-            var $span = $(self).find('span');
-            $(self).addClass('menu-mouseover');
-            setTimeout(function () {
-                $span.removeClass('fade-in-linear-enter');
-            }, 100);
-        });
-        _this.$el.children('li').children('.menu-item').on('mouseleave.menu', function () {
-            if (!_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            var self = this;
-            var $span = $(self).find('span');
-            setTimeout(function () {
-                $span.addClass('fade-in-linear-enter');
-            }, 100);
-        });
-        _this.$el.on('mouseover.menu', '.menu-sub' , function () {
-            if (!_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            $(this).siblings('.menu-title').addClass('menu-mouseover');
-        });
-        _this.$el.on('mouseleave.menu', '.menu-sub' , function () {
-            if (!_this.$el.hasClass('menu-collapse')) {
-                return false;
-            }
-            $(this).siblings('.menu-title').removeClass('menu-mouseover');
         });
     },
+    unbindEvent() {
+        this.$el.find('li').unbind('mouseenter').unbind('mouseleave');
+        this.$el.find('.menu-popup, span').off(commonUtils.transitionEnd);
+    },
     // 水平菜单绑定事件
-    bindHorizontalEvent: function () {
-        var _this = this;
-        var config = _this.config;
-        var $context = _this.$el.find('.menu-sub');
-
-        // 鼠标放在菜单效果
-        _this.$el.on('mouseover.menu', 'li', function () {
-            $(this).find('.menu-sub').removeClass(config.hideClass).addClass(config.animateEnterClass).removeClass(config.animateLeaveClass);
-            $(this).find('.menu-title').addClass('menu-open');
+    bindHorizontalEvent() {
+        this.$el.find('li').hover(function () {
+            $(this).children('.menu-popup').fadeIn();
+            $(this).children('.menu-item').addClass('hover');
+        }, function() {
+            $(this).children('.menu-popup').fadeOut();
+            $(this).children('.menu-item').removeClass('hover');
         });
-
-        // 鼠标离开菜单效果
-        _this.$el.on('mouseleave.menu', 'li', function () {
-            $(this).find('.menu-sub').removeClass(config.animateEnterClass).addClass(config.animateLeaveClass);
-            $(this).find('.menu-title').removeClass('menu-open');
+        // commonUtils.animateEndShim(this.$el.find('.menu-popup'), function () {
+        //     if ($(this).hasClass('slideDown-leave-active')) {
+        //         $(this).removeClass('slideDown-leave-active').addClass('hide');
+        //     }
+        // });
+    },
+    // 垂直菜单绑定事件
+    bindVerticalEvent() {
+        this.$el.on('click.menu', '.menu-item', function () {
+            $(this).siblings('.menu-popup').slideToggle();
+        })
+    },
+    // 内嵌菜单绑定事件
+    bindInlineEvent() {
+        this.$el.children('li').hover(function () {
+            let self = this;
+            if ($(self).children('.menu-popup').length) {
+                $(self).children('.menu-item').addClass('hover');
+                $(self).children('.menu-popup').removeClass('hide').addClass('zoom-in-left-enter zoom-in-left-enter-active');
+                setTimeout(function () {
+                    $(self).children('.menu-popup').removeClass('zoom-in-left-enter');
+                }, 100);
+            } else {
+                $(self).children('.menu-item').addClass('hover');
+                $(self).children('.menu-item').children('span').addClass('menu-item hover').addClass('zoom-in-left-enter zoom-in-left-enter-active');
+                setTimeout(function () {
+                    $(self).children('.menu-item').children('span').removeClass('zoom-in-left-enter');
+                }, 100);
+            }
+        }, function () {
+            if ($(this).children('.menu-popup').length) {
+                $(this).children('.menu-popup').addClass('zoom-in-left-enter');
+                $(this).children('.menu-item').removeClass('hover');
+            } else {
+                $(this).children('.menu-item').removeClass('hover');
+                $(this).children('.menu-item').children('span').removeClass('menu-item hover');
+                $(this).children('.menu-item').children('span').addClass('zoom-in-left-enter');
+            }
         });
-
-        // 动画结束事件绑定
-        commonUtils.animateEndShim($context, function () {
-            if ($context.hasClass(config.animateLeaveClass)) {
-                $context.removeClass(config.animateLeaveClass).addClass(config.hideClass);
+        this.$el.find('.menu-popup li').hover(function () {
+            let self = this;
+            if ($(self).children('.menu-popup').length) {
+                $(self).children('.menu-popup').removeClass('hide').addClass('zoom-in-left-enter zoom-in-left-enter-active');
+                $(self).children('.menu-item').addClass('hover');
+                setTimeout(function () {
+                    $(self).children('.menu-popup').removeClass('zoom-in-left-enter');
+                }, 100);
+            }
+        }, function () {
+            $(this).children('.menu-popup').addClass('zoom-in-left-enter');
+            $(this).children('.menu-item').removeClass('hover');
+        });
+        commonUtils.transitionEndShim(this.$el.find('.menu-popup'), function () {
+            if ($(this).hasClass('zoom-in-left-enter')) {
+                $(this).removeClass('zoom-in-left-enter-active zoom-in-left-enter').addClass('hide');
+            }
+        });
+        commonUtils.transitionEndShim(this.$el.children('li').children('.menu-item').children('span'), function () {
+            if ($(this).hasClass('zoom-in-left-enter')) {
+                $(this).removeClass('zoom-in-left-enter-active zoom-in-left-enter');
             }
         });
     }

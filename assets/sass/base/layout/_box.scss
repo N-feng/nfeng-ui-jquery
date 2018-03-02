@@ -1,5 +1,6 @@
 .box {
     position: relative;
+    border: 1px solid #ebebeb;
     border-radius: 3px;
     background: #ffffff;
     border-top: 3px solid #d2d6de;
@@ -17,7 +18,7 @@
 }
 
 .box-header {
-    color: #444;
+    color: #666;
     display: block;
     padding: 10px;
     position: relative;
@@ -32,8 +33,6 @@
 .box-header .box-title {
     display: inline-block;
     font-size: 18px;
-    margin: 0;
-    line-height: 1;
 }
 
 .box-header>.fa,
