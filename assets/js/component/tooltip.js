@@ -1,29 +1,19 @@
 function Tooltip(options) {
-    options = options || {};
-    let handle = options.handler || '[data-tooltip]';
-    $(handle).each(function (index, selector) {
-        new TooltipConstructor(options, selector);
-    });
+    return new TooltipConstructor(options);
 }
 
 function TooltipConstructor(options, selector) {
     this.options = null;
     this.$selector = $(selector);
-    this.$template = null;
-    this.tooltipId = null;
-    this.timer = null;
     this.init(options);
 }
 
 TooltipConstructor.DEFAULT = {
     container: 'body',
+    handle: '[content]',
     offsetX: 10,
     offsetY: 10,
-    onClose: null,
-    animateEnterClass: 'fade-in-linear-enter',
-    animateEnterActiveClass: 'fade-in-linear-enter-active',
-    animateLeaveClass: 'fade-in-linear-leave-active',
-    duration: 300,
+    duration: 100
 };
 
 // 位置计算
@@ -44,7 +34,7 @@ TooltipConstructor.PositionCalc = {
         let destH = template.outerHeight();
         return [srcX + srcW + this.options.offsetX, srcY + ((srcH - destH) / 2)];
     },
-    up(bcr, template) {
+    top(bcr, template) {
         let srcX = bcr.left;
         let srcY = bcr.top;
         let srcW = bcr.width;
@@ -52,7 +42,7 @@ TooltipConstructor.PositionCalc = {
         let destH = template.outerHeight();
         return [(srcW / 2) + srcX - (destW / 2), srcY - destH - this.options.offsetY];
     },
-    down(bcr, template) {
+    bottom(bcr, template) {
         let srcX = bcr.left;
         let srcY = bcr.top;
         let srcW = bcr.width;
@@ -71,90 +61,84 @@ TooltipConstructor.prototype = {
     },
     getTemplate() {
         //生成一个随机5位数，作为id
-        let tooltipId = 'tooltipId-';
+        let tooltipId = 'tooltip-';
         do {
             tooltipId += ~~(Math.random() * 100000)
         } while (document.getElementById(tooltipId));
-        this.tooltipId = tooltipId;
-        let tooltipOptions = (this.$selector.data('tooltipOptions') || '|').split('|');
-        let text = this.$selector.data('tooltip') || '';
-        let direct = tooltipOptions[0] || 'left';
-        let size = tooltipOptions[1] || 'small';
-
-        this.$template = $('<div class="tooltip" id="' + this.tooltipId + '">');
-        this.$template.html(text);
-        this.$template.addClass('tooltip-' + direct + ' tooltip-' + size);
-        this.$template.addClass(this.options.animateEnterClass).addClass(this.options.animateEnterActiveClass);
-
-        // 鼠标hover事件
-        let self = this;
-        this.$template.hover(function () {
-            self.clearTimer();
-        }, function () {
-            self.startTimer();
-        });
-
-        return this.$template;
+        let text = $(event.target).attr('content') || '';
+        let direct = $(event.target).attr('placement') || 'left';
+        let $template = $('<div class="tooltip" id="' + tooltipId + '">');
+        $template.html(text);
+        $template.addClass('tooltip-' + direct);
+        $(event.target).attr('aria-describedby', tooltipId);
+        return $template;
     },
     getPosition() {
-        let tooltipOptions = (this.$selector.data('tooltipOptions') || '|').split('|');
-        let direct = tooltipOptions[0] || 'left';
-        let bcr = this.$selector[0].getBoundingClientRect();
-        let pos = TooltipConstructor.PositionCalc[direct].call(this, bcr, this.$template);
-        this.$template.css({'left': pos[0], 'top': pos[1]});
+        let tooltipId = $(event.target).attr('aria-describedby');
+        let $template = $('#'+tooltipId);
+        let direct = $(event.target).attr('placement') || 'left';
+        let bcr = event.target.getBoundingClientRect();
+        let pos = TooltipConstructor.PositionCalc[direct].call(this, bcr, $template);
+        $template.css({'left': pos[0], 'top': pos[1]});
     },
     showTemplate() {
-        // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
-        let self = this;
-        setTimeout(function () {
-            self.$template.removeClass(self.options.animateEnterClass).on('transitionend', function () {
-                self.$template.removeClass(self.options.animateEnterActiveClass);
-            });
-        }, 100);
+        let $target = $(event.target);
+        let tooltipId = $target.attr('aria-describedby');
+        let $template = $('#'+tooltipId);
+        $template.addClass('tooltip-show');
     },
     init(options) {
         this.options = this.getOptions(options);
-
-        this.$selector.on('mouseenter.tooltip', $.proxy(this.show, this));
-        this.$selector.on('mouseleave.tooltip', $.proxy(this.hide, this));
+        $(this.options.container).on('mouseenter.tooltip', this.options.handle, $.proxy(this.show, this));
+        $(this.options.container).on('mouseleave.tooltip', this.options.handle, $.proxy(this.hide, this));
+        $(this.options.container).on('mouseenter.tooltip', '.tooltip', $.proxy(this.clearTimer, this));
+        $(this.options.container).on('mouseleave.tooltip', '.tooltip', $.proxy(this.startTimer, this));
     },
     show() {
-        this.clearTimer();
-        if(!this.$template) {
-            this.getTemplate().appendTo(this.options.container);
+        let $target = $(event.target);
+        let $parents = $target.parents(this.options.container);
+        let disabled = $target.data('disabled');
+        let text = $target.attr('content');
+        if (!$target.attr('aria-describedby')&&text) {
+            this.getTemplate().appendTo($parents);
+        }
+        if (!disabled) {
             this.getPosition();
             this.showTemplate();
         }
     },
     hide() {
-        this.startTimer();
-    },
-    // 关闭即销毁
-    close() {
-        let self = this;
-        if (typeof this.options.onClose === 'function') {
-            this.options.onClose(this);
+        let $target = $(event.target);
+        let tooltipId = $target.attr('aria-describedby');
+        let $template = $('#'+tooltipId);
+        let timer = $target.data('timer');
+        let duration = this.options.duration;
+        if (duration > 0) {
+            timer = setTimeout(function () {
+                $template.removeClass('tooltip-show');
+            }, duration);
+            $target.data('timer', timer);
         }
-        if(!this.$template) {
-            return false;
-        }
-        //消失动画结束后销毁
-        this.$template.addClass(this.options.animateLeaveClass).on('transitionend', function () {
-            self.$template.remove();
-            self.$template = null;
-        });
     },
     startTimer() {
-        let self = this;
-        let duration = self.options.duration;
+        let $template = $(event.target);
+        let id = $template.attr('id');
+        let $target = $('[aria-describedby="'+id+'"]');
+        let timer = $target.data('timer');
+        let duration = this.options.duration;
         if (duration > 0) {
-            self.timer = setTimeout(function () {
-                self.close();
+            timer = setTimeout(function () {
+                $template.removeClass('tooltip-show');
             }, duration);
+            $target.data('timer', timer);
         }
     },
     clearTimer() {
-        clearTimeout(this.timer);
+        let $template = $(event.target);
+        let id = $template.attr('id');
+        let $target = $('[aria-describedby="'+id+'"]');
+        let timer = $target.data('timer');
+        clearTimeout(timer);
     }
 };
 

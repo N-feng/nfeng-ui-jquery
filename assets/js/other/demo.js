@@ -4,7 +4,7 @@
         let self = this;
         let $span = $(self).find('span');
         let $i = $(self).find('i');
-        $span.addClass('text-slide-enter').removeAttr('style');
+        $span.addClass('text-slide-enter').removeClass('hide');
         $i.addClass('hovering');
         setTimeout(function () {
             $span.removeClass('text-slide-enter');
@@ -14,7 +14,7 @@
         let self = this;
         let $span = $(self).find('span');
         let $i = $(self).find('i');
-        $span.css('display', 'none');
+        $span.addClass('hide');
         $i.removeClass('hovering');
     });
     $('body').on('click.demo', '.demo-block-control', function () {

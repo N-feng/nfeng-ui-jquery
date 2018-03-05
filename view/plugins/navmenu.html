@@ -14,8 +14,8 @@
                             <li><a href="javascript:;" class="menu-item">Option 1</a></li>
                             <li><a href="javascript:;" class="menu-item">Option 2</a></li>
                             <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                            <li class="menu-sub">
-                                <span class="menu-item menu-triangle-right">Option 4</span>
+                            <li>
+                                <span class="menu-item menu-triangle">Option 4</span>
                                 <ul class="menu-popup hide">
                                     <li><a href="javascript:;" class="menu-item">Option 1</a></li>
                                     <li><a href="javascript:;" class="menu-item">Option 2</a></li>
@@ -36,8 +36,8 @@
                             <li><a href="javascript:;" class="menu-item">Option 1</a></li>
                             <li><a href="javascript:;" class="menu-item">Option 2</a></li>
                             <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                            <li class="menu-sub">
-                                <span class="menu-item menu-triangle-right">Option 4</span>
+                            <li>
+                                <span class="menu-item menu-triangle">Option 4</span>
                                 <ul class="menu-popup hide">
                                     <li><a href="javascript:;" class="menu-item">Option 1</a></li>
                                     <li><a href="javascript:;" class="menu-item">Option 2</a></li>
@@ -62,7 +62,7 @@
             </div>
             <div class="demo-block-control">
                 <i class="el-icon-caret-bottom"></i>
-                <span style="display: none;">显示代码</span>
+                <span class="hide">显示代码</span>
             </div>
         </div>
     </div>
@@ -82,15 +82,13 @@
                 <div class="row">
                     <div class="col-md-3">
                         <ul class="menu-demo-vertical menu-vertical menu-default">
-                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-laptop"></i><span>Navigation One</span></a></li>
-                            <li><a href="javascript:;" class="menu-item-disabled"><i class="fa fa-files-o"></i><span>Navigation Two</span></a></li>
                             <li>
-                                <span class="menu-item menu-triangle"><i class="fa fa-edit"></i><span>Navigation Three - Submenu</span></span>
+                                <span class="menu-item menu-triangle"><i class="fa fa-laptop"></i><span>Navigation One - Submenu</span></span>
                                 <ul class="menu-popup hide">
                                     <li><a href="javascript:;" class="menu-item">Option 1</a></li>
                                     <li><a href="javascript:;" class="menu-item">Option 2</a></li>
                                     <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                    <li class="menu-sub">
+                                    <li>
                                         <span class="menu-item menu-triangle">Option 4</span>
                                         <ul class="menu-popup hide">
                                             <li><a href="javascript:;" class="menu-item">Option 1</a></li>
@@ -100,20 +98,32 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-table"></i><span>Navigation Four - Link</span></a></li>
+                            <li>
+                                <a href="javascript:;" class="menu-item-disabled" content="Navigation Two" placement="right" data-disabled="true">
+                                    <i class="fa fa-files-o"></i><span>Navigation Two</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="menu-item" content="Navigation Three" placement="right" data-disabled="true">
+                                    <i class="fa fa-edit"></i><span>Navigation Three</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="menu-item" content="Navigation Four - Link" placement="right" data-disabled="true">
+                                    <i class="fa fa-table"></i><span>Navigation Four - Link</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <ul class="menu-demo-vertical menu-vertical menu-dark">
-                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-laptop"></i><span>Navigation One</span></a></li>
-                            <li><a href="javascript:;" class="menu-item-disabled"><i class="fa fa-files-o"></i><span>Navigation Two</span></a></li>
                             <li>
-                                <span class="menu-item menu-triangle"><i class="fa fa-edit"></i><span>Navigation Three - Submenu</span></span>
+                                <span class="menu-item menu-triangle"><i class="fa fa-laptop"></i><span>Navigation One - Submenu</span></span>
                                 <ul class="menu-popup hide">
                                     <li><a href="javascript:;" class="menu-item">Option 1</a></li>
                                     <li><a href="javascript:;" class="menu-item">Option 2</a></li>
                                     <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                    <li class="menu-sub">
+                                    <li>
                                         <span class="menu-item menu-triangle">Option 4</span>
                                         <ul class="menu-popup hide">
                                             <li><a href="javascript:;" class="menu-item">Option 1</a></li>
@@ -123,7 +133,21 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-table"></i><span>Navigation Four - Link</span></a></li>
+                            <li>
+                                <a href="javascript:;" class="menu-item-disabled" content="Navigation Two" placement="right" data-disabled="true">
+                                    <i class="fa fa-files-o"></i><span>Navigation Two</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="menu-item" content="Navigation Three" placement="right" data-disabled="true">
+                                    <i class="fa fa-edit"></i><span>Navigation Three</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="menu-item" content="Navigation Four - Link" placement="right" data-disabled="true">
+                                    <i class="fa fa-table"></i><span>Navigation Four - Link</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -142,111 +166,7 @@
             </div>
             <div class="demo-block-control">
                 <i class="el-icon-caret-bottom"></i>
-                <span style="display: none;">显示代码</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="box demo-block">
-            <div class="box-header">
-                <h3 class="box-title">InlineMenu</h3>
-                <div class="btn-group ml15">
-                    <button type="button" class="btn btn-default btn-sm menu-demo-spread active">展开</button>
-                    <button type="button" class="btn btn-default btn-sm menu-demo-close">收起</button>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-md-3">
-                        <ul class="menu-demo-inline menu-inline menu-default">
-                            <li>
-                                <div class="menu-item menu-triangle">
-                                    <i class="fa fa-files-o"></i>
-                                    <span>Navigation One</span>
-                                </div>
-                                <ul class="menu-popup hide">
-                                    <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 1</span></a></li>
-                                    <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 2</span></a></li>
-                                    <li>
-                                        <a href="javascript:;" class="menu-item menu-triangle-right"><i class="fa fa-circle-o"></i><span>Option 3</span></a>
-                                        <ul class="menu-popup hide">
-                                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 1</span></a></li>
-                                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 2</span></a></li>
-                                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 3</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item">
-                                    <i class="fa fa-edit"></i>
-                                    <span>Navigation Two</span>
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item">
-                                    <i class="fa fa-table"></i>
-                                    <span>Navigation Three</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul class="menu-demo-inline menu-inline menu-dark">
-                            <li>
-                                <div class="menu-item menu-triangle">
-                                    <i class="fa fa-files-o"></i>
-                                    <span>Navigation One</span>
-                                </div>
-                                <ul class="menu-popup hide">
-                                    <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 1</span></a></li>
-                                    <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 2</span></a></li>
-                                    <li>
-                                        <a href="javascript:;" class="menu-item menu-triangle-right"><i class="fa fa-circle-o"></i><span>Option 3</span></a>
-                                        <ul class="menu-popup hide">
-                                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 1</span></a></li>
-                                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 2</span></a></li>
-                                            <li><a href="javascript:;" class="menu-item"><i class="fa fa-circle-o"></i><span>Option 3</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item">
-                                    <i class="fa fa-edit"></i>
-                                    <span>Navigation Two</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item">
-                                    <i class="fa fa-table"></i>
-                                    <span>Navigation Three</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="meta">
-                <div class="highlight">
-                    <pre>
-                        <code class="hljs">
-                            $('.menu-demo-inline').NUI('menu', {
-                                mode: 'inline',
-                                closeHandle: '.menu-demo-close',
-                                openHandle: '.menu-demo-spread'
-                            });
-                        </code>
-                    </pre>
-                </div>
-            </div>
-            <div class="demo-block-control">
-                <i class="el-icon-caret-bottom"></i>
-                <span style="display: none;">显示代码</span>
+                <span class="hide">显示代码</span>
             </div>
         </div>
     </div>
@@ -272,7 +192,7 @@
                         <td>class</td>
                         <td>主题</td>
                         <td>string</td>
-                        <td>menu-default / menu-skyblue / menu-dark</td>
+                        <td>menu-default / menu-dark</td>
                         <td>-</td>
                     </tr>
                     <tr>
@@ -308,7 +228,7 @@
                         <td>mode</td>
                         <td>模式</td>
                         <td>string</td>
-                        <td>horizontal / vertical</td>
+                        <td>horizontal / vertical / inline</td>
                         <td>vertical</td>
                     </tr>
                     <tr>
@@ -340,10 +260,8 @@
             closeHandle: '.menu-demo-close',
             openHandle: '.menu-demo-spread'
         });
-        $('.menu-demo-inline').NUI('menu', {
-            mode: 'inline',
-            closeHandle: '.menu-demo-close',
-            openHandle: '.menu-demo-spread'
+        $.tooltip({
+            container: '.demo-block'
         });
     });
 </script>
