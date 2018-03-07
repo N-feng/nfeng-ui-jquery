@@ -35,7 +35,8 @@ MenuConstructor.prototype = {
         let str = '#' + $.getHash(url);
         let $target = $("[href='"+str+"']");
         $target.addClass('active');
-        $target.parents('.menu-popup').siblings('.menu-item').addClass('active');
+        $target.parents('.menu-popup').removeClass('hide');
+        $target.parents('.menu-popup').siblings('.menu-item').addClass('active menu-open');
     },
     bindEvent() {
         let _this = this;
@@ -54,19 +55,23 @@ MenuConstructor.prototype = {
             }
         });
         // 菜单收起、展开按钮操作
-        $(config.container).on('click.menu', config.closeHandle, function (event) {
-            _this.$el.removeClass('menu-vertical').addClass('menu-inline');
-            $(event.target).addClass('active').siblings('button').removeClass('active');
-            _this.$el.find('[content]').data('disabled', false);
-            _this.unbindEvent();
-            _this.bindInlineEvent();
+        $(config.container).on('click.menu', config.closeHandle, function () {
+            if(_this.$el.hasClass('menu-vertical')) {
+                _this.$el.removeClass('menu-vertical').addClass('menu-inline');
+                $(event.target).addClass('active').siblings('button').removeClass('active');
+                _this.$el.find('[content]').data('disabled', false);
+                _this.unbindEvent();
+                _this.bindInlineEvent();
+            }
         });
         $(config.container).on('click.menu', config.openHandle, function () {
-            _this.$el.removeClass('menu-inline').addClass('menu-vertical');
-            $(event.target).addClass('active').siblings('button').removeClass('active');
-            _this.$el.find('[content]').data('disabled', true);
-            _this.unbindEvent();
-            _this.bindVerticalEvent();
+            if(_this.$el.hasClass('menu-inline')) {
+                _this.$el.removeClass('menu-inline').addClass('menu-vertical');
+                $(event.target).addClass('active').siblings('button').removeClass('active');
+                _this.$el.find('[content]').data('disabled', true);
+                _this.unbindEvent();
+                _this.bindVerticalEvent();
+            }
         });
     },
     unbindEvent() {
@@ -76,26 +81,26 @@ MenuConstructor.prototype = {
     // 水平菜单绑定事件
     bindHorizontalEvent() {
         this.$el.find('li').hover(function () {
-            $(this).children('.menu-popup').removeClass('hide');
+            $(this).children('.menu-popup').fadeIn();
             $(this).children('.menu-item').addClass('hover');
         }, function() {
-            $(this).children('.menu-popup').addClass('hide');
+            $(this).children('.menu-popup').fadeOut();
             $(this).children('.menu-item').removeClass('hover');
         });
     },
     // 垂直菜单绑定事件
     bindVerticalEvent() {
         this.$el.on('click.menuSlide', '.menu-item', function () {
-            $(this).siblings('.menu-popup').toggleClass('hide');
+            $(this).siblings('.menu-popup').slideToggle();
         })
     },
     // 内嵌菜单绑定事件
     bindInlineEvent() {
         this.$el.find('li').hover(function () {
-            $(this).children('.menu-popup').removeClass('hide');
+            $(this).children('.menu-popup').fadeIn();
             $(this).children('.menu-item').addClass('hover');
         }, function() {
-            $(this).children('.menu-popup').addClass('hide');
+            $(this).children('.menu-popup').fadeOut();
             $(this).children('.menu-item').removeClass('hover');
         });
     }

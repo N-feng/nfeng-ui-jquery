@@ -1,54 +1,71 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header">
-                <i class="fa fa-edit"></i>
-                <h3 class="box-title">Buttons</h3>
-            </div>
-            <div class="box-body demo-block">
-                <h3 class="mb10">基础用法</h3>
-                <button class="btn">Default</button>
-                <button class="btn btn-primary">Primary</button>
-                <button class="btn btn-success">Success</button>
-                <button class="btn btn-info">Info</button>
-                <button class="btn btn-warning">Warning</button>
-                <button class="btn btn-danger">Danger</button>
-                <button class="btn btn-text">Text</button>
-                <h3 class="mb10">禁用状态</h3>
-                <button disabled="disabled" class="btn">Default</button>
-                <button disabled="disabled" class="btn btn-primary">Primary</button>
-                <button disabled="disabled" class="btn btn-success">Success</button>
-                <button disabled="disabled" class="btn btn-info">Info</button>
-                <button disabled="disabled" class="btn btn-warning">Warning</button>
-                <button disabled="disabled" class="btn btn-danger">Danger</button>
-                <button disabled="disabled" class="btn btn-text">Text</button>
-                <h3 class="mb10">图标按钮</h3>
-                <button class="btn"><i class="fa fa-search"></i><span>Search</span></button>
-                <button class="btn btn-primary"><i class="fa fa-search"></i><span>Search</span></button>
-                <button class="btn btn-primary"><span>Upload</span><i class="fa fa-upload"></i></button>
-                <button class="btn btn-primary btn-loading">
-                    <i class="anticon anticon-spin anticon-loading"></i>
-                    <span>Loading</span>
-                </button>
-                <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
-                <button class="btn btn-primary"><i class="fa fa-share-alt"></i></button>
-                <h3 class="mb10">不同尺寸</h3>
-                <button class="btn btn-lg">Large</button>
-                <button class="btn">Default</button>
-                <button class="btn btn-sm">Small</button>
-                <h3 class="mb10">Horizontal Button Group</h3>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default">Left</button>
-                    <button type="button" class="btn btn-default">Middle</button>
-                    <button type="button" class="btn btn-default">Right</button>
-                </div>
-            </div>
-        </div>
+<h3 class="mb15">Buttons</h3>
+<h4 class="mt50 mb20">基础用法</h4>
+<div class="demo-block">
+    <button class="btn">Default</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-danger">Danger</button>
+</div>
+<h4 class="mt50 mb20">禁用状态</h4>
+<div class="demo-block">
+    <button disabled="disabled" class="btn">Default</button>
+    <button disabled="disabled" class="btn btn-primary">Primary</button>
+    <button disabled="disabled" class="btn btn-success">Success</button>
+    <button disabled="disabled" class="btn btn-info">Info</button>
+    <button disabled="disabled" class="btn btn-warning">Warning</button>
+    <button disabled="disabled" class="btn btn-danger">Danger</button>
+</div>
+<h4 class="mt50 mb20">文字按钮</h4>
+<div class="demo-block">
+    <button class="btn btn-text">Text</button>
+    <button disabled="disabled" class="btn btn-text">Text</button>
+</div>
+<h4 class="mt50 mb20">图标按钮</h4>
+<div class="demo-block">
+    <button class="btn"><i class="fa fa-search"></i><span>Search</span></button>
+    <button class="btn btn-primary"><span>Upload</span><i class="fa fa-upload"></i></button>
+    <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
+    <button class="btn btn-primary"><i class="fa fa-share-alt"></i></button>
+</div>
+<h4 class="mt50 mb20">不同尺寸</h4>
+<div class="demo-block">
+    <button class="btn">Default</button>
+    <button class="btn btn-md">Middle</button>
+    <button class="btn btn-sm">Small</button>
+    <button class="btn btn-xs">Extra Small</button>
+</div>
+<h4 class="mt50 mb20">按钮组</h4>
+<div class="demo-block">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">
+            <i class="el-icon-arrow-left"></i><span>上一页</span>
+        </button>
+        <button type="button" class="btn btn-primary">
+            <span>下一页</span>
+            <i class="el-icon-arrow-right el-icon--right"></i>
+        </button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary"><i class="el-icon-edit"></i></button>
+        <button type="button" class="btn btn-primary"><i class="el-icon-share"></i></button>
+        <button type="button" class="btn btn-primary"><i class="el-icon-delete"></i></button>
     </div>
 </div>
-
-<style>
-
-</style>
-
-
+<h4 class="mt50 mb20">加载中</h4>
+<div class="demo-block">
+    <button type="button" class="btn btn-primary">
+        <i class="el-icon-loading"></i>
+        <span>加载中</span>
+    </button>
+    <button class="btn btn-primary">
+        <i class="anticon anticon-spin anticon-loading"></i>
+        <span>Loading</span>
+    </button>
+</div>

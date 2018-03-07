@@ -4,16 +4,7 @@
     position: relative;
     position: fixed;
     top: 0;
-    .#{header}-user {
-        float: right;
-        height: 50px;
-        line-height: 50px;
-        margin-right: 30px;
-        font-size: 14px;
-        color: #fff;
-    }
 }
-
 .logo {
     float: left;
     color: #666;
@@ -26,7 +17,6 @@
         display: none;
     }
 }
-
 .sidebar-collapse .logo {
     width: 80px;
     .logo-mini {
@@ -36,7 +26,6 @@
         display: none;
     }
 }
-
 .sidebar-toggle {
     float: left;
     padding: 15px;

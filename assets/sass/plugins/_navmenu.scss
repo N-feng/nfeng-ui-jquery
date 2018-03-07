@@ -21,19 +21,28 @@
 // 三角标样式
 .menu-triangle {
   font-family: FontAwesome;
+  height: 100%;
+  position: relative;
 }
 .menu-triangle:after {
   content: "\F106";
-  @include transition(transform .5s ease);
-  float: right;
-}
-.menu-triangle:after {
+  position: absolute;
+  height: 100%;
   margin-left: 8px;
   @include transform(rotate(-180deg));
+  @include transition(transform .5s ease);
 }
 .menu-triangle.hover:after,
 .menu-triangle.menu-open:after {
   @include transform(rotate(0deg));
+}
+.menu-horizontal>li>.menu-triangle:after {
+  position: relative;
+  display: inline-block;
+}
+.menu-vertical .menu-triangle:after,
+.menu-popup .menu-triangle:after {
+  right: 20px;
 }
 .menu-inline>li>.menu-triangle:after {
   content: '';

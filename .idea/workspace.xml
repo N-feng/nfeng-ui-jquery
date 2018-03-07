@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae572886-4e44-4595-8c31-40ffb8b93a22" name="Default" comment="">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/static/main.js" afterPath="$PROJECT_DIR$/static/main.js" />
-=======
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/plugins/menu/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/plugins/_menu.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/layout/menu.html" />
-=======
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/datadisplay/tooltip.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/feedback/message.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/datadisplay/_message.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/desktop/_tooltip.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/fonts/_element.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/general/_button.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/tool/mixins/color/_background-color-opacity.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/datadisplay/tooltip.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/feedback/message.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/general/button.html" />
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
+    <list default="true" id="eb6a5ff5-8254-44a8-98d5-63d109f8da21" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/component/input.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/other/_element.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/view/ui/form.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/view/ui/input.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/assets/entry.pc.js" afterPath="$PROJECT_DIR$/assets/entry.pc.js" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/datadisplay/_message.scss" afterPath="$PROJECT_DIR$/assets/sass/feedback/_message.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/desktop/_tooltip.scss" afterPath="$PROJECT_DIR$/assets/sass/datadisplay/_tooltip.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/style.scss" afterPath="$PROJECT_DIR$/assets/sass/style.scss" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/assets/sass/tool/_index.scss" afterPath="$PROJECT_DIR$/assets/sass/tool/_index.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/js/other/demo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/navmenu/src/navmenu.js" afterPath="$PROJECT_DIR$/assets/js/plugins/navmenu/src/navmenu.js" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/base/browser/_handle.scss" afterPath="$PROJECT_DIR$/assets/sass/base/browser/_handle.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/base/browser/_reset.scss" afterPath="$PROJECT_DIR$/assets/sass/base/browser/_reset.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_header.scss" afterPath="$PROJECT_DIR$/assets/sass/base/layout/_header.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/other/_demo.scss" afterPath="$PROJECT_DIR$/assets/sass/other/_demo.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/plugins/_navmenu.scss" afterPath="$PROJECT_DIR$/assets/sass/plugins/_navmenu.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/ui/_button.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/_button.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/ui/_form.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/_form.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/ui/_input.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/_input.scss" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/router/routes.js" afterPath="$PROJECT_DIR$/router/routes.js" />
-      <change beforePath="$PROJECT_DIR$/view/layout/menu.html" afterPath="$PROJECT_DIR$/view/layout/menu.html" />
+      <change beforePath="$PROJECT_DIR$/view/component/message.html" afterPath="$PROJECT_DIR$/view/component/message.html" />
+      <change beforePath="$PROJECT_DIR$/view/component/tooltip.html" afterPath="$PROJECT_DIR$/view/component/tooltip.html" />
       <change beforePath="$PROJECT_DIR$/view/layouts/header.html" afterPath="$PROJECT_DIR$/view/layouts/header.html" />
       <change beforePath="$PROJECT_DIR$/view/layouts/sidebar.html" afterPath="$PROJECT_DIR$/view/layouts/sidebar.html" />
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
+      <change beforePath="$PROJECT_DIR$/view/plugins/datapick.html" afterPath="$PROJECT_DIR$/view/plugins/datapick.html" />
+      <change beforePath="$PROJECT_DIR$/view/ui/button.html" afterPath="$PROJECT_DIR$/view/ui/button.html" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -50,249 +39,44 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="nfeng-ui-jquery" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="message.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/feedback/message.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <file leaf-file-name="data.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/table/data.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1690">
-              <caret line="404" column="30" lean-forward="true" selection-start-line="404" selection-start-column="30" selection-end-line="404" selection-end-column="30" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
-=======
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/layout/menu.html">
-=======
-      <file leaf-file-name="_message.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/datadisplay/_message.scss">
->>>>>>> gh-pages
-=======
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/layouts/header.html">
->>>>>>> gh-pages
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-              <folding />
->>>>>>> gh-pages
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/router/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-=======
-      <file leaf-file-name="_animate.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/browser/_animate.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="350" column="19" lean-forward="true" selection-start-line="350" selection-start-column="19" selection-end-line="350" selection-end-column="19" />
->>>>>>> gh-pages
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-=======
-      <file leaf-file-name="_menu.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/plugins/_menu.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="83" column="19" lean-forward="false" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
->>>>>>> gh-pages
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/plugins/menu/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
->>>>>>> gh-pages
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-=======
-      <file leaf-file-name="_anticon.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_anticon.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
->>>>>>> gh-pages
-=======
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
->>>>>>> gh-pages
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-=======
-      <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/component/menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="16" />
->>>>>>> gh-pages
-=======
-      <file leaf-file-name="_path.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> gh-pages
-=======
       <file leaf-file-name="entry.pc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="903">
+              <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_reset.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/base/browser/_reset.scss">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
-              <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
->>>>>>> gh-pages
+              <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_message.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/feedback/_message.scss">
+      <file leaf-file-name="_form.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/ui/_form.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-304">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/feedback/message.js">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-            <state relative-caret-position="-84">
-              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
->>>>>>> gh-pages
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <file leaf-file-name="event.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/plugins/table/event.js">
-=======
-      <file leaf-file-name="_sidebar.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/layout/_sidebar.scss">
+      <file leaf-file-name="_navmenu.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/plugins/_navmenu.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-=======
-      <file leaf-file-name="tooltip.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/datadisplay/tooltip.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
->>>>>>> gh-pages
+            <state relative-caret-position="582">
+              <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/layouts/header.html">
->>>>>>> gh-pages
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-              <folding />
-=======
-            <state relative-caret-position="467">
-              <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-              <folding>
-                <marker date="1519368311437" expanded="true" signature="1726:1733" ph="×" />
-              </folding>
->>>>>>> gh-pages
-=======
-      <file leaf-file-name="_tooltip.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/datadisplay/_tooltip.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tooltip.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/datadisplay/tooltip.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="102" column="42" lean-forward="true" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
-              <folding />
->>>>>>> gh-pages
             </state>
           </provider>
         </entry>
@@ -309,52 +93,28 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>static/</find>
-      <find>editInputBlur</find>
-      <find>.treeview-menu</find>
-      <find>#1e282c</find>
-      <find>datepick</find>
-      <find>-180</find>
-      <find>slideDown-leave-active</find>
-      <find>menu-open</find>
-      <find>dashed</find>
-      <find>btn-group</find>
-      <find>.btn</find>
-      <find>menu-demo</find>
-      <find>animateEnterClass</find>
-      <find>animateLeaveClass</find>
-      <find>menu-horizontal</find>
-      <find>slideDown-enter-active</find>
-      <find>commonUtils</find>
-      <find>ease-in-out</find>
-      <find>.3</find>
-      <find>cubic-bezier(0.645, 0.045, 0.355, 1)</find>
-      <find>opacity 0.3s,</find>
-      <find>1000</find>
-      <find>top</find>
-      <find>let</find>
-      <find>tooltip</find>
-      <find>urlHelper</find>
-      <find>mess</find>
-      <find>typeImg</find>
-      <find>display</find>
-      <find>getPreventDefault</find>
+      <find>form</find>
+      <find>'</find>
+      <find>highlight</find>
+      <find>form-control</find>
+      <find>class=&quot;input&quot;</find>
+      <find>.input</find>
+      <find>content-wrapper</find>
+      <find>suffix-icon</find>
+      <find>col-sm-3</find>
+      <find>textarea</find>
+      <find>.el-input__inner</find>
+      <find>.el-textarea__inner</find>
+      <find>&amp;</find>
+      <find>.el-button</find>
+      <find>input input-group input-prepend</find>
     </findStrings>
     <replaceStrings>
-      <replace>demo</replace>
-      <replace>static/js</replace>
-      <replace>static/js/</replace>
-      <replace>nav</replace>
-      <replace>180</replace>
-      <replace>btn</replace>
+      <replace>&quot;</replace>
+      <replace>input</replace>
+      <replace>btn btn</replace>
+      <replace>col-sm-4</replace>
       <replace>&amp;</replace>
-      <replace>menu-demo-vertical menu-vertical</replace>
-      <replace>menu-demo-horizontal menu-horizontal</replace>
-      <replace>.2</replace>
-      <replace>300</replace>
-      <replace>bottom</replace>
-      <replace>var</replace>
-      <replace>typeIcon</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -363,97 +123,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/view/forms/datapick/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/pages/global.js" />
-        <option value="$PROJECT_DIR$/view/header/header.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/view/sidebar/index.html" />
-        <option value="$PROJECT_DIR$/view/table/data/index.html" />
-        <option value="$PROJECT_DIR$/view/sidebar/index.js" />
-        <option value="$PROJECT_DIR$/view/table/data/index.js" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/index.html" />
-=======
->>>>>>> gh-pages
-        <option value="$PROJECT_DIR$/view/table/simple.html" />
-        <option value="$PROJECT_DIR$/view/public/index.html" />
-        <option value="$PROJECT_DIR$/view/public/error.art" />
-        <option value="$PROJECT_DIR$/view/forms/datapick/index.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/datepick/render.js" />
-        <option value="$PROJECT_DIR$/assets/sass/plugins/_datapick.scss" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/datepick/index.js" />
-        <option value="$PROJECT_DIR$/view/forms/datapick.html" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/table/utils.js" />
-        <option value="$PROJECT_DIR$/assets/sass/plugins/_table.scss" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/table/event.js" />
-        <option value="$PROJECT_DIR$/view/table/data.html" />
-=======
->>>>>>> gh-pages
-        <option value="$PROJECT_DIR$/static/main.js" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
-        <option value="$PROJECT_DIR$/assets/sass/fonts/awesome/_variables.scss" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/static/js/main.js" />
-        <option value="$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/fonts/_ionicons.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/fonts/_icomoon.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/fonts/_footable.scss" />
-        <option value="$PROJECT_DIR$/router/index.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/datepick/event.js" />
-        <option value="$PROJECT_DIR$/assets/sass/layout/_logo.scss" />
-        <option value="$PROJECT_DIR$/assets/js/component/menu.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/nav/index.js" />
-        <option value="$PROJECT_DIR$/view/layouts/menu.html" />
-        <option value="$PROJECT_DIR$/assets/js/common/urlHelper.js" />
-        <option value="$PROJECT_DIR$/assets/sass/browser/_handle.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/browser/_animate.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/plugins/_menu.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/component/_box.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/form/_button.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/fonts/_anticon.scss" />
-        <option value="$PROJECT_DIR$/view/basic/button.html" />
-        <option value="$PROJECT_DIR$/assets/sass/basic/_button.scss" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/menu/index.js" />
-        <option value="$PROJECT_DIR$/view/layouts/header.html" />
-        <option value="$PROJECT_DIR$/view/layout/menu.html" />
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-        <option value="$PROJECT_DIR$/assets/js/navigation/menu/index.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/datepick/view.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/datepick/index.js" />
-        <option value="$PROJECT_DIR$/assets/js/component/loading.js" />
-        <option value="$PROJECT_DIR$/view/desktop/tooltip.html" />
-        <option value="$PROJECT_DIR$/assets/sass/desktop/_tooltip.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/tool/mixins/color/_background-color-opacity.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/tool/_index.scss" />
-        <option value="$PROJECT_DIR$/assets/js/desktop/tooltip.js" />
-        <option value="$PROJECT_DIR$/assets/sass/navigation/_menu.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/layout/_sidebar.scss" />
-        <option value="$PROJECT_DIR$/view/layouts/sidebar.html" />
+        <option value="$PROJECT_DIR$/view/ui/form.html" />
         <option value="$PROJECT_DIR$/router/routes.js" />
-        <option value="$PROJECT_DIR$/assets/sass/style.scss" />
-        <option value="$PROJECT_DIR$/assets/js/datadisplay/message.js" />
-        <option value="$PROJECT_DIR$/view/feedback/message.html" />
-        <option value="$PROJECT_DIR$/assets/js/datadisplay/tooltip.js" />
-        <option value="$PROJECT_DIR$/assets/sass/layout/_header.scss" />
-        <option value="$PROJECT_DIR$/assets/js/feedback/message.js" />
-        <option value="$PROJECT_DIR$/assets/sass/datadisplay/_message.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/fonts/_element.scss" />
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-        <option value="$PROJECT_DIR$/assets/sass/datadisplay/_tooltip.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/view/layouts/sidebar.html" />
+        <option value="$PROJECT_DIR$/assets/sass/base/_configuration.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/base/browser/_handle.scss" />
+        <option value="$PROJECT_DIR$/assets/js/component/tooltip.js" />
+        <option value="$PROJECT_DIR$/view/plugins/datapick.html" />
+        <option value="$PROJECT_DIR$/view/component/message.html" />
+        <option value="$PROJECT_DIR$/view/component/tooltip.html" />
+        <option value="$PROJECT_DIR$/assets/js/other/demo.js" />
+        <option value="$PROJECT_DIR$/assets/js/component/input.js" />
+        <option value="$PROJECT_DIR$/assets/sass/base/layout/_layout.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/base/browser/_reset.scss" />
+        <option value="$PROJECT_DIR$/assets/js/plugins/navmenu/src/navmenu.js" />
+        <option value="$PROJECT_DIR$/assets/sass/plugins/_navmenu.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/other/_demo.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/ui/_form.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/other/_element.scss" />
+        <option value="$PROJECT_DIR$/view/ui/input.html" />
+        <option value="$PROJECT_DIR$/assets/sass/ui/_button.scss" />
+        <option value="$PROJECT_DIR$/view/ui/button.html" />
+        <option value="$PROJECT_DIR$/assets/sass/ui/_input.scss" />
         <option value="$PROJECT_DIR$/assets/entry.pc.js" />
->>>>>>> gh-pages
       </list>
     </option>
   </component>
@@ -468,11 +161,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="y" value="23" />
-    <option name="width" value="1873" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1771" />
+    <option name="y" value="136" />
+    <option name="width" value="1426" />
+    <option name="height" value="892" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -489,6 +182,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -499,35 +194,13 @@
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-              <item name="router" type="462c0819:PsiDirectoryNode" />
-=======
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
->>>>>>> gh-pages
-=======
-              <item name="js" type="462c0819:PsiDirectoryNode" />
->>>>>>> gh-pages
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="datadisplay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="feedback" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
@@ -540,50 +213,39 @@
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="datadisplay" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="feedback" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="butt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;button&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/ui/button.html&#10;re&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/browser/_reset.scss&#10;ent&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;demo.js&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/other/demo.js&#10;demo&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;navmenu.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_navmenu.scss&#10;na&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;demo.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;tool&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/tooltip.html&#10;too&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;mess&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/message.html&#10;datapick&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/plugins/datapick.html&#10;form.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_form.scss&#10;nav&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;router&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router&#10;sidebar&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;entry.&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;packj&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/package.json" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="images&#9;null&#9;null&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/sass/feedback" />
-      <recent name="$PROJECT_DIR$/assets/sass/datadisplay" />
-      <recent name="$PROJECT_DIR$/assets/js/feedback" />
-      <recent name="$PROJECT_DIR$/assets/js/datadisplay" />
-      <recent name="$PROJECT_DIR$/view/datadisplay" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -597,16 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-    </configuration>
+  <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -616,14 +269,9 @@
       <node-interpreter value="project" />
       <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="npm.dev" />
-      <item index="1" class="java.lang.String" itemvalue="npm.build" />
-    </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="npm.dev" />
-        <item index="1" class="java.lang.String" itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -635,124 +283,45 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ae572886-4e44-4595-8c31-40ffb8b93a22" name="Default" comment="" />
-      <created>1517283845541</created>
+      <changelist id="eb6a5ff5-8254-44a8-98d5-63d109f8da21" name="Default" comment="" />
+      <created>1520303492074</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1517283845541</updated>
-      <workItem from="1517283847460" duration="3342000" />
-      <workItem from="1517368612691" duration="6232000" />
-      <workItem from="1517381284042" duration="10267000" />
-      <workItem from="1517453402769" duration="3304000" />
-      <workItem from="1517465172982" duration="19932000" />
-<<<<<<< HEAD
-      <workItem from="1517561041850" duration="7536000" />
-=======
-      <workItem from="1517561041850" duration="6135000" />
-      <workItem from="1517817862898" duration="3838000" />
-      <workItem from="1518053944761" duration="33399000" />
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-      <workItem from="1518165007684" duration="14580000" />
-      <workItem from="1518795521548" duration="28000" />
-      <workItem from="1519263255597" duration="38632000" />
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-      <workItem from="1519393387608" duration="1278000" />
->>>>>>> gh-pages
+      <updated>1520303492074</updated>
+      <workItem from="1520303493600" duration="131000" />
+      <workItem from="1520303647282" duration="32817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="50613000" />
-=======
-    <option name="totallyTimeSpent" value="99103000" />
->>>>>>> gh-pages
-=======
-    <option name="totallyTimeSpent" value="152343000" />
->>>>>>> gh-pages
-=======
-    <option name="totallyTimeSpent" value="153621000" />
->>>>>>> gh-pages
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="32948000" />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <frame x="1920" y="23" width="1920" height="1057" extended-state="6" />
-=======
-    <frame x="1680" y="23" width="1920" height="1057" extended-state="6" />
->>>>>>> gh-pages
-=======
-    <frame x="46" y="23" width="1634" height="1027" extended-state="6" />
->>>>>>> gh-pages
-=======
-    <frame x="1920" y="23" width="1873" height="1057" extended-state="6" />
->>>>>>> gh-pages
+    <frame x="1771" y="136" width="1426" height="892" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15550756" sideWeight="0.45114344" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297244" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916266" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848233" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15550756" sideWeight="0.54885656" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1544196" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33367983" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15867944" sideWeight="0.503937" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16868328" sideWeight="0.49560854" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998747" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998747" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982207" sideWeight="0.5043915" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -762,46 +331,147 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/sass/browser/_reset.scss">
+    <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/layout/_logo.scss" />
-    <entry file="file://$PROJECT_DIR$/assets/sass/component/_caption.scss">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="8" />
+        <state relative-caret-position="147">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="79" lean-forward="true" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/table/data.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/multiCheck.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="404" column="30" lean-forward="false" selection-start-line="404" selection-start-column="30" selection-end-line="404" selection-end-column="30" />
+        <state relative-caret-position="-1312">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/forms/datapick.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/browser/_handle.scss">
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/select.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/multiSelect/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/ui/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/helpers/_center-block.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/_index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/_configuration.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery/.jshintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/browser/_handle.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layouts/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/tooltip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="95" column="6" lean-forward="true" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/component/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/plugins/datapick.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/component/tooltip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -809,287 +479,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/general/_button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/component/_box.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/browser/_animate.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="295" column="8" lean-forward="true" selection-start-line="295" selection-start-column="8" selection-end-line="295" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/layout/_nav.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/component/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/navigation/menu/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/component/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3468">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/form/datepick.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/view/forms/datapick/index.js" />
-    <entry file="file://$PROJECT_DIR$/assets/js/pages/datepicker.js">
-=======
-    <entry file="file://$PROJECT_DIR$/index.html">
-=======
-    <entry file="file://$PROJECT_DIR$/assets/js/form/select.js">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
->>>>>>> gh-pages
-=======
-    <entry file="file://$PROJECT_DIR$/assets/js/form/table.js">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/component/loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/view/table/simple.html">
-=======
-    <entry file="file://$PROJECT_DIR$/README.md">
-=======
-    <entry file="file://$PROJECT_DIR$/view/layout/menu.html">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-963">
-          <caret line="158" column="49" lean-forward="false" selection-start-line="158" selection-start-column="49" selection-end-line="158" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="194" column="34" lean-forward="false" selection-start-line="194" selection-start-column="34" selection-end-line="194" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/tool/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/assets/sass/layout/_logo.scss" />
-    <entry file="file://$PROJECT_DIR$/assets/js/component/loading.js">
->>>>>>> gh-pages
-=======
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/fixedBox/index.js">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/tool/mixins/color/_background-color-opacity.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/layout/_sidebar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/render.js">
-=======
-    <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
-=======
-    <entry file="file://$PROJECT_DIR$/router/routes.js">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/assets/sass/layout/_nav.scss">
->>>>>>> gh-pages
-=======
     <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="4080" column="13" lean-forward="false" selection-start-line="4080" selection-start-column="4" selection-end-line="4080" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layouts/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/navigation/_menu.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="114" column="27" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/general/button.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="58" selection-end-column="8" />
-<<<<<<< HEAD
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/table/render.js">
-=======
-    <entry file="file://$PROJECT_DIR$/router/routes.js">
-=======
-    <entry file="file://$PROJECT_DIR$/assets/js/datadisplay/tooltip.js">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="42" lean-forward="true" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
-          <folding />
-=======
->>>>>>> gh-pages
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/view.js">
->>>>>>> gh-pages
-=======
-    <entry file="file://$PROJECT_DIR$/assets/js/common/urlHelper.js">
->>>>>>> gh-pages
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/table/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/layout/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_element.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/awesome/_path.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1097,169 +491,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/fonts/_anticon.scss">
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/layout/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        <state relative-caret-position="315">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/feedback/_message.scss">
+    <entry file="file://$PROJECT_DIR$/assets/js/component/input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="621">
+          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/feedback/message.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/navmenu/src/navmenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="1021">
+          <caret line="102" column="53" lean-forward="false" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/datadisplay/tooltip.js">
+    <entry file="file://$PROJECT_DIR$/assets/sass/plugins/_navmenu.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="102" column="42" lean-forward="true" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
+        <state relative-caret-position="582">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/datadisplay/tooltip.html">
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/browser/_reset.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery/src/event.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="650" column="16" lean-forward="false" selection-start-line="650" selection-start-column="16" selection-end-line="650" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/datadisplay/_tooltip.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/feedback/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layouts/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="1690">
-          <caret line="404" column="30" lean-forward="true" selection-start-line="404" selection-start-column="30" selection-end-line="404" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-=======
-        <state relative-caret-position="432">
-          <caret line="193" column="54" lean-forward="false" selection-start-line="193" selection-start-column="54" selection-end-line="193" selection-end-column="54" />
-          <folding />
->>>>>>> gh-pages
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-=======
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-=======
         <state relative-caret-position="504">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery/test/unit/event.js">
+    <entry file="file://$PROJECT_DIR$/assets/sass/ui/_form.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="399" column="108" lean-forward="false" selection-start-line="399" selection-start-column="108" selection-end-line="399" selection-end-column="108" />
->>>>>>> gh-pages
-          <folding>
-            <marker date="1518164764188" expanded="true" signature="24011:24035" ph="..." />
-          </folding>
->>>>>>> gh-pages
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/sass/ui/_input.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        <state relative-caret-position="113">
+          <caret line="109" column="34" lean-forward="true" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/other/_demo.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/ui/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="186" column="44" lean-forward="false" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/ui/button.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="26" column="80" lean-forward="false" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/other/_element.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="10265" column="0" lean-forward="false" selection-start-line="10265" selection-start-column="0" selection-end-line="10267" selection-end-column="1" />
+          <folding>
+            <element signature="e#50#8309#1" expanded="true" />
+            <element signature="e#179872#180011#2" expanded="true" />
+            <element signature="e#183521#183660#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/ui/input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/other/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="903">
+          <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
           <folding />
         </state>
       </provider>

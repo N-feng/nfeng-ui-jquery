@@ -6,21 +6,25 @@
             </div>
             <div class="box-body demo-block">
                 <h3 class="mb10">基础用法</h3>
-                <button class="btn btn-default" onclick="defaultMessage('这是一个默认提示框')">打开消息提示</button>
+                <p><button class="btn btn-default" onclick="defaultMessage('这是一个默认提示框')">打开消息提示</button></p>
                 <h3 class="mb10">不同状态</h3>
-                <button class="btn btn-info" onclick="typeMessage('info','这是一条普通消息。')">普通消息</button>
-                <button class="btn btn-success" onclick="typeMessage('success','这是一条成功消息。')">成功消息</button>
-                <button class="btn btn-warning" onclick="typeMessage('warning','这是一条警告消息。')">警告消息</button>
-                <button class="btn btn-danger" onclick="typeMessage('error','这是一条错误消息。')">错误消息</button>
+                <p>
+                    <button class="btn btn-info" onclick="typeMessage('info','这是一条普通消息。')">普通消息</button>
+                    <button class="btn btn-success" onclick="typeMessage('success','这是一条成功消息。')">成功消息</button>
+                    <button class="btn btn-warning" onclick="typeMessage('warning','这是一条警告消息。')">警告消息</button>
+                    <button class="btn btn-danger" onclick="typeMessage('error','这是一条错误消息。')">错误消息</button>
+                </p>
                 <h3 class="mb10">可关闭</h3>
-                <button class="btn" onclick="closeMessage('info','可以关闭的提示框。')">可关闭的提示框</button>
-                <button class="btn" onclick="closeMessage('info','5s后关闭的提示框。', 5000)">5s后关闭的提示框</button>
-                <button class="btn" onclick="closeMessage('info','只能手动关闭的提示框。',0)">只能手动关闭的提示框</button>
-                <button class="btn" onclick="closeMessage('info','关闭时触发回调。',function(self) {console.log(self.msgId);})">关闭时触发回调的提示框</button>
+                <p>
+                    <button class="btn" onclick="closeMessage('info','可以关闭的提示框。')">可关闭的提示框</button>
+                    <button class="btn" onclick="closeMessage('info','5s后关闭的提示框。', 5000)">5s后关闭的提示框</button>
+                    <button class="btn" onclick="closeMessage('info','只能手动关闭的提示框。',0)">只能手动关闭的提示框</button>
+                    <button class="btn" onclick="closeMessage('info','关闭时触发回调。',function(self) {console.log(self.msgId);})">关闭时触发回调的提示框</button>
+                </p>
                 <h3 class="mb10">文字居中</h3>
-                <button class="btn btn-default" onclick="typeMessage('info', '居中的文字', true)">文字居中</button>
+                <p><button class="btn btn-default" onclick="typeMessage('info', '居中的文字', true)">文字居中</button></p>
                 <h3 class="mb10">使用 HTML 片段</h3>
-                <button class="btn btn-default" onclick="defaultMessage('<strong>这是 <i>HTML</i> 片段</strong>')">使用 HTML 片段</button>
+                <p><button class="btn btn-default" onclick="defaultMessage('<strong>这是 <i>HTML</i> 片段</strong>')">使用 HTML 片段</button></p>
                 <div class="meta">
                     <div class="highlight">
                     <pre>

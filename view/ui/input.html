@@ -1,0 +1,82 @@
+<h3 class="mb15">Input</h3>
+<h4 class="mt50 mb20">基础用法</h4>
+<div class="demo-block">
+    <div class="row">
+        <div class="col-sm-4"><input type="text" placeholder="请输入内容" class="form-control"></div>
+    </div>
+</div>
+
+<h4 class="mt50 mb20">禁用状态</h4>
+<div class="demo-block">
+    <div class="row">
+        <div class="col-sm-4"><input type="text" placeholder="请输入内容" class="form-control" disabled></div>
+    </div>
+</div>
+
+<h4 class="mt50 mb20">带 icon 的输入框</h4>
+<div class="demo-block">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group input-suffix">
+                <input type="text" placeholder="请选择日期" class="form-control">
+                <i class="el-icon-date input-icon"></i>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group input-prefix">
+                <i class="el-icon-search input-icon"></i>
+                <input type="text" placeholder="请输入内容" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 class="mt50 mb20">文本域</h4>
+<div class="demo-block">
+    <div class="row">
+        <div class="col-sm-4">
+            <textarea placeholder="请输入内容" class="form-control-textarea"></textarea>
+        </div>
+    </div>
+</div>
+
+<h4 class="mt50 mb20">复合型输入框</h4>
+<div class="demo-block">
+    <div class="row form-group">
+        <div class="col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon">Http://</span>
+                <input type="text" placeholder="请输入内容" class="form-control">
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+                <input type="text" placeholder="请输入内容" class="form-control">
+                <span class="input-group-addon">.com</span>
+            </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-4">
+            <div class="input-group">
+                <input type="text" placeholder="请输入内容" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn">Search</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+                <input type="text" placeholder="请输入内容" class="form-control">
+                <div class="input-group-btn">
+                    <button class="btn"><i class="el-icon-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $.input();
+    })
+</script>
