@@ -11,7 +11,6 @@ $.each([
     require("./js/component/loading"),		// 加载
     require("./js/component/message"),		// 提示
     require("./js/component/tooltip"),		// tooltip
-    require("./js/component/input"),        // Input 输入框
 	require("./js/other/clock"),			// 时钟
 	require("./js/other/parallax"),			// 3d视差
 ], function (index, component) {
