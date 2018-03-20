@@ -1,0 +1,213 @@
+.select {
+  position: relative;
+  &.is-focus .el-icon-arrow-down {
+    @include transform(rotate(180deg));
+  }
+  &.is-multiple .selected:after {
+    position: absolute;
+    right: 20px;
+    font-family: element-icons;
+    content: "\E611";
+    font-size: 12px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.select-chose {
+  @extend .form-control;
+  @extend .form-group;
+  display: block;
+  cursor: pointer;
+  &.active {
+    outline: none;
+    border-color: #409eff
+  }
+  &.disabled {
+    background-color: #f5f7fa;
+    border-color: #e4e7ed;
+    color: #c0c4cc;
+    cursor: not-allowed;
+  }
+  .select-chose-list {
+    line-height: 38px;
+    display: inline-block;
+  }
+  .placeholder {
+    display: none;
+  }
+  .placeholder:first-child {
+    display: block;
+    color: #c0c4cc;
+  }
+}
+
+.is-show-close {
+  .clearAll {
+    display: none;
+  }
+  .select-chose:hover {
+     .el-icon-arrow-down {
+       display: none;
+     }
+     .clearAll {
+       display: block;
+       &:hover {
+         color: #909399;
+       }
+     }
+   }
+}
+
+.is-multiple {
+  .clearAll {
+    display: none;
+  }
+  .select-chose {
+    line-height: initial;
+    height: auto;
+    min-height: 40px;
+    padding: 0 10px;
+    &:hover {
+      .el-icon-arrow-down {
+        display: block;
+      }
+      .clearAll {
+        display: none;
+      }
+    }
+  }
+  .select-chose-item {
+    background-color: #f0f2f5;
+    color: #909399;
+    display: block;
+    float: left;
+    height: 24px;
+    line-height: 22px;
+    font-size: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    margin: 7px 5px 0 0;
+    padding: 0 8px;
+    vertical-align: top;
+    &:nth-last-child(2) {
+      margin-bottom: 4px;
+    }
+    .del {
+      color: #c0c4cc;
+      right: -5px;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        color: #909399;
+      }
+    }
+  }
+}
+
+.select-dropdown {
+  position: absolute;
+  z-index: 1001;
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  box-sizing: border-box;
+  margin: 12px 0;
+  padding: 6px 0;
+  width: 100%;
+  display: none;
+  .select-group {
+    position: relative;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #909399;
+    line-height: 30px;
+  }
+  .select-item {
+    font-size: 14px;
+    padding: 0 20px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #606266;
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:not(.disabled):hover {
+      background-color: #f5f7fa
+    }
+    &.selected {
+      color: #409eff;
+    }
+    &.disabled {
+      color: #c0c4cc;
+      cursor: not-allowed;
+    }
+    &+.select-group {
+      padding-top: 24px;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 20px;
+        right: 20px;
+        top: 12px;
+        height: 1px;
+        background: #e4e7ed;
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 7px;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.03));
+    top: -7px;
+    left: 35px;
+    border-top-width: 0;
+    border-bottom-color: #ebeef5;
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: -5px;
+      top: 2px;
+      @include triangle(10px, #fff transparent, up, true);
+    }
+  }
+  .select-search {
+    padding: 5px 12px;
+  }
+  .select-empty {
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+  }
+}
+
+.select-alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e4e3e2;
+  width: 100%;
+  height: 39px;
+  line-height: 39px;
+  padding: 0 15px;
+  border-radius: 5px;
+  color: #999;
+  z-index: 2;
+  font-size: 14px;
+}

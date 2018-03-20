@@ -3,6 +3,7 @@ define(function () {
        "public/index": "view/public/index",
        "ui/button": "view/ui/button",
        "ui/input": "view/ui/input",
+       "ui/select": "view/ui/select",
        "ui/form": "view/ui/form",
        "ui/simple":  "view/ui/simple",
        "ui/data": "view/ui/data",

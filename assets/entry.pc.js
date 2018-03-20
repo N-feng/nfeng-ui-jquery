@@ -19,14 +19,16 @@ $.each([
 
 // 注入到jQuery原型对象
 $.each([
+    require("./js/base/ajaxForm"),          // ajaxForm
 	require("./js/plugins/datepick"),		// 时间选择控件
-	require("./js/plugins/multiSelect"),
+	require("./js/plugins/multiSelect"),	// Select选择器
 	require("./js/plugins/layer"),
 	require("./js/plugins/validate"),
 	require("./js/plugins/fixedBox"),
 	require("./js/plugins/scrollbar"),
 	require("./js/plugins/table"),
-	require("./js/plugins/navmenu")		// 菜单
+	require("./js/plugins/navmenu"),		// 菜单
+	require("./js/plugins/select")
 ], function (index, component) {
 	if (typeof component === "object" && !NUI[component]) {
 		$.extend(NUI, component);
