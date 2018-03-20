@@ -1,9 +1,10 @@
 <h3 class="mb15">Select</h3>
+
 <h4 class="mt50 mb20">基础用法</h4>
 <div class="demo-block">
     <div class="row">
         <div class="col-sm-4">
-            <select placeholder="请选择">
+            <select>
                 <option value="1">option 1</option>
                 <option value="2">option 2</option>
                 <option value="3">option 3</option>
@@ -27,7 +28,7 @@
 <div class="demo-block">
     <div class="row">
         <div class="col-sm-4">
-            <select placeholder="请选择" disabled="disabled">
+            <select disabled>
                 <option value="1">option 1</option>
                 <option value="2" disabled>option 2</option>
                 <option value="3">option 3</option>
@@ -105,6 +106,7 @@
         </div>
     </div>
 </div>
+
 <h4 class="mt50 mb20">Attributes</h4>
 <table class="table">
     <tr>
@@ -180,11 +182,12 @@
 
 <script>
     $(function () {
-        $('select').NUI('select', {
+        let options = {
             // filterable: true,
             // change: function (value, text) {
             //     console.log(value, text);
             // },
-        });
+        };
+        $('select').NUI('select', options);
     })
 </script>

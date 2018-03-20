@@ -1,187 +1,145 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header">
-                <h3 class="box-title">DatePicker</h3>
-            </div>
-            <div class="box-body">
-                <div class="form-group">
-                    <label>Select date</label><br>
-                    <div class="pr di">
-                        <input type="text" class="input datepick" data-type="date" value="" placeholder="Select date">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Select month</label><br>
-                    <div class="pr di">
-                        <input type="text" class="input datepick" data-type="month" value="" placeholder="Select month">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Select year</label><br>
-                    <div class="pr di">
-                        <input type="text" class="input datepick" data-type="year" value="" placeholder="Select year">
-                    </div>
-                </div>
-                <div class="form-group hide">
-                    <label>Select range</label><br>
-                    <div class="pr di">
-                        <input type="text" class="input datepick" data-type="range" value="" placeholder="Select range">
-                    </div>
-                </div>
-            </div>
+<h3 class="mb15">DatePicker</h3>
+
+<h4 class="mt50 mb20">Select date</h4>
+<div class="demo-block">
+    <div style="width:260px;position:relative;">
+        <input type="text" class="form-control datepick" data-type="date" value="" placeholder="Select date">
+    </div>
+</div>
+<h4 class="mt50 mb20">Select month</h4>
+<div class="demo-block">
+    <div style="width:260px;position:relative;">
+        <input type="text" class="form-control datepick" data-type="month" value="" placeholder="Select month">
+    </div>
+</div>
+<h4 class="mt50 mb20">Select year</h4>
+<div class="demo-block">
+    <div style="width:260px;position:relative;">
+        <input type="text" class="form-control datepick" data-type="year" value="" placeholder="Select year">
+    </div>
+</div>
+<div class="hide">
+    <h4 class="mt50 mb20">Select range</h4>
+    <div class="demo-block">
+        <div style="width:260px;position:relative;">
+            <input type="text" class="form-control datepick" data-type="range" value="" placeholder="Select range">
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Attributes</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>参数</th>
-                        <th>说明</th>
-                        <th>类型</th>
-                        <th>可选值</th>
-                        <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>container</td>
-                        <td>父元素</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>body</td>
-                    </tr>
-                    <tr>
-                        <td>initDate</td>
-                        <td>默认时间</td>
-                        <td>Date</td>
-                        <td>-</td>
-                        <td>new Date()</td>
-                    </tr>
-                    <tr>
-                        <td>currentToday</td>
-                        <td>显示当日</td>
-                        <td>boolean</td>
-                        <td>-</td>
-                        <td>true</td>
-                    </tr>
-                    <tr>
-                        <td>type</td>
-                        <td>类型</td>
-                        <td>string</td>
-                        <td>week, month, year</td>
-                        <td>month</td>
-                    </tr>
-                    <tr>
-                        <td>minDate</td>
-                        <td>最小日期</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>1990-00-00</td>
-                    </tr>
-                    <tr>
-                        <td>format</td>
-                        <td>格式</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>YYYY-MM-DD hh:mm:ss</td>
-                    </tr>
-                    <tr>
-                        <td>locales.weekName</td>
-                        <td>星期名称</td>
-                        <td>array</td>
-                        <td>-</td>
-                        <td>['日', '一', '二', '三', '四', '五', '六']</td>
-                    </tr>
-                    <tr>
-                        <td>locales.monthName</td>
-                        <td>月份名称</td>
-                        <td>array</td>
-                        <td>-</td>
-                        <td>['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']</td>
-                    </tr>
-                    <tr>
-                        <td>hideClass</td>
-                        <td>隐藏类名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>datepick-hidden</td>
-                    </tr>
-                    <tr>
-                        <td>animateEnterClass</td>
-                        <td>动画始名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>slideDown-enter-active</td>
-                    </tr>
-                    <tr>
-                        <td>animateLeaveClass</td>
-                        <td>动画终名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>slideDown-leave-active</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Methods</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>方法名</th>
-                        <th>说明</th>
-                        <th>参数</th>
-                    </tr>
-                    <tr>
-                        <td>weeks</td>
-                        <td>获取周数</td>
-                        <td>data</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Events</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>事件名称</th>
-                        <th>说明</th>
-                        <th>回调参数</th>
-                    </tr>
-                    <tr>
-                        <td>selectMonth</td>
-                        <td>选择月份</td>
-                        <td>index</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+<h4 class="mt50 mb20">Attributes</h4>
+<table class="table">
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <td>container</td>
+        <td>父元素</td>
+        <td>string</td>
+        <td>-</td>
+        <td>body</td>
+    </tr>
+    <tr>
+        <td>initDate</td>
+        <td>默认时间</td>
+        <td>Date</td>
+        <td>-</td>
+        <td>new Date()</td>
+    </tr>
+    <tr>
+        <td>currentToday</td>
+        <td>显示当日</td>
+        <td>boolean</td>
+        <td>-</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>类型</td>
+        <td>string</td>
+        <td>week, month, year</td>
+        <td>month</td>
+    </tr>
+    <tr>
+        <td>minDate</td>
+        <td>最小日期</td>
+        <td>string</td>
+        <td>-</td>
+        <td>1990-00-00</td>
+    </tr>
+    <tr>
+        <td>format</td>
+        <td>格式</td>
+        <td>string</td>
+        <td>-</td>
+        <td>YYYY-MM-DD hh:mm:ss</td>
+    </tr>
+    <tr>
+        <td>locales.weekName</td>
+        <td>星期名称</td>
+        <td>array</td>
+        <td>-</td>
+        <td>['日', '一', '二', '三', '四', '五', '六']</td>
+    </tr>
+    <tr>
+        <td>locales.monthName</td>
+        <td>月份名称</td>
+        <td>array</td>
+        <td>-</td>
+        <td>['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']</td>
+    </tr>
+    <tr>
+        <td>hideClass</td>
+        <td>隐藏类名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>datepick-hidden</td>
+    </tr>
+    <tr>
+        <td>animateEnterClass</td>
+        <td>动画始名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>slideDown-enter-active</td>
+    </tr>
+    <tr>
+        <td>animateLeaveClass</td>
+        <td>动画终名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>slideDown-leave-active</td>
+    </tr>
+</table>
+<h4 class="mt50 mb20">Methods</h4>
+<table class="table">
+    <tr>
+        <th>方法名</th>
+        <th>说明</th>
+        <th>参数</th>
+    </tr>
+    <tr>
+        <td>weeks</td>
+        <td>获取周数</td>
+        <td>data</td>
+    </tr>
+</table>
+<h4 class="mt50 mb20">Events</h4>
+<table class="table">
+    <tr>
+        <th>事件名称</th>
+        <th>说明</th>
+        <th>回调参数</th>
+    </tr>
+    <tr>
+        <td>selectMonth</td>
+        <td>选择月份</td>
+        <td>index</td>
+    </tr>
+</table>
 
 <script>
     $(function () {

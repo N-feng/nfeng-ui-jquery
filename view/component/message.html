@@ -1,167 +1,112 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header">
-                <h3 class="box-title">Message</h3>
-            </div>
-            <div class="box-body demo-block">
-                <h3 class="mb10">基础用法</h3>
-                <p><button class="btn btn-default" onclick="defaultMessage('这是一个默认提示框')">打开消息提示</button></p>
-                <h3 class="mb10">不同状态</h3>
-                <p>
-                    <button class="btn btn-info" onclick="typeMessage('info','这是一条普通消息。')">普通消息</button>
-                    <button class="btn btn-success" onclick="typeMessage('success','这是一条成功消息。')">成功消息</button>
-                    <button class="btn btn-warning" onclick="typeMessage('warning','这是一条警告消息。')">警告消息</button>
-                    <button class="btn btn-danger" onclick="typeMessage('error','这是一条错误消息。')">错误消息</button>
-                </p>
-                <h3 class="mb10">可关闭</h3>
-                <p>
-                    <button class="btn" onclick="closeMessage('info','可以关闭的提示框。')">可关闭的提示框</button>
-                    <button class="btn" onclick="closeMessage('info','5s后关闭的提示框。', 5000)">5s后关闭的提示框</button>
-                    <button class="btn" onclick="closeMessage('info','只能手动关闭的提示框。',0)">只能手动关闭的提示框</button>
-                    <button class="btn" onclick="closeMessage('info','关闭时触发回调。',function(self) {console.log(self.msgId);})">关闭时触发回调的提示框</button>
-                </p>
-                <h3 class="mb10">文字居中</h3>
-                <p><button class="btn btn-default" onclick="typeMessage('info', '居中的文字', true)">文字居中</button></p>
-                <h3 class="mb10">使用 HTML 片段</h3>
-                <p><button class="btn btn-default" onclick="defaultMessage('<strong>这是 <i>HTML</i> 片段</strong>')">使用 HTML 片段</button></p>
-                <div class="meta">
-                    <div class="highlight">
-                    <pre>
-                        <code class="hljs">
-                            function defaultMessage(msg) {
-                                $.message(msg);
-                            }
+<h3 class="mb15">Message</h3>
 
-                            function typeMessage(type, msg, center) {
-                                $.message({
-                                    type: type,
-                                    message: msg,
-                                    center: center
-                                })
-                            }
-
-                            function closeMessage(type, msg, duration, cb) {
-                                if (typeof duration === 'function') {
-                                    cb = duration;
-                                    duration = 3000
-                                }
-                                $.message({
-                                    type: type,
-                                    message: msg,
-                                    showClose: true,
-                                    duration: duration,
-                                    onClose: cb
-                                })
-                            }
-                        </code>
-                    </pre>
-                    </div>
-                </div>
-                <div class="demo-block-control">
-                    <i class="el-icon-caret-bottom"></i>
-                    <span style="display: none;">显示代码</span>
-                </div>
-            </div>
-        </div>
-    </div>
+<h4 class="mt50 mb20">基础用法</h4>
+<div class="demo-block">
+    <button class="btn btn-default" onclick="defaultMessage('这是一个默认提示框')">打开消息提示</button>
+</div>
+<h4 class="mt50 mb20">不同状态</h4>
+<div class="demo-block">
+    <button class="btn btn-info" onclick="typeMessage('info','这是一条普通消息。')">普通消息</button>
+    <button class="btn btn-success" onclick="typeMessage('success','这是一条成功消息。')">成功消息</button>
+    <button class="btn btn-warning" onclick="typeMessage('warning','这是一条警告消息。')">警告消息</button>
+    <button class="btn btn-danger" onclick="typeMessage('error','这是一条错误消息。')">错误消息</button>
+</div>
+<h4 class="mt50 mb20">可关闭</h4>
+<div class="demo-block">
+    <button class="btn" onclick="closeMessage('info','可以关闭的提示框。')">可关闭的提示框</button>
+    <button class="btn" onclick="closeMessage('info','5s后关闭的提示框。', 5000)">5s后关闭的提示框</button>
+    <button class="btn" onclick="closeMessage('info','只能手动关闭的提示框。',0)">只能手动关闭的提示框</button>
+    <button class="btn" onclick="closeMessage('info','关闭时触发回调。',function(self) {console.log(self.msgId);})">关闭时触发回调的提示框</button>
+</div>
+<h4 class="mt50 mb20">文字居中</h4>
+<div class="demo-block">
+    <button class="btn btn-default" onclick="typeMessage('info', '居中的文字', true)">文字居中</button>
+</div>
+<h4 class="mt50 mb20">使用 HTML 片段</h4>
+<div class="demo-block">
+    <button class="btn btn-default" onclick="defaultMessage('<strong>这是 <i>HTML</i> 片段</strong>')">使用 HTML 片段</button>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Attributes</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>参数</th>
-                        <th>说明</th>
-                        <th>类型</th>
-                        <th>可选值</th>
-                        <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>message</td>
-                        <td>消息文字</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>type</td>
-                        <td>主题</td>
-                        <td>string</td>
-                        <td>success/warning/info/error</td>
-                        <td>info</td>
-                    </tr>
-                    <tr>
-                        <td>iconClass</td>
-                        <td>自定义图标的类名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>customClass</td>
-                        <td>自定义类名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>duration</td>
-                        <td>显示时间, 毫秒。设为 0 则不会自动关闭</td>
-                        <td>number</td>
-                        <td>-</td>
-                        <td>3000</td>
-                    </tr>
-                    <tr>
-                        <td>showClose</td>
-                        <td>是否显示关闭按钮</td>
-                        <td>boolean</td>
-                        <td>-</td>
-                        <td>false</td>
-                    </tr>
-                    <tr>
-                        <td>center</td>
-                        <td>文字是否居中</td>
-                        <td>boolean</td>
-                        <td>-</td>
-                        <td>false</td>
-                    </tr>
-                    <tr>
-                        <td>onClose</td>
-                        <td>关闭时的回调函数, 参数为被关闭的 message 实例</td>
-                        <td>function</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>animateEnterClass</td>
-                        <td>动画始名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>slideDown-enter-active</td>
-                    </tr>
-                    <tr>
-                        <td>animateLeaveClass</td>
-                        <td>动画终名</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>slideDown-leave-active</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-
-</style>
+<h4 class="mt50 mb20">Attributes</h4>
+<table class="table">
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <td>message</td>
+        <td>消息文字</td>
+        <td>string</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>主题</td>
+        <td>string</td>
+        <td>success/warning/info/error</td>
+        <td>info</td>
+    </tr>
+    <tr>
+        <td>iconClass</td>
+        <td>自定义图标的类名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>customClass</td>
+        <td>自定义类名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>duration</td>
+        <td>显示时间, 毫秒。设为 0 则不会自动关闭</td>
+        <td>number</td>
+        <td>-</td>
+        <td>3000</td>
+    </tr>
+    <tr>
+        <td>showClose</td>
+        <td>是否显示关闭按钮</td>
+        <td>boolean</td>
+        <td>-</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>center</td>
+        <td>文字是否居中</td>
+        <td>boolean</td>
+        <td>-</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>onClose</td>
+        <td>关闭时的回调函数, 参数为被关闭的 message 实例</td>
+        <td>function</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>animateEnterClass</td>
+        <td>动画始名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>slideDown-enter-active</td>
+    </tr>
+    <tr>
+        <td>animateLeaveClass</td>
+        <td>动画终名</td>
+        <td>string</td>
+        <td>-</td>
+        <td>slideDown-leave-active</td>
+    </tr>
+</table>
 
 <script type="text/javascript">
     function defaultMessage(msg) {

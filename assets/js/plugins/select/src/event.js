@@ -1,5 +1,11 @@
 let utils = require('../../../base/utils');
 let Utils = require('./utils');
+let KEY_CODE = {
+    up    : 38,
+    down  : 40,
+    enter : 13
+};
+
 let Event = {
     singleChoose(event) {
         let self = this;
@@ -22,7 +28,7 @@ let Event = {
                 item.selected = hasSelected ? 0 : 1;
                 if (item.selected) {
                     let i = '<i class="del" data-value="' + item.value + '"></i>';
-                    let span = '<span class="select-chose-item">' + item.text + i + '</span>';
+                    let span = '<span class="select-choose-item">' + item.text + i + '</span>';
                     self.selectName.push(span);
                 }
             }
@@ -30,7 +36,7 @@ let Event = {
 
         this.$select.find('option[value="' + value + '"]').prop('selected', true);
         self.selectName.push('<span class="placeholder">' + this.placeholder + '</span>');
-        this.$selectChoseList.html(self.selectName.join(''));
+        this.$selectChooseList.html(self.selectName.join(''));
 
         this.config.change.call(this, value, $target.text());
         this.$hiddenInput.val(value);
@@ -64,7 +70,7 @@ let Event = {
             }
             if (item.selected) {
                 let i = '<i class="del el-icon-circle-close" data-value="' + item.value + '"></i>';
-                let span = '<span class="select-chose-item">' + item.text + i + '</span>';
+                let span = '<span class="select-choose-item">' + item.text + i + '</span>';
                 self.selectName.push(span);
                 selectedValue.push(item.value);
             }
@@ -72,13 +78,13 @@ let Event = {
 
         this.$select.find('option[value="'+value+'"]').prop('selected', hasSelected ? false : true);
 
-        this.$selectChoseList.find('.select-chose-item').remove();
-        this.$selectChoseList.prepend(self.selectName.join(''));
+        this.$selectChooseList.find('.select-choose-item').remove();
+        this.$selectChooseList.prepend(self.selectName.join(''));
         this.$hiddenInput.val(selectedValue.join(','));
         this.config.change.call(this, value, $target.text());
     },
     clearAll() {
-        this.$selectChoseList.find('.del').each(function (index, item) {
+        this.$selectChooseList.find('.del').each(function (index, item) {
             $(item).trigger('click.select');
         });
         return false;
@@ -114,8 +120,49 @@ let Event = {
         this.$container.find('[data-value="' + value + '"]').removeClass('selected');
         this.$container.find('[value="' + value + '"]').prop('selected', false).removeAttr('selected');
         this.$hiddenInput.val(selectedValue.join(','));
-        $target.closest('.select-chose-item').remove();
+        $target.closest('.select-choose-item').remove();
         return false;
+    },
+    control(event) {
+        let keyCode = event.keyCode;
+        let KC = KEY_CODE;
+        let index = 0;
+        let direct;
+        let itemIndex;
+        let $items;
+        if (keyCode === KC.down || keyCode === KC.up) {
+
+            // 方向
+            direct = keyCode === KC.up ? -1 : 1;
+            $items = this.$container.find('.select-item').not('.disabled');
+            itemIndex = $items.index(this.$container.find('.focus'));
+
+            // 初始
+            if (itemIndex === -1) {
+                index = direct + 1 ? -1 : 0;
+            } else {
+                index = itemIndex;
+            }
+
+            // 确认位序
+            index = index + direct;
+
+            // 最后位循环
+            if (index === $items.length) {
+                index = 0;
+            }
+
+            $items.removeClass('focus');
+            $items.eq(index).addClass('focus');
+            event.preventDefault();
+        }
+    },
+    choose (event) {
+        let keyCode = event.keyCode;
+        let KC = KEY_CODE;
+        if (keyCode === KC.enter) {
+            this.$container.find('.focus').trigger('click.select');
+        }
     },
     search: utils.throttle(function (event) {
         let result = [];
@@ -137,4 +184,5 @@ let Event = {
 
     }, 300),
 };
+
 module.exports = Event;

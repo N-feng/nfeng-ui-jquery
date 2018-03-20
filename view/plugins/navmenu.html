@@ -1,255 +1,186 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="box demo-block">
-            <div class="box-header">
-                <h3 class="box-title">HorizontalMenu</h3>
-            </div>
-            <div class="box-body">
-                <ul class="menu-demo-horizontal menu-horizontal menu-default">
-                    <li><a href="javascript:;" class="menu-item">Navigation One</a></li>
-                    <li><a href="javascript:;" class="menu-item-disabled">Navigation Two</a></li>
-                    <li>
-                        <span class="menu-item menu-triangle">Navigation Three - Submenu</span>
-                        <ul class="menu-popup hide">
-                            <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                            <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                            <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                            <li>
-                                <span class="menu-item menu-triangle">Option 4</span>
-                                <ul class="menu-popup hide">
-                                    <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:;" class="menu-item">Navigation Four - Link</a></li>
-                </ul>
-                <div class="pt15"></div>
-                <ul class="menu-demo-horizontal menu-horizontal menu-dark">
-                    <li><a href="javascript:;" class="menu-item">Navigation One</a></li>
-                    <li><a href="javascript:;" class="menu-item-disabled">Navigation Two</a></li>
-                    <li>
-                        <span class="menu-item menu-triangle">Navigation Three - Submenu</span>
-                        <ul class="menu-popup hide">
-                            <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                            <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                            <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                            <li>
-                                <span class="menu-item menu-triangle">Option 4</span>
-                                <ul class="menu-popup hide">
-                                    <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:;" class="menu-item">Navigation Four - Link</a></li>
-                </ul>
-            </div>
-            <div class="meta">
-                <div class="highlight">
-                    <pre>
-                        <code class="hljs">
-                            $('.menu-demo-horizontal').NUI('menu', {
-                                mode: 'horizontal'
-                            });
-                        </code>
-                    </pre>
-                </div>
-            </div>
-            <div class="demo-block-control">
-                <i class="el-icon-caret-bottom"></i>
-                <span class="hide">显示代码</span>
-            </div>
+<h3 class="mb15">Navmenu</h3>
+
+<h4 class="mt50 mb20">HorizontalMenu</h4>
+<div class="demo-block">
+    <ul class="menu-demo-horizontal menu-horizontal menu-default">
+        <li><a href="javascript:;" class="menu-item">Navigation One</a></li>
+        <li><a href="javascript:;" class="menu-item-disabled">Navigation Two</a></li>
+        <li>
+            <span class="menu-item menu-triangle">Navigation Three - Submenu</span>
+            <ul class="menu-popup hide">
+                <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                <li>
+                    <span class="menu-item menu-triangle">Option 4</span>
+                    <ul class="menu-popup hide">
+                        <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:;" class="menu-item">Navigation Four - Link</a></li>
+    </ul>
+    <div class="pt15"></div>
+    <ul class="menu-demo-horizontal menu-horizontal menu-dark">
+        <li><a href="javascript:;" class="menu-item">Navigation One</a></li>
+        <li><a href="javascript:;" class="menu-item-disabled">Navigation Two</a></li>
+        <li>
+            <span class="menu-item menu-triangle">Navigation Three - Submenu</span>
+            <ul class="menu-popup hide">
+                <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                <li>
+                    <span class="menu-item menu-triangle">Option 4</span>
+                    <ul class="menu-popup hide">
+                        <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:;" class="menu-item">Navigation Four - Link</a></li>
+    </ul>
+</div>
+<h4 class="mt50 mb20">VerticalMenu</h4>
+<div class="demo-block">
+    <div class="btn-group ml15">
+        <button type="button" class="btn btn-default btn-sm menu-demo-spread active">展开</button>
+        <button type="button" class="btn btn-default btn-sm menu-demo-close">收起</button>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="menu-demo-vertical menu-vertical menu-default">
+                <li>
+                    <span class="menu-item menu-triangle"><i class="fa fa-laptop"></i><span>Navigation One - Submenu</span></span>
+                    <ul class="menu-popup hide">
+                        <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                        <li>
+                            <span class="menu-item menu-triangle">Option 4</span>
+                            <ul class="menu-popup hide">
+                                <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                                <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                                <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu-item-disabled" content="Navigation Two" placement="right" data-disabled="true">
+                        <i class="fa fa-files-o"></i><span>Navigation Two</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu-item" content="Navigation Three" placement="right" data-disabled="true">
+                        <i class="fa fa-edit"></i><span>Navigation Three</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu-item" content="Navigation Four - Link" placement="right" data-disabled="true">
+                        <i class="fa fa-table"></i><span>Navigation Four - Link</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul class="menu-demo-vertical menu-vertical menu-dark">
+                <li>
+                    <span class="menu-item menu-triangle"><i class="fa fa-laptop"></i><span>Navigation One - Submenu</span></span>
+                    <ul class="menu-popup hide">
+                        <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                        <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                        <li>
+                            <span class="menu-item menu-triangle">Option 4</span>
+                            <ul class="menu-popup hide">
+                                <li><a href="javascript:;" class="menu-item">Option 1</a></li>
+                                <li><a href="javascript:;" class="menu-item">Option 2</a></li>
+                                <li><a href="javascript:;" class="menu-item">Option 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu-item-disabled" content="Navigation Two" placement="right" data-disabled="true">
+                        <i class="fa fa-files-o"></i><span>Navigation Two</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu-item" content="Navigation Three" placement="right" data-disabled="true">
+                        <i class="fa fa-edit"></i><span>Navigation Three</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu-item" content="Navigation Four - Link" placement="right" data-disabled="true">
+                        <i class="fa fa-table"></i><span>Navigation Four - Link</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="box demo-block">
-            <div class="box-header">
-                <h3 class="box-title">VerticalMenu</h3>
-                <div class="btn-group ml15">
-                    <button type="button" class="btn btn-default btn-sm menu-demo-spread active">展开</button>
-                    <button type="button" class="btn btn-default btn-sm menu-demo-close">收起</button>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-md-3">
-                        <ul class="menu-demo-vertical menu-vertical menu-default">
-                            <li>
-                                <span class="menu-item menu-triangle"><i class="fa fa-laptop"></i><span>Navigation One - Submenu</span></span>
-                                <ul class="menu-popup hide">
-                                    <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                    <li>
-                                        <span class="menu-item menu-triangle">Option 4</span>
-                                        <ul class="menu-popup hide">
-                                            <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                                            <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                                            <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item-disabled" content="Navigation Two" placement="right" data-disabled="true">
-                                    <i class="fa fa-files-o"></i><span>Navigation Two</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item" content="Navigation Three" placement="right" data-disabled="true">
-                                    <i class="fa fa-edit"></i><span>Navigation Three</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item" content="Navigation Four - Link" placement="right" data-disabled="true">
-                                    <i class="fa fa-table"></i><span>Navigation Four - Link</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul class="menu-demo-vertical menu-vertical menu-dark">
-                            <li>
-                                <span class="menu-item menu-triangle"><i class="fa fa-laptop"></i><span>Navigation One - Submenu</span></span>
-                                <ul class="menu-popup hide">
-                                    <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                                    <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                    <li>
-                                        <span class="menu-item menu-triangle">Option 4</span>
-                                        <ul class="menu-popup hide">
-                                            <li><a href="javascript:;" class="menu-item">Option 1</a></li>
-                                            <li><a href="javascript:;" class="menu-item">Option 2</a></li>
-                                            <li><a href="javascript:;" class="menu-item">Option 3</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item-disabled" content="Navigation Two" placement="right" data-disabled="true">
-                                    <i class="fa fa-files-o"></i><span>Navigation Two</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item" content="Navigation Three" placement="right" data-disabled="true">
-                                    <i class="fa fa-edit"></i><span>Navigation Three</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="menu-item" content="Navigation Four - Link" placement="right" data-disabled="true">
-                                    <i class="fa fa-table"></i><span>Navigation Four - Link</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="meta">
-                <div class="highlight">
-                    <pre>
-                        <code class="hljs">
-                            $('.menu-demo-vertical').NUI('menu', {
-                                closeHandle: '.menu-demo-close',
-                                openHandle: '.menu-demo-spread'
-                            });
-                        </code>
-                    </pre>
-                </div>
-            </div>
-            <div class="demo-block-control">
-                <i class="el-icon-caret-bottom"></i>
-                <span class="hide">显示代码</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="box">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Element Attributes</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>参数</th>
-                        <th>说明</th>
-                        <th>类型</th>
-                        <th>可选值</th>
-                        <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>class</td>
-                        <td>主题</td>
-                        <td>string</td>
-                        <td>menu-default / menu-dark</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>class</td>
-                        <td>方向</td>
-                        <td>string</td>
-                        <td>menu-vertical / menu-horizontal / menu-inline</td>
-                        <td>-</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="box">
-            <div class="box-header with-border">
-                <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">Attributes</h3>
-            </div>
-            <div class="box-body">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>参数</th>
-                        <th>说明</th>
-                        <th>类型</th>
-                        <th>可选值</th>
-                        <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>mode</td>
-                        <td>模式</td>
-                        <td>string</td>
-                        <td>horizontal / vertical / inline</td>
-                        <td>vertical</td>
-                    </tr>
-                    <tr>
-                        <td>closeHandle</td>
-                        <td>收起</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>.menu-close</td>
-                    </tr>
-                    <tr>
-                        <td>openHandle</td>
-                        <td>展开</td>
-                        <td>string</td>
-                        <td>-</td>
-                        <td>.menu-spread</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+<h4 class="mt50 mb20">Element Attributes</h4>
+<table class="table">
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <td>class</td>
+        <td>主题</td>
+        <td>string</td>
+        <td>menu-default / menu-dark</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>class</td>
+        <td>方向</td>
+        <td>string</td>
+        <td>menu-vertical / menu-horizontal / menu-inline</td>
+        <td>-</td>
+    </tr>
+</table>
+<h4 class="mt50 mb20">Attributes</h4>
+<table class="table">
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <td>mode</td>
+        <td>模式</td>
+        <td>string</td>
+        <td>horizontal / vertical / inline</td>
+        <td>vertical</td>
+    </tr>
+    <tr>
+        <td>closeHandle</td>
+        <td>收起</td>
+        <td>string</td>
+        <td>-</td>
+        <td>.menu-close</td>
+    </tr>
+    <tr>
+        <td>openHandle</td>
+        <td>展开</td>
+        <td>string</td>
+        <td>-</td>
+        <td>.menu-spread</td>
+    </tr>
+</table>
 
 <script>
     $(function() {

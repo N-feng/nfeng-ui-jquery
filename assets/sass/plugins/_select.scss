@@ -15,7 +15,7 @@
   }
 }
 
-.select-chose {
+.select-choose {
   @extend .form-control;
   @extend .form-group;
   display: block;
@@ -30,7 +30,7 @@
     color: #c0c4cc;
     cursor: not-allowed;
   }
-  .select-chose-list {
+  .select-choose-list {
     line-height: 38px;
     display: inline-block;
   }
@@ -47,7 +47,7 @@
   .clearAll {
     display: none;
   }
-  .select-chose:hover {
+  .select-choose:hover {
      .el-icon-arrow-down {
        display: none;
      }
@@ -64,7 +64,7 @@
   .clearAll {
     display: none;
   }
-  .select-chose {
+  .select-choose {
     line-height: initial;
     height: auto;
     min-height: 40px;
@@ -78,7 +78,7 @@
       }
     }
   }
-  .select-chose-item {
+  .select-choose-item {
     background-color: #f0f2f5;
     color: #909399;
     display: block;
@@ -139,8 +139,9 @@
     line-height: 34px;
     box-sizing: border-box;
     cursor: pointer;
-    &:not(.disabled):hover {
-      background-color: #f5f7fa
+    &:not(.disabled):hover,
+    &:not(.disabled).focus {
+      background-color: #f5f7fa;
     }
     &.selected {
       color: #409eff;

@@ -3,9 +3,10 @@ let View = require('./veiw');
 let Event = require('./event');
 let Utils = require('./utils');
 let defaults = {
+    filterable: false,
     container: 'body',
     placeholder: '请选择',
-    filterable: false,
+    disabled: '',
     name: '',
     data: [],
     limit: 0,
@@ -20,13 +21,15 @@ function Select(options) {
 
 function SelectConstructor(options, selector) {
     this.config = $.extend({}, defaults, options);
-    this.$select = $(selector).wrapAll('<div class="select"></div>').hide();
+    this.$select = $(selector).wrapAll('<div class="select"></div>');
     this.$container = $(selector).parent('.select');
     this.isSingleSelect = !this.$select.prop('multiple');
     this.config.limit = parseInt(this.$select.attr('limit') || 0);
     this.name = this.$select.prop('name') || this.config.name;
     this.placeholder = this.$select.attr('placeholder') || this.config.placeholder;
     this.filterable = (this.$select.attr('filterable') == '' ? true : false) || this.config.filterable;
+    this.disabled = this.$select.attr('disabled') || this.config.disabled;
+    this.readonly = this.$select.attr('readOnly') || this.config.readonly;
     this.selectName = [];
     this.selectAmount = 0;
     this.init(options);
@@ -38,6 +41,7 @@ $.extend(SelectConstructor.prototype, View);
 
 $.extend(SelectConstructor.prototype, {
     init() {
+        this.$select.hide();
         if (this.config.data.length === 0) {
             this.config.data = Utils.selectToObject.call(this);
             this.selectAmount = Utils.objectToSelect(this.config.data)[1];
@@ -46,14 +50,44 @@ $.extend(SelectConstructor.prototype, {
             this.$container.addClass('is-multiple');
         }
         this.renderInit();
-        this.bindEvent();
+        // disabled权重高于readonly
+        this.changeStatus(this.disabled ? 'disabled' : this.readonly ? 'readonly' : false);
     },
     bindEvent() {
-        this.$container.on('click.select', '.select-item:not(.disabled)', $.proxy(this.isSingleSelect ? Event.singleChoose : Event.multiChoose, this));
-        this.$container.on('click.select', '.select-chose:not(.disabled)', $.proxy(this.show, this));
+        let chooseHandle = $.proxy(this.isSingleSelect ? Event.singleChoose : Event.multiChoose, this);
+        this.$container.on('click.select', '.select-item:not(.disabled)', chooseHandle);
+        this.$container.on('click.select', '.select-choose:not(.disabled)', $.proxy(this.show, this));
         this.$container.on('click.select', '.clearAll', $.proxy(Event.clearAll, this));
         this.$container.on('click.select', '.del', $.proxy(Event.del, this));
         this.$container.on('keyup.select', '.search', $.proxy(Event.search, this));
+        this.$selectChoose.on('keydown.select', $.proxy(Event.control, this));
+        this.$selectChoose.on('keyup.select', $.proxy(Event.choose, this));
+    },
+    unbindEvent() {
+        this.$container.off('click.select', '.select-item:not(.disabled)');
+        this.$container.off('click.select', '.select-choose:not(.disabled)');
+        this.$container.off('click.select', '.clearAll');
+        this.$container.off('click.select', '.del');
+        this.$container.off('keyup.select', '.search');
+        this.$selectChoose.off('keydown.select');
+        this.$selectChoose.off('keyup.select');
+    },
+    changeStatus(status) {
+        if (status == 'readonly') {
+            this.unbindEvent();
+        } else if (status == 'disabled') {
+            this.$select.prop('disabled', true);
+            this.$selectChoose.addClass('disabled');
+            this.unbindEvent();
+        } else {
+            this.$select.prop('disabled', false);
+            this.$selectChoose.removeClass('disabled');
+            this.bindEvent();
+        }
+    },
+    destory() {
+        this.$container.children().not('select').remove();
+        this.$select.show().attr('name', this.name);
     }
 });
 
@@ -62,7 +96,7 @@ $('body').on('click.select', function (event) {
    if (!$target.parents('.select').length) {
        $('.select-dropdown').fadeOut(100);
        $('.select').removeClass('is-focus');
-       $('.select-chose').removeClass('active');
+       $('.select-choose').removeClass('active');
    }
 });
 
