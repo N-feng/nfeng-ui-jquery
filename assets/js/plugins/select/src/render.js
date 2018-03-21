@@ -37,7 +37,7 @@ let Render = {
         let arrow = '<span class="arrow"></span>';
         if (this.filterable) {
             let $selectSearch = $('<div class="select-search">');
-            let $input = $('<input class="form-control form-control-sm search" placeholder="请输入搜索">');
+            let $input = $('<input class="form-control sm search" placeholder="请输入搜索">');
             $selectSearch.append($input);
             this.$selectDropDown.append($selectSearch);
         }
