@@ -1,1 +1,534 @@
 <h3 class="mb15">Form</h3>
+
+<h4 class="mt50 mb20">典型表单</h4>
+<div class="demo-block">
+    <form class="form-label-right">
+        <div class="form-group">
+            <label class="form-left">活动名称</label>
+            <div class="form-right">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">活动区域</label>
+            <div class="form-right">
+                <select placeholder="请选择活动区域">
+                    <option value="1">区域一</option>
+                    <option value="2">区域二</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">即时配送</label>
+            <div class="form-right">
+                <div class="form-switch">
+                    <label>
+                        <input type="checkbox">
+                        <span class="switch">
+                        <span class="switch-button"></span>
+                    </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">活动性质</label>
+            <div class="form-right">
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="1">
+                    <span class="checkbox"></span>
+                    <span class="text">美食/餐厅线上活动</span>
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="2">
+                    <span class="checkbox"></span>
+                    <span class="text">地推活动</span>
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="3">
+                    <span class="checkbox"></span>
+                    <span class="text">线下主题活动</span>
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="4">
+                    <span class="checkbox"></span>
+                    <span class="text">单纯品牌曝光</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">特殊资源</label>
+            <div class="form-right">
+                <label class="form-radio">
+                    <input type="radio" name="specialResource" value="1">
+                    <span class="radio"></span>
+                    <span class="text">线上品牌商赞助</span>
+                </label>
+                <label class="form-radio">
+                    <input type="radio" name="specialResource" value="2">
+                    <span class="radio"></span>
+                    <span class="text">线下场地免费</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div style="margin-left: 80px;">
+                <button class="btn btn-primary md" type="button">立即创建</button>
+                <button class="btn md">取消</button>
+            </div>
+        </div>
+    </form>
+</div>
+<h4 class="mt50 mb20">行内表单</h4>
+<div class="demo-block">
+    <form class="form-inline">
+        <div class="form-group">
+            <label class="form-left">审批人</label>
+            <div class="form-right">
+                <input type="text" class="form-control" placeholder="审批人">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">活动区域</label>
+            <div class="form-right">
+                <select placeholder="活动区域">
+                    <option value="1">区域一</option>
+                    <option value="2">区域二</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div style="">
+                <button class="btn btn-primary md" type="button">查询</button>
+            </div>
+        </div>
+    </form>
+</div>
+<h4 class="mt50 mb20">对齐方式</h4>
+<div class="demo-block">
+    <div class="btn-group">
+        <button class="btn" onclick="alignment(this, '.J-alignment', 'form-label-left')">左对齐</button>
+        <button class="btn btn-primary" onclick="alignment(this, '.J-alignment', 'form-label-right')">右对齐</button>
+        <button class="btn" onclick="alignment(this, '.J-alignment', 'form-label-top')">顶部对齐</button>
+    </div>
+    <form class="J-alignment form-label-right mt20">
+        <div class="form-group">
+            <label class="form-left">名称</label>
+            <div class="form-right">
+                <input type="text" class="form-control" placeholder="审批人">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">活动区域</label>
+            <div class="form-right">
+                <input type="text" class="form-control" placeholder="审批人">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">活动形式</label>
+            <div class="form-right">
+                <input type="text" class="form-control" placeholder="审批人">
+            </div>
+        </div>
+    </form>
+</div>
+<h4 class="mt50 mb20">表单验证</h4>
+<div class="demo-block">
+    <form class="form-label-right form-ajaxSubmit">
+        <div class="form-group is-require">
+            <label class="form-left">活动名称</label>
+            <div class="form-right">
+                <input type="text" class="form-control" name="activityName">
+            </div>
+        </div>
+        <div class="form-group is-require">
+            <label class="form-left">活动区域</label>
+            <div class="form-right">
+                <select placeholder="请选择活动区域" name="activityArea">
+                    <option value="1">区域一</option>
+                    <option value="2">区域二</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">即时配送</label>
+            <div class="form-right">
+                <div class="form-switch">
+                    <label>
+                        <input type="checkbox">
+                        <span class="switch">
+                        <span class="switch-button"></span>
+                    </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group is-require">
+            <label class="form-left">活动性质</label>
+            <div class="form-right">
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="1">
+                    <span class="checkbox"></span>
+                    <span class="text">美食/餐厅线上活动</span>
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="2">
+                    <span class="checkbox"></span>
+                    <span class="text">地推活动</span>
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="3">
+                    <span class="checkbox"></span>
+                    <span class="text">线下主题活动</span>
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" name="activityNature" value="4">
+                    <span class="checkbox"></span>
+                    <span class="text">单纯品牌曝光</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group is-require">
+            <label class="form-left">特殊资源</label>
+            <div class="form-right">
+                <label class="form-radio">
+                    <input type="radio" name="specialResource" value="1">
+                    <span class="radio"></span>
+                    <span class="text">线上品牌商赞助</span>
+                </label>
+                <label class="form-radio">
+                    <input type="radio" name="specialResource" value="2">
+                    <span class="radio"></span>
+                    <span class="text">线下场地免费</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group is-require">
+            <label class="form-left">活动形式</label>
+            <div class="form-right">
+                <textarea type="textarea" rows="2" class="form-control" name="activityType"></textarea>
+            </div>
+        </div>
+        <div class="form-group is-require">
+            <div style="margin-left: 80px;">
+                <button class="btn btn-primary md" type="submit">立即创建</button>
+                <button class="btn md" type="button" onclick="validateDemo.resetField()">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<h4 class="mt50 mb20">自定义校验规则</h4>
+<div class="demo-block">
+    <form class="form-label-right form-Custom">
+        <div class="form-group">
+            <label class="form-left">密码</label>
+            <div class="form-right">
+                <input type="text" class="form-control" name="pass">
+                <span class="input-suffix">
+                    <i class="input-icon el-icon-circle-close"></i>
+                    <i class="input-icon el-icon-circle-check"></i>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">确认密码</label>
+            <div class="form-right">
+                <input type="text" class="form-control" name="checkPass">
+                <span class="input-suffix">
+                    <i class="input-icon el-icon-circle-close"></i>
+                    <i class="input-icon el-icon-circle-check"></i>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-left">年龄</label>
+            <div class="form-right">
+                <input type="text" class="form-control" name="age">
+                <span class="input-suffix">
+                    <i class="input-icon el-icon-circle-close"></i>
+                    <i class="input-icon el-icon-circle-check"></i>
+                </span>
+            </div>
+        </div>
+        <div class="form-group is-require">
+            <div style="margin-left: 80px;">
+                <button class="btn btn-primary md" type="submit">立即创建</button>
+                <button class="btn md" type="button" onclick="validateCustom.resetField()">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<h4 class="mt50 mb20">Element Attributes</h4>
+<table class="table">
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <td>class</td>
+        <td>对齐方式</td>
+        <td>String</td>
+        <td>form-label-left/form-label-right/form-label-top</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>is-required</td>
+        <td>是否显示 <span style="color: red;">*</span></td>
+        <td>String</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+
+<h4 class="mt50 mb20">Attributes</h4>
+<table class="table">
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>可选值</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <td>collections</td>
+        <td>校验集合器</td>
+        <td>Array</td>
+        <td>-</td>
+        <td>[]</td>
+    </tr>
+    <tr>
+        <td>strategy</td>
+        <td>自定义策略</td>
+        <td>Object</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+
+<h4 class="mt50 mb20">Methods</h4>
+<table class="table">
+    <tr>
+        <th>方法名</th>
+        <th>说明</th>
+        <th>参数</th>
+    </tr>
+    <tr>
+        <td>batch</td>
+        <td>对整个表单进行校验的方法。</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>verify</td>
+        <td>对部分表单字段进行校验的方法</td>
+        <td>fieldName</td>
+    </tr>
+    <tr>
+        <td>resetFields</td>
+        <td>对整个表单进行重置，将所有字段值重置为初始值并移除校验结果</td>
+        <td>-</td>
+    </tr>
+</table>
+
+<style>
+    form:not(.form-inline) {
+        width: 460px;
+    }
+</style>
+
+<script>
+
+    function alignment(elm, formName, className) {
+        $(elm).addClass('btn-primary').siblings().removeClass('btn-primary');
+        $(formName).removeClass('form-label-left form-label-right form-label-top').addClass(className);
+    }
+
+    $('select').NUI('select');
+
+    var validateDemo = $('.form-ajaxSubmit').NUI('validate', {
+        strategy: { // 自定义策略
+            ajaxValid: function (value) {
+                // 校验条件不通过必须 return false;
+                if (value === '123') {
+                    return false;
+                }
+            }
+        },
+        collections: [
+            {
+                name: 'activityName',            // 对应被验证input元素的 name="email"
+                required: true,
+                trigger: 'blur',
+                context: '.form-right',       // 校验结果信息存放位置，一般是input的父元素
+                matches: {                    // 校验规则，可校验多个条件
+                    isNonEmpty: {               // isNonEmpty 为校验条件，一般称为策略名
+                        errMsg: '请输入活动名称'    // 策略值，作为策略函数的参数，支持扩展自定义
+                    }
+                }
+            },
+            {
+                name: 'activityArea',
+                required: true,
+                trigger: 'change',
+                context: '.form-right',
+                matches: {
+                    isNonEmpty: {
+                        errMsg: '请选择活动区域'
+                    }
+                }
+            },
+            {
+                name: 'activityNature',
+                required: true,
+                context: '.form-right',
+                trigger: 'change',
+                matches: {
+                    isChecked: {
+                        errMsg: '请至少选择一个活动性质'
+                    }
+                }
+            },
+            {
+                name: 'specialResource',
+                required: true,
+                context: '.form-right',
+                trigger: 'change',
+                matches: {
+                    isChecked: {
+                        errMsg: '请选择活动资源'
+                    }
+                }
+            },
+            {
+                name: 'activityType',            // 对应被验证input元素的 name="email"
+                required: true,
+                trigger: 'blur',
+                context: '.form-right',       // 校验结果信息存放位置，一般是input的父元素
+                matches: {                    // 校验规则，可校验多个条件
+                    isNonEmpty: {               // isNonEmpty 为校验条件，一般称为策略名
+                        errMsg: '请填写活动形式'    // 策略值，作为策略函数的参数，支持扩展自定义
+                    }
+                }
+            },
+        ]
+    });
+
+    $('.form-ajaxSubmit').NUI('ajaxForm', {
+        before: function (event, config) {
+            // this => $form
+            // return false can prevent submit
+            if (validateDemo.batch() === false) {
+                return false;
+            }
+            console.log('trigger before callback, ajax-data:' + this.serialize());
+        },
+        success: function (response, config) {
+            // this => $form
+            console.log('trigger success callback');
+        },
+        pending: function (config) {
+            // this => $form
+            console.log('trigger pending callback');
+        },
+        error: function (error, config) {
+            // this => $form
+            console.log('trigger error callback');
+        },
+        always: function (response, config) {
+            // this => $form
+            console.log('trigger alway callback');
+        }
+    });
+
+    var validateCustom = $('.form-Custom').NUI('validate', {
+        strategy: { // 自定义策略
+            checkAge: function (value) {
+                if (value < 18) {
+                    return false;
+                }
+            },
+            validatePass: function (value) {
+                // 校验条件不通过必须 return false;
+                let passVal = $('[name="pass"]').val();
+                if (passVal !== value) {
+                    return false;
+                }
+            }
+        },
+        collections: [
+            {
+                name: 'pass',            // 对应被验证input元素的 name="email"
+                required: true,
+                trigger: 'blur',
+                context: '.form-right',       // 校验结果信息存放位置，一般是input的父元素
+                matches: {                    // 校验规则，可校验多个条件
+                    isNonEmpty: {               // isNonEmpty 为校验条件，一般称为策略名
+                        errMsg: '请输入密码'    // 策略值，作为策略函数的参数，支持扩展自定义
+                    }
+                }
+            },
+            {
+                name: 'checkPass',
+                required: true,
+                trigger: 'blur',
+                context: '.form-right',
+                matches: {
+                    isNonEmpty: {
+                        errMsg: '请再次输入密码'
+                    },
+                    validatePass: {
+                        errMsg: '两次输入密码不一致!'
+                    }
+                }
+            },
+            {
+                name: 'age',
+                required: true,
+                context: '.form-right',
+                trigger: 'blur',
+                matches: {
+                    isNonEmpty: {
+                        errMsg: '请输入数字值'
+                    },
+                    onlyInt: {
+                        errMsg: '请输入数字值'
+                    },
+                    checkAge: {
+                        errMsg: '必须年满18岁'
+                    }
+                }
+            },
+        ]
+    });
+
+    $('.form-Custom').NUI('ajaxForm', {
+        before: function (event, config) {
+            // this => $form
+            // return false can prevent submit
+            if (validateCustom.batch() === false) {
+                return false;
+            }
+            console.log('trigger before callback, ajax-data:' + this.serialize());
+        },
+        success: function (response, config) {
+            // this => $form
+            console.log('trigger success callback');
+        },
+        pending: function (config) {
+            // this => $form
+            console.log('trigger pending callback');
+        },
+        error: function (error, config) {
+            // this => $form
+            console.log('trigger error callback');
+        },
+        always: function (response, config) {
+            // this => $form
+            console.log('trigger alway callback');
+        }
+    });
+
+</script>

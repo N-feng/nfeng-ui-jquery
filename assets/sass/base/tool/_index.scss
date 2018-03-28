@@ -34,3 +34,8 @@ $em-base: 16px !default;
 
 // mixins form
 @import "mixins/form/button";
+
+// mixins common
+@import "mixins/common/inline-block";
+@import "mixins/common/clearfix";
+@import "mixins/common/box-sizing";

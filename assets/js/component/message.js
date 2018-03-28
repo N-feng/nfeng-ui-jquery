@@ -9,7 +9,7 @@ function Message(options) {
     return new MessageConstructor(options);
 }
 
-var MessageConstructor = function (options) {
+let MessageConstructor = function (options) {
     this.options = null;
     this.$template = null;
     this.msgId = null;
@@ -41,7 +41,7 @@ MessageConstructor.prototype = {
     },
     getTemplate() {
         //生成一个随机5位数，作为id
-        var msgId = 'msgId-';
+        let msgId = 'msgId-';
         do {
             msgId += ~~(Math.random() * 100000)
         } while (document.getElementById(msgId));
@@ -49,8 +49,8 @@ MessageConstructor.prototype = {
         this.customClass = this.options.customClass;
         this.type = this.options.type;
         this.message = this.options.message;
-        var typeClass = '';
-        var iconClass = '';
+        let typeClass = '';
+        let iconClass = '';
         switch (this.type.toLowerCase()) {
             case 'info':
                 typeClass = 'message--info';
@@ -72,7 +72,7 @@ MessageConstructor.prototype = {
                 throw new Error('类型必须为["info","success","warning","error"]其中之一');
                 break;
         }
-        var closeBtn = "";
+        let closeBtn = "";
         if (this.options.showClose) {
             closeBtn = '<i class="message__closeBtn el-icon-close"></i>';
         }
@@ -88,7 +88,7 @@ MessageConstructor.prototype = {
             this.$template.addClass('is-center');
         }
         this.$closeBtn = this.$template.find('.message__closeBtn');
-        var self = this;
+        let self = this;
         if (this.$closeBtn.length) {
             this.$closeBtn.on('click', function () {
                 self.close();
@@ -105,7 +105,7 @@ MessageConstructor.prototype = {
         return this.$template;
     },
     showTemplate() {
-        var self = this;
+        let self = this;
         self.$template.addClass(this.options.animateEnterClass);
         // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
         setTimeout(function () {
@@ -118,9 +118,9 @@ MessageConstructor.prototype = {
         this.getTemplate().appendTo(this.options.container);
         this.showTemplate();
     },
-    // 关闭即销毁
     close() {
-        var self = this;
+        // 关闭即销毁
+        let self = this;
         this.closed = true;
         if (typeof this.options.onClose === 'function') {
             this.options.onClose(this);
@@ -134,8 +134,8 @@ MessageConstructor.prototype = {
         clearTimeout(this.timer);
     },
     startTimer() {
-        var self = this;
-        var duration = this.options.duration;
+        let self = this;
+        let duration = this.options.duration;
         if (duration > 0) {
             this.timer = setTimeout(function () {
                 if (!self.closed) {

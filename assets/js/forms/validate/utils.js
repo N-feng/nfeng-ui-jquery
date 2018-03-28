@@ -1,11 +1,33 @@
-let valiUtils = {
+let Utils = {
 	GLOB_STRATEGY: {
-        isNonEmpty: function(params) {
-            var $target = this.self;
-            var value = $target[0].value;
+        isNonEmpty: function(value) {
+            // 是否为空
             if ($.trim(value).length === 0) {
                 return false;
             }
+        },
+        isEmail: function(value) {
+            //是否为邮箱
+            if (!/(^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$)/.test(value)) {
+                return false;
+            }
+        },
+        between: function(value, params) {
+            var length = value.length;
+            var min = params.range[0];
+            var max = params.range[1];
+            if (length < min || length > max) {
+                return false;
+            }
+        },
+        isChecked: function() {
+            //至少选中一项 radio || checkbox
+            var result = void(0);
+            this.each(function(index, el) {
+                result = el.checked;
+                return result ? false : true;
+            });
+            return result ? void(0) : false;
         },
         minLength: function(params) {
             //大于
@@ -40,22 +62,6 @@ let valiUtils = {
                 return false;
             }
         },
-        isEmail: function(params) {
-            //是否为邮箱
-            if (!/(^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$)/.test(this.self[0].value)) {
-                return false;
-            }
-        },
-        between: function(params) {
-            var $target = this.self;
-            var length = this.self[0].value.length;
-            var min = params.range[0];
-            var max = params.range[1];
-            if (length < min || length > max) {
-                return false;
-            }
-
-        },
         //纯英文
         onlyEn: function(params) {
             if (!/^[A-Za-z]+$/.test(this.self[0].value)) {
@@ -80,20 +86,11 @@ let valiUtils = {
                 return false;
             }
         },
-        //整数
-        onlyInt: function(params) {
-            if (!/^[0-9]*$/.test(this.self[0].value)) {
+        onlyInt: function(value) {
+            //整数
+            if (!/^[0-9]*$/.test(value)) {
                 return false;
             }
-        },
-        //至少选中一项 radio || checkbox
-        isChecked: function(params) {
-            var result = void(0);
-            this.self.each(function(index, el) {
-                result = el.checked;
-                return result ? false : true;
-            });
-            return result ? void(0) : false;
         },
         //昵称
         isNickname: function(params) {
@@ -104,4 +101,4 @@ let valiUtils = {
     }
 }
 
-module.exports = valiUtils
+module.exports = Utils;

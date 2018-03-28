@@ -22,12 +22,12 @@ $.each([
     require("./js/base/ajaxForm"),          // ajaxForm
 	require("./js/plugins/datepick"),		// 时间选择控件
 	require("./js/plugins/layer"),
-	require("./js/plugins/validate"),
 	require("./js/plugins/fixedBox"),
 	require("./js/plugins/scrollbar"),
 	require("./js/plugins/table"),
 	require("./js/plugins/navmenu"),		// 菜单
-	require("./js/plugins/select"),			// Select选择器
+	require("./js/forms/select"),			// Select选择器
+    require("./js/forms/validate"),			// 验证
 ], function (index, component) {
 	if (typeof component === "object" && !NUI[component]) {
 		$.extend(NUI, component);
@@ -55,7 +55,6 @@ require("./js/component/layer");
 require("./js/pages/echarts");
 require("./js/pages/select");
 require("./js/pages/tipsbox");
-require("./js/pages/owl");
 require("./js/pages/datepicker");
 require("./js/pages/multiCheck");
 require("./js/pages/global");

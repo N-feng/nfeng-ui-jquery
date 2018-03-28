@@ -17,7 +17,6 @@
 
 .select-choose {
   @extend .form-control;
-  @extend .form-group;
   display: block;
   cursor: pointer;
   &.active {

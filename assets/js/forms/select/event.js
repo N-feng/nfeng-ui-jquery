@@ -1,4 +1,4 @@
-let utils = require('../../../base/utils');
+let utils = require('../../base/utils');
 let Utils = require('./utils');
 let KEY_CODE = {
     up    : 38,
@@ -8,6 +8,7 @@ let KEY_CODE = {
 
 let Event = {
     singleChoose(event) {
+        event.preventDefault();
         let self = this;
         let $target = $(event.target);
         let value = $target.data('value');
@@ -40,9 +41,11 @@ let Event = {
 
         this.config.change.call(this, value, $target.text());
         this.$hiddenInput.val(value);
+        this.$hiddenInput.trigger('change');
         this.hide();
     },
     multiChoose(event) {
+        event.preventDefault();
         let self = this;
         let $target = $(event.target);
         let value = $target.data('value');

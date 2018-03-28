@@ -6,7 +6,7 @@ let Render = {
         this.initSelectDropDown();
     },
     initSelectchoose() {
-        this.$selectChoose = $('<a href="javascrip:;" class="select-choose">');
+        this.$selectChoose = $('<a class="select-choose">');
         this.$selectChoose.addClass(this.disabled);
         this.$hiddenInput = $('<input type="hidden">');
         this.$hiddenInput.attr('name', this.name);

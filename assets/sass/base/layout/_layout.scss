@@ -1,6 +1,8 @@
 @import "grids";
 @import "header";
 @import "sidebar";
+@import "breadcrumb";
+@import "/box";
 
 .content {
     margin-left: 230px;
@@ -18,33 +20,4 @@
 
 .content-wrapper {
     padding: 15px;
-}
-
-.breadcrumb {
-    float: right;
-    background: transparent;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 7px 5px;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    border-radius: 2px;
-    li {
-        display: inline-block;
-    }
-    li>a {
-        color: #444;
-        text-decoration: none;
-        display: inline-block;
-    }
-    li+li:before {
-        padding: 0 5px;
-        color: #ccc;
-        content: "/\00a0";
-    }
-    .active {
-        color: #777;
-    }
 }

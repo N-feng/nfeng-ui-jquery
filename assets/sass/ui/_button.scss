@@ -37,6 +37,21 @@
     border-color: #ebeef5;
     color: #c0c4cc;
   }
+  &.md {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  &.sm {
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  &.xs {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
 }
 
 .btn + .btn {
@@ -148,24 +163,6 @@
     background-color: transparent;
     border-color: transparent;
   }
-}
-
-.btn-md {
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.btn-sm {
-  padding: 9px 15px;
-  font-size: 12px;
-  border-radius: 3px;
-}
-
-.btn-xs {
-  padding: 7px 15px;
-  font-size: 12px;
-  border-radius: 3px;
 }
 
 .btn-group {

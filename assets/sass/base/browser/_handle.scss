@@ -3,24 +3,33 @@
 }
 
 .clearfix {
-  zoom: 1;
+  @extend %clearfix;
 }
 
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+//左浮动
+@mixin pull-left {
+  @include float(left);
+}
+
+%pull-left {
+  @include float(left);
 }
 
 .pull-left {
-  float: left;
+  @include pull-left;
+}
+
+//右浮动
+@mixin pull-right {
+  @include float(right);
+}
+
+%pull-right {
+  @include float(right);
 }
 
 .pull-right {
-  float: right;
+  @include pull-right;
 }
 
 .di {
