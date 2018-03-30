@@ -1,0 +1,6 @@
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  @if $filter {
+    filter: alpha(opacity=$opacity);
+  }
+}

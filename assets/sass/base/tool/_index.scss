@@ -10,6 +10,7 @@ $em-base: 16px !default;
 
 // mixins color
 @import "mixins/color/background-color-opacity";
+@import "mixins/color/opacity";
 
 // helpers
 @import "helpers/clearfix";

@@ -1,0 +1,85 @@
+<h3 class="mb15">Layer</h3>
+
+<div class="demo-block">
+    <button class="btn J-layer-0">layer-static</button>
+</div>
+
+<script type="text/html" id="tpl-static">
+    <!-- layer header -->
+    <div class="layer-header clearfix">
+        <div class="pull-left"><div class="layer-title">标题</div></div>
+        <div class="pull-right"><a href="javascript:;" class="btn-close icon-close"></a></div>
+    </div>
+    <!-- layer header end -->
+    <!-- layer body -->
+    <div class="layer-body">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+                <th>Table heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- layer body end -->
+    <!-- layer footer -->
+    <div class="layer-footer">
+        <button type="button" class="btn btn-primary btn-sm btn-confirm">确定</button>
+        <button type="button" class="btn btn-default btn-sm btn-close" data-dismiss="modal">取消</button>
+    </div>
+    <!-- layer footer end -->
+</script>
+
+
+<script>
+    /**
+     * static layer demo
+     * 静态层是指层内容片段已经存在于dom结构中，layer的作用是负责显示/隐藏
+     */
+    var layerStatic = $('#layer-static').NUI('layer',{
+        container: '.content-wrapper',
+        offsetWidth:700,
+        content:$('#tpl-static').html()
+    });
+
+    // layerStatic === $('#layer-static').data('layer')   // true
+
+    $('.J-layer-0').click(function(event) {
+        layerStatic.showLayer();
+    });
+</script>
