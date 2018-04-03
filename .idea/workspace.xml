@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb6a5ff5-8254-44a8-98d5-63d109f8da21" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_opacity.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/component/layer.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/layer/index.js" afterPath="$PROJECT_DIR$/assets/js/plugins/layer/index.js" />
-      <change beforePath="$PROJECT_DIR$/assets/js/plugins/layer/view.js" afterPath="$PROJECT_DIR$/assets/js/plugins/layer/view.js" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/_index.scss" afterPath="$PROJECT_DIR$/assets/sass/base/tool/_index.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/component/_layer.scss" afterPath="$PROJECT_DIR$/assets/sass/component/_layer.scss" />
-      <change beforePath="$PROJECT_DIR$/router/routes.js" afterPath="$PROJECT_DIR$/router/routes.js" />
-      <change beforePath="$PROJECT_DIR$/view/layouts/sidebar.html" afterPath="$PROJECT_DIR$/view/layouts/sidebar.html" />
-      <change beforePath="$PROJECT_DIR$/view/ui/form.html" afterPath="$PROJECT_DIR$/view/forms/form.html" />
-      <change beforePath="$PROJECT_DIR$/view/ui/input.html" afterPath="$PROJECT_DIR$/view/forms/input.html" />
-      <change beforePath="$PROJECT_DIR$/view/ui/select.html" afterPath="$PROJECT_DIR$/view/forms/select.html" />
-    </list>
+    <list default="true" id="eb6a5ff5-8254-44a8-98d5-63d109f8da21" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,22 +15,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/component/layer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-              <folding>
-                <element signature="n#script#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="-7">
               <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="18" />
               <folding />
             </state>
@@ -54,7 +28,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/plugins/fixedBox/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-7">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -64,19 +38,40 @@
       <file leaf-file-name="view.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="-7">
               <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/layouts/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="370">
+              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/component/message.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!block;n#Message#0" expanded="false" />
+                <element signature="e#283#433#0" expanded="false" />
+                <element signature="e#465#745#0" expanded="false" />
+                <element signature="e#798#848#0" expanded="false" />
+                <element signature="e#874#938#0" expanded="false" />
+                <element signature="e#3199#3497#0" expanded="false" />
+                <element signature="e#3517#3663#0" expanded="false" />
+                <element signature="e#3677#4029#0" expanded="false" />
+                <element signature="e#4048#4089#0" expanded="false" />
+                <element signature="e#4108#4388#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,7 +79,7 @@
       <file leaf-file-name="_layer.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/component/_layer.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="-16">
               <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding />
             </state>
@@ -94,7 +89,7 @@
       <file leaf-file-name="_opacity.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_opacity.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="-7">
               <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
               <folding />
             </state>
@@ -104,7 +99,7 @@
       <file leaf-file-name="_background-color-opacity.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_background-color-opacity.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-7">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -114,7 +109,7 @@
       <file leaf-file-name="_index.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/_index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="-7">
               <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
@@ -124,7 +119,7 @@
       <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-7">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1514537044182" expanded="true" signature="130:203" ph="..." />
@@ -341,22 +336,6 @@
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="fixedBox" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="layer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -485,7 +464,7 @@
     <property name="SearchEverywhereHistoryKey" value="validate/m&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/validate/src/main.js&#10;sele&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_select.scss&#10;input&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;dropdown&#9;null&#9;null&#10;mess&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/message.html&#10;button&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;inpu&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;utils&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/select/src/utils.js&#10;input.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;select/&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/select&#10;input.html&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/ui/input.html&#10;grids&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_grids.scss&#10;grid&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/tool/mixins/utilities/susy/lib/su/_grid.scss&#10;toolt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;tooltip&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_tooltip.scss&#10;element&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_element.scss&#10;input.sc&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;form.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_form.scss&#10;rout&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router/routes.js&#10;side&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;butt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;re&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/browser/_reset.scss&#10;ent&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;demo.js&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/other/demo.js&#10;demo&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;navmenu.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_navmenu.scss&#10;na&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;demo.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;tool&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/tooltip.html&#10;too&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;datapick&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/plugins/datapick.html&#10;nav&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;router&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router&#10;sidebar&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;entry.&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;packj&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/package.json" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="editorconfig.notification" value="spaces" />
   </component>
   <component name="RecentsManager">
@@ -509,7 +488,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -534,8 +513,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="npm.dev" />
-        <item index="1" class="java.lang.String" itemvalue="npm.build" />
+        <item index="0" class="java.lang.String" itemvalue="npm.build" />
+        <item index="1" class="java.lang.String" itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -577,12 +556,12 @@
       <workItem from="1521900387550" duration="910000" />
       <workItem from="1521901582814" duration="20901000" />
       <workItem from="1522050712385" duration="31385000" />
-      <workItem from="1522380655781" duration="2775000" />
+      <workItem from="1522380655781" duration="4879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293490000" />
+    <option name="totallyTimeSpent" value="295594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/component/message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/plugins/navmenu/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -836,6 +808,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/component/layer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="-7">
           <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
           <folding>
             <element signature="n#script#0;n#!!top" expanded="false" />
@@ -973,7 +952,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-7">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1514537044182" expanded="true" signature="130:203" ph="..." />
@@ -999,7 +978,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/_index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="-7">
           <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding />
         </state>
@@ -1007,7 +986,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_background-color-opacity.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-7">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1015,7 +994,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/plugins/fixedBox/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-7">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1023,7 +1002,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="-7">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="18" />
           <folding />
         </state>
@@ -1031,7 +1010,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/component/_layer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="-16">
           <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding />
         </state>
@@ -1039,7 +1018,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_opacity.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="-7">
           <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding />
         </state>
@@ -1047,7 +1026,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="-7">
           <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
           <folding />
         </state>
@@ -1055,9 +1034,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/layouts/sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="370">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!block;n#Message#0" expanded="false" />
+            <element signature="e#283#433#0" expanded="false" />
+            <element signature="e#465#745#0" expanded="false" />
+            <element signature="e#798#848#0" expanded="false" />
+            <element signature="e#874#938#0" expanded="false" />
+            <element signature="e#3199#3497#0" expanded="false" />
+            <element signature="e#3517#3663#0" expanded="false" />
+            <element signature="e#3677#4029#0" expanded="false" />
+            <element signature="e#4048#4089#0" expanded="false" />
+            <element signature="e#4108#4388#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
