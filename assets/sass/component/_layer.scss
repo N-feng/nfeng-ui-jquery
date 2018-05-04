@@ -4,12 +4,14 @@
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: .5;
-    background: #000;
+    visibility: hidden;
+    opacity: 0;
+    @include bgc-opacity(#000, .5);
+    @include transition(all 0.3s);
 }
 
 .layer-box {
-    z-index: 1031;
+    z-index: 2;
     position: fixed;
     top: 0;
     right: 0;
@@ -32,28 +34,54 @@
 .layer-content {
     position: relative;
     outline: 0;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 100%;
+    padding-bottom: 10px;
     margin-bottom: 10px;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
     color: #2b2e38;
     background: #fff;
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    font-size: 18px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
     vertical-align: middle;
     text-align: left;
+    @include box-sizing();
+    @include prefixer(text-size-adjust, 100%);
+    @include transform(translate3d(0, 0, 0));
+}
+
+.layer-title{
+    font-size: 18px;
+    line-height: 1;
+    color: #303133;
+}
+
+.layer-header {
+    position: relative;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.layer-body {
+    position: relative;
+    padding: 10px 15px;
+    color: #606266;
+    font-size: 14px;
+}
+
+.layer-footer {
+  padding: 5px 15px 0;
+  text-align: right;
 }
 
 .layer-opening {
-    -webkit-animation: layerIn 0.3s ease-out forwards;
-    -moz-animation: layerIn 0.3s ease-out forwards;
-    -o-animation: layerIn 0.3s ease-out forwards;
-    animation: layerIn 0.3s ease-out forwards;
+    //-webkit-animation: layerIn 0.3s ease-out forwards;
+    //-moz-animation: layerIn 0.3s ease-out forwards;
+    //-o-animation: layerIn 0.3s ease-out forwards;
+    //animation: layerIn 0.3s ease-out forwards;
+
+  @include animation(msgbox-fade-in .3s);
 }
 @-webkit-keyframes layerIn {
     0% {
@@ -121,10 +149,12 @@
 }
 
 .layer-closing, .dialog-closing {
-    -webkit-animation: layerOut 0.2s ease-out forwards;
-    -moz-animation: layerOut 0.2s ease-out forwards;
-    -o-animation: layerOut 0.2s ease-out forwards;
-    animation: layerOut 0.2s ease-out forwards;
+    //-webkit-animation: layerOut 0.2s ease-out forwards;
+    //-moz-animation: layerOut 0.2s ease-out forwards;
+    //-o-animation: layerOut 0.2s ease-out forwards;
+    //animation: layerOut 0.2s ease-out forwards;
+
+    @include animation(msgbox-fade-out .3s);
 }
 @-webkit-keyframes layerOut {
     0% {
@@ -235,4 +265,34 @@
         -webkit-transform: translateY(0%);
         transform: translateY(0%);
     }
+}
+
+.msgbox-fade-enter-active {
+  animation: msgbox-fade-in .3s
+}
+
+.msgbox-fade-leave-active {
+  animation: msgbox-fade-out .3s
+}
+
+@keyframes msgbox-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0
+  }
+  to {
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes msgbox-fade-out {
+  0% {
+    transform: translateZ(0);
+    opacity: 1
+  }
+  to {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0
+  }
 }

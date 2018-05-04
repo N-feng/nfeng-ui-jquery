@@ -21,7 +21,7 @@ $.each([
 $.each([
     require("./js/base/ajaxForm"),          // ajaxForm
 	require("./js/plugins/datepick"),		// 时间选择控件
-	require("./js/plugins/layer"),
+	require("./js/plugins/layer"),			// 弹层
 	require("./js/plugins/fixedBox"),
 	require("./js/plugins/scrollbar"),
 	require("./js/plugins/table"),
@@ -49,8 +49,6 @@ $.fn.NUI = function () {
 
 require("./js/component/table");
 require("./js/plugins/datepick");
-
-require("./js/component/layer");
 
 require("./js/pages/echarts");
 require("./js/pages/select");

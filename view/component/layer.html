@@ -2,6 +2,8 @@
 
 <div class="demo-block">
     <button class="btn J-layer-0">layer-static</button>
+    <button class="btn J-layer-1">layer-ajax</button>
+    <button class="btn J-layer-2">layer-cutto</button>
 </div>
 
 <script type="text/html" id="tpl-static">
@@ -83,3 +85,234 @@
         layerStatic.showLayer();
     });
 </script>
+
+<script>
+    /**
+     * ajax layer demo
+     *
+     * 先初始化一个没有 content 的Layer
+     * #layer-ajax 是随意拟定的，最终生成的layer Id 就是 #layer-ajax
+     * 由于是本站是Jekyll搭建的静态页，success 返回的只是一段html,需要将res转为json-object,在实际项目中并不需要。
+     */
+
+    var layerAjax = $('#layer-ajax').NUI('layer',{
+        container: '.content-wrapper',
+        offsetWidth: 420,
+        url:'/static/js/ajaxLayer.json',
+        cache:false,
+        successCall:function(res,xhr,layer){
+            var data = JSON.parse(res);
+            var html = data.html;
+            this.find('.layer-content').html(html);
+        },
+        confirmCall:function(event,layer){
+            this.find('form').off('submit').on('submit', function(event) {
+                event.preventDefault();
+                $.message('<span style="margin-right:10px;font-size:20px;" class="glyphicon glyphicon-ok-sign"></span>触发表单提交事件');
+            }).trigger('submit');
+        },
+        cancelCall:function(event,layer){
+            $.message('<span style="margin-right:10px;font-size:20px;" class="glyphicon glyphicon-ok-sign"></span>触发关闭事件');
+        }
+    });
+
+    $('.J-layer-1').click(function(event) {
+        layerAjax.ajaxLoad();
+    });
+</script>
+
+<script type="text/html" id="tpl-one">
+    <!-- layer header -->
+    <div class="layer-header clearfix">
+        <div class="pull-left"><div class="layer-title">标题</div></div>
+        <div class="pull-right"><a href="javascript:;" class="btn-close icon-close"></a></div>
+    </div>
+    <!-- layer header end -->
+    <!-- layer body -->
+    <div class="layer-body">
+        这是弹层一
+    </div>
+    <!-- layer body end -->
+    <!-- layer footer -->
+    <div class="layer-footer">
+        <button type="button" class="btn btn-primary btn-sm btn-next">切换</button>
+        <button type="button" class="btn btn-default btn-sm btn-close" data-dismiss="modal">取消</button>
+    </div>
+    <!-- layer footer end -->
+</script>
+<script type="text/html" id="tpl-two">
+    <!-- layer header -->
+    <div class="layer-header clearfix">
+        <div class="pull-left"><div class="layer-title">标题</div></div>
+        <div class="pull-right"><a href="javascript:;" class="btn-close icon-close"></a></div>
+    </div>
+    <!-- layer header end -->
+    <!-- layer body -->
+    <div class="layer-body">
+        这是弹层二
+    </div>
+    <!-- layer body end -->
+    <!-- layer footer -->
+    <div class="layer-footer">
+        <button type="button" class="btn btn-primary btn-sm btn-prev">切换</button>
+        <button type="button" class="btn btn-default btn-sm btn-close" data-dismiss="modal">取消</button>
+    </div>
+    <!-- layer footer end -->
+</script>
+
+<script>
+    /**
+     * cutto layer demo
+     * 两个不同层之间切换的用法
+     */
+
+    var layerOne = $('#layer-one').NUI('layer',{
+        container: '.content-wrapper',
+        offsetWidth: 420,
+        content:$('#tpl-one').html()
+    });
+
+    var layerTwo = $('#layer-two').NUI('layer',{
+        container: '.content-wrapper',
+        offsetWidth: 420,
+        content:$('#tpl-two').html()
+    });
+
+
+    $('.J-layer-2').click(function(event) {
+        layerTwo.showLayer();
+    });
+
+    $('body').on('click', '.btn-prev', function(event) {
+        event.preventDefault();
+        layerTwo.cutTo('#layer-one');
+    });
+
+    $('body').on('click', '.btn-next', function(event) {
+        event.preventDefault();
+        layerOne.cutTo('#layer-two');
+    });
+</script>
+
+<h4 class="mt50 mb20">Element Attributes</h4>
+<table class="table">
+    <thead>
+    <tr>
+        <th>属性</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>container</td>
+        <td>组件的执行上下文环境</td>
+        <td>String</td>
+        <td>body</td>
+    </tr>
+    <tr>
+        <td>cache</td>
+        <td>是否缓存 ajax 页面</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>shadow</td>
+        <td>是否开启阴影层关闭</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>confirmHandle</td>
+        <td>侦听确认按钮的className</td>
+        <td>String</td>
+        <td>.btn-confirm</td>
+    </tr>
+    <tr>
+        <td>closeHandle</td>
+        <td>侦听取消按钮的className</td>
+        <td>String</td>
+        <td>.btn-cancel</td>
+    </tr>
+    <tr>
+        <td>offsetWidth</td>
+        <td>layer 宽度</td>
+        <td>Number/String</td>
+        <td>auto</td>
+    </tr>
+    <tr>
+        <td>offsetHeight</td>
+        <td>layer 高度</td>
+        <td>Number/String</td>
+        <td>auto</td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td>ajax url</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>dataType</td>
+        <td>ajax dataType</td>
+        <td>String</td>
+        <td>html</td>
+    </tr>
+    <tr>
+        <td>data</td>
+        <td>ajax data</td>
+        <td>Object</td>
+        <td>null</td>
+    </tr>
+    <tr>
+        <td>method</td>
+        <td>ajax method</td>
+        <td>String</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>content</td>
+        <td>Layer的内容注入接口，仅对 static layer 有效</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>showCall</td>
+        <td>showLayer的回调函数</td>
+        <td>Function</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>hideCall</td>
+        <td>hideLayer的回调函数，在cancelCall之后执行</td>
+        <td>Function</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>cancelCall</td>
+        <td>点击 closeHandle 元素时触发回调</td>
+        <td>Function</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>confirmCall</td>
+        <td>点击 confirmHandle 元素时触发回调</td>
+        <td>Function</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>successCall</td>
+        <td>ajax success callback,仅对 ajax layer 有效</td>
+        <td>Function</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>errorCall</td>
+        <td>ajax error callback,仅对 ajax layer 有效</td>
+        <td>Function</td>
+        <td>-</td>
+    </tr>
+    </tbody>
+</table>
+
