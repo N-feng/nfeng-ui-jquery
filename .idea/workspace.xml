@@ -2,103 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb6a5ff5-8254-44a8-98d5-63d109f8da21" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_grid-framework.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_grid.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_index.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/plugins/_form.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/ui/form/_check.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/ui/form/_radio.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/ui/form/_switch.scss" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/animate/_animate.scss" afterPath="$PROJECT_DIR$/assets/sass/base/animate/_index.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/browser/_browser.scss" afterPath="$PROJECT_DIR$/assets/sass/base/browser/_index.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/fonts/_fonts.scss" afterPath="$PROJECT_DIR$/assets/sass/base/fonts/_index.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_box.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/layout/_box.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_breadcrumb.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/layout/_breadcrumb.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_grids.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_header.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/layout/_header.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_layout.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/layout/_content.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/layout/_sidebar.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/layout/_sidebar.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/_index.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/_index.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/functions/_border-radius.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_border-radius.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/functions/_px-to-rem.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/functions/_px-to-rem.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/helpers/_center-block.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_center-block.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/helpers/_clearfix.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/helpers/_ellipsis.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_ellipsis.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/helpers/_triangle.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_triangle.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/animation/_animation.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/animation/_animation.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/animation/_transform.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/animation/_transform.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/animation/_transition.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/animation/_transition.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_background-color-opacity.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/attributes/_background.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_opacity.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/attributes/_opacity.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/common/_box-sizing.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_box-sizing.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/common/_clearfix.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_clearfix.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/common/_inline-block.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_inline-block.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/form/_button.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/component/_button.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/typography/_background.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/typography/_margin.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/attributes/_margin.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/typography/_padding.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/attributes/_padding.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/typography/_text.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/_prefixer.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/animation/_prefixer.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/_index.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/_su.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/_susy.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_background.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_bleed.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_box-sizing.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_breakpoint-plugin.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_container.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_context.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_gallery.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_grids.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_gutters.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_isolate.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_margins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_padding.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_rows.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_settings.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_span.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_validation.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/_float.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/_shared.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/_support.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/float/_container.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/float/_end.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/float/_isolate.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/float/_span.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_background.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_container.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_direction.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_inspect.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_margins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_output.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/shared/_padding.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/support/_background.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/support/_box-sizing.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/support/_clearfix.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/support/_prefix.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/support/_rem.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/output/support/_support.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/su/_grid.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/su/_settings.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/su/_utilities.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/base/tool/mixins/utilities/susy/lib/su/_validation.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/component/_alert.scss" afterPath="$PROJECT_DIR$/assets/sass/component/_alert.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/forms/_form.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/forms/_input.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/form/_input.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/forms/_select.scss" afterPath="$PROJECT_DIR$/assets/sass/plugins/_select.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/style.scss" afterPath="$PROJECT_DIR$/assets/sass/style.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/ui/_button.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/form/_button.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/ui/_pagination.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/table/_pagination.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/ui/table/_table.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/table/_table.scss" />
-      <change beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" afterPath="$PROJECT_DIR$/build/webpack.prod.conf.js" />
       <change beforePath="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" afterPath="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" />
       <change beforePath="$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js" afterPath="$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -136,8 +42,8 @@
       <file leaf-file-name="webpack.prod.conf.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="330">
+              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -435,7 +341,7 @@
       <workItem from="1525423515422" duration="962000" />
       <workItem from="1525424655806" duration="185000" />
       <workItem from="1525425385521" duration="1348000" />
-      <workItem from="1525481834668" duration="16026000" />
+      <workItem from="1525481834668" duration="16119000" />
     </task>
     <task id="LOCAL-00001" summary="alert">
       <created>1525424372463</created>
@@ -479,11 +385,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525484396083</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="delete susy add bootstrap">
+      <created>1525597054553</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1525597054553</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320963000" />
+    <option name="totallyTimeSpent" value="321056000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,10 +417,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816902" sideWeight="0.503096" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.49750888" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998747" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17793594" sideWeight="0.6035132" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49839228" sideWeight="0.49690402" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49839228" sideWeight="0.49690402" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -574,7 +487,8 @@
     <MESSAGE value="alert" />
     <MESSAGE value="security" />
     <MESSAGE value="update hoek version to 5.0.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="update hoek version to 5.0.3" />
+    <MESSAGE value="delete susy add bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete susy add bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -986,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="330">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
