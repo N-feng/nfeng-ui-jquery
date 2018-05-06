@@ -1,7 +1,9 @@
 let config = require('./config');
 let webpack = require('webpack');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
+    mode: 'production',
     entry: {
         'nfeng-ui-jquery': './assets/entry.pc.js'
     },
@@ -11,11 +13,7 @@ module.exports = {
         publicPath: '/nfeng-ui-jquery/dist/'
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        }),
+        new UglifyJsPlugin(),
         new ExtractTextPlugin({
             filename: 'css/[name].css'
         })
