@@ -13,7 +13,17 @@ module.exports = {
         publicPath: '/nfeng-ui-jquery/dist/'
     },
     plugins: [
-        new UglifyJsPlugin(),
+        // we specify a custom UglifyJsPlugin here to get source maps in production
+        new UglifyJsPlugin({
+            cache: true,
+            parallel: true,
+            uglifyOptions: {
+                compress: false,
+                ecma: 6,
+                mangle: true
+            },
+            sourceMap: true
+        }),
         new ExtractTextPlugin({
             filename: 'css/[name].css'
         })
