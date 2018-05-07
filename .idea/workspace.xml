@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb6a5ff5-8254-44a8-98d5-63d109f8da21" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/component/dialog.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/component/overlay.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/animation/_keyframes.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/component/_dialog.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/component/_loading.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/component/_overlay.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/view/component/dialog.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/view/component/loading.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/assets/entry.pc.js" afterPath="$PROJECT_DIR$/assets/entry.pc.js" />
+      <change beforePath="$PROJECT_DIR$/assets/js/component/loading.js" afterPath="$PROJECT_DIR$/assets/js/component/loading.js" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/base/_configuration.scss" afterPath="$PROJECT_DIR$/assets/sass/base/_configuration.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/base/mixins/_index.scss" afterPath="$PROJECT_DIR$/assets/sass/base/mixins/_index.scss" />
       <change beforePath="$PROJECT_DIR$/assets/sass/component/_alert.scss" afterPath="$PROJECT_DIR$/assets/sass/component/_alert.scss" />
-      <change beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" afterPath="$PROJECT_DIR$/build/webpack.prod.conf.js" />
-      <change beforePath="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" afterPath="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" />
-      <change beforePath="$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js" afterPath="$PROJECT_DIR$/dist/js/nfeng-ui-jquery.js" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/style.scss" afterPath="$PROJECT_DIR$/assets/sass/style.scss" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/ui/layout/_sidebar.scss" afterPath="$PROJECT_DIR$/assets/sass/ui/layout/_sidebar.scss" />
+      <change beforePath="$PROJECT_DIR$/router/routes.js" afterPath="$PROJECT_DIR$/router/routes.js" />
+      <change beforePath="$PROJECT_DIR$/view/layouts/sidebar.html" afterPath="$PROJECT_DIR$/view/layouts/sidebar.html" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,64 +34,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="loading.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/component/loading.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="28">
+              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <file leaf-file-name="layer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            <state relative-caret-position="489">
+              <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="10" selection-end-line="209" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.prod.conf.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
+      <file leaf-file-name="overlay.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/component/overlay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="45">
+              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_alert.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/sass/component/_alert.scss">
+      <file leaf-file-name="dialog.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/component/dialog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nfeng-ui-jquery.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="9035" column="13" lean-forward="false" selection-start-line="9035" selection-start-column="9" selection-end-line="9035" selection-end-column="13" />
+            <state relative-caret-position="486">
+              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
               <folding>
-                <marker date="1525596852646" expanded="true" signature="374795:374830" ph="{&quot;version&quot;: &quot;4.1.0&quot;...}" />
+                <marker date="1525679273992" expanded="true" signature="2020:2040" ph="..." />
+                <marker date="1525679273992" expanded="true" signature="2688:2708" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_overlay.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/component/_overlay.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="6" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_dialog.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/component/_dialog.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dialog.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/component/dialog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="12" column="67" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/base/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1335">
+              <caret line="89" column="18" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_layer.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/component/_layer.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="150" column="31" lean-forward="false" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,24 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>zoomTop-enter</find>
-      <find>animateEnterClass</find>
-      <find>className</find>
-      <find>$content</find>
-      <find>errors</find>
-      <find>rules</find>
-      <find>form-check</find>
-      <find>Constructor</find>
-      <find>ENP</find>
-      <find>font-size:20px;</find>
-      <find>消息</find>
-      <find>style=&quot;margin-right:10px;&quot;</find>
-      <find>2.16</find>
-      <find>boom</find>
-      <find>2.16.3</find>
-      <find>ora</find>
-      <find>rimraf</find>
-      <find>mixin-exists</find>
       <find>hawk</find>
       <find>col-sm</find>
       <find>make-row</find>
@@ -125,6 +151,24 @@
       <find>RemovedPluginError</find>
       <find>UglifyJSPlugin</find>
       <find>hoek</find>
+      <find>module.exports</find>
+      <find>dialog</find>
+      <find>scrollBarWidth</find>
+      <find>require</find>
+      <find>#&lt;Object&gt;</find>
+      <find>utils</find>
+      <find>ball-clip-rotate</find>
+      <find>$backdrop</find>
+      <find>dialogBackdrop</find>
+      <find>iui-</find>
+      <find>dia</find>
+      <find>mark</find>
+      <find>IUI-</find>
+      <find>msgbox-fade-out</find>
+      <find>confirm</find>
+      <find>hide</find>
+      <find>deferred</find>
+      <find>&lt;code class=&quot;highlighter-rouge&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -145,7 +189,6 @@
       <replace>$selectChoose</replace>
       <replace>init</replace>
       <replace>select</replace>
-      <replace>console.log</replace>
       <replace>form-left</replace>
       <replace>form-right</replace>
       <replace>let</replace>
@@ -153,6 +196,8 @@
       <replace>EVENT_SPACE</replace>
       <replace>信息</replace>
       <replace>5.0.3</replace>
+      <replace>commonUtils</replace>
+      <replace>console.log</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -164,29 +209,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/sass/ui/_form.scss" />
-        <option value="$PROJECT_DIR$/view/ui/form.html" />
-        <option value="$PROJECT_DIR$/assets/sass/base/browser/_reset.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/ui/_input.scss" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/select/src/render.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/select/src/event.js" />
-        <option value="$PROJECT_DIR$/assets/js/forms/select/main.js" />
-        <option value="$PROJECT_DIR$/assets/js/forms/select/index.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/navmenu/navmenu.js" />
-        <option value="$PROJECT_DIR$/assets/js/plugins/navmenu/index.js" />
-        <option value="$PROJECT_DIR$/assets/js/component/message.js" />
-        <option value="$PROJECT_DIR$/view/component/layer.html" />
         <option value="$PROJECT_DIR$/assets/js/plugins/layer/index.js" />
         <option value="$PROJECT_DIR$/assets/sass/base/tool/mixins/color/_opacity.scss" />
         <option value="$PROJECT_DIR$/assets/js/plugins/layer/view.js" />
         <option value="$PROJECT_DIR$/assets/js/plugins/alert.js" />
-        <option value="$PROJECT_DIR$/assets/sass/component/_layer.scss" />
         <option value="$PROJECT_DIR$/router/index.js" />
         <option value="$PROJECT_DIR$/assets/sass/ui/_button.scss" />
         <option value="$PROJECT_DIR$/view/plugins/alert.html" />
-        <option value="$PROJECT_DIR$/assets/entry.pc.js" />
-        <option value="$PROJECT_DIR$/view/layouts/sidebar.html" />
-        <option value="$PROJECT_DIR$/router/routes.js" />
         <option value="$PROJECT_DIR$/view/font/element.html" />
         <option value="$PROJECT_DIR$/assets/sass/other/_demo.scss" />
         <option value="$PROJECT_DIR$/view/component/message.html" />
@@ -199,9 +228,7 @@
         <option value="$PROJECT_DIR$/assets/sass/base/tool/_index.scss" />
         <option value="$PROJECT_DIR$/assets/sass/base/mixins/helpers/_grid-framework.scss" />
         <option value="$PROJECT_DIR$/assets/sass/base/layout/_grids.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/base/_configuration.scss" />
         <option value="$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_variables.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/base/mixins/_index.scss" />
         <option value="$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_index.scss" />
         <option value="$PROJECT_DIR$/assets/sass/base/layout/_layout.scss" />
         <option value="$PROJECT_DIR$/assets/sass/ui/_check.scss" />
@@ -210,11 +237,29 @@
         <option value="$PROJECT_DIR$/assets/sass/ui/form/_switch.scss" />
         <option value="$PROJECT_DIR$/assets/sass/ui/table/_table.scss" />
         <option value="$PROJECT_DIR$/assets/sass/ui/layout/_layout.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/style.scss" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css" />
         <option value="$PROJECT_DIR$/build/webpack.prod.conf.js" />
+        <option value="$PROJECT_DIR$/assets/sass/ui/layout/_sidebar.scss" />
+        <option value="$PROJECT_DIR$/assets/js/component/modal.js" />
         <option value="$PROJECT_DIR$/assets/sass/component/_alert.scss" />
+        <option value="$PROJECT_DIR$/router/routes.js" />
+        <option value="$PROJECT_DIR$/view/layouts/sidebar.html" />
+        <option value="$PROJECT_DIR$/assets/sass/base/mixins/animation/_keyframes.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/base/mixins/_index.scss" />
+        <option value="$PROJECT_DIR$/assets/entry.pc.js" />
+        <option value="$PROJECT_DIR$/assets/js/plugins/layer.js" />
+        <option value="$PROJECT_DIR$/assets/sass/component/_overlay.scss" />
+        <option value="$PROJECT_DIR$/view/component/loading.html" />
+        <option value="$PROJECT_DIR$/assets/js/component/overlay.js" />
+        <option value="$PROJECT_DIR$/assets/js/component/loading.js" />
+        <option value="$PROJECT_DIR$/assets/sass/component/_loading.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/style.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/base/_configuration.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/component/_layer.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/component/_dialog.scss" />
+        <option value="$PROJECT_DIR$/assets/js/component/dialog.js" />
+        <option value="$PROJECT_DIR$/view/component/dialog.html" />
       </list>
     </option>
   </component>
@@ -228,10 +273,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="307" />
-    <option name="y" value="-1037" />
-    <option name="width" value="1562" />
-    <option name="height" value="1028" />
+    <option name="x" value="-1432" />
+    <option name="y" value="-103" />
+    <option name="width" value="1386" />
+    <option name="height" value="907" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -273,17 +318,32 @@
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="mixins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nfeng-ui-jquery" type="b2602c69:ProjectViewProjectNode" />
               <item name="nfeng-ui-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,7 +354,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="alert&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_alert.scss&#10;message&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/message.html&#10;validate/m&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/validate/src/main.js&#10;sele&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_select.scss&#10;input&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;dropdown&#9;null&#9;null&#10;mess&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/message.html&#10;button&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;inpu&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;utils&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/select/src/utils.js&#10;input.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;select/&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/select&#10;input.html&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/ui/input.html&#10;grids&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_grids.scss&#10;grid&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/tool/mixins/utilities/susy/lib/su/_grid.scss&#10;toolt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;tooltip&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_tooltip.scss&#10;element&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_element.scss&#10;input.sc&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;form.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_form.scss&#10;rout&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router/routes.js&#10;side&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;butt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;re&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/browser/_reset.scss&#10;ent&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;demo.js&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/other/demo.js&#10;demo&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;navmenu.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_navmenu.scss&#10;na&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;demo.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;tool&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/tooltip.html&#10;too&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;datapick&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/plugins/datapick.html&#10;nav&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;router&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router&#10;sidebar&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;entry.&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;packj&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/package.json" />
+    <property name="SearchEverywhereHistoryKey" value="dialo&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/dialog.html&#10;dia&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_dialog.scss&#10;over&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_overlay.scss&#10;util&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/base/utils.js&#10;layer&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/layer.js&#10;loading&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/loading.js&#10;layer.scs&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_layer.scss&#10;side&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;route&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router/routes.js&#10;sidebar.s&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/layout/_sidebar.scss&#10;alert&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_alert.scss&#10;message&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/message.html&#10;validate/m&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/validate/src/main.js&#10;sele&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_select.scss&#10;input&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;dropdown&#9;null&#9;null&#10;mess&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/message.html&#10;button&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;inpu&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;utils&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/select/src/utils.js&#10;input.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;select/&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/select&#10;input.html&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/ui/input.html&#10;grids&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/tool/mixins/utilities/susy/lib/language/susy/_grids.scss&#10;grid&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/tool/mixins/utilities/susy/lib/su/_grid.scss&#10;toolt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;tooltip&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/component/_tooltip.scss&#10;element&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_element.scss&#10;input.sc&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_input.scss&#10;form.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_form.scss&#10;rout&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router/routes.js&#10;butt&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/ui/_button.scss&#10;re&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/base/browser/_reset.scss&#10;ent&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;demo.js&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/other/demo.js&#10;demo&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;navmenu.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/plugins/_navmenu.scss&#10;na&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;demo.scss&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/sass/other/_demo.scss&#10;tool&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/component/tooltip.html&#10;too&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/component/tooltip.js&#10;datapick&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/plugins/datapick.html&#10;nav&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/js/plugins/navmenu/src/navmenu.js&#10;router&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/router&#10;sidebar&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/view/layouts/sidebar.html&#10;entry.&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/assets/entry.pc.js&#10;packj&#9;FILE&#9;file:///Users/nieqifeng/code/nfeng-ui-jquery/package.json" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -394,7 +454,8 @@
       <workItem from="1525424655806" duration="185000" />
       <workItem from="1525425385521" duration="1348000" />
       <workItem from="1525481834668" duration="18240000" />
-      <workItem from="1525599239126" duration="270000" />
+      <workItem from="1525599239126" duration="5007000" />
+      <workItem from="1525620614504" duration="17216000" />
     </task>
     <task id="LOCAL-00001" summary="alert">
       <created>1525424372463</created>
@@ -466,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525597133816</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="build">
+      <created>1525599517201</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1525599517201</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323447000" />
+    <option name="totallyTimeSpent" value="345400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,17 +550,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="307" y="-1037" width="1562" height="1028" extended-state="0" />
+    <frame x="-1432" y="-103" width="1386" height="907" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22452952" sideWeight="0.39648682" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25347987" sideWeight="0.39648682" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816902" sideWeight="0.503096" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.49750888" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49839228" sideWeight="0.49690402" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49753696" sideWeight="0.49690402" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -582,235 +650,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/sass/other/_demo.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/component/alert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/ui/layout/_box.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/mixins/utilities/susy/_index.scss" />
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/animation/_prefixer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/functions/_px-to-rem.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/mixins/typography/_background.scss" />
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/mixins/typography/_text.scss" />
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/component/_button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/attributes/_opacity.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/attributes/_margin.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/helpers/_triangle.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/helpers/_ellipsis.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/helpers/_center-block.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/helpers/_border-radius.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/helpers/_clearfix.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/helpers/_clearfix.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/attributes/_background.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/layout/_grids.scss" />
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/_configuration.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_grid-framework.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="134" column="22" lean-forward="false" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_grid.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/ui/layout/_breadcrumb.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/ui/table/_progress.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1053">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/ui/form/_input.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/bootstrap/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/browser/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/animate/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/base/fonts/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/ui/layout/_content.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -864,6 +703,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -874,18 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+    <entry file="file://$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -900,14 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css/nfeng-ui-jquery.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -916,10 +740,329 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/component/alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery/speed/benchmarker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/fixedBox/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/ui/layout/_sidebar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/tooltip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/forms/select/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/forms/validate/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/city.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datepick/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/attributes/_background.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/component/_alert.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/alert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/plugins/layer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1524553930134" expanded="true" signature="3412:3445" ph="..." />
+            <marker date="1524553930134" expanded="true" signature="3625:3658" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/animation/_animation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/animation/_prefixer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layouts/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="107" lean-forward="false" selection-start-line="26" selection-start-column="107" selection-end-line="26" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/entry.pc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/animation/_keyframes.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/component/_loading.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/_configuration.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/base/mixins/_index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/component/_layer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="150" column="31" lean-forward="false" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="10" selection-end-line="209" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/component/loading.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="88" column="40" lean-forward="true" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+          <folding>
+            <element signature="e#1022#1026#0" expanded="true" />
+            <element signature="e#1054#1058#0" expanded="true" />
+            <element signature="e#1058#1062#0" expanded="true" />
+            <element signature="e#1065#1069#0" expanded="true" />
+            <element signature="e#1069#1073#0" expanded="true" />
+            <element signature="e#1077#1081#0" expanded="true" />
+            <element signature="e#1081#1085#0" expanded="true" />
+            <element signature="e#1089#1093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/base/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="89" column="18" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/component/_dialog.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/component/_overlay.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/component/dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding>
+            <marker date="1525679273992" expanded="true" signature="2020:2040" ph="..." />
+            <marker date="1525679273992" expanded="true" signature="2688:2708" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/overlay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/component/dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="67" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="20" />
           <folding />
         </state>
       </provider>

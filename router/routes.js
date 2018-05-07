@@ -15,6 +15,8 @@ define(function () {
        "component/tooltip": "view/component/tooltip",
        "component/message": "view/component/message",
        "component/alert": "view/component/alert",
+       "component/dialog": "view/component/dialog",
+       "component/loading": "view/component/loading",
 
        "plugins/navmenu": "view/plugins/navmenu",
        "plugins/datapick": "view/plugins/datapick",

@@ -9,9 +9,11 @@ $.each([
     require("./js/base/pubsub"),			// 订阅发布
     require("./js/base/urlHelper"),			// 拿url参数
     require("./js/component/loading"),		// 加载
+    require('./js/component/overlay'),      // 蒙层
     require("./js/component/message"),		// 信息
     require('./js/component/alert'),        // 提示
-    require("./js/component/tooltip"),		// tooltip
+    require('./js/component/dialog'),       // 对话框
+    require('./js/component/tooltip'),		// tooltip
 	require("./js/other/clock"),			// 时钟
 	require("./js/other/parallax"),			// 3d视差
 ], function (index, component) {

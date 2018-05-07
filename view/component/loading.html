@@ -1,0 +1,93 @@
+<h3 class="mb15">Loading</h3>
+
+<div class="demo-block J-memo">
+    <a href="javascript:;" class="btn btn-default btn-md J-loading-css">显示 css3 loading</a>
+    <a href="javascript:;" class="btn btn-default btn-md J-loading-img">显示 gif loading</a>
+    <a href="javascript:;" class="btn btn-default btn-md J-loading-context">局部 loading</a>
+</div>
+
+<h4 class="mt50 mb20">Attributes</h4>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>属性</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>display</td>
+        <td>显示/隐藏</td>
+        <td>Boolean</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>选择 <code class="highlighter-rouge">css3</code> 或 <code class="highlighter-rouge">gif</code> 动画</td>
+        <td>Boolean</td>
+        <td>true（css3）</td>
+    </tr>
+    <tr>
+        <td>animateHtml</td>
+        <td>使用 css3 动画时所需的 html 片段,type 为 true 时有效</td>
+        <td>String</td>
+        <td><code class="highlighter-rouge">&lt;div class="ball-clip-rotate"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;</code></td>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>使用 gif 时传入所需的图片路径,type 为 false 时有效</td>
+        <td>String</td>
+        <td><code class="highlighter-rouge">http://img.yi114.com/201571121314_382.gif</code></td>
+    </tr>
+    <tr>
+        <td>shadow</td>
+        <td>遮罩层显示与隐藏</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $('.J-loading-css').on('click', function(event) {
+        event.preventDefault();
+        $(this).blur();
+        console.log('弹出 css3 loading');
+        $.loading(true,true);
+        setTimeout(function(){
+            $.loading(false);
+            console.log('关闭 loading');
+        }, 2000);
+    });
+
+    $('.J-loading-img').on('click', function(event) {
+        event.preventDefault();
+        $(this).blur();
+        console.log('弹出 css3 loading');
+        $.loading(true,false);
+        setTimeout(function(){
+            $.loading(false);
+            console.log('关闭 loading');
+        }, 2000);
+    });
+
+
+    $('.J-loading-context').on('click', function(event) {
+        event.preventDefault();
+        var $this = $(this);
+        if($this.data('lock')){
+            return false;
+        }
+        $this.data('lock',1).blur();
+        console.log('弹出 css3 loading');
+        $('.J-memo').loading(true,true);
+        setTimeout(function(){
+            $this.data('lock',0);
+            $('.J-memo').loading(false);
+            console.log('关闭 loading');
+        }, 2000);
+    });
+</script>

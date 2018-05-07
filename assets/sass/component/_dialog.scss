@@ -1,0 +1,132 @@
+%backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include bgc-opacity(#000, .7);
+  z-index: 10;
+}
+
+.dialog-opening{
+  @include animation(fadeIn .2s ease-in forwards);
+}
+
+.dialog-closing{
+  @include animation(fadeOut .2s ease-out forwards);
+}
+.dialog-backdrop {
+  @extend %backdrop;
+  opacity: 0;
+  visibility: hidden;
+  z-index: $z-index-dialog-backdrop;
+  transform: translateZ($z-index-dialog-backdrop+px);
+  @include transition(all 0.3s);
+}
+
+.dialog-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  z-index: $z-index-dialog;
+  transform: translateZ($z-index-dialog+px);
+  &:after {
+    display: inline-block;
+    height: 100%;
+    margin-left: -.05em;
+    content: "";
+    vertical-align: middle;
+  }
+}
+
+.dialog-main {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #333;
+  width: $dialog-width;
+  outline: 0;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: #2b2e38;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.dialog-header {
+  color: nth($dialog-color,1);
+  font: $dialog-header-font;
+  text-align: left;
+  border-bottom: 1px #e0e0e0 solid;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.dialog-content {
+  font: $dialog-content-font;
+  color: nth($dialog-color,2);
+  padding: 15px;
+  text-align: left;
+}
+
+.dialog-footer {
+  border-top: 1px #e0e0e0 solid;
+  text-align: right;
+  padding: 10px 15px;
+}
+
+.dialog-confirm,
+.dialog-cancel {
+  //@extend %button-init;
+}
+
+.dialog-confirm {
+  margin-right:10px;
+  @include button-variant(#fff,#367AB7,#367AB7);
+  @include button-size(5px,10px,12px,1,3px);
+}
+
+.dialog-cancel {
+  @include button-variant(#fff,#88858F,#88858F);
+  @include button-size(5px,10px,12px,1,3px);
+}
+
+
+%extend-style{
+  padding-left: 110px;
+  width:330px;
+}
+
+.dialog-main.success {
+  @extend %extend-style;
+  &:before {
+    content: '\e632';
+    color:#90bf00;
+  }
+}
+.dialog-main.error {
+  @extend %extend-style;
+  &:before {
+    content: '\e68e';
+    color:#f24f00;
+  }
+}
+.dialog-main.warning {
+  @extend %extend-style;
+  &:before {
+    content: '\e68e';
+    color:#f3c901;
+  }
+}

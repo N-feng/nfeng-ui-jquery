@@ -8,6 +8,7 @@
     -o-transition: -o-transform .3s ease-in-out,width .3s ease-in-out;
     transition: transform .3s ease-in-out,width .3s ease-in-out;
     bottom: 0;
+    overflow: auto;
 }
 
 .sidebar-collapse .sidebar {

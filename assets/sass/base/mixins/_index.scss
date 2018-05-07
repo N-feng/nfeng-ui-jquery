@@ -7,6 +7,7 @@ $em-base: 16px !default;
 
 // mixins animation
 @import "animation/animation";
+@import "animation/keyframes";
 @import "animation/prefixer";
 @import "animation/transform";
 @import "animation/transition";
