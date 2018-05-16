@@ -8,14 +8,14 @@ NUI = {};
 $.each([
     require("./js/base/pubsub"),			// 订阅发布
     require("./js/base/urlHelper"),			// 拿url参数
-    require("./js/component/loading"),		// 加载
-    require('./js/component/overlay'),      // 蒙层
-    require("./js/component/message"),		// 信息
-    require('./js/component/alert'),        // 提示
-    require('./js/component/dialog'),       // 对话框
-    require('./js/component/tooltip'),		// tooltip
-	require("./js/other/clock"),			// 时钟
-	require("./js/other/parallax"),			// 3d视差
+    require("./js/feedback/loading"),		// 加载
+    require('./js/feedback/overlay'),      	// 蒙层
+    require("./js/feedback/message"),		// 信息
+    require('./js/feedback/alert'),         // 提示
+    require('./js/feedback/dialog'),        // 对话框
+    require('./js/feedback/tooltip'),		// tooltip
+    require("./js/other/clock"),			// 时钟
+    require("./js/other/parallax"),			// 3d视差
 ], function (index, component) {
     $.extend(component);
 });
@@ -23,31 +23,31 @@ $.each([
 // 注入到jQuery原型对象
 $.each([
     require("./js/base/ajaxForm"),          // ajaxForm
-	require("./js/plugins/datepick"),		// 时间选择控件
-	require("./js/plugins/layer"),			// 弹层
-	require("./js/plugins/fixedBox"),
-	require("./js/plugins/scrollbar"),
-	require("./js/plugins/table"),
-	require("./js/plugins/navmenu"),		// 菜单
-	require("./js/forms/select"),			// Select选择器
+    require("./js/plugins/datepick"),		// 时间选择控件
+    require("./js/plugins/layer"),			// 弹层
+    require("./js/plugins/fixedBox"),
+    require("./js/plugins/scrollbar"),
+    require("./js/plugins/table"),
+    require("./js/plugins/navmenu"),		// 菜单
+    require("./js/forms/select"),			// Select选择器
     require("./js/forms/validate"),			// 验证
 ], function (index, component) {
-	if (typeof component === "object" && !NUI[component]) {
-		$.extend(NUI, component);
-	}
+    if (typeof component === "object" && !NUI[component]) {
+        $.extend(NUI, component);
+    }
 });
 
 // 调用插件
 $.fn.NUI = function () {
-	var arg = arguments;
-	var component = NUI[arguments[0]];
-	if (component) {
-		arg = Array.prototype.slice.call(arg, 1);
-		return component.apply(this, arg);
-	} else {
-		$.error("Method " + arguments[0] + " does not exist on jQuery.NUI Plugin");
-		return this;
-	}
+    var arg = arguments;
+    var component = NUI[arguments[0]];
+    if (component) {
+        arg = Array.prototype.slice.call(arg, 1);
+        return component.apply(this, arg);
+    } else {
+        $.error("Method " + arguments[0] + " does not exist on jQuery.NUI Plugin");
+        return this;
+    }
 };
 
 require("./js/component/table");

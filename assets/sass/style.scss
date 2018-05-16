@@ -22,15 +22,16 @@
 @import "ui/table/badge";
 @import "ui/table/progress";
 
-@import "component/alert";
-@import "component/dialog";
-@import "component/message";
-@import "component/tooltip";
+@import "feedback/alert";
+@import "feedback/dialog";
+@import "feedback/message";
+@import "feedback/tooltip";
+@import "feedback/loading";
+@import "feedback/overlay";
+
 @import "component/tipsbox";
 @import "component/multiCheck";
 @import "component/layer";
-@import "component/loading";
-@import "component/overlay";
 
 @import "plugins/datapick";
 @import "plugins/loading";
