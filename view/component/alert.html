@@ -9,88 +9,91 @@
 
 <h4 class="mt50 mb20">Attributes</h4>
 <table class="table">
-    <thead>
     <tr>
         <th>属性</th>
         <th>说明</th>
         <th>类型</th>
         <th>默认值</th>
     </tr>
-    </thead>
-    <tbody>
     <tr>
         <td>obj</td>
         <td>alert容器</td>
         <td>String</td>
-        <td>#alert</td>
+        <td>.alert</td>
     </tr>
     <tr>
-        <td>text</td>
-        <td>文本，支持html标签</td>
+        <td>content</td>
+        <td>文本,支持html标签</td>
         <td>String</td>
         <td>-</td>
     </tr>
     <tr>
-        <td>timeout</td>
+        <td>duration</td>
         <td>持续时间,单位毫秒</td>
         <td>Number</td>
         <td>3000</td>
     </tr>
     <tr>
         <td>status</td>
-        <td>状态：0-error,1-success,2-info,3-warning</td>
-        <td>Number</td>
-        <td>1</td>
+        <td>状态:error,success,info,warning</td>
+        <td>String</td>
+        <td>info</td>
     </tr>
     <tr>
         <td>callback</td>
-        <td>回调函数，<code class="highlighter-rouge">无论调用多少次alert,回调函数都将取最后一个</code></td>
+        <td>回调函数</td>
         <td>Function</td>
         <td>-</td>
     </tr>
-    </tbody>
+    <tr>
+        <td>icon</td>
+        <td>是否开启阴影icon</td>
+        <td>boolean</td>
+        <td>true</td>
+    </tr>
 </table>
 
 <script>
-    $('.btn-info').on('click',  function(event) {
+    $('.btn-info').on('click', function () {
         $.alert({
-            text:'<i class="alert__icon el-icon-info"></i>This is a info message',
-            status:2,
-            timeout:1500,
-            callback:function(){
+            content: 'This is a info message',
+            status: 'info',
+            timeout: 1500,
+            callback: function () {
+                // callback ...
+                console.log(this)
+            }
+        });
+    });
+
+    $('.btn-success').on('click', function () {
+        $.alert({
+            content: 'This is a success message',
+            status: 'success',
+            timeout: 1500,
+            callback: function () {
                 // callback ...
             }
         });
     });
 
-    $('.btn-success').on('click',  function(event) {
+    $('.btn-warning').on('click', function () {
         $.alert({
-            text:'<i class="alert__icon el-icon-success"></i>This is a success message',
-            status:1,
-            timeout:1500,
-            callback:function(){
+            content: 'This is a warning message',
+            status: 'warning',
+            timeout: 1500,
+            callback: function () {
                 // callback ...
             }
         });
     });
 
-    $('.btn-warning').on('click',  function(event) {
+    $('.btn-danger').on('click', function () {
         $.alert({
-            text:'<i class="alert__icon el-icon-warning"></i>This is a warning message',
-            status:3,
-            timeout:1500,
-            callback:function(){
-                // callback ...
-            }
-        });
-    });
-
-    $('.btn-danger').on('click',  function(event) {
-        $.alert({
-            text:'<i class="alert__icon el-icon-error"></i>This is a error message',
-            status:0,
-            timeout:1500,
-            callback:function(){
+            content: 'This is a error message',
+            status: 'error',
+            timeout: 1500,
+            callback: function () {
                 // callback ...
             }
         });

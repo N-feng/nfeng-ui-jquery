@@ -1,5 +1,5 @@
 <h3 class="mb15">Dialog</h3>
-
+<h4 class="mt50 mb20">基础用法</h4>
 <div class="demo-block">
     <a href="javascript:;" class="btn btn-default btn-md J-dialog-0">call dialog-alert</a>
     <a href="javascript:;" class="btn btn-default btn-md J-dialog-1">call dialog-confirm</a>
@@ -88,71 +88,82 @@
 </table>
 
 <script>
-    $('.J-dialog-0').click(function(){
-        $.dialog({
-            title:'提示：',
-            content:'<div style="padding:10px 0 20px;">内容区域支持HTML，方便调整你需要的样式</div>',
-            type:'alert',
-            closeBtn:true,
-            before:function(deferred){
-                console.log('[before]函数触发');
-            },
-            confirm:function(deferred){
-                console.log('[confirm]函数触发');
-                console.log('确认按钮点击，窗口关闭');
-                deferred.hideDialog();
-            },
-            cancel:function(deferred){
-                console.log('[cancel]函数触发');
-                console.log('取消按钮点击，窗口关闭');
-            }
-        });
+    let dialogAlert = $.dialog({
+        container: '.content-wrapper',
+        title: '提示：',
+        content: '<div style="padding:10px 0 20px;">内容区域支持HTML，方便调整你需要的样式</div>',
+        type: 'alert',
+        status: 'error',
+        closeBtn: true,
+        before: function () {
+            console.log('[before]函数触发');
+        },
+        confirm: function () {
+            console.log('[confirm]函数触发');
+        },
+        cancel: function () {
+            console.log('[cancel]函数触发');
+        }
     });
-
-
-    $('.J-dialog-1').click(function(){
-        $.dialog({
-            title:'提示：',
-            content:'<div style="padding:10px 0 20px;">内容区域支持HTML，方便调整你需要的样式</div>',
-            type:'confirm',
-            closeBtn:true,
-            before:function(deferred){
-                console.log('[before]函数触发');
-            },
-            confirm:function(deferred){
-                console.log('[confirm]函数触发');
-                console.log('确认按钮点击，窗口关闭');
-                deferred.hideDialog();
-            },
-            cancel:function(deferred){
-                console.log('[cancel]函数触发');
-                console.log('取消按钮点击，窗口关闭');
-            }
-        });
+    $('.J-dialog-0').click(function () {
+        dialogAlert.show();
     });
-
-
-
-    $('.J-dialog-2').click(function(){
-        $.dialog({
-            title:'提示：',
-            content:'<div class="form-group">' +
-            '<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">' +
-            '</div>',
-            type:'alert',
-            closeBtn:true,
-            before:function(deferred){
-                console.log('[before]函数触发');
-            },
-            confirm:function(deferred){
-                console.log('[confirm]函数触发');
-                console.log('确认按钮点击，窗口关闭');
-                deferred.hideDialog();
-            },
-            cancel:function(deferred){
-                console.log('[cancel]函数触发');
-                console.log('取消按钮点击，窗口关闭');
-            }
-        });
+</script>
+<script>
+    let dialogClose = $.dialog({
+        container: '.content-wrapper',
+        title: '',
+        content: '确认关闭？',
+        type: 'confirm',
+        confirm: function () {
+            console.log('[confirm]函数触发');
+        },
+        cancel: function () {
+            console.log('[cancel]函数触发');
+            dialogConfirm.show();
+        }
+    });
+    let dialogConfirm = $.dialog({
+        container: '.content-wrapper',
+        title: '提示：',
+        content: '<div style="padding:10px 0 20px;">内容区域支持HTML，方便调整你需要的样式</div>',
+        type: 'confirm',
+        closeBtn: true,
+        before: function () {
+            console.log('[before]函数触发');
+        },
+        confirm: function () {
+            console.log('[confirm]函数触发');
+        },
+        cancel: function () {
+            console.log('[cancel]函数触发');
+            dialogClose.show();
+        }
+    });
+    $('.J-dialog-1').click(function () {
+        dialogConfirm.show();
+    });
+</script>
+<script>
+    let dialogForm = $.dialog({
+        container: '.content-wrapper',
+        title: '提示：',
+        content: '<div class="form-group">' +
+        '<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">' +
+        '</div>',
+        type: 'alert',
+        closeBtn: true,
+        before: function () {
+            console.log('[before]函数触发');
+        },
+        confirm: function () {
+            console.log('[confirm]函数触发');
+        },
+        cancel: function () {
+            console.log('[cancel]函数触发');
+        }
+    });
+    $('.J-dialog-2').click(function () {
+        dialogForm.show();
     });
 </script>

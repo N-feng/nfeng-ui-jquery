@@ -1,45 +1,48 @@
-/**
- * alert 组件
- * @param {String}                 obj                 被提示的对象，可传 id 或 jQuery 对象
- * @param {String}                 text                文本信息
- * @param {Number}                 timeout             多少毫秒后隐藏提示
- * @param {Boolean}                status              状态，success or error
- * @param {Array}                  offset              自定义位置微调值，offset[0] = x, offset[1] = y
- * @param {Function}               callback            回调函数 - hide 时触发
- *
- */
+let defaults = {
+    container: 'body',
+    obj: '.alert',
+    content: '',
+    duration: 1000,
+    status: 'info',
+    callback: null,
+    icon: true,
+};
+
+function Alert(options) {
+    let config = this.config = $.extend({}, defaults, options);
+    let callerStyle = config.obj.charAt(0) === '#' ? 'id' : 'class';
+    this.$selector = $(config.obj).length === 0 ? $('<div ' + callerStyle + '="' + config.obj.slice(1) + '"/>').appendTo(config.container) : $(config.obj);
+    this.show();
+}
+
+Alert.prototype.show = function () {
+    let config = this.config;
+    let $selector = this.$selector;
+
+    $selector.html(this.create());
+    clearTimeout($selector.data('count'));
+    $selector.data('count', setTimeout(function () {
+        $selector.find('.alert-context').addClass('hide');
+        config.callback(this);
+    }, config.duration))
+};
+
+Alert.prototype.create = function () {
+    let iconClass = {
+        info: 'el-icon-info',
+        success: 'el-icon-success',
+        warning: 'el-icon-warning',
+        error: 'el-icon-error',
+    };
+    let config = this.config;
+    let _icon = '<i class="' + iconClass[config.status] + ' mr10"></i>';
+    let _content = '<span class="alert-text">' + config.content + '</span>';
+    let template = '<div class="alert-context ' + config.status + '">' + (config.icon ? _icon : '') + _content + '</div>';
+    return template;
+};
+
 module.exports = {
-    alert : function (options) {
-        var param = $.extend({
-            container : 'body',
-            obj       : "#alert",
-            text      : '',
-            timeout   : 1000,
-            status    : true,
-            callback  : null
-        }, options);
-
-        // 判断传入的是id还是class
-        var callerStyle = param.obj.charAt(0) === '#' ? 'id' : 'class';
-        //初始化jQuery对象
-        var obj = $(param.obj).length === 0 ? $('<div ' + callerStyle + '="' + param.obj.slice(1) + '" />').appendTo('body') : $(param.obj);
-        //判断状态
-        var status = param.status ? 'success' : 'error';
-
-        clearTimeout(obj.data('count'));
-
-        obj.html('<span class="' + status + '">' + param.text + '</span>').removeClass('hide');
-
-        // 计时器隐藏提示
-        obj.data('count', setTimeout(function () {
-
-            obj.addClass('hide');
-
-            if (param.callback) {
-                param.callback();
-            }
-
-        }, param.timeout));
-
+    alert: function (options) {
+        return new Alert(options);
     }
 };

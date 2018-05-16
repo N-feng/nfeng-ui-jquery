@@ -1,49 +1,49 @@
-let commonUtils = require('../base/utils');
+let utils = require('../base/utils');
+let defaults = {
+    container: 'body',
+    display: false,
+};
+
 function Overlay(options) {
-    // 默认配置
-    var defaults = {
-        display     : false,
-        template    : '<div class="overlay"></div>',
-        animateDisable : false,
-    };
-
-    // 判断是临时配置还是自定义配置
-    var isTempConfig = typeof options === 'object';
-    // 是否全局模式
-    var isGlobal = this instanceof $;
-    // 作用域元素
-    var $context = $('body');
-
-    var config = $.extend(defaults, isTempConfig ? options : {});
-
-    // 若非全局模式，给作用域元素相对定位
-    if (isGlobal) {
-        $context = this;
-        // $context.css('position', 'relative');
+    this.config = $.extend({}, defaults, options);
+    if (this.config.display) {
+        this.show();
     }
-
-    // 若options不为配置对象
-    if (!isTempConfig && typeof options !== void 0) {
-        config.display = options;
-    }
-
-    var $overlay = $(config.template);
-
-    // 显示 or 隐藏
-    if (options) {
-        $context.data('overlay', $overlay).append($overlay);
-        //插入-遮罩-显示动画
-        $overlay.attr('style', 'opacity: 1;visibility: visible;');
-    } else {
-        $context.data('overlay').remove();
-        $overlay.removeAttr('style');
-        commonUtils.transitionEndShim($overlay, function() {
-            $overlay.remove();
-        },config.animateDisable);
-    }
-
 }
 
-$.fn.overlay = Overlay;
+Overlay.prototype.show = function () {
+    let config = this.config;
+    let $selector = this.$selector = $(this.create());
+    $selector.appendTo(config.container);
+    $selector.attr('style', 'opacity: 1;visibility: visible;');
+};
 
-module.exports = { overlay: Overlay };
+Overlay.prototype.hide = function () {
+    let $selector = this.$selector;
+    $selector.removeAttr('style');
+    $selector.off(utils.transitionEnd);
+    utils.transitionEndShim($selector, function () {
+        $selector.remove();
+    }, false);
+};
+
+Overlay.prototype.create = function () {
+    let template = '<div class="overlay"></div>';
+    return template;
+};
+
+function Constructor(options) {
+    options = options || {};
+    if (typeof options === "string") {
+        options = {
+            display: options
+        };
+    }
+    return new Overlay(options, this)
+}
+
+$.fn.overlay = Constructor;
+
+module.exports = {
+    overlay: Constructor
+};

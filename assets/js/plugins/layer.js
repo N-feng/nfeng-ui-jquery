@@ -53,15 +53,12 @@ Layer.prototype.init = function() {
         $selector.css('z-index',config.zIndex + 10);
     }
 
-
     $content.css({
         width: layerWidth,
         height: layerHeight
     });
 
     $selector.data('layer', _this);
-
-
 };
 
 Layer.prototype.ajaxLoad = function() {

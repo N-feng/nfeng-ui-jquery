@@ -117,7 +117,7 @@
         $.message({
             type: type,
             message: msg,
-            center: center
+            center: center,
         })
     }
 
@@ -131,7 +131,10 @@
             message: msg,
             showClose: true,
             duration: duration,
-            onClose: cb
+            onClose: cb,
+            // iconClass: 'active',
+            // customClass: 'active',
+            // center: true,
         })
     }
 </script>

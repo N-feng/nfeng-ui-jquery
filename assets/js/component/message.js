@@ -1,24 +1,4 @@
-function Message(options) {
-    options = options || {};
-    if (typeof options === "string") {
-        options = {
-            message: options
-        };
-    }
-    // 返回MessageConstructor实例
-    return new MessageConstructor(options);
-}
-
-let MessageConstructor = function (options) {
-    this.options = null;
-    this.$template = null;
-    this.msgId = null;
-    this.closed = false;
-    this.timer = null;
-    this.init(options);
-};
-
-MessageConstructor.DEFAULT = {
+let defaults = {
     container : 'body',
     type: 'info',
     iconClass: '',
@@ -29,123 +9,117 @@ MessageConstructor.DEFAULT = {
     center: false,
     onClose: null,
     animateEnterClass : 'message-fade-enter',
-    animateLeaveClass : 'message-fade-leave-active'
+    animateLeaveClass : 'message-fade-leave-active',
+    icon: true,
 };
 
-MessageConstructor.prototype = {
-    getDefault() {
-        return MessageConstructor.DEFAULT;
-    },
-    getOptions(options) {
-        return $.extend({}, this.getDefault(), options);
-    },
-    getTemplate() {
-        //生成一个随机5位数，作为id
-        let msgId = 'msgId-';
-        do {
-            msgId += ~~(Math.random() * 100000)
-        } while (document.getElementById(msgId));
-        this.msgId = msgId;
-        this.customClass = this.options.customClass;
-        this.type = this.options.type;
-        this.message = this.options.message;
-        let typeClass = '';
-        let iconClass = '';
-        switch (this.type.toLowerCase()) {
-            case 'info':
-                typeClass = 'message--info';
-                iconClass = 'el-icon-info';
-                break;
-            case 'success':
-                typeClass = 'message--success';
-                iconClass = 'el-icon-success';
-                break;
-            case 'warning':
-                typeClass = 'message--warning';
-                iconClass = 'el-icon-warning';
-                break;
-            case 'error':
-                typeClass = 'message--error';
-                iconClass = 'el-icon-error';
-                break;
-            default:
-                throw new Error('类型必须为["info","success","warning","error"]其中之一');
-                break;
-        }
-        let closeBtn = "";
-        if (this.options.showClose) {
-            closeBtn = '<i class="message__closeBtn el-icon-close"></i>';
-        }
-        if (this.options.iconClass) {
-            iconClass = this.options.iconClass;
-        }
+function Message (options) {
+    //生成一个随机5位数，作为id
+    let msgId = 'msgId-';
+    do {
+        msgId += ~~(Math.random() * 100000)
+    } while (document.getElementById(msgId));
+    this.msgId = msgId;
+    this.closed = false;
+    this.timer = null;
 
-        this.$template = $('<div class="message" id="' + msgId + '">');
-        this.$template.html('<i class="message__icon ' + iconClass + '"></i>' +
-            '<p class="message__content">' + this.message + '</p>' + closeBtn);
-        this.$template.addClass(typeClass).addClass(this.customClass);
-        if (this.options.center) {
-            this.$template.addClass('is-center');
-        }
-        this.$closeBtn = this.$template.find('.message__closeBtn');
-        let self = this;
-        if (this.$closeBtn.length) {
-            this.$closeBtn.on('click', function () {
-                self.close();
-            })
-        }
+    this.config = $.extend({}, defaults, options);
+    this.$selector = $(this.create());
+    this.show();
+    this.event();
+}
 
-        // 鼠标hover事件
-        this.$template.hover(function () {
-            self.clearTimer();
-        }, function () {
-            self.startTimer();
-        });
+Message.prototype.event = function () {
+    let self = this;
+    let $selector = this.$selector;
+    $selector.on('transitionend', function () {
+        if ($selector.hasClass('message-fade-leave-active')) {
+            $selector.remove();
+        }
+    });
+    // 点击取消,关闭按钮
+    $selector.on('touchstart.message click.message', '.message-close', function () {
+        self.hide();
+    });
+    // 鼠标hover事件
+    $selector.hover(function () {
+        self.clearTimer();
+    }, function () {
+        self.startTimer();
+    });
+};
 
-        return this.$template;
-    },
-    showTemplate() {
-        let self = this;
-        self.$template.addClass(this.options.animateEnterClass);
-        // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
-        setTimeout(function () {
-            self.$template.removeClass(self.options.animateEnterClass);
-        }, 100);
-        this.startTimer();
-    },
-    init(options) {
-        this.options = this.getOptions(options);
-        this.getTemplate().appendTo(this.options.container);
-        this.showTemplate();
-    },
-    close() {
-        // 关闭即销毁
-        let self = this;
-        this.closed = true;
-        if (typeof this.options.onClose === 'function') {
-            this.options.onClose(this);
-        }
-        //消失动画结束后销毁
-        this.$template.addClass(this.options.animateLeaveClass).on('transitionend', function () {
-            self.$template.remove();
-        });
-    },
-    clearTimer() {
-        clearTimeout(this.timer);
-    },
-    startTimer() {
-        let self = this;
-        let duration = this.options.duration;
-        if (duration > 0) {
-            this.timer = setTimeout(function () {
-                if (!self.closed) {
-                    self.close();
-                }
-            }, duration);
-        }
+Message.prototype.show = function () {
+    let config = this.config;
+    let $selector = this.$selector;
+
+    $selector.appendTo(config.container);
+    $selector.addClass('message-fade-enter');
+    // 出现时动画,必须要用异步的方法移除类，而且时间必须大于0，否则可能不会有出现动画
+    setTimeout(function () {
+        $selector.removeClass('message-fade-enter');
+    }, 100);
+    this.startTimer();
+};
+
+Message.prototype.hide = function () {
+    // 关闭即销毁
+    let config = this.config;
+    let $selector = this.$selector;
+    this.closed = true;
+    if (typeof config.onClose === 'function') {
+        config.onClose(this);
+    }
+    //消失动画结束后销毁
+    $selector.addClass('message-fade-leave-active');
+};
+
+Message.prototype.startTimer = function () {
+    let self = this;
+    let config = this.config;
+    let duration = config.duration;
+    if (duration > 0) {
+        this.timer = setTimeout(function () {
+            if (!self.closed) {
+                self.hide();
+            }
+        }, duration);
     }
 };
 
+Message.prototype.clearTimer = function () {
+    clearTimeout(this.timer);
+};
+
+Message.prototype.create = function () {
+    let iconClass = {
+        info: 'el-icon-info',
+        success: 'el-icon-success',
+        warning: 'el-icon-warning',
+        error: 'el-icon-error',
+    };
+    let config = this.config;
+    let _icon = '<i class="message-icon ' + (config.iconClass ? config.iconClass : iconClass[config.type]) + ' mr10"></i>';
+    let _content = '<div class="message-content">' + (config.message || '') + '</div>';
+    let _closeBtn = '<a href="javascript:;" class="message-close icon-close pull-right"></a>';
+    let _main = (config.icon ? _icon : '') + _content + (config.showClose ? _closeBtn : '');
+    let template = '<div class="message ' + config.type
+        + (config.customClass ? ' ' + config.customClass : '')
+        + (config.center ? ' is-center' : '') + '" id="' + this.msgId + '">'
+        + _main + '</div>';
+    return template;
+};
+
+function Constructor(options) {
+    options = options || {};
+    if (typeof options === "string") {
+        options = {
+            message: options
+        };
+    }
+    return new Message(options);
+}
+
 module.exports = {
-    message: Message
+    message: Constructor
 };

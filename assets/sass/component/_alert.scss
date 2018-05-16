@@ -1,22 +1,19 @@
-#alert {
+.alert {
   position: fixed;
-  color: #fff;
-  padding: 13px 20px 13px 15px;
-  text-align: left;
-  font-size: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-  z-index: 99999;
+  z-index: 2;
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
-  @include bgc-opacity(#000, .6);
 }
 
-#alert span {
-  //vertical-align: top;
+.alert-context {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  //@include bgc-opacity(#000, .6);
+  border-radius: 3px;
+  padding: 13px 20px 13px 15px;
 }
 
-.alert__icon {
-  margin-right: 10px;
+.alert-text {
+  font-size: 15px;
+  //color: #fff;
 }

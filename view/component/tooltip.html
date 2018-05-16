@@ -14,7 +14,7 @@
 <h4 class="mt50 mb20">表单用法</h4>
 <div class="demo-block">
     <label for="age" class="mr10">Your age:</label>
-    <input id="age" class="form-control sm" content="We ask for your age only for statistical purposes." placement="right">
+    <input id="age" class="form-control sm" content="We ask for your age only for statistical purposes." placement="right" style="width: 200px;">
 </div>
 <h4 class="mt50 mb20">关闭用法</h4>
 <div class="demo-block">
@@ -77,16 +77,10 @@
     </tr>
 </table>
 
-<style>
-    .form-control {
-        width: 200px;
-    }
-</style>
-
 <script type="text/javascript">
     $(function () {
         $.tooltip({
-            container: '.demo-block',
+            container: '.content-wrapper',
             // offsetX: 100,
             // offsetY: 100,
             // handler: 'title',
