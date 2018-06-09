@@ -12,11 +12,11 @@ define(function () {
        "forms/select": "view/forms/select",
        "forms/form": "view/forms/form",
 
-       "component/tooltip": "view/component/tooltip",
-       "component/message": "view/component/message",
-       "component/alert": "view/component/alert",
-       "component/dialog": "view/component/dialog",
-       "component/loading": "view/component/loading",
+       "feedback/alert": "view/feedback/alert",
+       "feedback/dialog": "view/feedback/dialog",
+       "feedback/loading": "view/feedback/loading",
+       "feedback/message": "view/feedback/message",
+       "feedback/tooltip": "view/feedback/tooltip",
 
        "plugins/navmenu": "view/plugins/navmenu",
        "plugins/datapick": "view/plugins/datapick",
