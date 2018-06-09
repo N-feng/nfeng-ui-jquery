@@ -9,11 +9,12 @@ $.each([
     require("./js/base/pubsub"),			// 订阅发布
     require("./js/base/urlHelper"),			// 拿url参数
 
-    require('./js/feedback/overlay'),      	// 蒙层
     require('./js/feedback/alert'),         // 提示
     require('./js/feedback/dialog'),        // 对话框
     require("./js/feedback/loading"),		// 加载
     require("./js/feedback/message"),		// 信息
+    require('./js/feedback/overlay'),      	// 蒙层
+    require('./js/feedback/popover'),       // popover
     require('./js/feedback/tooltip'),		// tooltip
 
     require("./js/other/clock"),			// 时钟

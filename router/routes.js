@@ -16,6 +16,7 @@ define(function () {
        "feedback/dialog": "view/feedback/dialog",
        "feedback/loading": "view/feedback/loading",
        "feedback/message": "view/feedback/message",
+       "feedback/popover": "view/feedback/popover",
        "feedback/tooltip": "view/feedback/tooltip",
 
        "plugins/navmenu": "view/plugins/navmenu",
