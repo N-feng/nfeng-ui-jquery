@@ -60,9 +60,6 @@ function Popover(config) {
     this.$selector = $(config.handle);
     this.$container = $(config.container);
     this.config = config;
-    this.ctxPos = $(config.container)[0].getBoundingClientRect();
-    this.screenWidth = $(document).width();
-    this.screenHeight = $(document).height();
     this.init();
 }
 
@@ -70,7 +67,7 @@ Popover.prototype.init = function() {
     var _this = this;
 
     // show
-    _this.$container.on('click.IUI-popover', _this.config.handle, function(event) {
+    _this.$container.on('click.popover', _this.config.handle, function(event) {
         var $this = $(this);
         var eventSpace = $this.data('popoverid') ? ('.popover-' + $this.data('popoverid')) : '.popover';
 
@@ -82,7 +79,7 @@ Popover.prototype.init = function() {
         }
 
         $.pub('before' + eventSpace, [_this, $this]);
-        $('body').trigger('click.IUI-popover');
+        $('body').trigger('click.popover');
         _this.show($this);
         $.pub('after' + eventSpace, [_this, $this]);
         event.stopPropagation();
@@ -132,27 +129,24 @@ Popover.prototype.fillContent = function(emitter) {
 
 };
 
+Popover.prototype.getPosition = function($target, $template) {
+    let self = this;
+    let config = self.config;
+    // 父类、作用域矩形集合
+    let ctxPos = $(config.container)[0].getBoundingClientRect();
+    // target矩形集合
+    let targetMatrix = self.getEmitterPos($target);
+    // 模板矩形集合
+    let tmpWidth = $template.outerWidth();
+    let tmpHeight = $template.outerHeight();
+    // 组合矩形集合
+    let matrix = targetMatrix.concat([tmpWidth, tmpHeight, ctxPos.left, ctxPos.top]);
+    // 判断目标方向
+    let dirName = $target.attr('data-ppDirect') || config.direction;
+    let customDir = dirName.split('-');
+    let index = 'left right'.indexOf(customDir[0]) !== -1 ? 0 : 1;
 
-Popover.prototype.excePosition = function(emitter, template) {
-    var _this = this;
-    // 外围容器坐标 x,y
-    var ctxPosX = _this.ctxPos.left;
-    var ctxPosY = _this.ctxPos.top;
-    // 当前视窗宽高 w,h
-    var screenWidth = _this.screenWidth;
-    var screenHeight = _this.screenHeight + _this.$container.scrollTop();
-    // 参照物的坐标集
-    var emitterMatrix = _this.getEmitterPos(emitter);
-    // 模板
-    var $template = template;
-    var tmpWidth = $template.outerWidth();
-    var tmpHeight = $template.outerHeight();
-    var position = [];
-    var dirName = emitter.attr('data-ppDirect') || _this.config.direction;
-    var customDir = dirName.split('-');
-    var index = 'left right'.indexOf(customDir[0]) !== -1 ? 0 : 1;
-    var matrix = emitterMatrix.concat([tmpWidth, tmpHeight, ctxPosX, ctxPosY]);
-
+    let position = [];
     position[index] = tplDir[customDir[0]](matrix);
     position[index ? 0 : 1] = arrowDir[customDir[1]](matrix);
     position[2] = dirName;
@@ -167,11 +161,12 @@ Popover.prototype.show = function(emitter) {
     var content = _this.fillContent($emitter);
     var $template = $(content);
     var $body = $('body');
-    var position;
+
     $emitter.data('template', $template);
     _this.$container.data('popoverInit', _this.$container.css('position')).css({ 'position': 'relative' });
     $template.addClass('popover-show').appendTo(config.container);
-    position = _this.excePosition(emitter, $template);
+
+    let position = _this.getPosition(emitter, $template);
     $template.css({
         'left': position[0] + _this.$container.scrollLeft() + $body.scrollLeft(),
         'top': position[1] + _this.$container.scrollTop() + $body.scrollTop()
