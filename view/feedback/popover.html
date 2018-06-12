@@ -5,7 +5,7 @@
     <div class="mt50">
         <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="#tpl-one" data-ppdirect="left-top">left-top</a>
         <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="##在原来的基础上增加了内容区域的渲染接口，支持各种模板引擎对界面的渲染及数据绑定，强制依赖 $.pub/sub 组件" data-ppheader="Popover 简介" data-ppdirect="left-middle">left-middle</a>
-        <a href="javascript:;" id="test" class="btn btn-sm btn-primary" data-popover="##本页例子用的是百度的artTemplate模板引擎，你也可以用其他的，目前主流的引擎都支持" data-ppheader="特别声明：" data-ppdirect="left-bottom">left-bottom</a>
+        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="##本页例子用的是百度的artTemplate模板引擎，你也可以用其他的，目前主流的引擎都支持" data-ppheader="特别声明：" data-ppdirect="left-bottom">left-bottom</a>
     </div>
     <div class="mt50">
         <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="#tpl-two" data-popoverid="1" data-ppdirect="up-left">up-left</a>
@@ -54,9 +54,9 @@
         list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
     };
 
-
     $.popover({
         container: '.demo-block',
+        // trigger: 'focus',
         compiler: function(html, emitter) {
             var compiler = template.compile(html);
             return compiler(emitter.data('data'));
@@ -66,7 +66,6 @@
     $.sub('before.popover-1', function(event, popover, emitter) {
         emitter.data('data', data);
     });
-
 
     $('body').on('submit', '[role="form"]', function(event) {
         event.preventDefault();

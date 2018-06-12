@@ -1,16 +1,17 @@
-let IUI_UTILS = require('../base/utils');
+let utils = require('../base/utils');
 
-var template = '<div class="IUI-popover-container">{{header}}{{content}}</div>';
+let template = '<div class="popover-container"><div class="popover-content"></div></div>';
 
-var defaults = {
+let defaults = {
     handle: '[data-popover]', //绑定监听对象
     container: 'body', //全局作用域
     direction: 'down-center',
     compiler: null, //有无模板引擎
-    header: '' //标题
+    header: '', //标题
+    trigger: 'click'
 };
 
-// matrix : 
+// matrix :
 // 0 => 参照物x,
 // 1 => 参照物y,
 // 2 => 参照物w,
@@ -20,7 +21,7 @@ var defaults = {
 // 6 => 作用域元素x,
 // 7 => 作用域元素y
 // 8 => scrollTop
-var tplDir = {
+let tplDir = {
     left: function(matrix) {
         return matrix[0] - matrix[4] - matrix[6] - 20;
     },
@@ -35,7 +36,7 @@ var tplDir = {
     }
 };
 
-var arrowDir = {
+let arrowDir = {
     left: function(matrix) {
         return matrix[0]  - matrix[6];
     },
@@ -56,77 +57,57 @@ var arrowDir = {
     }
 };
 
-function Popover(config) {
-    this.$selector = $(config.handle);
-    this.$container = $(config.container);
-    this.config = config;
-    this.init();
+function Popover(options) {
+    this.config = $.extend({}, defaults, options);
+    this.$selector = $(this.config.handle);
+    this.$container = $(this.config.container);
+    this.event();
 }
 
-Popover.prototype.init = function() {
-    var _this = this;
+Popover.prototype.event = function() {
+    let self = this;
+    let config = self.config;
+
+    let showTrigger, showHandle, hideTrigger, hideHandle;
+    switch (config.trigger) {
+        case 'click':
+            showTrigger = hideTrigger = config.trigger + '.popover';
+            showHandle = config.handle;
+            hideHandle = '';
+            break;
+        case 'hover':
+            showTrigger = 'mouseenter.popover';
+            hideTrigger = 'mouseleave.popover';
+            showHandle = hideHandle = config.handle;
+            break;
+        case 'focus':
+            showTrigger = 'focus.popover';
+            hideTrigger = 'blur.popover';
+            showHandle = hideHandle = config.handle;
+            break;
+    }
 
     // show
-    _this.$container.on('click.popover', _this.config.handle, function(event) {
-        var $this = $(this);
-        var eventSpace = $this.data('popoverid') ? ('.popover-' + $this.data('popoverid')) : '.popover';
-
-        if ($this.hasClass('popover-active')) {
-            _this.hide($this.removeClass('popover-active').data('template'));
-            return false;
-        } else {
-            $this.addClass('popover-active');
-        }
-
-        $.pub('before' + eventSpace, [_this, $this]);
-        $('body').trigger('click.popover');
-        _this.show($this);
-        $.pub('after' + eventSpace, [_this, $this]);
+    self.$container.on(showTrigger, showHandle, function(event) {
+        $('body').trigger(config.trigger + '.popover');
+        self.show(event);
         event.stopPropagation();
     });
 
     // hide
-    $('body').on('click.IUI-popover', function(event) {
-        var $this = $(this);
-        if (($(event.target).closest('.IUI-popover-container').length === 0)) {
-            $this.trigger('hide.popover', [_this]);
-            _this.hide();
-        }
-    });
+    $('body').on(hideTrigger, hideHandle, $.proxy(self.hide, self));
 
 };
 
 // 获取调用者的位置
 Popover.prototype.getEmitterPos = function(emitter) {
-    var $emitter = emitter;
-    var pos = $emitter[0].getBoundingClientRect();
-    var emitterPosX = pos.left;
-    var emitterPosY = pos.top;
-    var emitterWidth = $emitter.outerWidth() / 2;
-    var emitterHeight = $emitter.outerHeight();
+    let $emitter = emitter;
+    let pos = $emitter[0].getBoundingClientRect();
+    let emitterPosX = pos.left;
+    let emitterPosY = pos.top;
+    let emitterWidth = $emitter.outerWidth() / 2;
+    let emitterHeight = $emitter.outerHeight();
     return [emitterPosX, emitterPosY, emitterWidth, emitterHeight];
-};
-
-// 填充内容
-Popover.prototype.fillContent = function(emitter) {
-    var _this = this;
-    var config = _this.config;
-    var $emitter = emitter;
-    var header = $emitter.attr('data-ppHeader') || config.header;
-    var str = $emitter.attr('data-popover');
-    var isEl = str.indexOf('##') === 0;
-    var $content = isEl ? str.slice(2, str.length) : $(str);
-
-    var _template = template.replace('{{header}}', header ? '<div class="popover-header">' + header + '</div>' : '');
-
-    if (!isEl && emitter.data('data') && config.compiler) {
-        _template = _template.replace('{{content}}', config.compiler($content.html(), $emitter));
-    } else {
-        _template = _template.replace('{{content}}', isEl ? '<div class="popover-content">' + $content + '</div>' : $content.html());
-    }
-
-    return _template;
-
 };
 
 Popover.prototype.getPosition = function($target, $template) {
@@ -153,46 +134,89 @@ Popover.prototype.getPosition = function($target, $template) {
     return position;
 };
 
-
-Popover.prototype.show = function(emitter) {
-    var _this = this;
-    var config = _this.config;
-    var $emitter = emitter;
-    var content = _this.fillContent($emitter);
-    var $template = $(content);
-    var $body = $('body');
-
-    $emitter.data('template', $template);
-    _this.$container.data('popoverInit', _this.$container.css('position')).css({ 'position': 'relative' });
-    $template.addClass('popover-show').appendTo(config.container);
-
-    let position = _this.getPosition(emitter, $template);
-    $template.css({
-        'left': position[0] + _this.$container.scrollLeft() + $body.scrollLeft(),
-        'top': position[1] + _this.$container.scrollTop() + $body.scrollTop()
-    }).addClass('popover-in '+position[2]);
-
-};
-
-Popover.prototype.hide = function(target) {
-    var _this = this;
-    var $target = target || $('.IUI-popover-container');
-    var $container = _this.$container;
-
-    if (!target) {
-        $('[data-popover]').removeClass('popover-active');
+Popover.prototype.getTemplate = function(event) {
+    let self = this;
+    let config = self.config;
+    let $target = $(event.target);
+    let $template;
+    // 获取模板id
+    let id = $target.attr('aria-describedby');
+    if(!id) {
+        // 生成一个随机5位数，作为id
+        let popoverId = 'popoverId-';
+        do {
+            popoverId += ~~(Math.random() * 100000)
+        } while (document.getElementById(popoverId));
+        $target.attr('aria-describedby', popoverId);
+        $template = $(template).appendTo(config.container);
+        self.bindTemplate($template);
+    } else {
+        $template = $('#' + id);
     }
 
-    $container.css('position', $container.data('popoverInit'));
+    self.fillTemplate($target, $template);
+    return $template;
+};
 
-    IUI_UTILS.transitionEndShim($target.removeClass('popover-in'), function() {
-        $target.remove();
-    });
+Popover.prototype.fillTemplate = function($target, $template) {
+    let self = this;
+    let config = self.config;
+    let str = $target.attr('data-popover');
+    let isEl = str.indexOf('##') === 0;
+    let $content = isEl ? str.slice(2, str.length) : $(str);
+    let header = $target.attr('data-ppHeader') || config.header;
+    let eventSpace = $target.data('popoverid') ? ('.popover-' + $target.data('popoverid')) : '.popover';
+    let id = $target.attr('aria-describedby');
+    $template.attr('id', id);
 
+    $.pub('before' + eventSpace, [self, $target]);
+
+    if(header) {
+        if($template.find('.popover-header').length) {
+            $template.find('.popover-header').html(header);
+        } else {
+            $template.prepend($('<div class="popover-header">').html(header));
+        }
+    }
+
+    if(!isEl && $target.data('data') && config.compiler) {
+        $template.find('.popover-content').html(config.compiler($content.html(), $target));
+    } else {
+        $template.find('.popover-content').html(isEl ? $content : $content.html());
+    }
+
+    $.pub('after' + eventSpace, [self, $target]);
+};
+
+Popover.prototype.bindTemplate = function($template) {
+    utils.transitionEndShim($template, function () {
+        if(!$template.hasClass('popover-in')) {
+            $template.removeClass('popover-show').addClass('hide');
+        }
+    })
+};
+
+Popover.prototype.show = function(event) {
+    let self = this;
+    let $target = $(event.target);
+    let $template = self.getTemplate(event);
+    let position = self.getPosition($target, $template);
+    let $body = $('body');
+
+    $template.addClass('popover-show').removeClass('hide');
+    $template.css({
+        'left': position[0] + self.$container.scrollLeft() + $body.scrollLeft(),
+        'top': position[1] + self.$container.scrollTop() + $body.scrollTop()
+    }).addClass('popover-in '+position[2]);
+    $template.siblings('.popover-container').removeClass('popover-in');
+};
+
+Popover.prototype.hide = function() {
+  $('.popover-container').removeClass('popover-in');
 };
 
 module.exports = {
-    popover: function(config) {
-        return new Popover($.extend({}, defaults, config));
+    popover: function(options) {
+        return new Popover(options);
     }
 };
