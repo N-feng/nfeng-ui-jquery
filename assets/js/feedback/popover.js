@@ -23,16 +23,16 @@ let defaults = {
 // 8 => scrollTop
 let tplDir = {
     left: function(matrix) {
-        return matrix[0] - matrix[4] - matrix[6] - 20;
+        return matrix[0] - matrix[4] - matrix[6] - 10;
     },
     right: function(matrix) {
-        return matrix[0] + matrix[2] * 2 - matrix[6] + 20;
+        return matrix[0] + matrix[2] * 2 - matrix[6] + 10;
     },
     up: function(matrix) {
-        return matrix[1] - matrix[5] - matrix[7] - 20;
+        return matrix[1] - matrix[5] - matrix[7] - 10;
     },
     down: function(matrix) {
-        return matrix[1] + matrix[3]  - matrix[7] + 20;
+        return matrix[1] + matrix[3]  - matrix[7] + 10;
     }
 };
 
@@ -95,7 +95,11 @@ Popover.prototype.event = function() {
     });
 
     // hide
-    $('body').on(hideTrigger, hideHandle, $.proxy(self.hide, self));
+    $('body').on(hideTrigger, hideHandle, function(event) {
+        if($(event.target).closest('.popover-container').length === 0) {
+            self.hide();
+        }
+    });
 
 };
 
@@ -150,11 +154,12 @@ Popover.prototype.getTemplate = function(event) {
         $target.attr('aria-describedby', popoverId);
         $template = $(template).appendTo(config.container);
         self.bindTemplate($template);
+        // 填充内容、也可以放到外围每次都重新渲染，或者加其它判定条件
+        self.fillTemplate($target, $template);
     } else {
         $template = $('#' + id);
     }
-
-    self.fillTemplate($target, $template);
+    
     return $template;
 };
 

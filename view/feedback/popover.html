@@ -3,9 +3,9 @@
 <h4 class="mt50 mb20">基础用法</h4>
 <div class="demo-block">
     <div class="mt50">
-        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="#tpl-one" data-ppdirect="left-top">left-top</a>
-        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="##在原来的基础上增加了内容区域的渲染接口，支持各种模板引擎对界面的渲染及数据绑定，强制依赖 $.pub/sub 组件" data-ppheader="Popover 简介" data-ppdirect="left-middle">left-middle</a>
-        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="##本页例子用的是百度的artTemplate模板引擎，你也可以用其他的，目前主流的引擎都支持" data-ppheader="特别声明：" data-ppdirect="left-bottom">left-bottom</a>
+        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="#tpl-one" data-ppheader="Please enter your password !" data-ppdirect="up-left">left-top</a>
+        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="##在原来的基础上增加了内容区域的渲染接口，</br> 支持各种模板引擎对界面的渲染及数据绑定，</br> 强制依赖 $.pub/sub 组件" data-ppheader="Popover 简介" data-ppdirect="up-center">left-middle</a>
+        <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="##本页例子用的是百度的artTemplate模板引擎，</br> 你也可以用其他的，目前主流的引擎都支持" data-ppheader="特别声明：" data-ppdirect="right-top">left-bottom</a>
     </div>
     <div class="mt50">
         <a href="javascript:;" class="btn btn-sm btn-primary" data-popover="#tpl-two" data-popoverid="1" data-ppdirect="up-left">up-left</a>
@@ -25,15 +25,10 @@
 </div>
 
 <script type="text/html" id="tpl-one">
-    <form role="form" class="p20">
-        <div class="form-group">
-            <label>Please enter your password !</label>
-            <input type="password" class="form-control" placeholder="password" required>
-        </div>
-        <div class="clearfix">
-            <div class="pull-right">
-                <button type="submit" class="btn btn-default btn-sm">Submit</button>
-            </div>
+    <form role="form">
+        <input type="text" class="form-control xs mb10" placeholder="password" required>
+        <div style="text-align: right;">
+            <button type="submit" class="btn btn-default xs">Submit</button>
         </div>
     </form>
 </script>
@@ -56,7 +51,7 @@
 
     $.popover({
         container: '.demo-block',
-        // trigger: 'focus',
+        // trigger: 'hover',
         compiler: function(html, emitter) {
             var compiler = template.compile(html);
             return compiler(emitter.data('data'));
