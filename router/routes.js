@@ -22,6 +22,7 @@ define(function () {
        "plugins/navmenu": "view/plugins/navmenu",
        "plugins/datapick": "view/plugins/datapick",
        "plugins/layer": "view/plugins/layer",
+       "plugins/scrollbar": "view/plugins/scrollbar",
    };
    return routes;
 });
