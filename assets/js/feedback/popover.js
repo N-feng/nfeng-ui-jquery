@@ -5,10 +5,9 @@ let template = '<div class="popover-container"><div class="popover-content"></di
 let defaults = {
     handle: '[data-popover]', //绑定监听对象
     container: 'body', //全局作用域
-    direction: 'down-center',
+    direction: 'right-top',
     compiler: null, //有无模板引擎
     header: '', //标题
-    trigger: 'click'
 };
 
 // matrix :
@@ -68,34 +67,15 @@ Popover.prototype.event = function() {
     let self = this;
     let config = self.config;
 
-    let showTrigger, showHandle, hideTrigger, hideHandle;
-    switch (config.trigger) {
-        case 'click':
-            showTrigger = hideTrigger = config.trigger + '.popover';
-            showHandle = config.handle;
-            hideHandle = '';
-            break;
-        case 'hover':
-            showTrigger = 'mouseenter.popover';
-            hideTrigger = 'mouseleave.popover';
-            showHandle = hideHandle = config.handle;
-            break;
-        case 'focus':
-            showTrigger = 'focus.popover';
-            hideTrigger = 'blur.popover';
-            showHandle = hideHandle = config.handle;
-            break;
-    }
-
     // show
-    self.$container.on(showTrigger, showHandle, function(event) {
-        $('body').trigger(config.trigger + '.popover');
+    self.$container.on('click.popover', config.handle, function(event) {
+        $('body').trigger('click.popover');
         self.show(event);
         event.stopPropagation();
     });
 
     // hide
-    $('body').on(hideTrigger, hideHandle, function(event) {
+    $('body').on('click.popover', function(event) {
         if($(event.target).closest('.popover-container').length === 0) {
             self.hide();
         }
@@ -127,7 +107,7 @@ Popover.prototype.getPosition = function($target, $template) {
     // 组合矩形集合
     let matrix = targetMatrix.concat([tmpWidth, tmpHeight, ctxPos.left, ctxPos.top]);
     // 判断目标方向
-    let dirName = $target.attr('data-ppDirect') || config.direction;
+    let dirName = $target.attr('placement') || config.direction;
     let customDir = dirName.split('-');
     let index = 'left right'.indexOf(customDir[0]) !== -1 ? 0 : 1;
 
@@ -169,7 +149,7 @@ Popover.prototype.fillTemplate = function($target, $template) {
     let str = $target.attr('data-popover');
     let isEl = str.indexOf('##') === 0;
     let $content = isEl ? str.slice(2, str.length) : $(str);
-    let header = $target.attr('data-ppHeader') || config.header;
+    let header = $target.attr('title') || config.header;
     let eventSpace = $target.data('popoverid') ? ('.popover-' + $target.data('popoverid')) : '.popover';
     let id = $target.attr('aria-describedby');
     $template.attr('id', id);
@@ -211,7 +191,7 @@ Popover.prototype.show = function(event) {
     $template.addClass('popover-show').removeClass('hide');
     $template.css({
         'left': position[0] + self.$container.scrollLeft() + $body.scrollLeft(),
-        'top': position[1] + self.$container.scrollTop() + $body.scrollTop()
+        'top': position[1] + self.$container.scrollTop() + $body.scrollTop(),
     }).addClass('popover-in '+position[2]);
     $template.siblings('.popover-container').removeClass('popover-in');
 };
