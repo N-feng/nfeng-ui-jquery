@@ -1,26 +1,9 @@
-@import "base/configuration";
-@import "base/mixins/index";
+@import "base/index";
+@import "ui/index";
 
-@import "base/animate/index";
-@import "base/browser/index";
-@import "base/fonts/index";
-
-@import "ui/form/button";
-@import "ui/form/check";
-@import "ui/form/input";
-@import "ui/form/radio";
-@import "ui/form/switch";
-
-@import "ui/layout/box";
-@import "ui/layout/breadcrumb";
-@import "ui/layout/content";
-@import "ui/layout/header";
-@import "ui/layout/sidebar";
-
-@import "ui/table/table";
-@import "ui/table/pagination";
-@import "ui/table/badge";
-@import "ui/table/progress";
+@import "component/tipsbox";
+@import "component/multiCheck";
+@import "component/layer";
 
 @import "feedback/alert";
 @import "feedback/dialog";
@@ -30,18 +13,15 @@
 @import "feedback/popover";
 @import "feedback/tooltip";
 
-@import "component/tipsbox";
-@import "component/multiCheck";
-@import "component/layer";
+@import "forms/select";
+@import "forms/validate";
+@import "forms/form";
 
 @import "plugins/datapick";
 @import "plugins/layer";
-@import "plugins/fixedBox";
 @import "plugins/scrollbar";
 @import "plugins/table";
 @import "plugins/navmenu";
-@import "plugins/select";
-@import "plugins/form";
 
 @import "other/demo";
 @import "other/clock";

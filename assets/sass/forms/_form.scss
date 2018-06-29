@@ -1,0 +1,53 @@
+.form-group {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 22px;
+  .form-left {
+    display: table-cell;
+    vertical-align: top;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 12px;
+    font-size: 14px;
+  }
+  .form-right {
+    display: table-cell;
+    position: relative;
+  }
+  .input-icon {
+    display: none;
+  }
+}
+
+.form-label-right {
+  .form-left {
+    text-align: right;
+  }
+}
+
+.form-label-top {
+  .form-left {
+    display: inline-block;
+    width: auto;
+    padding: 0 0 10px 0;
+  }
+  .form-right {
+    display: block;
+  }
+}
+
+.form-inline {
+  .form-group {
+    @include inline-block();
+    width: auto;
+    margin-right: 10px;
+  }
+  .form-left {
+    text-align: right;
+  }
+  .form-right {
+    width: 150px;
+  }
+}
