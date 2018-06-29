@@ -3,58 +3,67 @@ let defaults = {
     display: false,
     type: true,
     shadow: true,
-    template: '<div class="ball-clip-rotate"><div></div></div>',
+    animateHtml: '<div class="ball-clip-rotate"><div></div></div>',
     src: 'http://img.yi114.com/201571121314_382.gif',
+    template: '<div class="loading">{{hook}}</div>',
 };
 
+let action = {
+    show () {
+        let config = this.config;
+        let $context = this.$context;
+        let $loading = $context.data('loading');
+
+        $context.append($loading);
+
+        // 是否需要遮罩
+        if(config.shadow) {
+            $.overlay(true);
+        }
+    },
+    hide () {
+        let config = this.config;
+        let $context = this.$context;
+        let $loading = $context.data('loading');
+
+        $loading.remove();
+        $context.removeData('loading');
+
+        if(config.shadow) {
+            $.overlay(false);
+        }
+    },
+}
+
 function Loading(options) {
-    this.config = $.extend({}, defaults, options);
-    this.$selector = $(this.create());
-    this.$overlay = $.overlay({
-        container: this.config.container
-    });
-    if (this.config.display) {
-        this.show();
+    let config = this.config = $.extend({}, defaults, options);
+    let $context = this.$context = this instanceof $ ? this : $('body');
+
+    // loading 模板
+    let loadingStr = config.template;
+    loadingStr = loadingStr.replace('{{hook}}', config.type ? config.animateHtml : '<img src="' + config.src + '" />');
+
+    // 显示loading的时候，将 $loading存入作用域元素中
+    let $loading = $context.data('loading') || $(loadingStr);
+    $context.data('loading', $loading);
+
+    // 显示 or 隐藏
+    if(config.display) {
+        action.show.call(this);
+    } else {
+        action.hide.call(this);
     }
 }
 
-Loading.prototype.show = function () {
-    let config = this.config;
-    let $selector = this.$selector;
-    let $overlay = this.$overlay;
-
-    $selector.appendTo(config.container);
-    $selector.removeClass('hide');
-
-    if (config.shadow) {
-        $overlay.show();
-    }
-};
-
-Loading.prototype.hide = function () {
-    let $selector = this.$selector;
-    let $overlay = this.$overlay;
-
-    $selector.remove();
-    $overlay.hide();
-};
-
-Loading.prototype.create = function () {
-    let config = this.config;
-    let template = '<div class="loading hide">{{hook}}</div>'.replace('{{hook}}', config.type ? config.template : '<img src="' + config.src + '" />');
-    return template;
-};
-
 function Constructor(options, type) {
-    let config = options;
+    let config = {};
     if (typeof options === 'boolean') {
-        options = {};
-        options['display'] = config;
+        config['display'] = options;
     }
     if (typeof type === 'boolean') {
-        options['type'] = type;
+        config['type'] = type;
     }
-    return new Loading(options, this);
+    return new Loading(config, this);
 }
 
 $.fn.loading = Constructor;

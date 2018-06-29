@@ -48,38 +48,24 @@
 </table>
 
 <script>
-    let $loadingCss = $.loading({
-        // container: '.content-wrapper',
-    });
     $('.J-loading-css').on('click', function (event) {
         event.preventDefault();
         $(this).blur();
-        console.log('弹出 css3 loading');
-        $loadingCss.show();
+        $.loading(true, true);
         setTimeout(function () {
-            $loadingCss.hide();
-            console.log('关闭 loading');
+            $.loading(false);
         }, 2000);
     });
 
-    let $loadingImg = $.loading({
-        // container: '.content-wrapper',
-        type: false,
-    });
     $('.J-loading-img').on('click', function (event) {
         event.preventDefault();
         $(this).blur();
-        console.log('弹出 css3 loading');
-        $loadingImg.show();
+        $.loading(true, false);
         setTimeout(function () {
-            $loadingImg.hide();
-            console.log('关闭 loading');
+            $.loading(false);
         }, 2000);
     });
 
-    let $loadingContext = $.loading({
-        container: '.table'
-    });
     $('.J-loading-context').on('click', function (event) {
         event.preventDefault();
         let $this = $(this);
@@ -87,12 +73,10 @@
             return false;
         }
         $this.data('lock', 1).blur();
-        console.log('弹出 css3 loading');
-        $loadingContext.show();
+        $('.table').loading(true, true);
         setTimeout(function () {
             $this.data('lock', 0);
-            $loadingContext.hide();
-            console.log('关闭 loading');
+            $('.table').loading(false);
         }, 2000);
     });
 </script>

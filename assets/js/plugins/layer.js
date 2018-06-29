@@ -74,7 +74,11 @@ Layer.prototype.ajaxLoad = function() {
         return false;
     }
 
-    $.loading(true, true);
+    // $.loading(true, true);
+    let $loadingCss = $.loading({
+        shadow: false
+    });
+    $loadingCss.show();
     $selector.data('success', 1);
 
     $.ajax({
@@ -83,11 +87,13 @@ Layer.prototype.ajaxLoad = function() {
         dataType: dataType,
         data: config.data
     }).then(function(res) {
-        $.loading(false);
+        // $.loading(false);
+        $loadingCss.hide();
         config.successCall.apply($selector, [res, this, _this]);
         _this.showLayer();
     }, function(err) {
-        $.loading(false);
+        // $.loading(false);
+        $loadingCss.hide();
         _this.hideLayer();
         config.errorCall.apply($selector, [err, this, _this]);
     });

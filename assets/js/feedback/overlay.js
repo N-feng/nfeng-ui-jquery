@@ -1,45 +1,50 @@
-let utils = require('../base/utils');
 let defaults = {
     container: 'body',
     display: false,
+    template: '<div class="overlay"></div>',
+};
+
+let action = {
+    show () {
+        let $context = this.$context;
+        let $overlay = $context.data('overlay');
+
+        $context.append($overlay);
+    },
+    hide () {
+        let $context = this.$context;
+        let $overlay = $context.data('overlay');
+
+        $overlay.remove();
+        $context.removeData('overlay');
+    }
 };
 
 function Overlay(options) {
-    this.config = $.extend({}, defaults, options);
-    if (this.config.display) {
-        this.show();
+    let config = this.config = $.extend({}, defaults, options);
+    let $context = this.$context = this instanceof $ ? this : $('body');
+
+    // overlay 模板
+    let overlayStr = config.template;
+
+    // 显示overlay的时候，将 $overlay存入作用域元素中
+    let $overlay = $context.data('overlay') || $(overlayStr);
+    $context.data('overlay', $overlay);
+
+    // 显示 or 隐藏
+    if(config.display) {
+        action.show.call(this);
+    } else {
+        action.hide.call(this);
     }
 }
 
-Overlay.prototype.show = function () {
-    let config = this.config;
-    let $selector = this.$selector = $(this.create());
-    $selector.appendTo(config.container);
-    $selector.attr('style', 'opacity: 1;visibility: visible;');
-};
-
-Overlay.prototype.hide = function () {
-    let $selector = this.$selector;
-    $selector.removeAttr('style');
-    $selector.off(utils.transitionEnd);
-    utils.transitionEndShim($selector, function () {
-        $selector.remove();
-    }, false);
-};
-
-Overlay.prototype.create = function () {
-    let template = '<div class="overlay"></div>';
-    return template;
-};
-
 function Constructor(options) {
-    options = options || {};
-    if (typeof options === "string") {
-        options = {
-            display: options
-        };
+    let config = {};
+    if (typeof options === "boolean") {
+        config['display'] = options;
     }
-    return new Overlay(options, this)
+    return new Overlay(config, this)
 }
 
 $.fn.overlay = Constructor;
