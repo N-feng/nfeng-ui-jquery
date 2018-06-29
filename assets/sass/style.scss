@@ -1,28 +1,20 @@
 @import "base/index";
-@import "ui/index";
+@import "base/demo";
 
-@import "component/tipsbox";
-@import "component/multiCheck";
-@import "component/layer";
-
-@import "feedback/alert";
-@import "feedback/dialog";
-@import "feedback/loading";
-@import "feedback/message";
-@import "feedback/overlay";
-@import "feedback/popover";
-@import "feedback/tooltip";
-
-@import "forms/select";
-@import "forms/validate";
-@import "forms/form";
+@import "component/alert";
+@import "component/dialog";
+@import "component/loading";
+@import "component/message";
+@import "component/overlay";
+@import "component/popover";
+@import "component/tooltip";
+@import "component/clock";
+@import "component/parallax";
 
 @import "plugins/datapick";
 @import "plugins/layer";
 @import "plugins/scrollbar";
 @import "plugins/table";
 @import "plugins/navmenu";
-
-@import "other/demo";
-@import "other/clock";
-@import "other/parallax";
+@import "plugins/select";
+@import "plugins/validate";

@@ -1,28 +1,27 @@
 define(function () {
    var routes = {
-       "public/index": "view/public/index",
-
-       "font/element": "view/font/element",
-
-       "ui/button": "view/ui/button",
-       "ui/simple":  "view/ui/simple",
-       "ui/data": "view/ui/data",
-
+       "layouts/index": "view/layouts/index",
+       "basic/icon": "view/basic/icon",
+       "basic/button": "view/basic/button",
+       
        "forms/input": "view/forms/input",
        "forms/select": "view/forms/select",
        "forms/form": "view/forms/form",
+       "forms/datapick": "view/forms/datapick",
 
-       "feedback/alert": "view/feedback/alert",
-       "feedback/dialog": "view/feedback/dialog",
-       "feedback/loading": "view/feedback/loading",
-       "feedback/message": "view/feedback/message",
-       "feedback/popover": "view/feedback/popover",
-       "feedback/tooltip": "view/feedback/tooltip",
+       "navigation/navmenu": "view/navigation/navmenu",
+       "navigation/scrollbar": "view/navigation/scrollbar",
 
-       "plugins/navmenu": "view/plugins/navmenu",
-       "plugins/datapick": "view/plugins/datapick",
-       "plugins/layer": "view/plugins/layer",
-       "plugins/scrollbar": "view/plugins/scrollbar",
+       "notice/alert": "view/notice/alert",
+       "notice/dialog": "view/notice/dialog",
+       "notice/loading": "view/notice/loading",
+       "notice/message": "view/notice/message",
+       "notice/popover": "view/notice/popover",
+       "notice/tooltip": "view/notice/tooltip",
+       "notice/layer": "view/notice/layer",
+
+       "table/simple":  "view/table/simple",
+       "table/data": "view/table/data",
    };
    return routes;
 });
