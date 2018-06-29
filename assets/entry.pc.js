@@ -49,5 +49,3 @@ $.fn.NUI = function () {
         return this;
     }
 };
-
-require("./js/pages/global");
