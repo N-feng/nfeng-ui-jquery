@@ -87,7 +87,6 @@ Dialog.prototype.event = function () {
 Dialog.prototype.show = function () {
     let config = this.config;
     let $selector = this.$selector;
-    let $overlay = this.$overlay;
 
     config.before(this);
     $selector.removeClass('hide');
@@ -95,16 +94,15 @@ Dialog.prototype.show = function () {
     $selector.focus();
 
     if (config.shadow) {
-        $overlay.show();
+        $.overlay(true);
     }
 };
 
 Dialog.prototype.hide = function () {
     let $selector = this.$selector;
-    let $overlay = this.$overlay;
 
     $selector.find('.dialog-main').addClass('dialog-closing');
-    $overlay.hide();
+    $.overlay(false);
 };
 
 Dialog.prototype.create = function () {
