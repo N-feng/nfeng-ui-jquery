@@ -1,5 +1,7 @@
 .pagination {
     display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
 }
 
 .pagination>li {
@@ -16,7 +18,7 @@
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 5px 10px;
+    padding: 4px 10px;
     font-size: 12px;
     line-height: 1.5;
     background: #fafafa;

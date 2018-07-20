@@ -22,6 +22,7 @@ define(function () {
 
        "table/simple":  "view/table/simple",
        "table/data": "view/table/data",
+       "table/pagination": "view/table/pagination",
    };
    return routes;
 });
