@@ -1,8 +1,8 @@
 define(function () {
    var routes = {
        "layouts/index": "view/layouts/index",
-       "basic/icon": "view/basic/icon",
-       "basic/button": "view/basic/button",
+       "basic/icon": "view/base/basic/icon",
+       "basic/button": "view/base/basic/button",
        
        "forms/input": "view/forms/input",
        "forms/select": "view/forms/select",
@@ -10,6 +10,7 @@ define(function () {
        "forms/datapick": "view/forms/datapick",
 
        "navigation/navmenu": "view/navigation/navmenu",
+       "navigation/tabs": "view/navigation/tabs",
        "navigation/scrollbar": "view/navigation/scrollbar",
 
        "notice/alert": "view/notice/alert",

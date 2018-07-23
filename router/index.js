@@ -7,8 +7,8 @@ define(['require', './routes'], function(require, routes) {
         defaultRoute : function(actions){
             var url = routes[actions];
             var defaultUrl = 'text!../' + url + '.html';
-            var errorUrl = 'text!../view/layouts/error.html';
-            var indexUrl = 'text!../view/layouts/index.html';
+            var errorUrl = 'text!../view/base/layouts/error.html';
+            var indexUrl = 'text!../view/base/layouts/index.html';
             var str = actions == null ? indexUrl : url ? defaultUrl : errorUrl;
             require([str], function (template) {
                 if (this.current != null) {

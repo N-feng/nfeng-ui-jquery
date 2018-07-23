@@ -31,6 +31,7 @@ $.each([
     require("./js/plugins/scrollbar"),      // 模拟滚动条
     require("./js/plugins/table"),          // 表单
     require("./js/plugins/navmenu"),		// 菜单
+    require("./js/plugins/tabs"),           // 标签页
     require("./js/plugins/pagination"),     // 分页
 ], function (index, component) {
     if (typeof component === "object" && !NUI[component]) {

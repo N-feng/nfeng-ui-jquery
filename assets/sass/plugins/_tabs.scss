@@ -1,0 +1,70 @@
+.tabs-header,
+.tabs-header-nested {
+    list-style-type: none;
+    border-bottom: 1px #ccc solid;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs-header li,
+.tabs-header-nested li {
+    float: left;
+    position: relative;
+    top: 1px;
+}
+
+.tabs-header li a,
+.tabs-header-nested li a {
+    padding: 5px 15px;
+    display: block;
+}
+
+.tabs-header li.active {
+    border-bottom: 1px #6482EB solid;
+}
+
+.tabs-header li.active a {
+    color: #6482EB
+}
+
+.tabs-header-nested {
+    border-bottom-color: #EB9B9D
+}
+
+.tabs-header-nested li a {
+    color: #EB9B9D
+}
+
+.tabs-header-nested li.active {
+    border-bottom: 1px #EB4438 solid;
+}
+
+.tabs-header-nested li.active a {
+    color: #EB4438
+}
+
+.tabs-header-nested+div p {
+    color: #666;
+}
+/*=========== 强制声明 =============*/
+
+.tabs-content {
+    display: none;
+}
+
+.tabs-content.active {
+    display: block;
+}
+/*================================*/
+
+.tabs-content {
+    display: none;
+}
+
+.tabs-content.active {
+    display: block;
+}
+
+.tabs-content.animate{
+    @include animation(iui-fadeIn .2s ease-in forwards);
+}
