@@ -12,6 +12,17 @@
     transition: transform .3s ease-in-out,margin .3s ease-in-out;
 }
 
+.content-title {
+    padding: 15px;
+    @extend %clearfix;
+
+    .title {
+        float: left;
+        padding-top: 2px;
+        text-transform: capitalize;
+    }
+}
+
 .content-wrapper {
     padding: 15px;
     height: 100%;
