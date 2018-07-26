@@ -7,7 +7,7 @@ define(function () {
                {
                    path: 'index',
                    name: 'index',
-                   component: 'view/base/layouts/index',
+                   component: 'view/public/index',
                }
            ]
        },
@@ -18,12 +18,12 @@ define(function () {
                {
                    path: 'icon',
                    name: 'icon',
-                   component: 'view/base/basic/icon',
+                   component: 'view/basic/icon',
                },
                {
                    path: 'button',
                    name: 'button',
-                   component: 'view/base/basic/button',
+                   component: 'view/basic/button',
                }
            ],
            

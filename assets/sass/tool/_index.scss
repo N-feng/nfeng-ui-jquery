@@ -6,20 +6,22 @@ $prefix-global-setting: webkit moz ms o;
 $em-base: 16px !default;
 
 // mixins animation
-@import "animation/animation";
-@import "animation/keyframes";
-@import "animation/prefixer";
-@import "animation/transform";
-@import "animation/transition";
+@import "mixins/animation/animation";
+@import "mixins/animation/keyframes";
+@import "mixins/animation/prefixer";
+@import "mixins/animation/transform";
+@import "mixins/animation/transition";
 
-// mixins attributes
-@import "attributes/background";
-@import "attributes/margin";
-@import "attributes/opacity";
-@import "attributes/padding";
+// mixins color
+@import "mixins/color/background";
 
-// mixins component
-@import "component/button";
+// mixins typography
+@import "mixins/typography/margin";
+@import "mixins/typography/opacity";
+@import "mixins/typography/padding";
+
+// mixins form
+@import "mixins/form/button";
 
 // mixins functions
 @import "functions/px-to-rem";
@@ -33,4 +35,4 @@ $em-base: 16px !default;
 @import "helpers/triangle";
 
 // mixins bootstrap
-@import "bootstrap/index";
+@import "mixins/utilities/bootstrap/index";

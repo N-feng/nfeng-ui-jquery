@@ -1,3 +1,5 @@
+$legacy-support-for-ie: false !default;
+
 @mixin float($side:left) {
   float: unquote($side);
   @if $legacy-support-for-ie {
