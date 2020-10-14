@@ -1,3 +1,3 @@
 # website
 
-[nfeng-ui-jquery](https://n-feng.github.io/nfeng-ui-jquery/#/public/index)
+[nfeng-ui-jquery](https://imnqf.github.io/nfeng-ui-jquery/#/public/index)
